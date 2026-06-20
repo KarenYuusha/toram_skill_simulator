@@ -1,0 +1,158 @@
+{
+  "skill_tree": "Dagger",
+  "tree_slug": "dagger",
+  "group": "sub_weapon_skills",
+  "raw_skill_file": "sub_weapon_skills/dagger_skills.txt",
+  "coordinate_system": {
+    "origin": [
+      0,
+      0
+    ],
+    "format": [
+      "row",
+      "column"
+    ],
+    "description": "Moving one level down adds [1, 0]; moving one column right adds [0, 1]. Empty rows and columns are preserved to match the image layout."
+  },
+  "skills": [
+    {
+      "id": "spike_dart",
+      "name": "Spike Dart",
+      "position": [
+        0,
+        1
+      ],
+      "prerequisites": [
+        "throwing_knife"
+      ]
+    },
+    {
+      "id": "gatling_knife",
+      "name": "Gatling Knife",
+      "position": [
+        0,
+        2
+      ],
+      "prerequisites": [
+        "spike_dart"
+      ]
+    },
+    {
+      "id": "amazing_throw",
+      "name": "Amazing Throw",
+      "position": [
+        0,
+        3
+      ],
+      "prerequisites": [
+        "gatling_knife"
+      ]
+    },
+    {
+      "id": "mad_dagger",
+      "name": "Mad Dagger",
+      "position": [
+        0,
+        4
+      ],
+      "prerequisites": [
+        "amazing_throw"
+      ]
+    },
+    {
+      "id": "throwing_knife",
+      "name": "Throwing Knife",
+      "position": [
+        1,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "poison_dagger",
+      "name": "Poison Dagger",
+      "position": [
+        2,
+        1
+      ],
+      "prerequisites": [
+        "throwing_knife"
+      ]
+    },
+    {
+      "id": "double_stab",
+      "name": "Double Stab",
+      "position": [
+        2,
+        2
+      ],
+      "prerequisites": [
+        "poison_dagger"
+      ]
+    },
+    {
+      "id": "hidden_arm",
+      "name": "Hidden Arm",
+      "position": [
+        3,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "intensive_knife",
+      "name": "Intensive Knife",
+      "position": [
+        3,
+        1
+      ],
+      "prerequisites": [
+        "hidden_arm"
+      ]
+    },
+    {
+      "id": "mail_breaker",
+      "name": "Mail Breaker",
+      "position": [
+        3,
+        3
+      ],
+      "prerequisites": [
+        "intensive_knife"
+      ]
+    },
+    {
+      "id": "knife_combat",
+      "name": "Knife Combat",
+      "position": [
+        4,
+        2
+      ],
+      "prerequisites": [
+        "intensive_knife"
+      ]
+    },
+    {
+      "id": "flincher_knife",
+      "name": "Flincher Knife",
+      "position": [
+        4,
+        3
+      ],
+      "prerequisites": [
+        "knife_combat"
+      ]
+    },
+    {
+      "id": "rolling_bite",
+      "name": "Rolling Bite",
+      "position": [
+        4,
+        4
+      ],
+      "prerequisites": [
+        "flincher_knife"
+      ]
+    }
+  ]
+}

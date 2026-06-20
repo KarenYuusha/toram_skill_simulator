@@ -1,0 +1,12 @@
+{
+  "name": "Detection",
+  "slug": "detection",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/hunter/detection.png",
+  "raw_text": "Bowgun/Bow only Type Active Element Neutral MP 300 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 0 Description Ability to sense danger in nature. Reduces Aggro against you and slightly increases Critical Rate for 40sec. The effect ends when you are targeted. Bow [Get the same effect when used with a Bowgun] When the effect ends due to being targeted, you will automatically perform Shot Skill: \"Decoy Shot\". Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcDetectionBuffEffect(level, result) { var HTML = `<b>Skill Effect:</b> Grants <b>Detection buff</b> to the <b>caster</b> upon successful cast <br><b>Buff Effect:</b> <li><b>Critical Rate</b> +${level}</li> <li><b>Reduces Aggro</b></li> <li>If you get targeted by an enemy while this buff is active, instantly activate <b>Decoy Shot</b> and <b>remove this buff</b></li> <li><b>Buff Duration:</b> 40 seconds OR until you are targeted by an enemy</li>` result.innerHTML = HTML } function addDetectionExtraInfo(result) { result.innerHTML += `<br><b>Extra info:</b> <li>The skill level of <b>Decoy Shot</b> activated by this buff effect is the same as the skill level of the learned <b>Decoy Shot</b>; if you have not learned <b>Decoy Shot</b>, nothing will be activated</li> <li><b>Decoy Shot</b> activated by this buff effect does not have any action, cast time, nor cost any MP</li>` } function calcDetectionValues() { var levelSelector = document.getElementById(\"detectionSkillLevel\") var level = levelSelector[levelSelector.selectedIndex].value var result = document.getElementById(\"detectionValues\") calcDetectionBuffEffect(level, result) addDetectionExtraInfo(result) result.innerHTML += `<br>Credits to <b>Phantom Library</b> for the skill info` } calcDetectionValues() Cyclon Arrow",
+  "tree": "Hunter",
+  "tree_slug": "hunter",
+  "tree_url": "https://coryn.club/skill.php?tree=Hunter",
+  "image_path": "assets/skill_tree/hunter/detection.png",
+  "data_path": "doc/coryn_skills/hunter/detection.json"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Advanced Evasion",
+  "slug": "advanced_evasion",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/guard/advancedevasion.png",
+  "raw_text": "Light Armor only Type Passive Neutral Description Increases Evasion Recharge when light-remodeled armor is equipped. The amount raised per level is the same as the effect of Light Armor Mastery . Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcAdvancedEvasionValues() { var levelSelector = document.getElementById(\"advancedEvasionLevel\") var level = levelSelector[levelSelector.selectedIndex].value var evasionRecharge = 1 * level var result = document.getElementById(\"advancedEvasionValues\") result.innerHTML = `<li><b>Evasion Recharge</b> +${evasionRecharge}%</li>` } calcAdvancedEvasionValues() Mirage Evasion",
+  "tree": "Guard",
+  "tree_slug": "guard",
+  "tree_url": "https://coryn.club/skill.php?tree=Guard",
+  "image_path": "assets/skill_tree/guard/advanced_evasion.png",
+  "data_path": "doc/coryn_skills/guard/advanced_evasion.json"
+}

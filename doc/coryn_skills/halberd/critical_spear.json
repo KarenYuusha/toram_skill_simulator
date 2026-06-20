@@ -1,0 +1,12 @@
+{
+  "name": "Critical Spear",
+  "slug": "critical_spear",
+  "required_level": 3,
+  "image_url": "https://coryn.club/skill/halberd/criticalspear.png",
+  "raw_text": "Halberd only Type Passive Neutral Description Learn the mastery of Halberds. Critical Rate increases when you equip a Halberd. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcCriticalSpearPercent(level, result) { let percent = Math.floor(level/2) let HTML = `` if (percent > 0) {HTML += `<li><b>Critical Rate</b> +${percent}%</li>`} result.innerHTML = HTML } function calcCriticalSpearFlat(level, result) { let flat = Math.ceil(level/2) result.innerHTML += `<li><b>Critical Rate</b> +${flat}</li>` } function calcCriticalSpearValues() { let levelSelector = document.getElementById('criticalSpearSkillLevel') let level = levelSelector[levelSelector.selectedIndex].value let result = document.getElementById('criticalSpearValues') calcCriticalSpearPercent(level, result) calcCriticalSpearFlat(level, result) } calcCriticalSpearValues() Tornado Lance",
+  "tree": "Halberd",
+  "tree_slug": "halberd",
+  "tree_url": "https://coryn.club/skill.php?tree=Halberd",
+  "image_path": "assets/skill_tree/halberd/critical_spear.png",
+  "data_path": "doc/coryn_skills/halberd/critical_spear.json"
+}

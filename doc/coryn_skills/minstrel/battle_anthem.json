@@ -1,0 +1,12 @@
+{
+  "name": "Battle Anthem",
+  "slug": "battle_anthem",
+  "required_level": 3,
+  "image_url": "https://coryn.club/skill/minstrel/battleanthem.png",
+  "raw_text": "Magic Device/Staff/Bowgun/Bow/2-Handed Sword/Katana only Type Passive Neutral Description While a song skill is active, emits an aggressive sound and performs a normal attack on targets within your weapon range if stationary. Activation interval depends on ASPD and skill level. Ad-lib",
+  "tree": "Minstrel",
+  "tree_slug": "minstrel",
+  "tree_url": "https://coryn.club/skill.php?tree=Minstrel",
+  "image_path": null,
+  "data_path": "doc/coryn_skills/minstrel/battle_anthem.json"
+}

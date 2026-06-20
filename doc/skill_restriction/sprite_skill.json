@@ -1,0 +1,202 @@
+{
+  "skill_tree": "Sprite",
+  "tree_slug": "sprite",
+  "group": "weapon_class_skills",
+  "raw_skill_file": "weapon_class_skills/sprite_skills.txt",
+  "coordinate_system": {
+    "origin": [
+      0,
+      0
+    ],
+    "format": [
+      "row",
+      "column"
+    ],
+    "description": "Moving one level down adds [1, 0]; moving one column right adds [0, 1]. Empty rows and columns are preserved to match the image layout."
+  },
+  "skills": [
+    {
+      "id": "resurrection",
+      "name": "Resurrection",
+      "position": [
+        0,
+        3
+      ],
+      "prerequisites": [
+        "micro_heal"
+      ]
+    },
+    {
+      "id": "micro_heal",
+      "name": "Micro Heal",
+      "position": [
+        1,
+        2
+      ],
+      "prerequisites": [
+        "express_aid"
+      ]
+    },
+    {
+      "id": "express_aid",
+      "name": "Express Aid",
+      "position": [
+        2,
+        1
+      ],
+      "prerequisites": [
+        "auto_device"
+      ]
+    },
+    {
+      "id": "stabiliz",
+      "name": "Stabiliz",
+      "position": [
+        2,
+        3
+      ],
+      "prerequisites": [
+        "enhance"
+      ]
+    },
+    {
+      "id": "sprite_upgrade",
+      "name": "Sprite Upgrade",
+      "position": [
+        2,
+        4
+      ],
+      "prerequisites": [
+        "stabiliz"
+      ]
+    },
+    {
+      "id": "auto_device",
+      "name": "Auto-Device",
+      "position": [
+        3,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "enhance",
+      "name": "Enhance",
+      "position": [
+        3,
+        2
+      ],
+      "prerequisites": [
+        "express_aid"
+      ]
+    },
+    {
+      "id": "counterforce",
+      "name": "Counterforce",
+      "position": [
+        4,
+        1
+      ],
+      "prerequisites": [
+        "auto_device"
+      ]
+    },
+    {
+      "id": "sprite_shield",
+      "name": "Sprite Shield",
+      "position": [
+        4,
+        3
+      ],
+      "prerequisites": [
+        "enhance"
+      ]
+    },
+    {
+      "id": "astral_lance",
+      "name": "Astral Lance",
+      "position": [
+        5,
+        2
+      ],
+      "prerequisites": [
+        "counterforce"
+      ]
+    },
+    {
+      "id": "magic_vulcan",
+      "name": "Magic Vulcan",
+      "position": [
+        6,
+        3
+      ],
+      "prerequisites": [
+        "astral_lance"
+      ]
+    },
+    {
+      "id": "cursed_altar",
+      "name": "Cursed Altar",
+      "position": [
+        6,
+        4
+      ],
+      "prerequisites": [
+        "magic_vulcan"
+      ]
+    },
+    {
+      "id": "ignition",
+      "name": "Ignition",
+      "position": [
+        7,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "terrawrym",
+      "name": "Terrawrym",
+      "position": [
+        7,
+        1
+      ],
+      "prerequisites": [
+        "ignition"
+      ]
+    },
+    {
+      "id": "faux_weapon",
+      "name": "Faux Weapon",
+      "position": [
+        7,
+        2
+      ],
+      "prerequisites": [
+        "terrawrym"
+      ]
+    },
+    {
+      "id": "slash_reaper",
+      "name": "Slash Reaper",
+      "position": [
+        7,
+        3
+      ],
+      "prerequisites": [
+        "faux_weapon"
+      ]
+    },
+    {
+      "id": "lebenglanz",
+      "name": "Lebenglanz",
+      "position": [
+        7,
+        4
+      ],
+      "prerequisites": [
+        "slash_reaper"
+      ]
+    }
+  ]
+}

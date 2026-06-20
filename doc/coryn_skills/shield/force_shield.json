@@ -1,0 +1,12 @@
+{
+  "name": "Force Shield",
+  "slug": "force_shield",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/shield/forceshield.png",
+  "raw_text": "Shield only Type Passive Neutral Description DEF and Physical Resistance are added when equipping a shield. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcForceShieldValues() { var levelSelector = document.getElementById(\"forceShieldLevel\") var level = levelSelector[levelSelector.selectedIndex].value var result = document.getElementById(\"forceShieldValues\") var flatDEF = 2 * level var percDEF = 1 * level var hp = 50 * level var pres = 1 * level result.innerHTML = `<li><b>DEF</b> +${flatDEF}</li> <li><b>DEF</b> +${percDEF}%</li> <li><b>MaxHP</b> +${hp}</li> <li><b>Physical Resistance</b> +${pres}%</li>` } calcForceShieldValues() Magical Shield",
+  "tree": "Shield",
+  "tree_slug": "shield",
+  "tree_url": "https://coryn.club/skill.php?tree=Shield",
+  "image_path": "assets/skill_tree/shield/force_shield.png",
+  "data_path": "doc/coryn_skills/shield/force_shield.json"
+}

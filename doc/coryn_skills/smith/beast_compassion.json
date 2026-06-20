@@ -1,0 +1,12 @@
+{
+  "name": "Beast Compassion",
+  "slug": "beast_compassion",
+  "required_level": 5,
+  "image_url": "https://coryn.club/skill/smith/beastcompassion.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description Reduces the Beast points consumed by Skill: [Customize Equipment]. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcBeastCompassionValues() { var levelSelector = document.getElementById(\"beastCompassionSkillLevel\") var level = levelSelector[levelSelector.selectedIndex].value var result = document.getElementById(\"beastCompassionValues\") result.innerHTML = `Reduces the <b>Beast Point consumption</b> of <b>Customize Equipment</b> by ${level}%; stacks <b>multiplicatively</b> with the material consumption reduction of <b>Blacksmith Proficiency</b>` } calcBeastCompassionValues() Wood Compassion",
+  "tree": "Smith",
+  "tree_slug": "smith",
+  "tree_url": "https://coryn.club/skill.php?tree=Smith",
+  "image_path": "assets/skill_tree/smith/beast_compassion.png",
+  "data_path": "doc/coryn_skills/smith/beast_compassion.json"
+}

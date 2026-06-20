@@ -1,0 +1,12 @@
+{
+  "name": "Fabric Compassion",
+  "slug": "fabric_compassion",
+  "required_level": 5,
+  "image_url": "https://coryn.club/skill/smith/fabriccompassion.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description Reduces the Fabric points consumed by Skill: [Customize Equipment]. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcFabricCompassionValues() { var levelSelector = document.getElementById(\"fabricCompassionSkillLevel\") var level = levelSelector[levelSelector.selectedIndex].value var result = document.getElementById(\"fabricCompassionValues\") result.innerHTML = `Reduces the <b>Cloth Point consumption</b> of <b>Customize Equipment</b> by ${level}%; stacks <b>multiplicatively</b> with the material consumption reduction of <b>Blacksmith Proficiency</b>` } calcFabricCompassionValues() Beast Compassion",
+  "tree": "Smith",
+  "tree_slug": "smith",
+  "tree_url": "https://coryn.club/skill.php?tree=Smith",
+  "image_path": "assets/skill_tree/smith/fabric_compassion.png",
+  "data_path": "doc/coryn_skills/smith/fabric_compassion.json"
+}

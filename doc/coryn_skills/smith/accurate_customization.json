@@ -1,0 +1,12 @@
+{
+  "name": "Accurate Customization",
+  "slug": "accurate_customization",
+  "required_level": 3,
+  "image_url": "https://coryn.club/skill/smith/accuratecustomization.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description The success rate of [Customize Equipment] increase a little. The number of abilities that you can add increase. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcAccurateCustomizationEffect(level, result) { var slot = Math.floor((level*1+1)/3) var HTML = `` if (slot > 0) { HTML += `<li>Grants ${slot} additional <b>Statting Slot` if (slot != 1) {HTML += `s`} HTML += `</b></li>` } HTML += `<li><b>Statting Success Rate</b> +${2*level}</li>` result.innerHTML = HTML } function addAccurateCustomizationExtraInfo(result) { result.innerHTML += `<br>Check <a href=\"https://coryn.club/guide.php?key=smith\" style=\"color:blue;\"><b>Smithing Guide > Statting</b></a> for more details` } function calcAccurateCustomizationValues() { var levelSelector = document.getElementById(\"accurateCustomizationSkillLevel\") var level = levelSelector[levelSelector.selectedIndex].value var result = document.getElementById(\"accurateCustomizationValues\") calcAccurateCustomizationEffect(level, result) addAccurateCustomizationExtraInfo(result) } calcAccurateCustomizationValues() Expert's Customization",
+  "tree": "Smith",
+  "tree_slug": "smith",
+  "tree_url": "https://coryn.club/skill.php?tree=Smith",
+  "image_path": "assets/skill_tree/smith/accurate_customization.png",
+  "data_path": "doc/coryn_skills/smith/accurate_customization.json"
+}

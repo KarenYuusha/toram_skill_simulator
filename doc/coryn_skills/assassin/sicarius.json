@@ -1,0 +1,12 @@
+{
+  "name": "Sicarius",
+  "slug": "sicarius",
+  "required_level": 4,
+  "image_url": "https://coryn.club/skill/assassin/sicarius.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description Raises the power of Back Stab with lasting effect. Successful Back Stab execution will slightly enhance ATK and Physical Pierce for a short time. Damage received will be slightly reduced and the enhancement effect will be lost. Extras Show more... Sub-Weapon: Dagger/Ninjutsu Scroll Other Skill Level: 1 2 3 4 5 6 7 8 9 10 \"Foresight\" Skill Level: 0 1 2 3 4 5 6 7 8 9 10 function addSicariusPassiveEffect(level, weapon, result) { var multBonus = 0.15 * level if (weapon == \"dagger\") {multBonus += 1} multBonus = Math.round(multBonus*100)/100 result.innerHTML = `<b>Passive Effect:</b> <li><b>Back Stab Skill Multiplier</b> +${multBonus}</li> <li>Grants <b>Sicarius buff</b> upon successful <b>Back Stab</b> cast</li>` } function addSicariusBuffEffect(level, weapon, foresightLevel, result) { var atk = 5 * level var pp = 1*level if (weapon == \"dagger\") { atk *= 2 pp += 15 } var dmgReduc = 10 + 1*level + Math.floor((0.5 + 0.05*level)*foresightLevel) let HTML = `<br><b>Buff Effect:</b> <li><b>ATK</b> +${atk}</li> <li><b>Physical Pierce</b> +${pp}%</li> <li><b>Damage Taken Reduction:</b> ${dmgReduc}%</li> <li><b>Buff Duration:</b> 30 seconds OR until you get hit</li>` result.innerHTML += HTML } function calcSicariusValues() { let levelSelector = document.getElementById('sicariusSkillLevel') let level = levelSelector[levelSelector.selectedIndex].value let weaponSelector = document.getElementById('sicariusWeaponType') let weapon = weaponSelector[weaponSelector.selectedIndex].value let foresightLevelSelector = document.getElementById(\"sicariusForesightLevel\") let foresightLevel = foresightLevelSelector[foresightLevelSelector.selectedIndex].value let result = document.getElementById('sicariusValues') addSicariusPassiveEffect(level, weapon, result) addSicariusBuffEffect(level, weapon, foresightLevel, result) result.innerHTML += `<br>Credits to <b>Phantom Library</b> for the info of the skill` } calcSicariusValues() Secret Assassin",
+  "tree": "Assassin",
+  "tree_slug": "assassin",
+  "tree_url": "https://coryn.club/skill.php?tree=Assassin",
+  "image_path": "assets/skill_tree/assassin/sicarius.png",
+  "data_path": "doc/coryn_skills/assassin/sicarius.json"
+}

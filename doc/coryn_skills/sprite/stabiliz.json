@@ -1,0 +1,12 @@
+{
+  "name": "Stabiliz",
+  "slug": "stabiliz",
+  "required_level": 4,
+  "image_url": "https://coryn.club/skill/sprite/stabiliz.png",
+  "raw_text": "Main MD only Type Active Element Neutral MP 700 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 0 Description A technique that improves accuracy. Increases the stability of Critical Rate and Magic Damage, and mitigates the decrease in stability of Graze hits for 45 seconds. Removes [Fatigue] when activated. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 Member's CRT Stat: function calcStabilizSkillEffect(result) { result.innerHTML = `<b>Skill effect:</b> Removes [Fatigue] ailment from and grant <b>Stabiliz buff</b> to the <b>caster</b> and <b>party members</b> upon successful cast<br>` } function calcStabilizFlatDamageReduction (level, crt, result) { function rounding(value) { if (value - Math.floor(value) < 0.99999999) {value = Math.floor(value)} else {value = Math.round(value)} return value } var crit = 5 + 2*level + rounding(crt/8.5) result.innerHTML += `<b>Buff effect:</b> <li><b>Critical Rate</b> +${crit}</li> <li><b>Magic Stability</b> +${level}%</li> <li>Halves the stability reduction effect of [Graze]</li> <li><b>Buff Duration:</b> 45 seconds</li>` } function calcStabilizValues() { let levelSelector = document.getElementById('stabilizSkillLevel') let level = levelSelector[levelSelector.selectedIndex].value let crt = document.getElementById('stabilizCrt').value let result = document.getElementById('stabilizValues') calcStabilizSkillEffect(result) calcStabilizFlatDamageReduction(level, crt, result) } calcStabilizValues() Sprite Upgrade",
+  "tree": "Sprite",
+  "tree_slug": "sprite",
+  "tree_url": "https://coryn.club/skill.php?tree=Sprite",
+  "image_path": "assets/skill_tree/sprite/stabiliz.png",
+  "data_path": "doc/coryn_skills/sprite/stabiliz.json"
+}

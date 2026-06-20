@@ -1,0 +1,12 @@
+{
+  "name": "Ultima Raving Storm",
+  "slug": "ultima_raving_storm",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/unarmed/ultimaraving.png",
+  "raw_text": "Bare Hand/No Sub Weapon only Type Passive Neutral Description When Raving Storm activates, Physical Pierce and chance to trigger Additional Melee are raised. The effect ends when a non-Bare Hand skill is used, but the MP Cost will be halved. The effect is also lost when Internal Elixir activates. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcUltimaRavingStormBuffEffect(level, result) { let pp = Math.floor(level * 2.5) let addMeleeChance = Math.floor(level * 2.5) result.innerHTML = `<li>Gains the following effects while <b>Raving Storm buff</b> is active:<ul> <li>&nbsp&nbsp&nbsp- <b>Physical Pierce</b> +${pp}% (need further testing)</li> <li>&nbsp&nbsp&nbsp- <b>Chance to activate Additional Melee</b> +${addMeleeChance}%</li> </ul></li> <li>Upon using <b>Raving Storm</b>, gains a stack that <b>halves the MP Cost</b> of the next <b>non-Bare Hand skill</b>, rounded up to the nearest multiple of 100</li> <li><b>Stack Duration:</b> Until a <b>non-Bare Hand skill</b> is used OR until <b>Internal Elixir</b> is used</li>` } function calcUltimaRavingStormValues() { let levelSelector = document.getElementById('ultimaRavingStormSkillLevel') let level = levelSelector[levelSelector.selectedIndex].value let result = document.getElementById('ultimaRavingStormValues') calcUltimaRavingStormBuffEffect(level, result) } calcUltimaRavingStormValues() Internal Elixir",
+  "tree": "Barehand",
+  "tree_slug": "barehand",
+  "tree_url": "https://coryn.club/skill.php?tree=Barehand",
+  "image_path": "assets/skill_tree/barehand/ultima_raving_storm.png",
+  "data_path": "doc/coryn_skills/barehand/ultima_raving_storm.json"
+}

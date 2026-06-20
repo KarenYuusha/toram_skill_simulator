@@ -1,0 +1,12 @@
+{
+  "name": "Ninja Spirit",
+  "slug": "ninja_spirit",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/ninja/ninjaspirit.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description Learns the rules of shinobi (ninja). Slightly boosts Dodge and reduces Aggro a little. If this skill is Lv10, the skill \"Two-Handed\" will be applicable even if a Ninjutsu Scroll is equipped. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcNinjaSpiritEffect(level, result) { var dodge = 1*level result.innerHTML = `<li><b>Dodge</b> +${dodge}</li> <li><b>Reduces Aggro</b> (currently the exact amount is unknown)</li>` if (level == 10) {result.innerHTML += `<li>Equipping a <b>Ninjutsu Scroll</b> in the sub-hand slot <b>will no longer disable Two-Handed passive from Mononofu Skills tree</b></li>`} } function calcNinjaSpiritValues() { let levelSelector = document.getElementById(\"ninjaSpiritLevel\") let level = levelSelector[levelSelector.selectedIndex].value let result = document.getElementById(\"ninjaSpiritValues\") calcNinjaSpiritEffect(level, result) } calcNinjaSpiritValues() Ninjutsu Drill I",
+  "tree": "Ninja",
+  "tree_slug": "ninja",
+  "tree_url": "https://coryn.club/skill.php?tree=Ninja",
+  "image_path": "assets/skill_tree/ninja/ninja_spirit.png",
+  "data_path": "doc/coryn_skills/ninja/ninja_spirit.json"
+}

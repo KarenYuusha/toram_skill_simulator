@@ -1,0 +1,12 @@
+{
+  "name": "Neo Buster",
+  "slug": "neo_buster",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/golem/neobuster.png",
+  "raw_text": "Staff/Bowgun/Main MD only Type Passive Neutral Description Improves the abilities of the Buster-type golem. The golem's piercing power and Critical Rate increase, with a small boost also applied to the Lancer-type and Shielder-type golem. Speed Boost",
+  "tree": "Golem",
+  "tree_slug": "golem",
+  "tree_url": "https://coryn.club/skill.php?tree=Golem",
+  "image_path": "assets/skill_tree/golem/neo_buster.png",
+  "data_path": "doc/coryn_skills/golem/neo_buster.json"
+}

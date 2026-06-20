@@ -1,0 +1,12 @@
+{
+  "name": "Focus",
+  "slug": "focus",
+  "required_level": 5,
+  "image_url": "https://coryn.club/skill/hunter/focus.png",
+  "raw_text": "Bowgun/Bow only Type Active Element Neutral MP 600 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 0 Description Issues a hunting command. Marks an enemy as a \"target\". Increases long-range attack power ( from party members too ) to the target. Bow \"Satellite Arrow\" will land on the target faster and will be re-aimed after each attack. Bowgun The interval between \"Satellite Arrow\" hits becomes shorter from the second hit onward. Dagger [Get the same effect when used with a shield] Adds a passive effect that increases close-range attack power on target (starting from Skill Lv2). Sleep Trap",
+  "tree": "Hunter",
+  "tree_slug": "hunter",
+  "tree_url": "https://coryn.club/skill.php?tree=Hunter",
+  "image_path": "assets/skill_tree/hunter/focus.png",
+  "data_path": "doc/coryn_skills/hunter/focus.json"
+}

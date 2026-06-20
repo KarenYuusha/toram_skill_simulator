@@ -1,0 +1,12 @@
+{
+  "name": "Craftsman's Bottle",
+  "slug": "craftsmans_bottle",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/alchemy/craftsmanbottle.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description Increases the limit of proficiency level by 5 per skill level. Extras Show more... Proficiency Limit Bonus Skill Lv Proficiency 1 +5 2 +10 3 +15 4 +20 5 +25 6 +30 7 +35 8 +40 9 +45 10 +50 Synthesist's Bottle",
+  "tree": "Alchemy",
+  "tree_slug": "alchemy",
+  "tree_url": "https://coryn.club/skill.php?tree=Alchemy",
+  "image_path": "assets/skill_tree/alchemy/craftsmans_bottle.png",
+  "data_path": "doc/coryn_skills/alchemy/craftsmans_bottle.json"
+}

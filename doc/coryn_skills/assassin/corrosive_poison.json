@@ -1,0 +1,12 @@
+{
+  "name": "Corrosive Poison",
+  "slug": "corrosive_poison",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/assassin/venominjection.png",
+  "raw_text": "Dagger/Bare Hand/Ninjutsu Scroll only Type Passive Neutral Description Enables the stacking of poison with Venom Injection ( max +2 ). If it turns into enhanced poison due to the stacking, the player's attack will also be able to inflict poison damage. Venom Thief",
+  "tree": "Assassin",
+  "tree_slug": "assassin",
+  "tree_url": "https://coryn.club/skill.php?tree=Assassin",
+  "image_path": "assets/skill_tree/assassin/corrosive_poison.png",
+  "data_path": "doc/coryn_skills/assassin/corrosive_poison.json"
+}

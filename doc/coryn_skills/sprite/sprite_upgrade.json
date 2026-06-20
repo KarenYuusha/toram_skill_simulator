@@ -1,0 +1,12 @@
+{
+  "name": "Sprite Upgrade",
+  "slug": "sprite_upgrade",
+  "required_level": 5,
+  "image_url": "https://coryn.club/skill/sprite/spriteupgrade.png",
+  "raw_text": "Main MD only Type Passive Neutral Description Extends the duration of Auto-Device, Counterforce, Astral Lance, and Stabiliz. Sprite Shield",
+  "tree": "Sprite",
+  "tree_slug": "sprite",
+  "tree_url": "https://coryn.club/skill.php?tree=Sprite",
+  "image_path": "assets/skill_tree/sprite/sprite_upgrade.png",
+  "data_path": "doc/coryn_skills/sprite/sprite_upgrade.json"
+}

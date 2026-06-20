@@ -1,0 +1,147 @@
+{
+  "skill_tree": "Golem",
+  "tree_slug": "golem",
+  "group": "assist_skills",
+  "raw_skill_file": "assist_skills/golem_skills.txt",
+  "coordinate_system": {
+    "origin": [
+      0,
+      0
+    ],
+    "format": [
+      "row",
+      "column"
+    ],
+    "description": "Moving one level down adds [1, 0]; moving one column right adds [0, 1]. Empty rows and columns are preserved to match the image layout."
+  },
+  "skills": [
+    {
+      "id": "neo_lancer",
+      "name": "Neo Lancer",
+      "position": [
+        0,
+        1
+      ],
+      "prerequisites": [
+        "golem_call"
+      ]
+    },
+    {
+      "id": "attack_boost",
+      "name": "Attack Boost",
+      "position": [
+        0,
+        2
+      ],
+      "prerequisites": [
+        "neo_lancer"
+      ]
+    },
+    {
+      "id": "golem_call",
+      "name": "Golem Call",
+      "position": [
+        1,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "neo_shielder",
+      "name": "Neo Shielder",
+      "position": [
+        1,
+        1
+      ],
+      "prerequisites": [
+        "golem_call"
+      ]
+    },
+    {
+      "id": "shield_boost",
+      "name": "Shield Boost",
+      "position": [
+        1,
+        2
+      ],
+      "prerequisites": [
+        "neo_shielder"
+      ]
+    },
+    {
+      "id": "neo_buster",
+      "name": "Neo Buster",
+      "position": [
+        2,
+        1
+      ],
+      "prerequisites": [
+        "golem_call"
+      ]
+    },
+    {
+      "id": "speed_boost",
+      "name": "Speed Boost",
+      "position": [
+        2,
+        2
+      ],
+      "prerequisites": [
+        "neo_buster"
+      ]
+    },
+    {
+      "id": "frost_grenade",
+      "name": "Frost Grenade",
+      "position": [
+        3,
+        1
+      ],
+      "prerequisites": [
+        "magic_grenade"
+      ]
+    },
+    {
+      "id": "flash_grenade",
+      "name": "Flash Grenade",
+      "position": [
+        3,
+        2
+      ],
+      "prerequisites": [
+        "frost_grenade"
+      ]
+    },
+    {
+      "id": "magic_grenade",
+      "name": "Magic Grenade",
+      "position": [
+        4,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "barrier_screen",
+      "name": "Barrier Screen",
+      "position": [
+        5,
+        1
+      ],
+      "prerequisites": [
+        "magic_grenade"
+      ]
+    },
+    {
+      "id": "barrier_upgrade",
+      "name": "Barrier Upgrade",
+      "position": [
+        5,
+        2
+      ],
+      "prerequisites": [
+        "barrier_screen"
+      ]
+    }
+  ]
+}

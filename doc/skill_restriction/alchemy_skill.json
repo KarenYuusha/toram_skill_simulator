@@ -1,0 +1,180 @@
+{
+  "skill_tree": "Alchemy",
+  "tree_slug": "alchemy",
+  "group": "other_skill_trees",
+  "raw_skill_file": "other_skill_trees/alchemist_skills.txt",
+  "coordinate_system": {
+    "origin": [
+      0,
+      0
+    ],
+    "format": [
+      "row",
+      "column"
+    ],
+    "description": "Moving one level down adds [1, 0]; moving one column right adds [0, 1]. Empty rows and columns are preserved to match the image layout."
+  },
+  "skills": [
+    {
+      "id": "novices_bottle",
+      "name": "Novice's Bottle",
+      "position": [
+        0,
+        1
+      ],
+      "prerequisites": [
+        "item_synthesis"
+      ]
+    },
+    {
+      "id": "craftsmans_bottle",
+      "name": "Craftsman's Bottle",
+      "position": [
+        0,
+        2
+      ],
+      "prerequisites": [
+        "novices_bottle"
+      ]
+    },
+    {
+      "id": "synthesists_bottle",
+      "name": "Synthesist's Bottle",
+      "position": [
+        0,
+        3
+      ],
+      "prerequisites": [
+        "craftsmans_bottle"
+      ]
+    },
+    {
+      "id": "masters_bottle",
+      "name": "Master's Bottle",
+      "position": [
+        0,
+        4
+      ],
+      "prerequisites": [
+        "synthesists_bottle"
+      ]
+    },
+    {
+      "id": "masters_bottle_ii",
+      "name": "Master's Bottle II",
+      "position": [
+        0,
+        5
+      ],
+      "prerequisites": [
+        "masters_bottle"
+      ]
+    },
+    {
+      "id": "item_synthesis",
+      "name": "Item Synthesis",
+      "position": [
+        1,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "mid_class_synthesis",
+      "name": "Mid-Class Synthesis",
+      "position": [
+        1,
+        2
+      ],
+      "prerequisites": [
+        "item_synthesis"
+      ]
+    },
+    {
+      "id": "high_class_synthesis",
+      "name": "High-Class Synthesis",
+      "position": [
+        1,
+        3
+      ],
+      "prerequisites": [
+        "mid_class_synthesis"
+      ]
+    },
+    {
+      "id": "experts_synthesis",
+      "name": "Expert's Synthesis",
+      "position": [
+        1,
+        4
+      ],
+      "prerequisites": [
+        "high_class_synthesis"
+      ]
+    },
+    {
+      "id": "experts_synthesis_ii",
+      "name": "Expert's Synthesis II",
+      "position": [
+        1,
+        5
+      ],
+      "prerequisites": [
+        "experts_synthesis"
+      ]
+    },
+    {
+      "id": "process_materials",
+      "name": "Process Materials",
+      "position": [
+        2,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "synthesize_equipment",
+      "name": "Synthesize Equipment",
+      "position": [
+        2,
+        2
+      ],
+      "prerequisites": [
+        "item_synthesis"
+      ]
+    },
+    {
+      "id": "technical_synthesis_i",
+      "name": "Technical Synthesis I",
+      "position": [
+        2,
+        3
+      ],
+      "prerequisites": [
+        "synthesize_equipment"
+      ]
+    },
+    {
+      "id": "technical_synthesis_ii",
+      "name": "Technical Synthesis II",
+      "position": [
+        2,
+        4
+      ],
+      "prerequisites": [
+        "technical_synthesis_i"
+      ]
+    },
+    {
+      "id": "technical_synthesis_iii",
+      "name": "Technical Synthesis III",
+      "position": [
+        2,
+        5
+      ],
+      "prerequisites": [
+        "technical_synthesis_ii"
+      ]
+    }
+  ]
+}

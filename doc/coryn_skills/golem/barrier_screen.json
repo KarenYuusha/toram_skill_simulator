@@ -1,0 +1,12 @@
+{
+  "name": "Barrier Screen",
+  "slug": "barrier_screen",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/golem/barrierscreen.png",
+  "raw_text": "Shield/Bowgun only Type Active Element Neutral MP 300 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 0 Description Deploys a drone that creates a magic barrier. Reduces the power of straight-line, bullet, or bowling blade-wave attacks that pass through the barrier, one time. *The power of certain attacks cannot be reduced. While deployed, Attack MP Recovery is reduced. Barrier Upgrade",
+  "tree": "Golem",
+  "tree_slug": "golem",
+  "tree_url": "https://coryn.club/skill.php?tree=Golem",
+  "image_path": null,
+  "data_path": "doc/coryn_skills/golem/barrier_screen.json"
+}

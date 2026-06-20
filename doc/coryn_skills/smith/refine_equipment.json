@@ -1,0 +1,12 @@
+{
+  "name": "Refine Equipment",
+  "slug": "refine_equipment",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/smith/refineeq.png",
+  "raw_text": "Available with all weapons Type EX Skill Element Neutral MP 0 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start No Combo middle No Range 0 Description Refine equipment by yourself. The success rate is lower than the blacksmiths but you don't need Spina. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcRefineEquipmentEffect(level, result) { var srMult = 2*level result.innerHTML = `<li>Allow you to <b>refine equipment by yourself</b> via the <b>Smith Skills</b> section in <b>EX Skills</b>; unlike <b>NPC's Equipment Refining</b>, this does not cost Spina</li> <li><b>Refine Success Rate Multiplier</b> +${srMult}%</li>` } function addRefineEquipmentExtraInfo(result) { result.innerHTML += `<br>Check <a href=\"https://coryn.club/guide.php?key=smith\">Smithing Guide > Refining</a> for more details` } function calcRefineEquipmentValues() { var levelSelector = document.getElementById(\"refineEquipmentSkillLevel\") var level = levelSelector[levelSelector.selectedIndex].value var result = document.getElementById(\"refineEquipmentValues\") calcRefineEquipmentEffect(level, result) addRefineEquipmentExtraInfo(result) } calcRefineEquipmentValues() Novice's Anvil",
+  "tree": "Smith",
+  "tree_slug": "smith",
+  "tree_url": "https://coryn.club/skill.php?tree=Smith",
+  "image_path": "assets/skill_tree/smith/refine_equipment.png",
+  "data_path": "doc/coryn_skills/smith/refine_equipment.json"
+}

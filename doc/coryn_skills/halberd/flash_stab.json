@@ -1,0 +1,12 @@
+{
+  "name": "Flash Stab",
+  "slug": "flash_stab",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/halberd/flashstab.png",
+  "raw_text": "1-Handed Sword/Halberd only Type Active, Physical skill Element Weapon Dependent MP 100 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 2 Description Sharply attack an enemy with a quick movement. Halberd Boost on Activation Speed. Extras Show more... Weapon: 1-Handed Sword Halberd Skill Level: 1 2 3 4 5 6 7 8 9 10 \"Flash Stab Enhancer\" Registlet Level: Unequipped 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 function calcFlashStabConstant(level, result) { let constant = 50 + 5 * level result.innerHTML = `<li><b>Skill Constant:</b> ${constant}</li>` } function calcFlashStabMultiplier (level, registlet, result) { let multiplier = 1 + 0.05 * level + 0.05 * registlet multiplier = Math.round(multiplier*100)/100 result.innerHTML += `<li><b>Skill Multiplier:</b> ${multiplier}</li><br>` } function calcFlashStabMotion(weapon, result) { var motionSpeed = 25 if (weapon == \"hb\") {motionSpeed += 25} result.innerHTML += `<li><b>Motion Speed</b> of <b>Flash Stab</b> +${motionSpeed}%</li>` } function calcFlashStabValues() { let levelSelector = document.getElementById('flashStabSkillLevel') let level = levelSelector[levelSelector.selectedIndex].value let weaponSelector = document.getElementById('flashStabWeaponType') let weapon = weaponSelector[weaponSelector.selectedIndex].value let result = document.getElementById('flashStabValues') let registletSelector = document.getElementById(\"flashStabRegistlet\"); let registlet = registletSelector[registletSelector.selectedIndex].value; calcFlashStabConstant(level, result) calcFlashStabMultiplier(level, registlet, result) calcFlashStabMotion(weapon, result) result.innerHTML += `<br>This skill's <b>maximum cast range</b> is equal to the maximum auto attack range of the <b>main weapon</b>` } calcFlashStabValues() Cannon Spear",
+  "tree": "Halberd",
+  "tree_slug": "halberd",
+  "tree_url": "https://coryn.club/skill.php?tree=Halberd",
+  "image_path": "assets/skill_tree/halberd/flash_stab.png",
+  "data_path": "doc/coryn_skills/halberd/flash_stab.json"
+}

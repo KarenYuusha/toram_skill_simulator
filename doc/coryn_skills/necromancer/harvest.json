@@ -1,0 +1,12 @@
+{
+  "name": "Harvest",
+  "slug": "harvest",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/necromancer/fineshovel.png",
+  "raw_text": "Staff only Type Passive Neutral Description Recovers a small amount of HP and MP instantly when a monster is killed. (activates only once per second.) A skeleton soldier will be summoned upon recovery if \"Skeleton Call\" has been acquired. ( There can't be more than 3 skeleton soldiers on the field. ) Opportunist",
+  "tree": "Necromancer",
+  "tree_slug": "necromancer",
+  "tree_url": "https://coryn.club/skill.php?tree=Necromancer",
+  "image_path": "assets/skill_tree/necromancer/harvest.png",
+  "data_path": "doc/coryn_skills/necromancer/harvest.json"
+}

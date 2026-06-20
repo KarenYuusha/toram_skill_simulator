@@ -1,0 +1,12 @@
+{
+  "name": "Halberd Mastery",
+  "slug": "halberd_mastery",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/halberd/halberdmastery.png",
+  "raw_text": "Halberd only Type Passive Neutral Description Get better at using Halberds. ATK increases when you equip a Halberd. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcHalberdMasteryAtk(level,result) { var ATK = 1 + Math.ceil((level - 2)/5) result.innerHTML = `<li><b>ATK</b> +${ATK}%</li>` } function calcHalberdMasteryWeaponAtk(level, result) { var weaponATK = 3 * level result.innerHTML += `<li><b>Weapon ATK</b> +${weaponATK}%</li>` } function calcHalberdMasteryValues() { let levelSelector = document.getElementById('halberdMasterySkillLevel') let level = levelSelector[levelSelector.selectedIndex].value let result = document.getElementById('halberdMasteryValues') calcHalberdMasteryAtk(level, result) calcHalberdMasteryWeaponAtk(level,result) } calcHalberdMasteryValues() Critical Spear",
+  "tree": "Halberd",
+  "tree_slug": "halberd",
+  "tree_url": "https://coryn.club/skill.php?tree=Halberd",
+  "image_path": "assets/skill_tree/halberd/halberd_mastery.png",
+  "data_path": "doc/coryn_skills/halberd/halberd_mastery.json"
+}

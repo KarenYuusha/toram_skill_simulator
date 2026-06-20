@@ -1,0 +1,147 @@
+{
+  "skill_tree": "Necromancer",
+  "tree_slug": "necromancer",
+  "group": "sub_weapon_skills",
+  "raw_skill_file": "sub_weapon_skills/necromancer_skills.txt",
+  "coordinate_system": {
+    "origin": [
+      0,
+      0
+    ],
+    "format": [
+      "row",
+      "column"
+    ],
+    "description": "Moving one level down adds [1, 0]; moving one column right adds [0, 1]. Empty rows and columns are preserved to match the image layout."
+  },
+  "skills": [
+    {
+      "id": "phantom_missile",
+      "name": "Phantom Missile",
+      "position": [
+        0,
+        1
+      ],
+      "prerequisites": [
+        "grave_digger"
+      ]
+    },
+    {
+      "id": "blood_siphon",
+      "name": "Blood Siphon",
+      "position": [
+        0,
+        2
+      ],
+      "prerequisites": [
+        "phantom_missile"
+      ]
+    },
+    {
+      "id": "soul_stream",
+      "name": "Soul Stream",
+      "position": [
+        0,
+        3
+      ],
+      "prerequisites": [
+        "blood_siphon"
+      ]
+    },
+    {
+      "id": "grave_digger",
+      "name": "Grave Digger",
+      "position": [
+        1,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "skeleton_call",
+      "name": "Skeleton Call",
+      "position": [
+        1,
+        2
+      ],
+      "prerequisites": [
+        "grave_digger"
+      ]
+    },
+    {
+      "id": "demonic_pact",
+      "name": "Demonic Pact",
+      "position": [
+        1,
+        3
+      ],
+      "prerequisites": [
+        "skeleton_call"
+      ]
+    },
+    {
+      "id": "fine_shovel",
+      "name": "Fine Shovel",
+      "position": [
+        2,
+        1
+      ],
+      "prerequisites": [
+        "grave_digger"
+      ]
+    },
+    {
+      "id": "harvest",
+      "name": "Harvest",
+      "position": [
+        2,
+        2
+      ],
+      "prerequisites": [
+        "fine_shovel"
+      ]
+    },
+    {
+      "id": "opportunist",
+      "name": "Opportunist",
+      "position": [
+        2,
+        3
+      ],
+      "prerequisites": [
+        "harvest"
+      ]
+    },
+    {
+      "id": "tomb",
+      "name": "Tomb",
+      "position": [
+        3,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "skull_shaker",
+      "name": "Skull Shaker",
+      "position": [
+        3,
+        2
+      ],
+      "prerequisites": [
+        "tomb"
+      ]
+    },
+    {
+      "id": "hazard_strike",
+      "name": "Hazard Strike",
+      "position": [
+        3,
+        3
+      ],
+      "prerequisites": [
+        "skull_shaker"
+      ]
+    }
+  ]
+}

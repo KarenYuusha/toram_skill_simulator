@@ -1,0 +1,88 @@
+1. Taming
+Lv 1 Skill; No Limit
+MP Cost: 300
+Damage Type: None
+Skill Effect:
+- Allows you to capture a pet by using a Cage (you must have a Cage in your inventory)
+
+- The base values for pet capturing are the following:
+Timer = Skill Timer Boost + mob's Neutral Proration Rate/2 
+
+Maximum Taming Gauge = 10000 + 10 * mob's Physical Proration Rate 
+
+Mob Resistance Increase = (10 + mob's Magic Proration Rate/10)/3 
+
+Mob Level Limit = Player Level - 10 
+
+Taming Gauge starts at 0 
+
+Skill Timer Boost starts at 25 seconds (levels 1 to 5) or 30 seconds (levels 6 to 10) 
+
+Mob Resistance starts at 0; it cannot go under 0 and cannot go over 1100 
+
+- If the mob starts moving, the Mob Resistance is continually increased by the Mob Resistance Increase until it stops moving; if it stops moving, the Mob Resistance is continually decreased by 9 until it starts moving again
+
+- If the mob isn't damaged during the capture, the Mob Resistance will be continually decreased by 9 until it is damaged; if damaging the mob stops that from happening completely or simply sets a cooldown for this mechanic is unknown 
+
+- The Taming Gauge continually increases or decreases according to the following formula:
+Base Taming Gauge Increase = (1 - mob's Current HP/mob's Max HP) * 300
+ 
+Taming Gauge Increase/Decrease = Base Taming Gauge Increase * (1000 - Mob Resistance)/1000 
+
+- If the mob has the Tumble, Stun, Sleep, Stop or Fatigue aliment, the Taming Gauge Increase/Decrease is doubled
+
+- If you succeed to raise the gauge to the maximum before the timer runs out, the pet will be captured; the pet will have a randomly attributed weapon type, nature and potential base; the type of the mob determines which attack patterns it has; to use the pet, you must first purchase your land, release your pet from the cage at your land, and then raise the pet before calling it
+
+- If you fail, the mob will be inflicted with the Rage ailment and you have a chance to lose the Cage; leveling this skill decreases the chance of losing the Cage (full effects unknown)
+
+- You cannot capture a mob that has the Rage ailment or that has a level higher than the Mob Level LimitPassive Effect: Mob Level Limit +(Skill Level)
+
+Game Description: "Capture the monsters weaker than you. The Max Lv of them and the time limit increase. The chance of breaking Cages decreases as the skill levels up. Consume [Cage] x1"
+ 
+2. Capture Technique I
+Lv 1 Skill; No Limit
+Passive Effect:
+- Mob Level Limit +1 (levels 1 and 2)/ +2 (levels 3 and 4)/ +3 (levels 5 and 6)/ +4 (levels 7 and 8)/ +5 (levels 9 and 10)
+- Skill Timer Boost +1 (level 1)/ +2 (level 2)/ +3 (level 3)/ +4 (level 4)/ +5 (level 5)/ +7 (level 6)/ +9 (level 7)/ +11 (level 8)/ +13 (level 9)/ +15 (level 10)
+Game Description: "The Max Lv of the monsters that can be captured and time limit increase."
+ 
+3. Capture Technique II
+Lv 2 Skill; No Limit
+Passive Effect:
+- Mob Level Limit +1 (levels 1 and 2)/ +2 (levels 3 and 4)/ +3 (levels 5 and 6)/ +4 (levels 7 and 8)/ +5 (levels 9 and 10)
+- Skill Timer Boost +1 (level 1)/ +2 (level 2)/ +3 (level 3)/ +4 (level 4)/ +5 (level 5)/ +7 (level 6)/ +9 (level 7)/ +11 (level 8)/ +13 (level 9)/ +15 (level 10)
+Game Description: "The Max Lv of the monsters that can be captured and time limit increase more."
+ 
+4. Skillful Capture
+Lv 1 Skill; No Limit
+Passive Effect: Supposedly gives a chance to increase the maximum level of captured pets.  At level 10, raise max pet’s level by 5 - 10 level
+Game Description: "Chance to raise the growth limit level of the captured monsters."
+ 
+5. Careful Capture
+Lv 3 Skill; No Limit
+Passive Effect: Supposedly gives a chance to get captured pets with higher potential than usual. At level 10, raise pet’s potential stats by 1 - 10
+Game Description: "Chance to capture monsters with a little high Potential."
+ 
+6. Pet Heal
+Lv 1 Skill; No Limit
+MP Cost: 100
+Base Charge Time: 6 seconds (levels 1 to 3); 5 seconds (level 4 to 6); 4 seconds (level 7 to 9); 3 seconds (level 10)
+Skill Effect: Restores your pet's HP based on the following formula:
+HP Heal Percentage = 0.02 (level 1); 0.05 (level 2); 0.07 (level 3); 0.1 (level 4); 0.12 (level 5); 0.15 (level 6); 0.17 (level 7); 0.2 (level 8); 0.22 (level 9); 0.25 (level 10) 
+HP Heal = pet's Max HP * HP Heal Percentage + 100 * Skill Level 
+Game Description: "Restore the called pet's HP. Unavailable on other players' pets."
+Bow bonus: HP Heal Percentage +0.15
+Bow bonus: Charge Time is halved
+Staff bonus: HP Heal Percentage +0.15
+Staff bonus: Charge Time is divided by 1.5
+If this skill is used in a combo, it will not activate if you have no pet called
+7. Pet MP Charge
+Lv 2 Skill; No Limit
+MP Cost: 300
+Base Charge Time: 9 seconds (levels 1 to 3); 8 seconds (level 4 to 6); 7 seconds (level 7 to 9); 6 seconds (level 10)
+Skill Effect: Restores (100 * Skill Level) MP to your pet
+Game Description: "Restore the called pet's MP. Unavailable on other players' pets."
+Bow bonus: Charge Time is halved
+Staff bonus: Charge Time is divided by 1.5
+If this skill is used in a combo, it will not activate if you have no pet called
+this is info from old amino 2 years ago, credit to xiithguy, mayam, islandi, and rest below

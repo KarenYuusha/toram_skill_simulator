@@ -1,0 +1,12 @@
+{
+  "name": "Magic Warrior Mastery",
+  "slug": "magic_warrior_mastery",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/magicblade/magicwarriormastery.png",
+  "raw_text": "Sub MD only Type Passive Neutral Description Reduce the ATK decrease applied when equipping a sub magic device and increase MATK and CSPD a little. 1-Handed Sword ATK decline penalty is further reduced by 5%. Extras Show more... Weapon: 1-Handed Sword Other Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcMWMasteryATK(level, weapon, result) { var atk = 15 - 1*level if (weapon == \"1h\") {atk -= 5} var HTML = `<li><b>Reduces the ATK penalty</b> granted by <b>equipping a sub Magic Device</b> to -${atk}%</li>` if (atk == 0) {HTML = `<li><b>Nullifies the ATK penalty</b> granted by <b>equipping a sub Magic Device</b></li>`} result.innerHTML += HTML } function calcMWMasteryMATK(level, result) { var matk = level * 2 + Math.max(0,level-5) result.innerHTML += `<li><b>MATK</b> +${matk}</li>` } function calcMWMasteryPercentageCSPD(level, result) { var percentCSPD = 1*level + Math.max(0,level-5) result.innerHTML += `<li><b>Cast Speed</b> +${percentCSPD}%</li>` } function calcMWMasteryFlatCSPD(level, result) { var flatCSPD = level * 10 result.innerHTML += `<li><b>Cast Speed</b> +${flatCSPD}</li>` } function calcMWMasteryValues() { let weaponSelector = document.getElementById(\"MWMasteryWeapon\") let weapon = weaponSelector[weaponSelector.selectedIndex].value let levelSelector = document.getElementById(\"MWMasteryLevel\") let level = levelSelector[levelSelector.selectedIndex].value let result = document.getElementById(\"MWarriorMasteryValues\") result.innerHTML = `Gains the following bonuses when a <b>Magic Device</b> is equipped in the <b>sub-hand slot</b>:` calcMWMasteryATK(level, weapon, result) calcMWMasteryMATK(level, result) calcMWMasteryPercentageCSPD(level, result) calcMWMasteryFlatCSPD(level, result) } calcMWMasteryValues() Conversion",
+  "tree": "MagicBlade",
+  "tree_slug": "magicblade",
+  "tree_url": "https://coryn.club/skill.php?tree=MagicBlade",
+  "image_path": "assets/skill_tree/magicblade/magic_warrior_mastery.png",
+  "data_path": "doc/coryn_skills/magicblade/magic_warrior_mastery.json"
+}

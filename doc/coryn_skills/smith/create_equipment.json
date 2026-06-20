@@ -1,0 +1,12 @@
+{
+  "name": "Create Equipment",
+  "slug": "create_equipment",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/smith/createeq.png",
+  "raw_text": "Available with all weapons Type EX Skill Element Neutral MP 0 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start No Combo middle No Range 0 Description Create equipment by yourself. [Create Equipment] is required to attach stats. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcCreateEquipmentEffect(level, result) { result.innerHTML = `<li>Allow you to <b>create equipment by yourself</b> via the <b>Smith Skills</b> section in <b>EX Skills</b>; this crafting method has several differences compared to <b>NPC's Equipment Crafing</b>:<ul> <li>&nbsp&nbsp&nbsp- It does not cost Spina, but <b>can have a chance of failure</b>; upon failure, the stats of the created equipment will almost always become lower than its usual base stats</li> <li>&nbsp&nbsp&nbsp- Player-crafted equipment <b>does not have any usual stat</b>, instead have a unique stat called <b>Potential</b>; this stat allows player to customize the stats of the equipment to a certain extent (requires <b>Customize Equipment</b> skill)</li> <li>&nbsp&nbsp&nbsp- Equipment created via this <b>always have a very low chance of getting 2 slots</b></li> </ul></li>` } function addCreateEquipmentExtraInfo(result) { result.innerHTML += `<br>Check <a href=\"https://coryn.club/guide.php?key=smith\" style=\"color:blue;\"><b>Smithing Guide > Crafting</b></a> for more details` } function calcCreateEquipmentValues() { var levelSelector = document.getElementById(\"createEquipmentSkillLevel\") var level = levelSelector[levelSelector.selectedIndex].value var result = document.getElementById(\"createEquipmentValues\") calcCreateEquipmentEffect(level, result) addCreateEquipmentExtraInfo(result) } calcCreateEquipmentValues() Careful Creation",
+  "tree": "Smith",
+  "tree_slug": "smith",
+  "tree_url": "https://coryn.club/skill.php?tree=Smith",
+  "image_path": "assets/skill_tree/smith/create_equipment.png",
+  "data_path": "doc/coryn_skills/smith/create_equipment.json"
+}

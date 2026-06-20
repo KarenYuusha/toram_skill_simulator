@@ -1,0 +1,12 @@
+{
+  "name": "Reflex",
+  "slug": "reflex",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/dw/reflex.png",
+  "raw_text": "Available with all weapons Type Active Element Weapon Dependent MP 100 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 0 Description Greatly raises Evasion Recharge for a short time. Decreases DEF and MDEF a lot. Dual Swords Duration +90sec Extras Show more... Weapon: Dual Swords Other Skill Level: 1 2 3 4 5 6 7 8 9 10 function caclReflexEvasionRecharge(level, result) { let evasionRecharge = 10 + (2 * level) result.innerHTML = `<b>Buff Effect:</b> <li><b>Evasion Recharge</b> +${evasionRecharge}%</li>` } function calcReflexDeffAndMdeffPenalty( level, result) { let penalty = 100 - level result.innerHTML += `<li style = 'color: #C70039'><b>DEF</b> -${penalty}%</li> <li style = 'color: #C70039'><b>MDEF</b> -${penalty}%</li>` } function calcReflexBuffDuration (weapon, result) { // ds equipped got bonus 1 min 30 sec let baseDuration = 10 let dsBonusSecondTime = baseDuration + 30 if (weapon == 'ds') {result.innerHTML += `<li><b>Buff Duration:</b> 1 minute ${dsBonusSecondTime} seconds</li>`} else {result.innerHTML += `<li><b>Buff Duration:</b> ${baseDuration} seconds</li>`} } function calcReflexValues() { let levelSelector = document.getElementById('reflexSkillLevel') let level = levelSelector[levelSelector.selectedIndex].value let weaponSelector = document.getElementById('reflexWeaponType') let weapon = weaponSelector[weaponSelector.selectedIndex].value let result = document.getElementById('reflexValues') caclReflexEvasionRecharge(level, result) calcReflexDeffAndMdeffPenalty(level, result) calcReflexBuffDuration(weapon, result) } calcReflexValues() Flash Blast",
+  "tree": "DualSword",
+  "tree_slug": "dualsword",
+  "tree_url": "https://coryn.club/skill.php?tree=DualSword",
+  "image_path": "assets/skill_tree/dualsword/reflex.png",
+  "data_path": "doc/coryn_skills/dualsword/reflex.json"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Metal Compassion",
+  "slug": "metal_compassion",
+  "required_level": 5,
+  "image_url": "https://coryn.club/skill/smith/metalcompassion.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description Reduces the Metal points consumed by Skill: [Customize Equipment]. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcMetalCompassionValues() { var levelSelector = document.getElementById(\"metalCompassionSkillLevel\") var level = levelSelector[levelSelector.selectedIndex].value var result = document.getElementById(\"metalCompassionValues\") result.innerHTML = `Reduces the <b>Metal Point consumption</b> of <b>Customize Equipment</b> by ${level}%; stacks <b>multiplicatively</b> with the material consumption reduction of <b>Blacksmith Proficiency</b>` } calcMetalCompassionValues() Fabric Compassion",
+  "tree": "Smith",
+  "tree_slug": "smith",
+  "tree_url": "https://coryn.club/skill.php?tree=Smith",
+  "image_path": "assets/skill_tree/smith/metal_compassion.png",
+  "data_path": "doc/coryn_skills/smith/metal_compassion.json"
+}

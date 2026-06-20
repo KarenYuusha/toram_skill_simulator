@@ -1,0 +1,12 @@
+{
+  "name": "Soul Stream",
+  "slug": "soul_stream",
+  "required_level": 3,
+  "image_url": "https://coryn.club/skill/necromancer/soulstream.png",
+  "raw_text": "Staff only Type Active, Magic skill Element Weapon Dependent MP 900 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 12 Description Unleashes a spiritual particle beam. Performs a magic attack. Restores MP and raises the chance to inflict [Lethargy] based on spirit stacks used. The number of spirit stacks used depends on the amount of MP consumed when the skill is activated. ( max 20 ) Skeleton Call",
+  "tree": "Necromancer",
+  "tree_slug": "necromancer",
+  "tree_url": "https://coryn.club/skill.php?tree=Necromancer",
+  "image_path": "assets/skill_tree/necromancer/soul_stream.png",
+  "data_path": "doc/coryn_skills/necromancer/soul_stream.json"
+}

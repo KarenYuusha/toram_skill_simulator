@@ -1,0 +1,178 @@
+{
+  "skill_tree": "Priest",
+  "tree_slug": "priest",
+  "group": "sub_weapon_skills",
+  "raw_skill_file": "sub_weapon_skills/priest_skills.txt",
+  "coordinate_system": {
+    "origin": [
+      0,
+      0
+    ],
+    "format": [
+      "row",
+      "column"
+    ],
+    "description": "Moving one level down adds [1, 0]; moving one column right adds [0, 1]. Empty rows and columns are preserved to match the image layout."
+  },
+  "skills": [
+    {
+      "id": "bless",
+      "name": "Bless",
+      "position": [
+        0,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "gloria",
+      "name": "Gloria",
+      "position": [
+        0,
+        1
+      ],
+      "prerequisites": [
+        "bless"
+      ]
+    },
+    {
+      "id": "enhanced_bless",
+      "name": "Enhanced Bless",
+      "position": [
+        0,
+        2
+      ],
+      "prerequisites": [
+        "gloria"
+      ]
+    },
+    {
+      "id": "royal_heal",
+      "name": "Royal Heal",
+      "position": [
+        0,
+        3
+      ],
+      "prerequisites": [
+        "enhanced_bless"
+      ]
+    },
+    {
+      "id": "sacred_teaching",
+      "name": "Sacred Teaching",
+      "position": [
+        0,
+        4
+      ],
+      "prerequisites": [
+        "royal_heal"
+      ]
+    },
+    {
+      "id": "holy_fist",
+      "name": "Holy Fist",
+      "position": [
+        1,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "holy_light",
+      "name": "Holy Light",
+      "position": [
+        1,
+        1
+      ],
+      "prerequisites": [
+        "holy_fist"
+      ]
+    },
+    {
+      "id": "ether_barrier",
+      "name": "Ether Barrier",
+      "position": [
+        1,
+        2
+      ],
+      "prerequisites": [
+        "holy_light"
+      ]
+    },
+    {
+      "id": "prayer",
+      "name": "Prayer",
+      "position": [
+        1,
+        3
+      ],
+      "prerequisites": [
+        "ether_barrier"
+      ]
+    },
+    {
+      "id": "aspis_soul",
+      "name": "Aspis Soul",
+      "position": [
+        1,
+        4
+      ],
+      "prerequisites": [
+        "prayer"
+      ]
+    },
+    {
+      "id": "staff_thrust",
+      "name": "Staff Thrust",
+      "position": [
+        2,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "exorcism",
+      "name": "Exorcism",
+      "position": [
+        2,
+        1
+      ],
+      "prerequisites": [
+        "holy_light"
+      ]
+    },
+    {
+      "id": "holy_book",
+      "name": "Holy Book",
+      "position": [
+        2,
+        2
+      ],
+      "prerequisites": [
+        "exorcism"
+      ]
+    },
+    {
+      "id": "nemesis",
+      "name": "Nemesis",
+      "position": [
+        2,
+        3
+      ],
+      "prerequisites": [
+        "holy_book"
+      ]
+    },
+    {
+      "id": "holy_grace",
+      "name": "Holy Grace",
+      "position": [
+        2,
+        4
+      ],
+      "prerequisites": [
+        "nemesis"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Careful Creation",
+  "slug": "careful_creation",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/smith/carefulcreation.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description The potential of the equipment created by [Create equipment] increases. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcCarefulCreationEffect(level, result) { result.innerHTML = `<li>Increases the <b>Potential</b> of equipment created via <b>Create Equipment</b> by ${level}% of its <b>Base Potential</b></li>` } function addCarefulCreationExtraInfo(result) { result.innerHTML += `<br>Check <a href=\"https://coryn.club/guide.php?key=smith\" style=\"color:blue;\"><b>Smithing Guide > Crafting</b></a> for more details` } function calcCarefulCreationValues() { var levelSelector = document.getElementById(\"carefulCreationSkillLevel\") var level = levelSelector[levelSelector.selectedIndex].value var result = document.getElementById(\"carefulCreationValues\") calcCarefulCreationEffect(level, result) addCarefulCreationExtraInfo(result) } calcCarefulCreationValues() Expert's Creation",
+  "tree": "Smith",
+  "tree_slug": "smith",
+  "tree_url": "https://coryn.club/skill.php?tree=Smith",
+  "image_path": "assets/skill_tree/smith/careful_creation.png",
+  "data_path": "doc/coryn_skills/smith/careful_creation.json"
+}

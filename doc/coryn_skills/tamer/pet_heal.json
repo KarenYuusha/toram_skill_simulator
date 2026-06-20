@@ -1,0 +1,12 @@
+{
+  "name": "Pet Heal",
+  "slug": "pet_heal",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/tamer/petheal.png",
+  "raw_text": "Available with all weapons Type Active Element Neutral MP 100 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 0 Description Restore the called pet's HP. Unavailable on other players' pets. Bow Boost on heal amount by 15% of max HP. Charge time is shortened by 50%. Staff Boost on heal amount. by 15% of max HP Charge time is shortened by 33%. Extras Show more... Heals 100 + 2.5% per skill Lv. Charge time decreases as skill levels up, minimum of 3 sec at Lv 10. Pet MP Charge",
+  "tree": "Tamer",
+  "tree_slug": "tamer",
+  "tree_url": "https://coryn.club/skill.php?tree=Tamer",
+  "image_path": "assets/skill_tree/tamer/pet_heal.png",
+  "data_path": "doc/coryn_skills/tamer/pet_heal.json"
+}

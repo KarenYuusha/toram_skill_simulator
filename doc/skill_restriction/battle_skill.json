@@ -1,0 +1,178 @@
+{
+  "skill_tree": "Battle",
+  "tree_slug": "battle",
+  "group": "assist_skills",
+  "raw_skill_file": "assist_skills/battle_skills.txt",
+  "coordinate_system": {
+    "origin": [
+      0,
+      0
+    ],
+    "format": [
+      "row",
+      "column"
+    ],
+    "description": "Moving one level down adds [1, 0]; moving one column right adds [0, 1]. Empty rows and columns are preserved to match the image layout."
+  },
+  "skills": [
+    {
+      "id": "magic_up",
+      "name": "Magic UP",
+      "position": [
+        0,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "concentrate",
+      "name": "Concentrate",
+      "position": [
+        0,
+        1
+      ],
+      "prerequisites": [
+        "magic_up"
+      ]
+    },
+    {
+      "id": "desperate_resist",
+      "name": "Desperate Resist",
+      "position": [
+        0,
+        2
+      ],
+      "prerequisites": [
+        "concentrate"
+      ]
+    },
+    {
+      "id": "increased_energy",
+      "name": "Increased Energy",
+      "position": [
+        0,
+        3
+      ],
+      "prerequisites": [
+        "desperate_resist"
+      ]
+    },
+    {
+      "id": "spell_burst",
+      "name": "Spell Burst",
+      "position": [
+        0,
+        4
+      ],
+      "prerequisites": [
+        "increased_energy"
+      ]
+    },
+    {
+      "id": "attack_up",
+      "name": "Attack UP",
+      "position": [
+        1,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "whack",
+      "name": "Whack",
+      "position": [
+        1,
+        1
+      ],
+      "prerequisites": [
+        "attack_up"
+      ]
+    },
+    {
+      "id": "critical_up",
+      "name": "Critical UP",
+      "position": [
+        1,
+        2
+      ],
+      "prerequisites": [
+        "whack"
+      ]
+    },
+    {
+      "id": "intimidating_power",
+      "name": "Intimidating Power",
+      "position": [
+        1,
+        3
+      ],
+      "prerequisites": [
+        "critical_up"
+      ]
+    },
+    {
+      "id": "secret_chase_attack",
+      "name": "Secret Chase Attack",
+      "position": [
+        1,
+        4
+      ],
+      "prerequisites": [
+        "intimidating_power"
+      ]
+    },
+    {
+      "id": "defense_up",
+      "name": "Defense UP",
+      "position": [
+        2,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "dodge_up",
+      "name": "Dodge UP",
+      "position": [
+        2,
+        1
+      ],
+      "prerequisites": [
+        "defense_up"
+      ]
+    },
+    {
+      "id": "accuracy_up",
+      "name": "Accuracy UP",
+      "position": [
+        2,
+        2
+      ],
+      "prerequisites": [
+        "dodge_up"
+      ]
+    },
+    {
+      "id": "defense_mastery",
+      "name": "Defense Mastery",
+      "position": [
+        2,
+        3
+      ],
+      "prerequisites": [
+        "accuracy_up"
+      ]
+    },
+    {
+      "id": "super_grip",
+      "name": "Super Grip",
+      "position": [
+        2,
+        4
+      ],
+      "prerequisites": [
+        "defense_mastery"
+      ]
+    }
+  ]
+}

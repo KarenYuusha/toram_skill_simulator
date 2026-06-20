@@ -1,0 +1,12 @@
+{
+  "name": "Expert's Customization II",
+  "slug": "experts_customization_ii",
+  "required_level": 5,
+  "image_url": "https://coryn.club/skill/smith/accuratecustomization.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description The ability in the first slot may remain unchanged even when Skill: [Customize Equipment] fails. Process Materials",
+  "tree": "Smith",
+  "tree_slug": "smith",
+  "tree_url": "https://coryn.club/skill.php?tree=Smith",
+  "image_path": "assets/skill_tree/smith/experts_customization_ii.png",
+  "data_path": "doc/coryn_skills/smith/experts_customization_ii.json"
+}

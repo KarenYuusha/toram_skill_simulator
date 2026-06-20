@@ -1,0 +1,12 @@
+{
+  "name": "Skull Shaker",
+  "slug": "skull_shaker",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/necromancer/skullshaker.png",
+  "raw_text": "Staff/Halberd only Type Active, Physical skill Element Weapon Dependent MP 200 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 3 Description Delivers a heavy blow to the top of the head with a staff. Performs a physical attack to the target. Chance to inflict [Dizzy]. Each successful hit increases the power and may inflict [Stun] on the target. The effect resets upon inflicting [Stun]. Hazard Strike",
+  "tree": "Necromancer",
+  "tree_slug": "necromancer",
+  "tree_url": "https://coryn.club/skill.php?tree=Necromancer",
+  "image_path": "assets/skill_tree/necromancer/skull_shaker.png",
+  "data_path": "doc/coryn_skills/necromancer/skull_shaker.json"
+}

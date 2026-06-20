@@ -1,0 +1,12 @@
+{
+  "name": "Customize Equipment",
+  "slug": "customize_equipment",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/smith/customizeeq.png",
+  "raw_text": "Available with all weapons Type EX Skill Element Neutral MP 0 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start No Combo middle No Range 0 Description Consume potential and attach stats to the equipment created by [Create Equipment]. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcCustomizeEquipmentEffect(level, result) { result.innerHTML = `<li>Allow you to <b>customize the stats</b> of any equipment with <b>Potential</b> higher than 0 via the <b>Smith Skills</b> section in <b>EX Skills</b></li> <li>Grants 3 <b>Statting Slots</b></li> <li><b>Statting Success Rate</b> +${level}</li>` } function addCustomizeEquipmentExtraInfo(result) { result.innerHTML += `<br>Check <a href=\"https://coryn.club/guide.php?key=smith\" style=\"color:blue;\"><b>Smithing Guide > Statting</b></a> for more details` } function calcCustomizeEquipmentValues() { var levelSelector = document.getElementById(\"customizeEquipmentSkillLevel\") var level = levelSelector[levelSelector.selectedIndex].value var result = document.getElementById(\"customizeEquipmentValues\") calcCustomizeEquipmentEffect(level, result) addCustomizeEquipmentExtraInfo(result) } calcCustomizeEquipmentValues() Accurate Customization",
+  "tree": "Smith",
+  "tree_slug": "smith",
+  "tree_url": "https://coryn.club/skill.php?tree=Smith",
+  "image_path": "assets/skill_tree/smith/customize_equipment.png",
+  "data_path": "doc/coryn_skills/smith/customize_equipment.json"
+}

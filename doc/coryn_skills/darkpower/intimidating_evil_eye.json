@@ -1,0 +1,12 @@
+{
+  "name": "Intimidating Evil Eye",
+  "slug": "intimidating_evil_eye",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/dark/intimidatingevileye.png",
+  "raw_text": "Available with all weapons Type Active, Magic skill Element Dark MP 100 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 12 Description Makes the target flinch with a sharp glare. The lower the target's level, the higher the chance to inflict [Flinch]. If unsuccessful, inflicts [Slow]. Not expected to deal much damage. All Weapons The level of Eternal Nightmare increases the chance to inflict [Flinch]. Bewitching Evil Eye",
+  "tree": "DarkPower",
+  "tree_slug": "darkpower",
+  "tree_url": "https://coryn.club/skill.php?tree=DarkPower",
+  "image_path": null,
+  "data_path": "doc/coryn_skills/darkpower/intimidating_evil_eye.json"
+}

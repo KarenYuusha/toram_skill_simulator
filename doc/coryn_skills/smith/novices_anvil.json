@@ -1,0 +1,12 @@
+{
+  "name": "Novice's Anvil",
+  "slug": "novices_anvil",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/smith/noviceanvil.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description Increases the proficiency limit of blacksmithing. Without this skill, proficiency can reach Lv50. At Lv10, the limit increases to the level cap. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcNovicesAnvilValues() { var levelSelector = document.getElementById(\"novicesAnvilSkillLevel\") var level = levelSelector[levelSelector.selectedIndex].value var result = document.getElementById(\"novicesAnvilValues\") result.innerHTML = `<li><b>Blacksmith Proficiency Level Limit</b> +${5*level}</li><br> <b>Maximum Blacksmith Proficiency Level</b> without <b>any Anvil passives (including this skill)</b> is Lv50` } calcNovicesAnvilValues() Craftsman's Anvil",
+  "tree": "Smith",
+  "tree_slug": "smith",
+  "tree_url": "https://coryn.club/skill.php?tree=Smith",
+  "image_path": "assets/skill_tree/smith/novices_anvil.png",
+  "data_path": "doc/coryn_skills/smith/novices_anvil.json"
+}

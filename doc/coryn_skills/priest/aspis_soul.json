@@ -1,0 +1,12 @@
+{
+  "name": "Aspis Soul",
+  "slug": "aspis_soul",
+  "required_level": 5,
+  "image_url": "https://coryn.club/skill/priest/aspissoul.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description The shield of faith. Gains a permanent effect that reduces Fractional Damage aimed at you. Also gains an effect that prevents status ailments at a certain time. All Weapons When in a party, Fractional Damage resistance is increased further according to the number of members ( up to 3 ) who are still alive. The effect that prevents status ailments is gained at the beginning of a boss battle and when naturally recovering from a status ailment. Staff Thrust",
+  "tree": "Priest",
+  "tree_slug": "priest",
+  "tree_url": "https://coryn.club/skill.php?tree=Priest",
+  "image_path": "assets/skill_tree/priest/aspis_soul.png",
+  "data_path": "doc/coryn_skills/priest/aspis_soul.json"
+}

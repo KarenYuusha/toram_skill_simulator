@@ -1,0 +1,12 @@
+{
+  "name": "Craftsman's Anvil",
+  "slug": "craftsmans_anvil",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/smith/craftsmananvil.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description Reduces the materials required for Customize Equipment. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcCraftsmansAnvilValues() { var levelSelector = document.getElementById(\"craftsmansAnvilSkillLevel\") var level = levelSelector[levelSelector.selectedIndex].value var result = document.getElementById(\"craftsmansAnvilValues\") result.innerHTML = `<li><b>Blacksmith Proficiency Level Limit</b> +${5*level}</li>` } calcCraftsmansAnvilValues() Blacksmith's Anvil",
+  "tree": "Smith",
+  "tree_slug": "smith",
+  "tree_url": "https://coryn.club/skill.php?tree=Smith",
+  "image_path": "assets/skill_tree/smith/craftsmans_anvil.png",
+  "data_path": "doc/coryn_skills/smith/craftsmans_anvil.json"
+}

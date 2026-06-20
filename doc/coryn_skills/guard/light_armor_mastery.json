@@ -1,0 +1,12 @@
+{
+  "name": "Light Armor Mastery",
+  "slug": "light_armor_mastery",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/guard/lightarmor.png",
+  "raw_text": "Light Armor only Type Passive Neutral Description Increases Evasion Recharge when light-remodeled armor is equipped. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcLightArmorMasteryValues() { var levelSelector = document.getElementById(\"lightArmorMasteryLevel\") var level = levelSelector[levelSelector.selectedIndex].value var evasionRecharge = 1 * level var result = document.getElementById(\"lightArmorMasteryValues\") result.innerHTML = `<li><b>Evasion Recharge</b> +${evasionRecharge}%</li>` } calcLightArmorMasteryValues() Advanced Evasion",
+  "tree": "Guard",
+  "tree_slug": "guard",
+  "tree_url": "https://coryn.club/skill.php?tree=Guard",
+  "image_path": "assets/skill_tree/guard/light_armor_mastery.png",
+  "data_path": "doc/coryn_skills/guard/light_armor_mastery.json"
+}

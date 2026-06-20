@@ -1,0 +1,12 @@
+{
+  "name": "Nukiuchi Sennosen",
+  "slug": "nukiuchi_sennosen",
+  "required_level": 5,
+  "image_url": "https://coryn.club/skill/katana/shukuchi.png",
+  "raw_text": "Main Katana only Type Passive Neutral Description A sword-drawing technique that is like a miracle. When not attacking for a certain period of time, the normal attack with Shukuchi will be greatly enhanced. The less HP you have, the more powerful it is. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 Current HP Percentage: function calcNukiuchiSennosenSkillEffect(level, result) { var wait = 12 - 1*level result.innerHTML = `<li>After ${wait} seconds of <b>not attacking</b>, gains <b>Nukiuchi Sennosen buff</b> (indicated by a faint glow that appears briefly on the weapon)</li> <li>Performing an <b>after-attack slide</b> will reduce the remaining cooldown by 1 second</li>` } function calcNukiuchiSennosenBuffEffect(currentHP, result) { var aaConst = 1000 * (100 - 1*currentHP)/100 var cdmg = 1 var HTML = `<br><b>Buff Effect:</b>` if (aaConst > 0) {HTML += `<li><b>Skill Constant bonus</b> of <b>Shukuchi buff</b> +${aaConst}</li>`} HTML += `<li><b>Skill Multiplier bonus</b> of <b>Shukuchi buff</b> becomes +4</li> <li><b>Pulse Blade</b> becomes <b>Swift Pulse Blade</b>, its damage is multiplied by 5 times, and it will not inflict proration</li> <li><b>Buff Duration:</b> Until an auto attack or an attacking skill is used</li>` result.innerHTML += HTML } function calcNukiuchiSennosenValues() { let levelSelector = document.getElementById(\"nukiuchiSennosenSkillLevel\") let level = levelSelector[levelSelector.selectedIndex].value let currentHP = document.getElementById(\"nukiuchiCurrentHP\").value let result = document.getElementById(\"nukiuchiSennosenValues\") calcNukiuchiSennosenSkillEffect(level, result) calcNukiuchiSennosenBuffEffect(currentHP, result) } calcNukiuchiSennosenValues() Two-Handed",
+  "tree": "Mononofu",
+  "tree_slug": "mononofu",
+  "tree_url": "https://coryn.club/skill.php?tree=Mononofu",
+  "image_path": "assets/skill_tree/mononofu/nukiuchi_sennosen.png",
+  "data_path": "doc/coryn_skills/mononofu/nukiuchi_sennosen.json"
+}

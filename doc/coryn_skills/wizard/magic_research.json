@@ -1,0 +1,12 @@
+{
+  "name": "Magic Research",
+  "slug": "magic_research",
+  "required_level": 5,
+  "image_url": "https://coryn.club/skill/magic/magicmastery.png",
+  "raw_text": "Magic Device/Staff/Sub MD only Type Passive Neutral Description Deepens your understanding of magic through research. Increases the power of \"Imperial Ray\" and shortens the casting time of magic used by the familiar. Mana Crystal",
+  "tree": "Wizard",
+  "tree_slug": "wizard",
+  "tree_url": "https://coryn.club/skill.php?tree=Wizard",
+  "image_path": "assets/skill_tree/wizard/magic_research.png",
+  "data_path": "doc/coryn_skills/wizard/magic_research.json"
+}

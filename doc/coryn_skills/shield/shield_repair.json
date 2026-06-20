@@ -1,0 +1,12 @@
+{
+  "name": "Shield Repair",
+  "slug": "shield_repair",
+  "required_level": 4,
+  "image_url": "https://coryn.club/skill/shield/shieldrepair.png",
+  "raw_text": "Shield only Type Active Element Neutral MP 200 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 0 Description Repairs your shield and recovers its durability. Recovers the Guard power consumed. Also recovers MP depending on the recovered Guard. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcShieldRepairCastTime(result) { result.innerHTML = `<li><b>Cast Time:</b> 2 seconds (unaffected by CSPD)</li>` } function calcShieldRepairSkillEffect(level, result) { var gauge = 10 + 4*level result.innerHTML += `<br><b>Skill Effect:</b> <li>Recovers <b>Guard gauge</b> by ${gauge}% of <b>missing Guard gauge</b> upon successful cast</li> <li>Recovers 1 MP for every 0.1 unit of <b>Guard gauge</b> recovered by this skill</li>` } function calcShieldRepairValues() { let levelSelector = document.getElementById(\"shieldRepairLevel\") let level = levelSelector[levelSelector.selectedIndex].value let result = document.getElementById(\"shieldRepairValues\") calcShieldRepairCastTime(result) calcShieldRepairSkillEffect(level, result) } calcShieldRepairValues() Belagerung",
+  "tree": "Shield",
+  "tree_slug": "shield",
+  "tree_url": "https://coryn.club/skill.php?tree=Shield",
+  "image_path": "assets/skill_tree/shield/shield_repair.png",
+  "data_path": "doc/coryn_skills/shield/shield_repair.json"
+}

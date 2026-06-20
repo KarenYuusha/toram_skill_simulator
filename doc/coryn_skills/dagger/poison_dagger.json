@@ -1,0 +1,12 @@
+{
+  "name": "Poison Dagger",
+  "slug": "poison_dagger",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/dagger/poisondagger.png",
+  "raw_text": "Dagger only Type Active, Physical skill Element Weapon Dependent MP 200 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 8 Description Attack with a poisoned dagger. The damage increases as INT is higher. Chance to inflict [Poison]. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 Caster Level: Total AGI: Total DEX: Base INT: function calcPoisonDaggerConstant(level, casterLevel, agiValue, dexValue, result) { var constant = 100 + 10*level + 1*casterLevel + agiValue*2 + Math.floor(dexValue/2) result.innerHTML = `<li><b>Skill Constant: </b> ${constant}</li>` } function calcPoisonDaggerMultiplier(level, intValue, result) { var multiplier = 0.5 + 0.025*level + intValue/((11-level*1)*100) if (multiplier - Math.floor(multiplier*100)/100 < 0.0099999999) {multiplier = Math.floor(multiplier*100)/100} else {multiplier = Math.round(multiplier*100)/100} result.innerHTML += `<li><b>Skill Multiplier:</b> ${multiplier}</li><br>` } function calcPoisonDaggerPoisonChance(level, result) { var chance = Math.floor(75 + 2.5 * level) result.innerHTML += `<li><b>Poison Chance:</b> ${chance}%</li> <li><b>Poison Duration:</b> 10 seconds</li>` } function calcPoisonDaggerValue() { let levelSelector = document.getElementById(\"poisonDaggerLevel\") let level = levelSelector[levelSelector.selectedIndex].value let casterLevel = document.getElementById(\"poisonDaggerCasterLevel\").value let agiValue = document.getElementById(\"poisonDaggerAgiValue\").value let dexValue = document.getElementById(\"poisonDaggerDexValue\").value let intValue = document.getElementById(\"poisonDaggerIntValue\").value let result = document.getElementById(\"poisonDaggerValue\") calcPoisonDaggerConstant(level, casterLevel, agiValue, dexValue, result) calcPoisonDaggerMultiplier(level, intValue, result) calcPoisonDaggerPoisonChance(level, result) } calcPoisonDaggerValue() Double Stab",
+  "tree": "Dagger",
+  "tree_slug": "dagger",
+  "tree_url": "https://coryn.club/skill.php?tree=Dagger",
+  "image_path": "assets/skill_tree/dagger/poison_dagger.png",
+  "data_path": "doc/coryn_skills/dagger/poison_dagger.json"
+}

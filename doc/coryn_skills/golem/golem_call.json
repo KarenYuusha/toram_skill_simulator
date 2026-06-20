@@ -1,0 +1,12 @@
+{
+  "name": "Golem Call",
+  "slug": "golem_call",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/golem/golemcall.png",
+  "raw_text": "Staff/Bowgun/Main MD only Type Active Element Weapon Dependent MP 500 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start No Combo middle No Range 0 Description Summons a golem to assist in battle. Your attacks won't restore MP. Instead, the golem's normal attacks will. From the EX skill, you can choose the golem type and adjust the magic lamp. Neo Lancer",
+  "tree": "Golem",
+  "tree_slug": "golem",
+  "tree_url": "https://coryn.club/skill.php?tree=Golem",
+  "image_path": "assets/skill_tree/golem/golem_call.png",
+  "data_path": "doc/coryn_skills/golem/golem_call.json"
+}

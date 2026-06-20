@@ -1,0 +1,96 @@
+Process Material
+Lv 1 Skill; No Limit
+Skill Effect:
+Allows you to process items in your inventory and convert them to material points without having to spend Spina
+Items processed through this skill will give material points at random, but will give at least (80 + Skill Level)% of the normal amount they provide
+Game Description: "Process materials by yourself. The success rate increases as the skill levels up. It is a common skill in Smith and Alchemy Skills."
+This skill's level is shared with the skill with the same name in the Smith Skills tree
+Item Synthesis
+Lv 1 Skill; No Limit
+Skill Effect:
+Allows you to create potions, ores and gems without having to spend Spina
+
+Technical Information
+The items you create have a difficulty; you can adjust the success rate with your "Difficulty Limit":
+Difficulty Limit = Synthesis Proficiency Level + TEC/2 + total DEX/6
+
+Synthesis Success Rate = (Synthesis Proficiency + TEC/2 + DEX/6 + INT/10 - Item Difficulty + Mid-Class Synthesis Skill Level + High-Class Synthesis Skill Level + Expert's Synthesis Skill Level + Expert's Synthesis II Skill Level) * (0.5 + 0.05 * Item Synthesis Skill Level)
+
+Game Description: "You can synthesize items by yourself. The success rate is lower than the synthesists but you don't need Spina."
+
+Mid-Class Synthesis
+Lv 2 Skill; No Limit
+Passive Effect: Increases the chances of Item Synthesis (full effects unknown) and Reduce Synthesis Material consumption by (Skill Level)%
+Game Description: "Increases the success rate of [Item Synthesis] a little."
+High-Class Synthesis
+Lv 3 Skill; No Limit
+Passive Effect: Increases the chances of Item Synthesis (full effects unknown) and Reduce Synthesis Material consumption by (Skill Level)%
+Game Description: "Increases the success rate of [Item Synthesis]."
+Expert’s Synthesis
+Lv 4 Skill; No Limit
+Passive Effect: Increases the chances of Item Synthesis (full effects unknown) and Reduce Synthesis Material consumption by (Skill Level)%
+Game Description: "Increases the success rate of [Item Synthesis] more."
+Expert’s Synthesis II
+Lv 5 Skill; No Limit
+Passive Effect: Increases the chances of Item Synthesis (full effects unknown) and Reduce Synthesis Material consumption by (Skill Level)%
+Game Description: "Moderately increases the success rate of [Item Synthesis] more."
+Novice's Bottle
+Lv 1 Skill; No Limit
+Passive Effect: Increases the Synthesis Proficiency Level limit by (5 * Skill Level)
+Game Description: "Increases the limit of synthesis proficiency level. You can level up the proficiency up to Lv50 without this skill."
+The base Synthesis Proficiency Level limit is 50
+Craftsman's Bottle
+Lv 2 Skill; No Limit
+Passive Effect: Increases the Synthesis Proficiency Level limit by (5 * Skill Level)
+Game Description: "Increases the limit of proficiency level by 5 per skill level."
+Synthesist's Bottle
+Lv 3 Skill; No Limit
+Passive Effect: Increases the Synthesis Proficiency Level limit by (5 * Skill Level)
+Game Description: "Increases the limit of proficiency level by 5 per skill level."
+Master's Bottle
+Lv 4 Skill; No Limit
+Passive Effect: Increases the Synthesis Proficiency Level limit by (5 * Skill Level)
+Game Description: "Increases the limit of proficiency level by 5 per skill level."
+Master's Bottle II
+Lv 5 Skill; No Limit
+Passive Effect: Increases the Synthesis Proficiency Level limit by (5 * Skill Level)
+Game Description: "Increases the limit of proficiency level by 5 per skill level. Proficiency increases to the current level cap if all Bottles skills reach lv10"
+
+Synthesize Equipment
+Lv 2 Skill; No Limit
+Skill Effect:
+Allows you to synthesise equipment characteristics without having to spend Spina or Orbs
+
+You can select two of the same type of equipments to select the characteristics you want to keep or get rid of for the resulting equipment; the characteristics you can select are: Appearance (the base model of the weapon/armor/additionnal), Dyes (each dye slot represents one characteristic) and Stats (this includes ATK/DEF of the equipment, Stability of the weapon, the stats attached to that equipment, the number of slots the equipment has, the Crystas attached to said slots, the level of refine and the armor's remodel; you cannot select each of these individually)
+
+If left alone, the resulting equipment will have its characteristics selected at random between the two base equips; you can lock one base weapon's characteristic to ensure that the resulting equipment has it
+
+You can lock 1 characteristic to start with; you gain extra locks by raising your Synthesis Proficiency Level (one at level 50, one at level 100, one at level 150 and the final one at level 200)
+
+On failure, some of the locks might not take effect
+
+Technical Information(more detail in ⁠synthesis)
+The chances for success are calculated as follows:
+Equip Synthesis Lock Penalty = number of locked characteristics²/2; this value cannot go under 1
+Equip Synthesis Success Rate = (50 + Skill Equip Synthesis Boost + 2 * TEC)/Equip Synthesis Lock Penalty
+
+Skill Equip Synthesis Boost starts at 0
+Passive Effect: Skill Equip Synthesis Boost +(10 * Skill Level)
+
+Game Description: "You can synthesize items by yourself. The success rate is lower than the synthesis but you don't need Spina."
+Technical Synthesis
+Lv 3 Skill; No Limit
+Passive Effect: Skill Equip Synthesis Boost +(15 * Skill Level)
+Game Description: "Increase the success rates of Skill: [Synthesize Equipment]."
+
+Technical Synthesis II
+Lv 4 Skill; No Limit
+Passive Effect: Skill Equip Synthesis Boost +(20 * Skill Level)
+Game Description: "Increase the success rates of Skill: [Synthesize Equipment]."
+
+Technical Synthesis III
+Lv 5 Skill; No Limit
+Passive Effect: Skill Equip Synthesis Boost +(20 * Skill Level)
+Game Description: "Increase the success rates of Skill: [Synthesize Equipment]."
+
+Lvl req, T1 lv25, T2 lv50, T3 lv100, T4 lv200, T5 lv250

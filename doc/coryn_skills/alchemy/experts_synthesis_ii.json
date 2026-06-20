@@ -1,0 +1,12 @@
+{
+  "name": "Expert's Synthesis II",
+  "slug": "experts_synthesis_ii",
+  "required_level": 5,
+  "image_url": "https://coryn.club/skill/alchemy/highclasssynth.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description Moderately increases the success rates of Skill: [Item Synthesis]. Synthesize Equipment",
+  "tree": "Alchemy",
+  "tree_slug": "alchemy",
+  "tree_url": "https://coryn.club/skill.php?tree=Alchemy",
+  "image_path": "assets/skill_tree/alchemy/experts_synthesis_ii.png",
+  "data_path": "doc/coryn_skills/alchemy/experts_synthesis_ii.json"
+}

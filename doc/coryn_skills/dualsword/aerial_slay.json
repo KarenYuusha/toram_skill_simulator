@@ -1,0 +1,12 @@
+{
+  "name": "Aerial Slay",
+  "slug": "aerial_slay",
+  "required_level": 4,
+  "image_url": "https://coryn.club/skill/dw/aerialslay.png",
+  "raw_text": "Dual Wield/1-Handed Sword only Type Active, Physical skill Element Weapon Dependent MP 300 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 2 Description Slashes your enemy while trifling with them. When activated with a combo ( except as opener ), the required MP becomes 100. You can move with the directional keys while the skill is active. Knuckle [Get the same effect when used with a dagger] Activates in Swift state. Shield Gains resistance to damage and immobility that depends on your shield's refinement value while active. The effect of the skill \"Fareth\" will not be lost when moving with Aerial Slay. Magic Device Can be activated even when you are a certain distance away from the target. Changes to Magic Damage. Arrow [Get the same effect when used with a Ninjutsu Scroll] Can be activated even when you are a certain distance away from the target. Dual Swords Aggro from MP consumption will be greatly reduced for 5 seconds. Horizon Cut",
+  "tree": "DualSword",
+  "tree_slug": "dualsword",
+  "tree_url": "https://coryn.club/skill.php?tree=DualSword",
+  "image_path": "assets/skill_tree/dualsword/aerial_slay.png",
+  "data_path": "doc/coryn_skills/dualsword/aerial_slay.json"
+}

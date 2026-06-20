@@ -1,0 +1,154 @@
+{
+  "skill_tree": "Support",
+  "tree_slug": "support",
+  "group": "assist_skills",
+  "raw_skill_file": "assist_skills/support_skills.txt",
+  "coordinate_system": {
+    "origin": [
+      0,
+      0
+    ],
+    "format": [
+      "row",
+      "column"
+    ],
+    "description": "Moving one level down adds [1, 0]; moving one column right adds [0, 1]. Empty rows and columns are preserved to match the image layout."
+  },
+  "skills": [
+    {
+      "id": "mini_heal",
+      "name": "Mini Heal",
+      "position": [
+        0,
+        1
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "recovery",
+      "name": "Recovery",
+      "position": [
+        0,
+        2
+      ],
+      "prerequisites": [
+        "mini_heal"
+      ]
+    },
+    {
+      "id": "sanctuary",
+      "name": "Sanctuary",
+      "position": [
+        0,
+        3
+      ],
+      "prerequisites": [
+        "recovery"
+      ]
+    },
+    {
+      "id": "heal",
+      "name": "Heal",
+      "position": [
+        0,
+        4
+      ],
+      "prerequisites": [
+        "sanctuary"
+      ]
+    },
+    {
+      "id": "first_aid",
+      "name": "First Aid",
+      "position": [
+        1,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "life_recovery",
+      "name": "Life Recovery",
+      "position": [
+        1,
+        1
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "brave_aura",
+      "name": "Brave Aura",
+      "position": [
+        1,
+        2
+      ],
+      "prerequisites": [
+        "life_recovery"
+      ]
+    },
+    {
+      "id": "high_cycle",
+      "name": "High Cycle",
+      "position": [
+        1,
+        3
+      ],
+      "prerequisites": [
+        "brave_aura"
+      ]
+    },
+    {
+      "id": "quick_motion",
+      "name": "Quick Motion",
+      "position": [
+        1,
+        4
+      ],
+      "prerequisites": [
+        "high_cycle"
+      ]
+    },
+    {
+      "id": "mana_recharge",
+      "name": "Mana Recharge",
+      "position": [
+        2,
+        1
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "magic_barrier",
+      "name": "Magic Barrier",
+      "position": [
+        2,
+        2
+      ],
+      "prerequisites": [
+        "mana_recharge"
+      ]
+    },
+    {
+      "id": "immunity",
+      "name": "Immunity",
+      "position": [
+        2,
+        3
+      ],
+      "prerequisites": [
+        "magic_barrier"
+      ]
+    },
+    {
+      "id": "fast_reaction",
+      "name": "Fast Reaction",
+      "position": [
+        2,
+        4
+      ],
+      "prerequisites": [
+        "immunity"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Clash of Enmity",
+  "slug": "clash_of_enmity",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/unarmed/clashofenmity.png",
+  "raw_text": "Bare Hand/No Sub Weapon only Type Passive Neutral Description Only usable if no Main or Sub-Weapon is equipped. If you and a target are pulling aggro towards each other, the damage taken from the target will be reduced. Chance to prevent qi consumption if you receive damage while Internal Elixir is active. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcClashOfEnmityBuffEffect(level, result) { let dmgReduc = 1*level let qiSaveChance = Math.floor(2.5 * level) result.innerHTML = `<li>If <b>you and an enemy</b> are pulling aggro towards each other, the damage taken <b>from that enemy</b> will be reduced by ${dmgReduc}%; <b>only apply to the enemy that you are targetting</b></li> <li>Chance to prevent Qi lost while <b>Internal Elixir buff</b> is active: ${qiSaveChance}% (estimate)</li>` } function calcClashOfEnmityValues() { let levelSelector = document.getElementById('clashOfEnmitySkillLevel') let level = levelSelector[levelSelector.selectedIndex].value let result = document.getElementById('clashOfEnmityValues') calcClashOfEnmityBuffEffect(level, result) } calcClashOfEnmityValues() Miracle Comeback",
+  "tree": "Barehand",
+  "tree_slug": "barehand",
+  "tree_url": "https://coryn.club/skill.php?tree=Barehand",
+  "image_path": "assets/skill_tree/barehand/clash_of_enmity.png",
+  "data_path": "doc/coryn_skills/barehand/clash_of_enmity.json"
+}

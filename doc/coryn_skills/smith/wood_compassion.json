@@ -1,0 +1,12 @@
+{
+  "name": "Wood Compassion",
+  "slug": "wood_compassion",
+  "required_level": 5,
+  "image_url": "https://coryn.club/skill/smith/woodcompassion.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description Reduces the Wood points consumed by Skill: [Customize Equipment]. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcWoodCompassionValues() { var levelSelector = document.getElementById(\"woodCompassionSkillLevel\") var level = levelSelector[levelSelector.selectedIndex].value var result = document.getElementById(\"woodCompassionValues\") result.innerHTML = `Reduces the <b>Wood Point consumption</b> of <b>Customize Equipment</b> by ${level}%; stacks <b>multiplicatively</b> with the material consumption reduction of <b>Blacksmith Proficiency</b>` } calcWoodCompassionValues() Medicine Compassion",
+  "tree": "Smith",
+  "tree_slug": "smith",
+  "tree_url": "https://coryn.club/skill.php?tree=Smith",
+  "image_path": "assets/skill_tree/smith/wood_compassion.png",
+  "data_path": "doc/coryn_skills/smith/wood_compassion.json"
+}

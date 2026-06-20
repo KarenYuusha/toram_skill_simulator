@@ -1,0 +1,12 @@
+{
+  "name": "L Boomerang II",
+  "slug": "l_boomerang_ii",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/partisan/lboomerangii.png",
+  "raw_text": "2-Handed Sword only Type Active, Physical skill Element Weapon Dependent MP 100 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 24 Description Throws the boomerang while moving backward, however, it is less powerful. Without a boomerang, you will only move backward. L Boomerang III",
+  "tree": "Partisan",
+  "tree_slug": "partisan",
+  "tree_url": "https://coryn.club/skill.php?tree=Partisan",
+  "image_path": "assets/skill_tree/partisan/l_boomerang_ii.png",
+  "data_path": "doc/coryn_skills/partisan/l_boomerang_ii.json"
+}

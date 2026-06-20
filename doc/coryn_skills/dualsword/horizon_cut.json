@@ -1,0 +1,12 @@
+{
+  "name": "Horizon Cut",
+  "slug": "horizon_cut",
+  "required_level": 5,
+  "image_url": "https://coryn.club/skill/dw/horizoncut.png",
+  "raw_text": "Dual Wield/1-Handed Sword only Type Active, Physical skill Element Weapon Dependent MP 600 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 2 Description Surprises your enemy with a swift backhand slash. Restores half of the MP consumed by your next skill. The required MP becomes 300 when used as a combo opener and 0 when used as a combo finisher. You will tumble if you take damage while it is active. Sting Blade",
+  "tree": "DualSword",
+  "tree_slug": "dualsword",
+  "tree_url": "https://coryn.club/skill.php?tree=DualSword",
+  "image_path": "assets/skill_tree/dualsword/horizon_cut.png",
+  "data_path": "doc/coryn_skills/dualsword/horizon_cut.json"
+}

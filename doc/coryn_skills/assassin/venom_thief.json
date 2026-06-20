@@ -1,0 +1,12 @@
+{
+  "name": "Venom Thief",
+  "slug": "venom_thief",
+  "required_level": 3,
+  "image_url": "https://coryn.club/skill/assassin/venomthief.png",
+  "raw_text": "Dagger/Bare Hand/Ninjutsu Scroll only Type Active Element Neutral MP 200 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 0 Description Absorbs the corrosive poison from the target to restore your own HP and get rid of the poison status. If it is enhanced poison, MP will also be restored. If not poisoned, you will get an effect that prevents you from getting poisoned. Death Reception",
+  "tree": "Assassin",
+  "tree_slug": "assassin",
+  "tree_url": "https://coryn.club/skill.php?tree=Assassin",
+  "image_path": "assets/skill_tree/assassin/venom_thief.png",
+  "data_path": "doc/coryn_skills/assassin/venom_thief.json"
+}

@@ -1,0 +1,275 @@
+{
+  "skill_tree": "Blade",
+  "tree_slug": "blade",
+  "group": "weapon_class_skills",
+  "raw_skill_file": "weapon_class_skills/blade_skills.txt",
+  "coordinate_system": {
+    "origin": [
+      0,
+      0
+    ],
+    "format": [
+      "row",
+      "column"
+    ],
+    "description": "Moving one level down adds [1, 0]; moving one column right adds [0, 1]. Empty rows and columns are preserved to match the image layout."
+  },
+  "skills": [
+    {
+      "id": "hammer_slam",
+      "name": "Hammer Slam",
+      "position": [
+        0,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "cleaving_attack",
+      "name": "Cleaving Attack",
+      "position": [
+        0,
+        2
+      ],
+      "prerequisites": [
+        "hammer_slam"
+      ]
+    },
+    {
+      "id": "storm_blaze",
+      "name": "Storm Blaze",
+      "position": [
+        0,
+        3
+      ],
+      "prerequisites": [
+        "cleaving_attack"
+      ]
+    },
+    {
+      "id": "garde_blade",
+      "name": "Garde Blade",
+      "position": [
+        0,
+        4
+      ],
+      "prerequisites": [
+        "storm_blaze"
+      ]
+    },
+    {
+      "id": "ogre_slash",
+      "name": "Ogre Slash",
+      "position": [
+        0,
+        5
+      ],
+      "prerequisites": [
+        "garde_blade"
+      ]
+    },
+    {
+      "id": "astute",
+      "name": "Astute",
+      "position": [
+        2,
+        1
+      ],
+      "prerequisites": [
+        "hard_hit"
+      ]
+    },
+    {
+      "id": "trigger_slash",
+      "name": "Trigger Slash",
+      "position": [
+        2,
+        2
+      ],
+      "prerequisites": [
+        "astute"
+      ]
+    },
+    {
+      "id": "rampage",
+      "name": "Rampage",
+      "position": [
+        2,
+        3
+      ],
+      "prerequisites": [
+        "trigger_slash"
+      ]
+    },
+    {
+      "id": "shut_out",
+      "name": "Shut-Out",
+      "position": [
+        2,
+        6
+      ],
+      "prerequisites": [
+        "rampage"
+      ]
+    },
+    {
+      "id": "hard_hit",
+      "name": "Hard Hit",
+      "position": [
+        3,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "meteor_breaker",
+      "name": "Meteor Breaker",
+      "position": [
+        3,
+        4
+      ],
+      "prerequisites": [
+        "trigger_slash"
+      ]
+    },
+    {
+      "id": "lunar_slash",
+      "name": "Lunar Slash",
+      "position": [
+        3,
+        5
+      ],
+      "prerequisites": [
+        "meteor_breaker"
+      ]
+    },
+    {
+      "id": "sonic_blade",
+      "name": "Sonic Blade",
+      "position": [
+        4,
+        1
+      ],
+      "prerequisites": [
+        "hard_hit"
+      ]
+    },
+    {
+      "id": "spiral_air",
+      "name": "Spiral Air",
+      "position": [
+        4,
+        2
+      ],
+      "prerequisites": [
+        "sonic_blade"
+      ]
+    },
+    {
+      "id": "sword_tempest",
+      "name": "Sword Tempest",
+      "position": [
+        4,
+        3
+      ],
+      "prerequisites": [
+        "spiral_air"
+      ]
+    },
+    {
+      "id": "buster_blade",
+      "name": "Buster Blade",
+      "position": [
+        5,
+        4
+      ],
+      "prerequisites": [
+        "spiral_air"
+      ]
+    },
+    {
+      "id": "aura_blade",
+      "name": "Aura Blade",
+      "position": [
+        5,
+        5
+      ],
+      "prerequisites": [
+        "buster_blade"
+      ]
+    },
+    {
+      "id": "sword_mastery",
+      "name": "Sword Mastery",
+      "position": [
+        6,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "quick_slash",
+      "name": "Quick Slash",
+      "position": [
+        6,
+        1
+      ],
+      "prerequisites": [
+        "sword_mastery"
+      ]
+    },
+    {
+      "id": "sword_techniques",
+      "name": "Sword Techniques",
+      "position": [
+        6,
+        2
+      ],
+      "prerequisites": [
+        "quick_slash"
+      ]
+    },
+    {
+      "id": "war_cry",
+      "name": "War Cry",
+      "position": [
+        7,
+        3
+      ],
+      "prerequisites": [
+        "quick_slash"
+      ]
+    },
+    {
+      "id": "berserk",
+      "name": "Berserk",
+      "position": [
+        7,
+        4
+      ],
+      "prerequisites": [
+        "war_cry"
+      ]
+    },
+    {
+      "id": "gladiate",
+      "name": "Gladiate",
+      "position": [
+        7,
+        5
+      ],
+      "prerequisites": [
+        "berserk"
+      ]
+    },
+    {
+      "id": "swift_attack",
+      "name": "Swift Attack",
+      "position": [
+        9,
+        3
+      ],
+      "prerequisites": []
+    }
+  ]
+}

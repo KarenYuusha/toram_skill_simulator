@@ -1,0 +1,12 @@
+{
+  "name": "Royal Heal",
+  "slug": "royal_heal",
+  "required_level": 4,
+  "image_url": "https://coryn.club/skill/priest/royalheal.png",
+  "raw_text": "Available with all weapons Type Active Element Neutral MP 400 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start No Combo middle No Range 0 Description Restores your HP and that of the allies around. Unlike Heal from Support Skill, there is no effect to reduce revival time. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 \"Mega Royal Heal\" Registlet Level: Unequipped 1 2 3 4 5 6 7 8 Cast Speed: function calcCastTime(baseCastTime, CSPD) { var castTime = baseCastTime*1 var modifier1 = CSPD/2000 var modifier2 = (CSPD-1000)/18000 if (CSPD <= 1000) {castTime = castTime*(1-modifier1)} else {castTime = castTime*(1-(0.5+modifier2))} castTime = Math.ceil(castTime*100)/100 if (castTime < 0) {castTime = 0} return castTime } function calcRoyalHealCastTime(CSPD, result) { var castTime = calcCastTime(3, CSPD) var HTML = `<li><b>Cast Time:</b> ${castTime} second` if (castTime != 1) {HTML += `s`} HTML += ` (affected by CSPD)</li>` result.innerHTML = HTML } function calcRoyalHealSkillEffect(level, registlet, result) { var healFlat = 500 * level var healPercentage = 10 + 2 * level var range = 7 + 0.3 * level if (registlet > 0) { healFlat *= 0.5 healPercentage *= 0.5 range += registlet*1 } result.innerHTML += `<li><b>Skill effect:</b> Recovers the HP of the <b>caster</b> and <b>allies</b> within range by ${healFlat} HP <b>plus</b> ${healPercentage}% of <b>their MaxHP</b> upon successful cast</li> <li><b>Heal Range (radius):</b> ${range}m, around the <b>caster</b></li>` } function calcRoyalHealValues() { let levelSelector = document.getElementById('royalHealSkillLevel') let level = levelSelector[levelSelector.selectedIndex].value let registletSelector = document.getElementById(\"royalHealRegistlet\") let registlet = registletSelector[registletSelector.selectedIndex].value var CSPD = document.getElementById(\"royalHealCSPD\").value let result = document.getElementById('royalHealValues') calcRoyalHealCastTime(CSPD, result) calcRoyalHealSkillEffect(level, registlet, result) } calcRoyalHealValues() Sacred Teaching",
+  "tree": "Priest",
+  "tree_slug": "priest",
+  "tree_url": "https://coryn.club/skill.php?tree=Priest",
+  "image_path": "assets/skill_tree/priest/royal_heal.png",
+  "data_path": "doc/coryn_skills/priest/royal_heal.json"
+}

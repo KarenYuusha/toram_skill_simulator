@@ -1,0 +1,12 @@
+{
+  "name": "Unarmed Mastery",
+  "slug": "unarmed_mastery",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/unarmed/unarmedmastery.png",
+  "raw_text": "Bare Hand/No Sub Weapon only Type Passive Neutral Description Only usable when no Main or Sub-Weapon is equipped. The essence of unarmed combat. Gain Weapon ATK based on character's level. Also increase qi limit. Important note: • You must have both Main Weapon Slot and Sub-Weapon Slot empty in order to use any of the Bare Hand Skills • Using any non-Bare Hand skill will consume 20% of current Accumulate Qi (rounded down, minimum 1); this can only be reduced by the passive Ultima Qi Charge Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 Caster Level: function calcUnarmedMasteryWeaponAtk(level, casterLevel, result) { let watk = casterLevel * level/10 watk = Math.floor(watk) result.innerHTML = `<li><b>Weapon ATK</b> +${watk}</li> ` } function calcUnarmedMasteryQiLimit(level, casterLevel, result) { let qiLimit = 10 + Math.min(level, 9)*10 + Math.floor(level/10)*casterLevel result.innerHTML += `<li><b>Qi Limit:</b> ${qiLimit} Qi</li> ` } function calcUnarmedMasteryValues() { let levelSelector = document.getElementById('unarmedMasterySkillLevel') let level = levelSelector[levelSelector.selectedIndex].value let casterLevel = document.getElementById(\"unarmedMasteryCasterLevel\").value let result = document.getElementById('unarmedMasteryValues') calcUnarmedMasteryWeaponAtk(level, casterLevel, result) calcUnarmedMasteryQiLimit(level, casterLevel, result) } calcUnarmedMasteryValues() Qi Charge",
+  "tree": "Barehand",
+  "tree_slug": "barehand",
+  "tree_url": "https://coryn.club/skill.php?tree=Barehand",
+  "image_path": "assets/skill_tree/barehand/unarmed_mastery.png",
+  "data_path": "doc/coryn_skills/barehand/unarmed_mastery.json"
+}

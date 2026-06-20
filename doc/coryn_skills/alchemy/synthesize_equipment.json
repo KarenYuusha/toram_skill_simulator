@@ -1,0 +1,12 @@
+{
+  "name": "Synthesize Equipment",
+  "slug": "synthesize_equipment",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/alchemy/synthesizeeq.png",
+  "raw_text": "Available with all weapons Type EX Skill Element Neutral MP 0 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start No Combo middle No Range 0 Description You can synthesize items by yourself. The success rate is lower than synthesists but you don't need Spina. Extras Show more... 1 lock at Proficiency Lv 1 , 2 lock at Proficiency Lv 50 , possible 3 lock at Proficiency Lv 100. Technical Synthesis I",
+  "tree": "Alchemy",
+  "tree_slug": "alchemy",
+  "tree_url": "https://coryn.club/skill.php?tree=Alchemy",
+  "image_path": "assets/skill_tree/alchemy/synthesize_equipment.png",
+  "data_path": "doc/coryn_skills/alchemy/synthesize_equipment.json"
+}

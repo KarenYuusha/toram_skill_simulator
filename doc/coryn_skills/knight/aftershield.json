@@ -1,0 +1,12 @@
+{
+  "name": "Aftershield",
+  "slug": "aftershield",
+  "required_level": 5,
+  "image_url": "https://coryn.club/skill/knight/pdefense.png",
+  "raw_text": "1-Handed Sword only Type Passive Neutral Description Gains a damage reduction effect for a certain period of time after activating P. Defense. Acquiring this skill will slightly increase Neutral Resistance permanently too. 1-Handed Sword Negates fatal damage exceeding your MaxHP taken while Aftershield is active. However, once the damage negation takes place, you will be unable to activate Aftershield for some time. Provoke",
+  "tree": "Knight",
+  "tree_slug": "knight",
+  "tree_url": "https://coryn.club/skill.php?tree=Knight",
+  "image_path": "assets/skill_tree/knight/aftershield.png",
+  "data_path": "doc/coryn_skills/knight/aftershield.json"
+}

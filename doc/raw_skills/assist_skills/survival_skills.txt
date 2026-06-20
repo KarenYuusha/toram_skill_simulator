@@ -1,0 +1,80 @@
+Play Dead
+Reduce the revive time for a dead character.
+Passive skill
+Revive Time = -5*Lvl %
+NOTES:
+--Base revive time is 300seconds
+
+Play Dead | ⛺survival-skills🔦
+Exp Gain UP
+Increase the EXP gained.
+Passive skill
+Amount of EXP increased = +1*Lvl%
+NOTES:
+-- If there are other exp% from emblems or etc., then they do stack additively
+
+Exp Gain UP | ⛺survival-skills🔦
+Drop Gain UP
+Increase the drop rate chances.
+Passive skill
+Amount of drop rate increase = +1*Lvl %
+NOTES:
+-- If there are other drop% from event or etc., then they do stack additively
+
+Drop Gain UP | ⛺survival-skills🔦
+HP Boost
+Increase MaxHP points of the character.
+Passive Skill
+Amount of flat HP = +100 * Lvl
+Amount of % HP = +2 * Lvl %
+
+HP Boost | ⛺survival-skills🔦
+MP Boost
+Increase the maxMP of your character.
+Passive skill
+Amount of flat maxMP increase = +30*Lvl
+
+MP Boost | ⛺survival-skills🔦
+Safe Rest
+Increase Natural HP Regen
+Passive Skill
+Effect: When you're in off-battle, Increase Natural HP regen at the end of calculation
+Amount of flat Natural HP regen (NHPR) = +10 * Lvl
+Amount of % Natural HP regen (NHPR) = +10 * Lvl %
+NOTES:
+-- Natural HP regen from equip & avatar are added as base NHPR value. Meanwhile NHPR from skill is applied after base NHPR is calculated.
+Base NHPR = MaxHP/25 * (100% + Total eq NHPR%) + 10 + Total eq flat NHPR
+Final NHPR = Base NHPR * (100% + Total NHPR% skill) + Total flat NHPR skill
+
+Safe Rest | ⛺survival-skills🔦
+Fighter's High
+Passive Effect:
+Recovers HP inside combat every 3 seconds.
+HP Recovery Amount: 1 * Skill Level% * Base Natural HP Regen
+-Base NHPR: INT(INT(MaxHP/25) * (1 + Total NHPR%/100)) + 10 + Total Flat NHPR
+Game Description: Regenerate HP during combat. The healing amount is small.
+
+Fighter's High | ⛺survival-skills🔦
+Short Rest
+Increase the Natural MP regen stat
+Passive skill
+Amount of flat Natural MP regen (NMPR) = +1 * Lvl
+Amount of % Natural MP regen (NMPR) = +5 * Lvl %
+NOTES:
+-- Natural MP regen from equip & avatar are added as base NMPR value. Meanwhile NMPR from skill is applied after base NMPR is calculated.
+Base NMPR = MaxMP/100 * (100% + Total eq NMPR%) + 1 + Total eq flat NMPR
+Final NMPR = Base NMPR * (100% + Total NMPR% skill) + Total flat NMPR skill
+
+Short Rest | ⛺survival-skills🔦
+Sober Analysis
+Sober Analysis
+Passive Effect:
+Recovers MP inside/outside combat every 3 seconds.
+MP Recovery Amount: 5 * Skill Level% * Base Natural MP Regen
+-Base NMPR: INT(INT(MaxMP/100) * (1 + Total NMPR%/100)) + 1 + Total Flat NMPR
+-Total NMPR% excludes: Sunbath Regislet & Emotion NMPR boosts.
+Game Description: Regenerate MP during combat. The healing amount is small.
+
+Sober Analysis | ⛺survival-skills🔦
+
+Lvl req, T1 Lv 1, T2 Lv 20

@@ -1,0 +1,264 @@
+{
+  "skill_tree": "Mononofu",
+  "tree_slug": "mononofu",
+  "group": "weapon_class_skills",
+  "raw_skill_file": "weapon_class_skills/mononofu_skills.txt",
+  "coordinate_system": {
+    "origin": [
+      0,
+      0
+    ],
+    "format": [
+      "row",
+      "column"
+    ],
+    "description": "Moving one level down adds [1, 0]; moving one column right adds [0, 1]. Empty rows and columns are preserved to match the image layout."
+  },
+  "skills": [
+    {
+      "id": "issen",
+      "name": "Issen",
+      "position": [
+        0,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "pulse_blade",
+      "name": "Pulse Blade",
+      "position": [
+        0,
+        1
+      ],
+      "prerequisites": [
+        "issen"
+      ]
+    },
+    {
+      "id": "triple_thrust",
+      "name": "Triple Thrust",
+      "position": [
+        0,
+        2
+      ],
+      "prerequisites": [
+        "pulse_blade"
+      ]
+    },
+    {
+      "id": "hasso_happa",
+      "name": "Hasso Happa",
+      "position": [
+        0,
+        3
+      ],
+      "prerequisites": [
+        "triple_thrust"
+      ]
+    },
+    {
+      "id": "tenryu_ransei",
+      "name": "Tenryu Ransei",
+      "position": [
+        0,
+        4
+      ],
+      "prerequisites": [
+        "hasso_happa"
+      ]
+    },
+    {
+      "id": "kasumisetsu_getsuka",
+      "name": "Kasumisetsu Getsuka",
+      "position": [
+        0,
+        5
+      ],
+      "prerequisites": [
+        "tenryu_ransei"
+      ]
+    },
+    {
+      "id": "pommel_strike",
+      "name": "Pommel Strike",
+      "position": [
+        1,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "magadachi",
+      "name": "Magadachi",
+      "position": [
+        1,
+        2
+      ],
+      "prerequisites": [
+        "pommel_strike"
+      ]
+    },
+    {
+      "id": "zantei_settetsu",
+      "name": "Zantei Settetsu",
+      "position": [
+        1,
+        3
+      ],
+      "prerequisites": [
+        "magadachi"
+      ]
+    },
+    {
+      "id": "garyou_tensei",
+      "name": "Garyou Tensei",
+      "position": [
+        1,
+        4
+      ],
+      "prerequisites": [
+        "hasso_happa"
+      ]
+    },
+    {
+      "id": "shadowless_slash",
+      "name": "Shadowless Slash",
+      "position": [
+        1,
+        5
+      ],
+      "prerequisites": [
+        "garyou_tensei"
+      ]
+    },
+    {
+      "id": "bushido",
+      "name": "Bushido",
+      "position": [
+        2,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "shukuchi",
+      "name": "Shukuchi",
+      "position": [
+        2,
+        3
+      ],
+      "prerequisites": [
+        "bushido"
+      ]
+    },
+    {
+      "id": "nukiuchi_sennosen",
+      "name": "Nukiuchi Sennosen",
+      "position": [
+        2,
+        5
+      ],
+      "prerequisites": [
+        "shukuchi"
+      ]
+    },
+    {
+      "id": "two_handed",
+      "name": "Two-Handed",
+      "position": [
+        3,
+        1
+      ],
+      "prerequisites": [
+        "bushido"
+      ]
+    },
+    {
+      "id": "meikyo_shisui",
+      "name": "Meikyo Shisui",
+      "position": [
+        3,
+        2
+      ],
+      "prerequisites": [
+        "two_handed"
+      ]
+    },
+    {
+      "id": "kairiki_ranshin",
+      "name": "Kairiki Ranshin",
+      "position": [
+        3,
+        4
+      ],
+      "prerequisites": [
+        "meikyo_shisui"
+      ]
+    },
+    {
+      "id": "dauntless",
+      "name": "Dauntless",
+      "position": [
+        3,
+        5
+      ],
+      "prerequisites": [
+        "kairiki_ranshin"
+      ]
+    },
+    {
+      "id": "auspicious_wind",
+      "name": "Auspicious Wind",
+      "position": [
+        4,
+        2
+      ],
+      "prerequisites": [
+        "meikyo_shisui"
+      ]
+    },
+    {
+      "id": "gust",
+      "name": "Gust",
+      "position": [
+        4,
+        3
+      ],
+      "prerequisites": [
+        "auspicious_wind"
+      ]
+    },
+    {
+      "id": "zephyr_rush",
+      "name": "Zephyr Rush",
+      "position": [
+        4,
+        4
+      ],
+      "prerequisites": [
+        "gust"
+      ]
+    },
+    {
+      "id": "super_gust",
+      "name": "Super Gust",
+      "position": [
+        4,
+        5
+      ],
+      "prerequisites": [
+        "zephyr_rush"
+      ]
+    },
+    {
+      "id": "bouncing_blade",
+      "name": "Bouncing Blade",
+      "position": [
+        5,
+        3
+      ],
+      "prerequisites": []
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Sorcery Guide",
+  "slug": "sorcery_guide",
+  "required_level": 4,
+  "image_url": "https://coryn.club/skill/wizard/overlimit.png",
+  "raw_text": "Staff/Main MD only Type Passive Neutral Description Mitigates CSPD loss due to Overlimit and increases element power further. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcSorceryGuideSubBuff(level, result) { var cspd = level*50 var HTML = `<li>Increases the <b>Damage to All Element</b> bonus of <b>Overlimit buff</b> by ${level}%</li> <li>Reduces the <b>CSPD</b> penalty of <b>Overlimit buff</b> by ${cspd}</li>` result.innerHTML = HTML } function calcSorceryGuideValues() { let levelSelector = document.getElementById(\"sorceryGuideSkillLevel\") let level = levelSelector[levelSelector.selectedIndex].value let result= document.getElementById(\"sorceryGuideValues\") calcSorceryGuideSubBuff(level, result) } calcSorceryGuideValues() Shift",
+  "tree": "Wizard",
+  "tree_slug": "wizard",
+  "tree_url": "https://coryn.club/skill.php?tree=Wizard",
+  "image_path": "assets/skill_tree/wizard/sorcery_guide.png",
+  "data_path": "doc/coryn_skills/wizard/sorcery_guide.json"
+}

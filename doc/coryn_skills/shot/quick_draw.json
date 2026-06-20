@@ -1,0 +1,12 @@
+{
+  "name": "Quick Draw",
+  "slug": "quick_draw",
+  "required_level": 3,
+  "image_url": "https://coryn.club/skill/shot/quickdraw.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description Quickly prepare for the next move. Chance to restore MP a little when succeeding in attacking with a skill. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcQuickDrawEffect() { var levelSelector = document.getElementById(\"quickDrawLevel\") var level = levelSelector[levelSelector.selectedIndex].value var result = document.getElementById(\"quickDrawValues\") result.innerHTML = `Whenever you use an <b>attacking skill</b> that <b>consumes MP</b>, you have a ${3*level}% chance to <b>recover</b> 100 MP <li><b>Support skills</b>, <b>non-attacking skills</b>, and <b>attacking skills</b> that <b>do not consume MP</b> will <b>not trigger this effect</b></li> <li>If the skill is a <b>placed skill</b>, the effect will only activate <b>after the placed skill's animation has ended completely<b></li>` } calcQuickDrawEffect() Decoy Shot",
+  "tree": "Shot",
+  "tree_slug": "shot",
+  "tree_url": "https://coryn.club/skill.php?tree=Shot",
+  "image_path": "assets/skill_tree/shot/quick_draw.png",
+  "data_path": "doc/coryn_skills/shot/quick_draw.json"
+}

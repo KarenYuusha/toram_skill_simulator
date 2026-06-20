@@ -1,0 +1,12 @@
+{
+  "name": "Miracle Comeback",
+  "slug": "miracle_comeback",
+  "required_level": 3,
+  "image_url": "https://coryn.club/skill/unarmed/internalelixir.png",
+  "raw_text": "Bare Hand/No Sub Weapon only Type Passive Neutral Description When Internal Elixir is not activated and you get knocked out, it may auto-activate and restore your HP. Once activated, it won't reactivate for some time. Ultima Qi Charge",
+  "tree": "Barehand",
+  "tree_slug": "barehand",
+  "tree_url": "https://coryn.club/skill.php?tree=Barehand",
+  "image_path": "assets/skill_tree/barehand/miracle_comeback.png",
+  "data_path": "doc/coryn_skills/barehand/miracle_comeback.json"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Survival Instinct",
+  "slug": "survival_instinct",
+  "required_level": 3,
+  "image_url": "https://coryn.club/skill/partisan/survivalinstinct.png",
+  "raw_text": "Bowgun/Bow only Type Passive Neutral Description Increases MaxHP and Fractional Damage Reduction for 20 seconds when a party member gets knocked out. Doesn't activate if knocked out due to certain conditions. Frontliner",
+  "tree": "Partisan",
+  "tree_slug": "partisan",
+  "tree_url": "https://coryn.club/skill.php?tree=Partisan",
+  "image_path": "assets/skill_tree/partisan/survival_instinct.png",
+  "data_path": "doc/coryn_skills/partisan/survival_instinct.json"
+}

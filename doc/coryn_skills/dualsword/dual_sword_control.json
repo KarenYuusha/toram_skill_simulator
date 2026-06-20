@@ -1,0 +1,12 @@
+{
+  "name": "Dual Sword Control",
+  "slug": "dual_sword_control",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/dw/dualswordcontrol.png",
+  "raw_text": "Dual Wield only Type Passive Neutral Description Increases ASPD of Dual Swords. Reduces the disadvantages of Dual Swords. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcDualSwordControlAspd(level, result) { let aspd = 50 * level result.innerHTML = `<li><b>Attack Speed</b> +${aspd}</li>` } function calcDualSwordControlAccuracyAndCrit(level, result) { let bonus = 5 + (3 * level) result.innerHTML += `<li><b>Accuracy</b> +${bonus}%</li> <li><b>Critical Rate</b> +${bonus}%` } function calcDualSwordControlValues() { let levelSelector = document.getElementById('dualSwordControlSkillLevel') let level = levelSelector[levelSelector.selectedIndex].value let result = document.getElementById('dualSwordControlValues') calcDualSwordControlAspd(level, result) calcDualSwordControlAccuracyAndCrit(level, result) result.innerHTML += `<br><b>Accuracy</b> and <b>Critical Rate</b> bonuses are applied additively to <b>Dual Sword Mastery</b> modifiers` } calcDualSwordControlValues() Godspeed",
+  "tree": "DualSword",
+  "tree_slug": "dualsword",
+  "tree_url": "https://coryn.club/skill.php?tree=DualSword",
+  "image_path": "assets/skill_tree/dualsword/dual_sword_control.png",
+  "data_path": "doc/coryn_skills/dualsword/dual_sword_control.json"
+}

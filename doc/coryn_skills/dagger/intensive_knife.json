@@ -1,0 +1,12 @@
+{
+  "name": "Intensive Knife",
+  "slug": "intensive_knife",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/dagger/intenseknife.png",
+  "raw_text": "Dagger only Type Passive Neutral Description Increase the damage and activation rate of Hidden Arm. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcIntensiveKnifeActivationChance(level, result) { result.innerHTML = `<li><b>Hidden Arm Activation Chance</b> +${5*level}%</li>` } function calcIntensiveKnifeMultiplier(result) { multiplier = 0.25 result.innerHTML += `<li><b>Hidden Arm Skill Multiplier</b> +${multiplier}</li>` } function calcIntensiveKnifeValues() { let levelSelector = document.getElementById(\"intensiveKnifeSkillLevel\") let level = levelSelector[levelSelector.selectedIndex].value let result= document.getElementById(\"intensiveKnifeValues\") calcIntensiveKnifeActivationChance(level, result) calcIntensiveKnifeMultiplier(result) } calcIntensiveKnifeValues() Mail Breaker",
+  "tree": "Dagger",
+  "tree_slug": "dagger",
+  "tree_url": "https://coryn.club/skill.php?tree=Dagger",
+  "image_path": "assets/skill_tree/dagger/intensive_knife.png",
+  "data_path": "doc/coryn_skills/dagger/intensive_knife.json"
+}

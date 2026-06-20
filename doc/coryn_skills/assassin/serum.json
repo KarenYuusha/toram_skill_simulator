@@ -1,0 +1,12 @@
+{
+  "name": "Serum",
+  "slug": "serum",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/assassin/serum.png",
+  "raw_text": "Available with all weapons Type Active Element Neutral MP 300 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 0 Description A technique to ease and relieve pain. Reduce damage over time due to status ailments: [Poison] and [Ignite] for a certain period of time. Dagger [Using it with a Ninjutsu Scroll will give you the same effects.] Duration x3 Extras Show more... Sub-Weapon: Dagger/Ninjutsu Scroll Other Skill Level: 1 2 3 4 5 6 7 8 9 10 function addSerumBuffEffect(level, weapon, result){ var ignite = 10 + 2 * level var poison = Math.floor(25 + 2.5 * level) var duration = 10 + 1*level if (weapon == \"dagger\") {duration *= 3} result.innerHTML = `<b>Buff Effect:</b> <li><b>Ignite Damage Received</b> -${ignite}%</li> <li><b>Poison Damage Received</b> -${poison}%</li> <li><b>Buff Duration:</b> ${duration} seconds</li> <br>The damage reductions are applied <b>additively</b> with <b>Stone Barrier</b> effect` } function calcSerumValues() { var weaponSelector = document.getElementById(\"serumWeapon\") var weapon = weaponSelector[weaponSelector.selectedIndex].value var levelSelector = document.getElementById(\"serumLevel\") var level = levelSelector[levelSelector.selectedIndex].value var result = document.getElementById(\"serumValues\") addSerumBuffEffect(level, weapon, result) } calcSerumValues() Foresight",
+  "tree": "Assassin",
+  "tree_slug": "assassin",
+  "tree_url": "https://coryn.club/skill.php?tree=Assassin",
+  "image_path": "assets/skill_tree/assassin/serum.png",
+  "data_path": "doc/coryn_skills/assassin/serum.json"
+}

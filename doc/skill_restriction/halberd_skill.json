@@ -1,0 +1,253 @@
+{
+  "skill_tree": "Halberd",
+  "tree_slug": "halberd",
+  "group": "weapon_class_skills",
+  "raw_skill_file": "weapon_class_skills/halberd_skills.txt",
+  "coordinate_system": {
+    "origin": [
+      0,
+      0
+    ],
+    "format": [
+      "row",
+      "column"
+    ],
+    "description": "Moving one level down adds [1, 0]; moving one column right adds [0, 1]. Empty rows and columns are preserved to match the image layout."
+  },
+  "skills": [
+    {
+      "id": "dragon_tooth",
+      "name": "Dragon Tooth",
+      "position": [
+        0,
+        4
+      ],
+      "prerequisites": [
+        "dragon_tail"
+      ]
+    },
+    {
+      "id": "draconic_charge",
+      "name": "Draconic Charge",
+      "position": [
+        0,
+        5
+      ],
+      "prerequisites": [
+        "dragon_tooth"
+      ]
+    },
+    {
+      "id": "flash_stab",
+      "name": "Flash Stab",
+      "position": [
+        1,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "cannon_spear",
+      "name": "Cannon Spear",
+      "position": [
+        1,
+        1
+      ],
+      "prerequisites": [
+        "flash_stab"
+      ]
+    },
+    {
+      "id": "dragon_tail",
+      "name": "Dragon Tail",
+      "position": [
+        1,
+        2
+      ],
+      "prerequisites": [
+        "cannon_spear"
+      ]
+    },
+    {
+      "id": "dive_impact",
+      "name": "Dive Impact",
+      "position": [
+        1,
+        3
+      ],
+      "prerequisites": [
+        "dragon_tail"
+      ]
+    },
+    {
+      "id": "deadly_spear",
+      "name": "Deadly Spear",
+      "position": [
+        2,
+        1
+      ],
+      "prerequisites": [
+        "flash_stab"
+      ]
+    },
+    {
+      "id": "strike_stab",
+      "name": "Strike Stab",
+      "position": [
+        2,
+        3
+      ],
+      "prerequisites": [
+        "deadly_spear"
+      ]
+    },
+    {
+      "id": "chronos_drive",
+      "name": "Chronos Drive",
+      "position": [
+        2,
+        4
+      ],
+      "prerequisites": [
+        "strike_stab"
+      ]
+    },
+    {
+      "id": "infinite_dimension",
+      "name": "Infinite Dimension",
+      "position": [
+        2,
+        5
+      ],
+      "prerequisites": [
+        "chronos_drive"
+      ]
+    },
+    {
+      "id": "punish_ray",
+      "name": "Punish Ray",
+      "position": [
+        3,
+        2
+      ],
+      "prerequisites": [
+        "deadly_spear"
+      ]
+    },
+    {
+      "id": "blitz_spike",
+      "name": "Blitz Spike",
+      "position": [
+        3,
+        3
+      ],
+      "prerequisites": [
+        "punish_ray"
+      ]
+    },
+    {
+      "id": "lightning_hail",
+      "name": "Lightning Hail",
+      "position": [
+        3,
+        4
+      ],
+      "prerequisites": [
+        "blitz_spike"
+      ]
+    },
+    {
+      "id": "thors_hammer",
+      "name": "Thor's Hammer",
+      "position": [
+        3,
+        5
+      ],
+      "prerequisites": [
+        "lightning_hail"
+      ]
+    },
+    {
+      "id": "halberd_mastery",
+      "name": "Halberd Mastery",
+      "position": [
+        4,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "critical_spear",
+      "name": "Critical Spear",
+      "position": [
+        4,
+        3
+      ],
+      "prerequisites": [
+        "halberd_mastery"
+      ]
+    },
+    {
+      "id": "tornado_lance",
+      "name": "Tornado Lance",
+      "position": [
+        4,
+        5
+      ],
+      "prerequisites": [
+        "critical_spear"
+      ]
+    },
+    {
+      "id": "quick_aura",
+      "name": "Quick Aura",
+      "position": [
+        5,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "war_cry_of_struggle",
+      "name": "War Cry of Struggle",
+      "position": [
+        5,
+        2
+      ],
+      "prerequisites": [
+        "quick_aura"
+      ]
+    },
+    {
+      "id": "godspeed_wield",
+      "name": "Godspeed Wield",
+      "position": [
+        5,
+        4
+      ],
+      "prerequisites": [
+        "war_cry_of_struggle"
+      ]
+    },
+    {
+      "id": "almighty_wield",
+      "name": "Almighty Wield",
+      "position": [
+        5,
+        5
+      ],
+      "prerequisites": [
+        "godspeed_wield"
+      ]
+    },
+    {
+      "id": "buster_lance",
+      "name": "Buster Lance",
+      "position": [
+        6,
+        3
+      ],
+      "prerequisites": []
+    }
+  ]
+}

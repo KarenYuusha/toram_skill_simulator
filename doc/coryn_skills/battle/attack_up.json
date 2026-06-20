@@ -1,0 +1,12 @@
+{
+  "name": "Attack UP",
+  "slug": "attack_up",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/battle/attackup.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description Increase ATK a little. The amount depends on the player's level. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 Caster Level: function calcAttackUpStats(level, casterLevel, result) { var atk = casterLevel*(2.5*level)/100 if (atk - Math.floor(atk) < 0.999999999999) {atk = Math.floor(atk)} else {atk = Math.round(atk)} result.innerHTML = `<li><b>ATK</b> +${atk}</li>` } function calcAttackUpValues() { var levelSelector = document.getElementById(\"attackUpSkillLevel\") var level = levelSelector[levelSelector.selectedIndex].value var casterLevel = document.getElementById(\"attackUpCasterLevel\").value var result = document.getElementById(\"attackUpValues\") calcAttackUpStats(level, casterLevel, result) } calcAttackUpValues() Whack",
+  "tree": "Battle",
+  "tree_slug": "battle",
+  "tree_url": "https://coryn.club/skill.php?tree=Battle",
+  "image_path": "assets/skill_tree/battle/attack_up.png",
+  "data_path": "doc/coryn_skills/battle/attack_up.json"
+}

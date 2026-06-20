@@ -1,0 +1,12 @@
+{
+  "name": "Neo Shielder",
+  "slug": "neo_shielder",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/golem/neoshielder.png",
+  "raw_text": "Staff/Bowgun/Main MD only Type Passive Neutral Description Improves the abilities of the Shielder-type golem. The golem's active time and damage reduction range increase, with a small boost also applied to the Lancer-type and Buster-type golem. Shield Boost",
+  "tree": "Golem",
+  "tree_slug": "golem",
+  "tree_url": "https://coryn.club/skill.php?tree=Golem",
+  "image_path": "assets/skill_tree/golem/neo_shielder.png",
+  "data_path": "doc/coryn_skills/golem/neo_shielder.json"
+}

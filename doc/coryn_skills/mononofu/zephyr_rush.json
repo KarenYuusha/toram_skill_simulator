@@ -1,0 +1,12 @@
+{
+  "name": "Zephyr Rush",
+  "slug": "zephyr_rush",
+  "required_level": 4,
+  "image_url": "https://coryn.club/skill/katana/zephyrrush.png",
+  "raw_text": "Katana only Type Active, Physical skill Element Weapon Dependent MP 400 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 24 Description Escapes danger like a sudden breeze ( only while in Gust state ). Gains invincibility while in the air, then descends and performs a slash after some time or upon key input. The power increases based on the duration of invincibility, but it will be a MISS if there's no target at the landing point. Super Gust",
+  "tree": "Mononofu",
+  "tree_slug": "mononofu",
+  "tree_url": "https://coryn.club/skill.php?tree=Mononofu",
+  "image_path": null,
+  "data_path": "doc/coryn_skills/mononofu/zephyr_rush.json"
+}

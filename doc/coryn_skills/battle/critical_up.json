@@ -1,0 +1,12 @@
+{
+  "name": "Critical UP",
+  "slug": "critical_up",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/battle/criticalup.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description Increase Critical Rate and damage dealt a little. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcCriticalUpValues() { var levelSelector = document.getElementById(\"criticalUpSkillLevel\") var level = levelSelector[levelSelector.selectedIndex].value var result = document.getElementById(\"criticalUpValues\") result.innerHTML = `<li><b>Critical Rate</b> +${level/2}</li> <li><b>Critical Damage</b> +${level/2}%</li>` } calcCriticalUpValues() Accuracy UP",
+  "tree": "Battle",
+  "tree_slug": "battle",
+  "tree_url": "https://coryn.club/skill.php?tree=Battle",
+  "image_path": "assets/skill_tree/battle/critical_up.png",
+  "data_path": "doc/coryn_skills/battle/critical_up.json"
+}

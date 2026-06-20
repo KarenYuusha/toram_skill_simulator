@@ -1,0 +1,145 @@
+{
+  "skill_tree": "Dark Power",
+  "tree_slug": "darkpower",
+  "group": "sub_weapon_skills",
+  "raw_skill_file": "sub_weapon_skills/dark_energy_skills.txt",
+  "coordinate_system": {
+    "origin": [
+      0,
+      0
+    ],
+    "format": [
+      "row",
+      "column"
+    ],
+    "description": "Moving one level down adds [1, 0]; moving one column right adds [0, 1]. Empty rows and columns are preserved to match the image layout."
+  },
+  "skills": [
+    {
+      "id": "bloody_bite",
+      "name": "Bloody Bite",
+      "position": [
+        0,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "dark_stinger",
+      "name": "Dark Stinger",
+      "position": [
+        0,
+        1
+      ],
+      "prerequisites": [
+        "bloody_bite"
+      ]
+    },
+    {
+      "id": "red_tear",
+      "name": "Red Tear",
+      "position": [
+        0,
+        2
+      ],
+      "prerequisites": [
+        "dark_stinger"
+      ]
+    },
+    {
+      "id": "soul_hunter",
+      "name": "Soul Hunter",
+      "position": [
+        0,
+        3
+      ],
+      "prerequisites": [
+        "red_tear"
+      ]
+    },
+    {
+      "id": "sacrifice",
+      "name": "Sacrifice",
+      "position": [
+        1,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "demon_claw",
+      "name": "Demon Claw",
+      "position": [
+        1,
+        1
+      ],
+      "prerequisites": [
+        "sacrifice"
+      ]
+    },
+    {
+      "id": "regretless",
+      "name": "Regretless",
+      "position": [
+        1,
+        2
+      ],
+      "prerequisites": [
+        "demon_claw"
+      ]
+    },
+    {
+      "id": "eternal_nightmare",
+      "name": "Eternal Nightmare",
+      "position": [
+        1,
+        3
+      ],
+      "prerequisites": [
+        "regretless"
+      ]
+    },
+    {
+      "id": "intimidating_evil_eye",
+      "name": "Intimidating Evil Eye",
+      "position": [
+        2,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "bewitching_evil_eye",
+      "name": "Bewitching Evil Eye",
+      "position": [
+        2,
+        1
+      ],
+      "prerequisites": [
+        "intimidating_evil_eye"
+      ]
+    },
+    {
+      "id": "black_flame_evil_eye",
+      "name": "Black Flame Evil Eye",
+      "position": [
+        2,
+        2
+      ],
+      "prerequisites": [
+        "bewitching_evil_eye"
+      ]
+    },
+    {
+      "id": "chaotic_evil_eye",
+      "name": "Chaotic Evil Eye",
+      "position": [
+        2,
+        3
+      ],
+      "prerequisites": [
+        "black_flame_evil_eye"
+      ]
+    }
+  ]
+}

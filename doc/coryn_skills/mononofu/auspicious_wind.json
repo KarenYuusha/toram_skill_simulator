@@ -1,0 +1,12 @@
+{
+  "name": "Auspicious Wind",
+  "slug": "auspicious_wind",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/katana/auspiciouswind.png",
+  "raw_text": "Katana only Type Passive Neutral Description Activates by chance when your attack misses or when you manage to dodge with Evasion. For 30 sec, Close-range ATK power/Critical Damage/Accuracy slightly increases, max 3 stacks. The effect increases based on the Mononofu skill tree level. Gust",
+  "tree": "Mononofu",
+  "tree_slug": "mononofu",
+  "tree_url": "https://coryn.club/skill.php?tree=Mononofu",
+  "image_path": null,
+  "data_path": "doc/coryn_skills/mononofu/auspicious_wind.json"
+}

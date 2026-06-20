@@ -1,0 +1,12 @@
+{
+  "name": "Defense UP",
+  "slug": "defense_up",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/battle/defenseup.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description Increase DEF and MDEF a little. The amount depends on the player's level. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 Caster Level: function calcDefenseUpStats(level, casterLevel, result) { var pmdef = casterLevel*(2.5*level)/100 if (pmdef - Math.floor(pmdef) < 0.999999999999) {pmdef = Math.floor(pmdef)} else {pmdef = Math.round(pmdef)} result.innerHTML = `<li><b>DEF</b> +${pmdef}</li> <li><b>MDEF</b> +${pmdef}</li>` } function calcDefenseUpValues() { var levelSelector = document.getElementById(\"defenseUpSkillLevel\") var level = levelSelector[levelSelector.selectedIndex].value var casterLevel = document.getElementById(\"defenseUpCasterLevel\").value var result = document.getElementById(\"defenseUpValues\") calcDefenseUpStats(level, casterLevel, result) } calcDefenseUpValues() Dodge UP",
+  "tree": "Battle",
+  "tree_slug": "battle",
+  "tree_url": "https://coryn.club/skill.php?tree=Battle",
+  "image_path": "assets/skill_tree/battle/defense_up.png",
+  "data_path": "doc/coryn_skills/battle/defense_up.json"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Blink Sword",
+  "slug": "blink_sword",
+  "required_level": 5,
+  "image_url": "https://coryn.club/skill/knight/blinksword.png",
+  "raw_text": "1-Handed Sword only Type Active, Physical skill Element Weapon Dependent MP 200 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 14 Description Throws a sword to instantly close the distance to the target. Chance to inflict [Flinch]. When successful, Fractional Damage can be reduced for 3 seconds and the effect of Fareth will not be lost even if you move. 1-Handed Sword Gains an effect that guarantees Blink Sword hit if [Flinch] is successfully inflicted. A MISS will cause it to fail to activate. Sonic Thrust",
+  "tree": "Knight",
+  "tree_slug": "knight",
+  "tree_url": "https://coryn.club/skill.php?tree=Knight",
+  "image_path": "assets/skill_tree/knight/blink_sword.png",
+  "data_path": "doc/coryn_skills/knight/blink_sword.json"
+}

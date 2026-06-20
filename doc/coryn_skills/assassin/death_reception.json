@@ -1,0 +1,12 @@
+{
+  "name": "Death Reception",
+  "slug": "death_reception",
+  "required_level": 4,
+  "image_url": "https://coryn.club/skill/assassin/deathreception.png",
+  "raw_text": "Dagger/Bare Hand/Ninjutsu Scroll only Type Active, Physical skill Element Weapon Dependent MP 300 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 8 Description Uses the poison absorbed with Venom Thief to inflict damage and Deadly Poison to the target. Depending on the poison used, damage that inflicts poison to your surroundings will also be generated additionally. 1-Handed Sword Power increases depending on DEX. Physical Pierce +25%. Halberd Power increases depending on AGI. Physical Pierce +25%. Bare Hand Power increases depending on your level. Physical Pierce +25%. Poison Master",
+  "tree": "Assassin",
+  "tree_slug": "assassin",
+  "tree_url": "https://coryn.club/skill.php?tree=Assassin",
+  "image_path": "assets/skill_tree/assassin/death_reception.png",
+  "data_path": "doc/coryn_skills/assassin/death_reception.json"
+}

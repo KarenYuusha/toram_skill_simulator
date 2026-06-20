@@ -1,0 +1,12 @@
+{
+  "name": "Knight's Remedy",
+  "slug": "knights_remedy",
+  "required_level": 4,
+  "image_url": "https://coryn.club/skill/knight/knightsstance.png",
+  "raw_text": "1-Handed Sword only Type Passive Neutral Description A portion of damage received while Knight's Stance is active will be accumulated and restored as HP. When Knight's Stance is activated again, the total accumulation will be used to restore HP. Shield Accumulates more damage from the target if you are pulling aggro toward each other. Extras Show more... Sub-Weapon: Shield Other Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcKnightsRemedyBonuses(level, weapon, result) { var hpStore = 1 * level var HTML = `<li>While <b>Knight's Stance buff</b> is active, ${hpStore}% of damage received will be accumulated` if (weapon == \"shield\") {HTML += `, increases to ${3*hpStore}% if you have the target's aggro`} HTML += `</li> <li>Upon recasting <b>Knight's Stance</b>, consumes all of the accumulation to restore your HP by the same amount</li>` result.innerHTML = HTML } function addKnightsRemedyExtraInfo(result) { result.innerHTML += `<br><b>Extra info:</b> <li>The damage amount used for accumulation is after <b>P. Defense</b> and before any <b>Barrier</b> stats</li> <li>The amount of accumulation is indicated by a percentage value below <b>Knight's Stance buff</b>; this percentage value is based on <b>your MaxHP</b> (e.g. if the number is 10% then the effect will heal you by up to 10% of your <b>MaxHP</b>)</li>` } function calcKnightsRemedyValues() { let weaponSelector = document.getElementById(\"knightsRemedyWeapon\") let weapon = weaponSelector[weaponSelector.selectedIndex].value let levelSelector = document.getElementById('knightsRemedySkillLevel') let level = levelSelector[levelSelector.selectedIndex].value let result = document.getElementById('knightsRemedyValues') calcKnightsRemedyBonuses(level, weapon, result) addKnightsRemedyExtraInfo(result) } calcKnightsRemedyValues() Knight Pledge",
+  "tree": "Knight",
+  "tree_slug": "knight",
+  "tree_url": "https://coryn.club/skill.php?tree=Knight",
+  "image_path": "assets/skill_tree/knight/knights_remedy.png",
+  "data_path": "doc/coryn_skills/knight/knights_remedy.json"
+}

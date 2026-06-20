@@ -1,0 +1,12 @@
+{
+  "name": "Issen",
+  "slug": "issen",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/katana/issen.png",
+  "raw_text": "Katana only Type Active, Physical skill Element Weapon Dependent MP 100 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 2 Description Slash an enemy at a blinding speed. High Critical Rate at the second hit. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 Total Critical Rate: \"Issen Enhancer\" Registlet Level: Unequipped 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 function calcIssenConstant(level, result) { let constant1 = 0 let constant2 = 50 + 5 * level result.innerHTML = `<li><b>Skill Constant (First Hit):</b> ${constant1}</li> <li><b>Skill Constant (Second Hit):</b> ${constant2}</li>` } function calcIssenMultiplier(level, registlet, result) { let multiplier1 = 0.5 let multiplier2 = 1 + 0.05 * level + 0.05 * registlet multiplier2 = Math.round(multiplier2*100)/100 result.innerHTML += `<li><b>Skill Multiplier (First Hit):</b> ${multiplier1}</li> <li><b>Skill Multiplier (Second Hit):</b> ${multiplier2}</li> <li><b>Hit Count:</b> 2 hits; damage calculation is done for each hit</li><br>` } function addIssenUnsheathe(result) { result.innerHTML += `<li>This skill is treated as an <b>Unsheathe Attack</b></li>` } function calcIssenSecondCrit(totalCr, result) { let bonusCr = totalCr * 2 result.innerHTML += `<li><b>Critical Rate</b> of the <b>Second Hit</b> +${bonusCr}</li>` } function calcIssenValues() { let levelSelector = document.getElementById('issenSkillLevel') let level = levelSelector[levelSelector.selectedIndex].value let totalCr = document.getElementById(\"issenCritValues\").value let registletSelector = document.getElementById(\"issenRegistlet\"); let registlet = registletSelector[registletSelector.selectedIndex].value; let result = document.getElementById('issenValues') calcIssenConstant(level, result) calcIssenMultiplier(level, registlet, result) addIssenUnsheathe(result) calcIssenSecondCrit(totalCr, result) result.innerHTML += `<br>This skill's <b>maximum cast range</b> is equal to the maximum auto attack range of the <b>equipped katana</b>` } calcIssenValues() Pulse Blade",
+  "tree": "Mononofu",
+  "tree_slug": "mononofu",
+  "tree_url": "https://coryn.club/skill.php?tree=Mononofu",
+  "image_path": "assets/skill_tree/mononofu/issen.png",
+  "data_path": "doc/coryn_skills/mononofu/issen.json"
+}

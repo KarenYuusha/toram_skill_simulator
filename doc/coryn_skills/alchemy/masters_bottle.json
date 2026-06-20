@@ -1,0 +1,12 @@
+{
+  "name": "Master's Bottle",
+  "slug": "masters_bottle",
+  "required_level": 4,
+  "image_url": "https://coryn.club/skill/alchemy/masterbottle.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description Increases the limit of profiency level by 5 per skill level. Master's Bottle II",
+  "tree": "Alchemy",
+  "tree_slug": "alchemy",
+  "tree_url": "https://coryn.club/skill.php?tree=Alchemy",
+  "image_path": "assets/skill_tree/alchemy/masters_bottle.png",
+  "data_path": "doc/coryn_skills/alchemy/masters_bottle.json"
+}

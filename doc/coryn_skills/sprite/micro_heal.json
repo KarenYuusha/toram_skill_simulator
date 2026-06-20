@@ -1,0 +1,12 @@
+{
+  "name": "Micro Heal",
+  "slug": "micro_heal",
+  "required_level": 3,
+  "image_url": "https://coryn.club/skill/sprite/microheal.png",
+  "raw_text": "Main MD only Type Active Element Neutral MP 100 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 24 Description Sharing a little comfort. Slightly restores your HP and the HP of the party member who has lost the most HP. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 Total MATK: function calcMicroHealSkillEffect(level, matk, result) { var healFlat = (50 + Math.floor(matk/20)) * level result.innerHTML = `<b>Skill effect:</b> <li>Recovers the HP of the <b>caster</b> and the <b>party member with the lowest HP</b> by ${healFlat} HP upon successful cast</li> <li>If there are no members within 8m range, or the <b>caster</b> is also the party member with the lowest HP, then the <b>caster</b> will be healed twice</li>` } function calcMicroHealValues() { var levelSelector = document.getElementById('microHealSkillLevel') var level = levelSelector[levelSelector.selectedIndex].value var matk = document.getElementById(\"microHealMatk\").value var result = document.getElementById('microHealValues') calcMicroHealSkillEffect(level, matk, result) } calcMicroHealValues() Resurrection",
+  "tree": "Sprite",
+  "tree_slug": "sprite",
+  "tree_url": "https://coryn.club/skill.php?tree=Sprite",
+  "image_path": "assets/skill_tree/sprite/micro_heal.png",
+  "data_path": "doc/coryn_skills/sprite/micro_heal.json"
+}

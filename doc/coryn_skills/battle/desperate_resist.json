@@ -1,0 +1,12 @@
+{
+  "name": "Desperate Resist",
+  "slug": "desperate_resist",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/battle/desperateresist.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description Reduce the damage taken while you are immobilized by the status ailments such as Stun and Tumble. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcDesperateResistValues() { var levelSelector = document.getElementById(\"desperateResistSkillLevel\") var level = levelSelector[levelSelector.selectedIndex].value var result = document.getElementById(\"desperateResistValues\") result.innerHTML = `Reduces damage taken by ${level}% when you are afflicted with [Flinch], [Tumble], [Stun], [Knockback], or [Sleep]` } calcDesperateResistValues() Critical UP",
+  "tree": "Battle",
+  "tree_slug": "battle",
+  "tree_url": "https://coryn.club/skill.php?tree=Battle",
+  "image_path": "assets/skill_tree/battle/desperate_resist.png",
+  "data_path": "doc/coryn_skills/battle/desperate_resist.json"
+}

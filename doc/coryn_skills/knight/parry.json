@@ -1,0 +1,12 @@
+{
+  "name": "Parry",
+  "slug": "parry",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/knight/parry.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description Parry attacks using the weapon. Chance to reduce physical damage. The skill will not be activated with Guard. Extras Show more... Sub-Weapon: Shield Other Skill Level: 1 2 3 4 5 6 7 8 9 10 \"Knight Will\" Skill Level: 0 1 2 3 4 5 6 7 8 9 10 function knightWillCheck(level, kwSection) { if (level == 10) {kwSection.style = \"display: block\"} else {kwSection.style = \"display: none\"} } function calcParryChance(level, weapon, kwLevel, result) { let chance = 5*level - Math.floor(level/6)*20 if (level == 10) { if (weapon == \"shield\") {chance += kwLevel*2} else {chance += kwLevel*1} } result.innerHTML = `<li><b>Parry Chance:</b> ${chance}%</li>` } function calcParryDmgReduc(level, result) { let dmgReduc = 10 + Math.floor(level/6)*10 result.innerHTML += `<li><b>Damage Reduction:</b> ${dmgReduc}%</li><br>` } function parryExtraInformation (result) { result.innerHTML += `<b>Extra info:</b> <li><b>Parry</b> does not show any kind of indication when it activates</li> <li><b>Parry</b> can <b>only reduce Physical Damage</b></li> <li><b>Parry</b> cannot activate <b>simultaneously with Guard</b></li>` } function calcParryValues() { let weaponSelector = document.getElementById(\"parryWeapon\") let weapon = weaponSelector[weaponSelector.selectedIndex].value let levelSelector = document.getElementById('parrySkillLevel') let level = levelSelector[levelSelector.selectedIndex].value let kwSection = document.getElementById(\"parryKWInput\") let kwLevelSelector = document.getElementById(\"parryKWLevel\") let kwLevel = kwLevelSelector[kwLevelSelector.selectedIndex].value let result = document.getElementById('parryValues') knightWillCheck(level, kwSection) calcParryChance(level, weapon, kwLevel, result) calcParryDmgReduc(level, result) parryExtraInformation(result) } calcParryValues() P. Defense",
+  "tree": "Knight",
+  "tree_slug": "knight",
+  "tree_url": "https://coryn.club/skill.php?tree=Knight",
+  "image_path": "assets/skill_tree/knight/parry.png",
+  "data_path": "doc/coryn_skills/knight/parry.json"
+}

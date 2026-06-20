@@ -1,0 +1,12 @@
+{
+  "name": "Sanctuary",
+  "slug": "sanctuary",
+  "required_level": 3,
+  "image_url": "https://coryn.club/skill/support/sanctuary.png",
+  "raw_text": "Available with all weapons Type Active Element Neutral MP 400 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 0 Description Create a sanctuary and protect allies. Reduce damage taken while in the area. The amount depends on each player's MaxHP. Ineffective against fatal damage. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcSanctuarySkillEffect(level, result) { var radius = 1 + level/3 radius = Math.round(radius*100)/100 var duration = 5 + 1*level result.innerHTML = `<b>Skill Effect:</b> <li>Creates <b>Sanctuary zone</b> at the <b>caster's position</b>; grants <b>Sanctuary buff</b> to the <b>caster</b> or <b>allies</b> when they are inside the zone</li> <li><b>Zone Radius:</b> ${radius}m, around the <b>caster's position when the skill is cast</b></li> <li><b>Zone Duration:</b> ${duration} seconds</li>` } function calcSanctuaryBuff(level, result) { var threshold = 5 + 0.5 * level var dmgReduc = Math.floor(30 + ((level-1)/3)*20) result.innerHTML += `<br><b>Buff Effect:</b> <li>Reduces the damage taken by ${dmgReduc}% if that damage is <b>lower than ${threshold}% of your MaxHP</b></li> <li><b>Buff Duration:</b> Until you move out of <b>Sanctuary zone</b></li>` } function addSanctuaryExtraInfo(result) { result.innerHTML += `<br><b>Extra info:</b> <li>This skill <b>will not reduce the received damage</b> if that damage is higher than the aforementioned threshold; as long as the condition is satisfied, all received attack damage will be reduced regardless of damage type</li> <li>This skill cannot stack with <b>Asura Aura</b> and <b>Internal Elixir</b>; apparently only the better damage reduction will be used</li>` } function calcSanctuaryValues() { let levelSelector = document.getElementById(\"sanctuarySkillLevel\") let level = levelSelector[levelSelector.selectedIndex].value let result = document.getElementById(\"sanctuaryValues\") calcSanctuarySkillEffect(level, result) calcSanctuaryBuff(level, result) addSanctuaryExtraInfo(result) } calcSanctuaryValues() Heal",
+  "tree": "Support",
+  "tree_slug": "support",
+  "tree_url": "https://coryn.club/skill.php?tree=Support",
+  "image_path": "assets/skill_tree/support/sanctuary.png",
+  "data_path": "doc/coryn_skills/support/sanctuary.json"
+}

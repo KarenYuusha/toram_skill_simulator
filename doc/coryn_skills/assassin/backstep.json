@@ -1,0 +1,12 @@
+{
+  "name": "Backstep",
+  "slug": "backstep",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/assassin/backstep.png",
+  "raw_text": "Available with all weapons Type Active Element Neutral MP 100 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 0 Description A technique to instantly escape from danger. If you manage to move a certain distance away, the power of Assassin Stab used next increases. Restore a little MP when the use is timed with the monster's attack warning. Dagger [Using it with a Ninjutsu Scroll will give you the same effects.] MP Recovery Amount x2 Extras Show more... Sub-Weapon: Dagger/Ninjutsu Scroll Other Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcBackstepSkillEffect(level, weapon, result) { var mpHeal = 5 * level if (weapon == \"dagger\") {mpHeal *= 2} result.innerHTML = `<b>Skill Effect:</b> Causes the <b>caster</b> to jump back 5m and grants <b>Backstep buff</b>; recovers ${mpHeal} MP if the skill is used <b>during an AoE Attack Warning</b> (when an Exclamation mark appears on the character's head)` } function calcBackstepBuffEffect(level, weapon, result) { var dmgBonus = 5 * level result.innerHTML += `<br><b>Buff Effect:</b> <li>Increases <b>Assassin Stab</b> damage by ${dmgBonus}%; stacks <b>additively</b> with <b>Foresight</b> bonus</li> <li><b>Buff Duration:</b> Until <b>Assassin Stab</b> is used</li>` } function calcBackstepValue() { let weaponSelector = document.getElementById(\"backstepWeapon\") let weapon = weaponSelector[weaponSelector.selectedIndex].value let levelSelector = document.getElementById(\"backstepLevel\") let level = levelSelector[levelSelector.selectedIndex].value let result = document.getElementById(\"backstepValue\") calcBackstepSkillEffect (level, weapon, result) calcBackstepBuffEffect(level, weapon, result) } calcBackstepValue() Arcane Strike",
+  "tree": "Assassin",
+  "tree_slug": "assassin",
+  "tree_url": "https://coryn.club/skill.php?tree=Assassin",
+  "image_path": "assets/skill_tree/assassin/backstep.png",
+  "data_path": "doc/coryn_skills/assassin/backstep.json"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Cursed Altar",
+  "slug": "cursed_altar",
+  "required_level": 5,
+  "image_url": "https://coryn.club/skill/sprite/cursedaltar.png",
+  "raw_text": "Main MD only Type Active, Magic skill Element Neutral MP 600 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 12 Description Devours the soul with a curse. Puts a \"curse\" on the target. If successful, an effect that continuously deals damage to the target is additionally applied ( damage is reduced against bosses ). Ignition",
+  "tree": "Sprite",
+  "tree_slug": "sprite",
+  "tree_url": "https://coryn.club/skill.php?tree=Sprite",
+  "image_path": "assets/skill_tree/sprite/cursed_altar.png",
+  "data_path": "doc/coryn_skills/sprite/cursed_altar.json"
+}

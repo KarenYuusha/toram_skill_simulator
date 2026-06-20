@@ -1,0 +1,12 @@
+{
+  "name": "Godspeed",
+  "slug": "godspeed",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/dw/godspeed.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description Enhances AGI and Unsheathe Attacks such as First Attack, Evasion Attacks and certain skills. Dual Swords Unsheathe Attack +10% Extras Show more... Weapon: Dual Swords Other Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcGodspeedAgi(level, result) { let agiBonus = level*1 + Math.max(0, level-5) result.innerHTML = `<li><b>AGI</b> +${agiBonus}</li>` } function calcGodspeedUnsheathe (level, weapon, result) { let unsheathe = 5 + 1*level if (weapon == 'ds') {unsheathe += 10} result.innerHTML += `<li><b>Unsheathe Attack</b> +${unsheathe}%</li>` } function calcGodspeedValues() { let levelSelector = document.getElementById('godspeedSkillLevel') let level = levelSelector[levelSelector.selectedIndex].value let weaponSelector = document.getElementById('godspeedWeaponType') let weapon = weaponSelector[weaponSelector.selectedIndex].value let result = document.getElementById('godspeedValues') calcGodspeedAgi(level, result) calcGodspeedUnsheathe(level, weapon, result) } calcGodspeedValues() Saber Aura",
+  "tree": "DualSword",
+  "tree_slug": "dualsword",
+  "tree_url": "https://coryn.club/skill.php?tree=DualSword",
+  "image_path": "assets/skill_tree/dualsword/godspeed.png",
+  "data_path": "doc/coryn_skills/dualsword/godspeed.json"
+}

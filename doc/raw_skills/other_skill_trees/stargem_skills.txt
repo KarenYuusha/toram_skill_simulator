@@ -1,0 +1,63 @@
+Iron Pipe
+[Active] All Weapons
+MP Cost: 0
+Damage Type: Physical
+
+Base Skill Multiplier: 0.5 + 0.05 * Skill Level + STR/250
+Base Skill Constant: 0
+Hit Count: 1 hit
+Element: Fixed Neutral Element
+Maximum Cast Range: 4m
+AOE Radius: 1m around the target
+
+Ailment: Flinch
+Base Ailment Chance: 100% (only flinch enemy when dealing critical hit)
+Ailment Duration: 2 seconds
+Ailment Resistance: 4 seconds (Easy, Normal, and hard); 5 seconds (Nightmare); 8 seconds (Ultimate)
+
+This skill is affected by Short Range Damage; uses and deal physical proration; and has fixed motion speed. There is a critical rate penalty for this skill, resulting in the final skill's critical rate becoming 5% * Skill Level of the total character's crit.
+Game Description: It's good enough to kill zombies. Performs a narrow AoE attack. It lowers Critical Rate, but successful critical hit will make the enemy flinch.
+
+Iron Pipe | ⭐stargem-skills⭐ | 2024 Halloween Stargem
+🛈 Phantom's Library Information 🛈
+Retro Bowgun
+[Active] All Weapons
+MP Cost: 100
+Damage Type: Physical
+
+Base Skill Multiplier: 0.5 + 0.05 * Skill Level + DEX/250
+Base Skill Constant: 100
+Hit Count: 1 hit
+Element: Fixed Neutral Element
+Maximum Cast Range: 12m
+
+Additional aggro:
+0-5m: 0 aggro
+6-8m: 250 * Skill Level
+9-12m: 750 * Skill Level
+-These value use actual aggro unit, and not yet included base MP aggro; so final value will gain 1000 more aggro from MP cost base aggro.
+-Only aggro holder gains additional aggro (includes battle initiation); non aggro holder only generate MP cost base aggro (100MP aggro/1000 aggro).
+-additional aggro affected by aggro+% equipment/buff.
+
+This skill is affected by Short/Long Range Damage; uses and deal physical proration; and has fixed motion speed.
+Game Description: A bowgun that is not very powerful and is mainly for display. Attacks the target to pull aggro. The greater the distance, the greater the effect. (6m or more/9m or more)
+
+Retro Bowgun | ⭐stargem-skills⭐ | 2024 Halloween Stargem
+Magnum
+[Active] All Weapons
+MP Cost: 400
+Damage Type: Physical
+
+Base Skill Multiplier: Character Level/100 + Skill Level
+Base Skill Constant: 40 * Skill Level
+Hit Count: 1 hit
+Element: Fixed Fire Element
+Maximum Cast Range: 18m
+
+-Bullets are required to fire a shot. One bullet regenerates every 20s - Skill Level, with a maximum stack of 99.
+-This skill is absolute critical but has an accuracy penalty of 35% for all skill levels.
+
+This skill is forced Long Range Damage; uses and deals magic proration; and has fixed motion speed.
+Game Description: A weapon from another world modified and loaded with magic. Attacks with a guaranteed critical hit, but the high recoil makes it hard to hit the target. The ability to use it accumulates as the battle goes on.
+
+Magnum | ⭐stargem-skills⭐ | 2024 Halloween Stargem

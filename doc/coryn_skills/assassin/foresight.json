@@ -1,0 +1,12 @@
+{
+  "name": "Foresight",
+  "slug": "foresight",
+  "required_level": 3,
+  "image_url": "https://coryn.club/skill/assassin/foresight.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description Exceed the limit of your ability to dodge. Lower monster's minimum accuracy and makes it easier to dodge attacks. The power of Assassin Stab is also raised. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 Backstep buff is active: function calcForesightEffect(level, backstep, result){ var foeAcc = 25 - 1*level var maxDodge = 75 + 1*level var dmgBonus = 5*level if (backstep) {dmgBonus += 100} result.innerHTML = `<li><b>Enemy's minimum accuracy:</b> ${foeAcc}%; only applies for yourself, and <b>does not</b> affect attacks with <b>Perfect Aim</b> attribute</li> <li><b>Your maximum dodge chance:</b> ${maxDodge}%; this is technically the same as the above, but from the player's point of view</li> <li>Increases <b>Assassin Stab</b> damage by ${dmgBonus}%</li>` } function calcForesightValues() { var levelSelector = document.getElementById(\"foresightLevel\") var level = levelSelector[levelSelector.selectedIndex].value var backstep = document.getElementById(\"foresightBackstepBuff\").checked var result = document.getElementById(\"foresightValues\") calcForesightEffect(level, backstep, result) } calcForesightValues() Shadow Walk",
+  "tree": "Assassin",
+  "tree_slug": "assassin",
+  "tree_url": "https://coryn.club/skill.php?tree=Assassin",
+  "image_path": "assets/skill_tree/assassin/foresight.png",
+  "data_path": "doc/coryn_skills/assassin/foresight.json"
+}

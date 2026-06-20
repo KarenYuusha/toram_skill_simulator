@@ -1,0 +1,12 @@
+{
+  "name": "Mad Dagger",
+  "slug": "mad_dagger",
+  "required_level": 5,
+  "image_url": "https://coryn.club/skill/dagger/maddagger.png",
+  "raw_text": "Dagger only Type Active, Physical skill Element Weapon Dependent MP 200 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 16 Description Summons and controls a levitating dagger. Hurls the dagger at the target or a different target in combat to deal damage. After using the skill, the dagger follows you and delivers follow-up attacks in tandem with your normal attacks. Dagger After activating Mad Dagger, using Dagger Skills (excluding certain skills such as passives) will increase the number of levitating daggers. ( Max 5 ) The number of daggers decreases if you are immobilized (Flinch, Tumble, etc.) or if the enemy successfully performs Guard on daggers launched by the skill. Poison Dagger",
+  "tree": "Dagger",
+  "tree_slug": "dagger",
+  "tree_url": "https://coryn.club/skill.php?tree=Dagger",
+  "image_path": null,
+  "data_path": "doc/coryn_skills/dagger/mad_dagger.json"
+}

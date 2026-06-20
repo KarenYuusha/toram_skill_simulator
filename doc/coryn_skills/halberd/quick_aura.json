@@ -1,0 +1,12 @@
+{
+  "name": "Quick Aura",
+  "slug": "quick_aura",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/halberd/quickaura.png",
+  "raw_text": "Available with all weapons Type Active Element Neutral MP 0 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start No Combo middle Yes Range 0 Description Increase your speed with the fighting spirit. Activate this skill by consuming HP instead of MP. Increase ASPD for a certain period of time. Halberd HP Cost -5% Duration +120sec. Extras Show more... Weapon: Halberd Other Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcQuickAuraSkillEffect(level, weapon, result) { let hpConsumption = 15 if (weapon == 'hb') {hpConsumption -= 5} let HTML = `<b>Skill Effect:</b> Consumes ${hpConsumption}% of your <b>MaxHP</b> and grants <b>Quick Aura buff</b> upon cast; if you don't have enough HP, you will be left with 1 HP` if (level != 1) {HTML += ` but the effect of the buff will be reduced to that of <b>Skill Level 1</b>`} result.innerHTML = HTML } function calcQuickAuraBuffEffect(level, result) { let flat = 50 * level let percent = Math.floor(2.5 * level) result.innerHTML += `<br><b>Buff Effect:</b> <li><b>Attack Speed</b> +${percent}%</li> <li><b>Attack Speed</b> +${flat}</li>` } function calcQuickAuraDuration(weapon, result) { let duration = 3 if (weapon == 'hb') {duration += 2} result.innerHTML += `<li><b>Buff Duration:</b> ${duration} minutes</li>` } function calcQuickAuraValues() { let levelSelector = document.getElementById('quickAuraSkillLevel') let level = levelSelector[levelSelector.selectedIndex].value let weaponSelector = document.getElementById('quickAuraWeaponType') let weapon = weaponSelector[weaponSelector.selectedIndex].value let result = document.getElementById('quickAuraValues') calcQuickAuraSkillEffect(level, weapon, result) calcQuickAuraBuffEffect(level, result) calcQuickAuraDuration(weapon, result) } calcQuickAuraValues() War Cry of Struggle",
+  "tree": "Halberd",
+  "tree_slug": "halberd",
+  "tree_url": "https://coryn.club/skill.php?tree=Halberd",
+  "image_path": "assets/skill_tree/halberd/quick_aura.png",
+  "data_path": "doc/coryn_skills/halberd/quick_aura.json"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Gust",
+  "slug": "gust",
+  "required_level": 3,
+  "image_url": "https://coryn.club/skill/katana/gust.png",
+  "raw_text": "Katana only Type Active Element Neutral MP 300 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 0 Description Assumes a dual-katana stance. Removes and converts Unsheathe Power into ATK and Weapon ATK. Reactivating Gust while it's in effect will produce a different effect based on the key input. The effect ends when you move while sheathing your katana. Katana Still Wind, Northerly Wind, Easterly Wind, Westerly Wind and Southerly Wind can be activated with key input without ending the effect of Meikyo Shisui. After assuming the \"Still Wind\" stance, you can still transition into the corresponding skill with a key input. ( MP is only consumed when activating Still Wind ) Zephyr Rush",
+  "tree": "Mononofu",
+  "tree_slug": "mononofu",
+  "tree_url": "https://coryn.club/skill.php?tree=Mononofu",
+  "image_path": null,
+  "data_path": "doc/coryn_skills/mononofu/gust.json"
+}

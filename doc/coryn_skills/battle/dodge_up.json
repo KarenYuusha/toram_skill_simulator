@@ -1,0 +1,12 @@
+{
+  "name": "Dodge UP",
+  "slug": "dodge_up",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/battle/dodgeup.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description Increase Dodge Rate a little. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcDodgeUpValues() { var levelSelector = document.getElementById(\"dodgeUpSkillLevel\") var level = levelSelector[levelSelector.selectedIndex].value var result = document.getElementById(\"dodgeUpValues\") result.innerHTML = `<li><b>Dodge</b> +${level}</li>` } calcDodgeUpValues() Desperate Resist",
+  "tree": "Battle",
+  "tree_slug": "battle",
+  "tree_url": "https://coryn.club/skill.php?tree=Battle",
+  "image_path": "assets/skill_tree/battle/dodge_up.png",
+  "data_path": "doc/coryn_skills/battle/dodge_up.json"
+}

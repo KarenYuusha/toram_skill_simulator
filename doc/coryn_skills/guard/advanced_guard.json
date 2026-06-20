@@ -1,0 +1,12 @@
+{
+  "name": "Advanced Guard",
+  "slug": "advanced_guard",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/guard/advancedguard.png",
+  "raw_text": "Heavy Armor only Type Passive Neutral Description Increases ( Damage Reduction ) by Guard Power when heavy-remodeled armor is equipped. Also slightly increases Guard Recharge. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcAdvancedGuardValues() { var levelSelector = document.getElementById(\"advancedGuardLevel\") var level = levelSelector[levelSelector.selectedIndex].value var guardRecharge = 1 * level var guardPower = Math.floor((1 + level*1)/2) var result = document.getElementById(\"advancedGuardValues\") result.innerHTML = `<li><b>Guard Recharge</b> +${guardRecharge}%</li> <li><b>Guard Power</b> +${guardPower}%</li>` } calcAdvancedGuardValues() Physical Guard",
+  "tree": "Guard",
+  "tree_slug": "guard",
+  "tree_url": "https://coryn.club/skill.php?tree=Guard",
+  "image_path": "assets/skill_tree/guard/advanced_guard.png",
+  "data_path": "doc/coryn_skills/guard/advanced_guard.json"
+}

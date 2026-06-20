@@ -1,0 +1,180 @@
+{
+  "skill_tree": "Wizard",
+  "tree_slug": "wizard",
+  "group": "sub_weapon_skills",
+  "raw_skill_file": "sub_weapon_skills/wizard_skills.txt",
+  "coordinate_system": {
+    "origin": [
+      0,
+      0
+    ],
+    "format": [
+      "row",
+      "column"
+    ],
+    "description": "Moving one level down adds [1, 0]; moving one column right adds [0, 1]. Empty rows and columns are preserved to match the image layout."
+  },
+  "skills": [
+    {
+      "id": "lightning",
+      "name": "Lightning",
+      "position": [
+        0,
+        2
+      ],
+      "prerequisites": [
+        "familia"
+      ]
+    },
+    {
+      "id": "familia",
+      "name": "Familia",
+      "position": [
+        1,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "blizzard",
+      "name": "Blizzard",
+      "position": [
+        1,
+        2
+      ],
+      "prerequisites": [
+        "familia"
+      ]
+    },
+    {
+      "id": "meteor_strike",
+      "name": "Meteor Strike",
+      "position": [
+        1,
+        3
+      ],
+      "prerequisites": [
+        "blizzard"
+      ]
+    },
+    {
+      "id": "imperial_ray",
+      "name": "Imperial Ray",
+      "position": [
+        1,
+        4
+      ],
+      "prerequisites": [
+        "meteor_strike"
+      ]
+    },
+    {
+      "id": "magic_research",
+      "name": "Magic Research",
+      "position": [
+        1,
+        5
+      ],
+      "prerequisites": [
+        "imperial_ray"
+      ]
+    },
+    {
+      "id": "mana_crystal",
+      "name": "Mana Crystal",
+      "position": [
+        2,
+        1
+      ],
+      "prerequisites": [
+        "familia"
+      ]
+    },
+    {
+      "id": "stone_barrier",
+      "name": "Stone Barrier",
+      "position": [
+        2,
+        3
+      ],
+      "prerequisites": [
+        "mana_crystal"
+      ]
+    },
+    {
+      "id": "advanced_familia",
+      "name": "Advanced Familia",
+      "position": [
+        2,
+        4
+      ],
+      "prerequisites": [
+        "stone_barrier"
+      ]
+    },
+    {
+      "id": "kittys_treasure",
+      "name": "Kitty's Treasure",
+      "position": [
+        2,
+        5
+      ],
+      "prerequisites": [
+        "advanced_familia"
+      ]
+    },
+    {
+      "id": "cast_mastery",
+      "name": "Cast Mastery",
+      "position": [
+        3,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "crystal_laser",
+      "name": "Crystal Laser",
+      "position": [
+        3,
+        2
+      ],
+      "prerequisites": [
+        "mana_crystal"
+      ]
+    },
+    {
+      "id": "overlimit",
+      "name": "Overlimit",
+      "position": [
+        3,
+        3
+      ],
+      "prerequisites": [
+        "crystal_laser"
+      ]
+    },
+    {
+      "id": "sorcery_guide",
+      "name": "Sorcery Guide",
+      "position": [
+        3,
+        4
+      ],
+      "prerequisites": [
+        "overlimit"
+      ]
+    },
+    {
+      "id": "shift",
+      "name": "Shift",
+      "position": [
+        3,
+        5
+      ],
+      "prerequisites": [
+        "sorcery_guide"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "skill_tree": "Assassin",
+  "tree_slug": "assassin",
+  "group": "sub_weapon_skills",
+  "raw_skill_file": "sub_weapon_skills/assassin_skills.txt",
+  "coordinate_system": {
+    "origin": [
+      0,
+      0
+    ],
+    "format": [
+      "row",
+      "column"
+    ],
+    "description": "Moving one level down adds [1, 0]; moving one column right adds [0, 1]. Empty rows and columns are preserved to match the image layout."
+  },
+  "skills": [
+    {
+      "id": "sicarius",
+      "name": "Sicarius",
+      "position": [
+        0,
+        3
+      ],
+      "prerequisites": [
+        "backstep"
+      ]
+    },
+    {
+      "id": "assassin_stab",
+      "name": "Assassin Stab",
+      "position": [
+        1,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "backstep",
+      "name": "Backstep",
+      "position": [
+        1,
+        1
+      ],
+      "prerequisites": [
+        "assassin_stab"
+      ]
+    },
+    {
+      "id": "arcane_strike",
+      "name": "Arcane Strike",
+      "position": [
+        1,
+        2
+      ],
+      "prerequisites": [
+        "backstep"
+      ]
+    },
+    {
+      "id": "secret_assassin",
+      "name": "Secret Assassin",
+      "position": [
+        1,
+        4
+      ],
+      "prerequisites": [
+        "arcane_strike"
+      ]
+    },
+    {
+      "id": "evasion",
+      "name": "Evasion",
+      "position": [
+        2,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "serum",
+      "name": "Serum",
+      "position": [
+        2,
+        1
+      ],
+      "prerequisites": [
+        "evasion"
+      ]
+    },
+    {
+      "id": "foresight",
+      "name": "Foresight",
+      "position": [
+        2,
+        2
+      ],
+      "prerequisites": [
+        "serum"
+      ]
+    },
+    {
+      "id": "shadow_walk",
+      "name": "Shadow Walk",
+      "position": [
+        2,
+        3
+      ],
+      "prerequisites": [
+        "foresight"
+      ]
+    },
+    {
+      "id": "assault_chase",
+      "name": "Assault Chase",
+      "position": [
+        2,
+        4
+      ],
+      "prerequisites": [
+        "shadow_walk"
+      ]
+    },
+    {
+      "id": "venom_injection",
+      "name": "Venom Injection",
+      "position": [
+        3,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "corrosive_poison",
+      "name": "Corrosive Poison",
+      "position": [
+        3,
+        1
+      ],
+      "prerequisites": [
+        "venom_injection"
+      ]
+    },
+    {
+      "id": "venom_thief",
+      "name": "Venom Thief",
+      "position": [
+        3,
+        2
+      ],
+      "prerequisites": [
+        "corrosive_poison"
+      ]
+    },
+    {
+      "id": "death_reception",
+      "name": "Death Reception",
+      "position": [
+        3,
+        3
+      ],
+      "prerequisites": [
+        "venom_thief"
+      ]
+    },
+    {
+      "id": "poison_master",
+      "name": "Poison Master",
+      "position": [
+        3,
+        4
+      ],
+      "prerequisites": [
+        "death_reception"
+      ]
+    }
+  ]
+}

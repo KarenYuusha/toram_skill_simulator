@@ -1,0 +1,303 @@
+{
+  "source": "https://coryn.club/skill_menu.php",
+  "tree_count": 33,
+  "trees": [
+    {
+      "name": "Blade",
+      "slug": "blade",
+      "url": "https://coryn.club/skill.php?tree=Blade",
+      "skill_count": 24,
+      "icon_count": 24,
+      "missing_icon_count": 0,
+      "index_path": "doc/coryn_skills/blade/index.json"
+    },
+    {
+      "name": "Shot",
+      "slug": "shot",
+      "url": "https://coryn.club/skill.php?tree=Shot",
+      "skill_count": 25,
+      "icon_count": 25,
+      "missing_icon_count": 0,
+      "index_path": "doc/coryn_skills/shot/index.json"
+    },
+    {
+      "name": "Magic",
+      "slug": "magic",
+      "url": "https://coryn.club/skill.php?tree=Magic",
+      "skill_count": 24,
+      "icon_count": 24,
+      "missing_icon_count": 0,
+      "index_path": "doc/coryn_skills/magic/index.json"
+    },
+    {
+      "name": "Martial",
+      "slug": "martial",
+      "url": "https://coryn.club/skill.php?tree=Martial",
+      "skill_count": 22,
+      "icon_count": 22,
+      "missing_icon_count": 0,
+      "index_path": "doc/coryn_skills/martial/index.json"
+    },
+    {
+      "name": "Halberd",
+      "slug": "halberd",
+      "url": "https://coryn.club/skill.php?tree=Halberd",
+      "skill_count": 22,
+      "icon_count": 22,
+      "missing_icon_count": 0,
+      "index_path": "doc/coryn_skills/halberd/index.json"
+    },
+    {
+      "name": "Mononofu",
+      "slug": "mononofu",
+      "url": "https://coryn.club/skill.php?tree=Mononofu",
+      "skill_count": 23,
+      "icon_count": 23,
+      "missing_icon_count": 0,
+      "index_path": "doc/coryn_skills/mononofu/index.json"
+    },
+    {
+      "name": "DualSword",
+      "slug": "dualsword",
+      "url": "https://coryn.club/skill.php?tree=DualSword",
+      "skill_count": 21,
+      "icon_count": 21,
+      "missing_icon_count": 0,
+      "index_path": "doc/coryn_skills/dualsword/index.json"
+    },
+    {
+      "name": "Crusher",
+      "slug": "crusher",
+      "url": "https://coryn.club/skill.php?tree=Crusher",
+      "skill_count": 10,
+      "icon_count": 10,
+      "missing_icon_count": 0,
+      "index_path": "doc/coryn_skills/crusher/index.json"
+    },
+    {
+      "name": "Sprite",
+      "slug": "sprite",
+      "url": "https://coryn.club/skill.php?tree=Sprite",
+      "skill_count": 17,
+      "icon_count": 17,
+      "missing_icon_count": 0,
+      "index_path": "doc/coryn_skills/sprite/index.json"
+    },
+    {
+      "name": "Shield",
+      "slug": "shield",
+      "url": "https://coryn.club/skill.php?tree=Shield",
+      "skill_count": 13,
+      "icon_count": 13,
+      "missing_icon_count": 0,
+      "index_path": "doc/coryn_skills/shield/index.json"
+    },
+    {
+      "name": "Dagger",
+      "slug": "dagger",
+      "url": "https://coryn.club/skill.php?tree=Dagger",
+      "skill_count": 13,
+      "icon_count": 13,
+      "missing_icon_count": 0,
+      "index_path": "doc/coryn_skills/dagger/index.json"
+    },
+    {
+      "name": "Knight",
+      "slug": "knight",
+      "url": "https://coryn.club/skill.php?tree=Knight",
+      "skill_count": 15,
+      "icon_count": 15,
+      "missing_icon_count": 0,
+      "index_path": "doc/coryn_skills/knight/index.json"
+    },
+    {
+      "name": "Priest",
+      "slug": "priest",
+      "url": "https://coryn.club/skill.php?tree=Priest",
+      "skill_count": 15,
+      "icon_count": 15,
+      "missing_icon_count": 0,
+      "index_path": "doc/coryn_skills/priest/index.json"
+    },
+    {
+      "name": "Hunter",
+      "slug": "hunter",
+      "url": "https://coryn.club/skill.php?tree=Hunter",
+      "skill_count": 17,
+      "icon_count": 17,
+      "missing_icon_count": 0,
+      "index_path": "doc/coryn_skills/hunter/index.json"
+    },
+    {
+      "name": "Assassin",
+      "slug": "assassin",
+      "url": "https://coryn.club/skill.php?tree=Assassin",
+      "skill_count": 15,
+      "icon_count": 15,
+      "missing_icon_count": 0,
+      "index_path": "doc/coryn_skills/assassin/index.json"
+    },
+    {
+      "name": "Wizard",
+      "slug": "wizard",
+      "url": "https://coryn.club/skill.php?tree=Wizard",
+      "skill_count": 15,
+      "icon_count": 15,
+      "missing_icon_count": 0,
+      "index_path": "doc/coryn_skills/wizard/index.json"
+    },
+    {
+      "name": "Guard",
+      "slug": "guard",
+      "url": "https://coryn.club/skill.php?tree=Guard",
+      "skill_count": 6,
+      "icon_count": 6,
+      "missing_icon_count": 0,
+      "index_path": "doc/coryn_skills/guard/index.json"
+    },
+    {
+      "name": "DarkPower",
+      "slug": "darkpower",
+      "url": "https://coryn.club/skill.php?tree=DarkPower",
+      "skill_count": 12,
+      "icon_count": 12,
+      "missing_icon_count": 0,
+      "index_path": "doc/coryn_skills/darkpower/index.json"
+    },
+    {
+      "name": "MagicBlade",
+      "slug": "magicblade",
+      "url": "https://coryn.club/skill.php?tree=MagicBlade",
+      "skill_count": 15,
+      "icon_count": 15,
+      "missing_icon_count": 0,
+      "index_path": "doc/coryn_skills/magicblade/index.json"
+    },
+    {
+      "name": "Barehand",
+      "slug": "barehand",
+      "url": "https://coryn.club/skill.php?tree=Barehand",
+      "skill_count": 12,
+      "icon_count": 12,
+      "missing_icon_count": 0,
+      "index_path": "doc/coryn_skills/barehand/index.json"
+    },
+    {
+      "name": "Ninja",
+      "slug": "ninja",
+      "url": "https://coryn.club/skill.php?tree=Ninja",
+      "skill_count": 4,
+      "icon_count": 4,
+      "missing_icon_count": 0,
+      "index_path": "doc/coryn_skills/ninja/index.json"
+    },
+    {
+      "name": "Partisan",
+      "slug": "partisan",
+      "url": "https://coryn.club/skill.php?tree=Partisan",
+      "skill_count": 9,
+      "icon_count": 9,
+      "missing_icon_count": 0,
+      "index_path": "doc/coryn_skills/partisan/index.json"
+    },
+    {
+      "name": "Necromancer",
+      "slug": "necromancer",
+      "url": "https://coryn.club/skill.php?tree=Necromancer",
+      "skill_count": 12,
+      "icon_count": 12,
+      "missing_icon_count": 0,
+      "index_path": "doc/coryn_skills/necromancer/index.json"
+    },
+    {
+      "name": "Survival",
+      "slug": "survival",
+      "url": "https://coryn.club/skill.php?tree=Survival",
+      "skill_count": 9,
+      "icon_count": 9,
+      "missing_icon_count": 0,
+      "index_path": "doc/coryn_skills/survival/index.json"
+    },
+    {
+      "name": "Support",
+      "slug": "support",
+      "url": "https://coryn.club/skill.php?tree=Support",
+      "skill_count": 13,
+      "icon_count": 13,
+      "missing_icon_count": 0,
+      "index_path": "doc/coryn_skills/support/index.json"
+    },
+    {
+      "name": "Battle",
+      "slug": "battle",
+      "url": "https://coryn.club/skill.php?tree=Battle",
+      "skill_count": 15,
+      "icon_count": 15,
+      "missing_icon_count": 0,
+      "index_path": "doc/coryn_skills/battle/index.json"
+    },
+    {
+      "name": "Minstrel",
+      "slug": "minstrel",
+      "url": "https://coryn.club/skill.php?tree=Minstrel",
+      "skill_count": 10,
+      "icon_count": 10,
+      "missing_icon_count": 0,
+      "index_path": "doc/coryn_skills/minstrel/index.json"
+    },
+    {
+      "name": "Dancer",
+      "slug": "dancer",
+      "url": "https://coryn.club/skill.php?tree=Dancer",
+      "skill_count": 7,
+      "icon_count": 7,
+      "missing_icon_count": 0,
+      "index_path": "doc/coryn_skills/dancer/index.json"
+    },
+    {
+      "name": "Golem",
+      "slug": "golem",
+      "url": "https://coryn.club/skill.php?tree=Golem",
+      "skill_count": 12,
+      "icon_count": 12,
+      "missing_icon_count": 0,
+      "index_path": "doc/coryn_skills/golem/index.json"
+    },
+    {
+      "name": "Smith",
+      "slug": "smith",
+      "url": "https://coryn.club/skill.php?tree=Smith",
+      "skill_count": 23,
+      "icon_count": 23,
+      "missing_icon_count": 0,
+      "index_path": "doc/coryn_skills/smith/index.json"
+    },
+    {
+      "name": "Alchemy",
+      "slug": "alchemy",
+      "url": "https://coryn.club/skill.php?tree=Alchemy",
+      "skill_count": 15,
+      "icon_count": 15,
+      "missing_icon_count": 0,
+      "index_path": "doc/coryn_skills/alchemy/index.json"
+    },
+    {
+      "name": "Tamer",
+      "slug": "tamer",
+      "url": "https://coryn.club/skill.php?tree=Tamer",
+      "skill_count": 7,
+      "icon_count": 7,
+      "missing_icon_count": 0,
+      "index_path": "doc/coryn_skills/tamer/index.json"
+    },
+    {
+      "name": "Scroll",
+      "slug": "scroll",
+      "url": "https://coryn.club/skill.php?tree=Scroll",
+      "skill_count": 8,
+      "icon_count": 8,
+      "missing_icon_count": 0,
+      "index_path": "doc/coryn_skills/scroll/index.json"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Lightning Hail",
+  "slug": "lightning_hail",
+  "required_level": 4,
+  "image_url": "https://coryn.club/skill/halberd/lightninghail.png",
+  "raw_text": "Halberd only Type Active, Magic skill Element Weapon Dependent MP 200 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 12 Description A spear technique that summons multiple lightning strikes from the sky. Generates multiple attacks that deal magic damage around the target. More likely to hit paralyzed targets. Grants invincibility to yourself when activated. Thor's Hammer",
+  "tree": "Halberd",
+  "tree_slug": "halberd",
+  "tree_url": "https://coryn.club/skill.php?tree=Halberd",
+  "image_path": "assets/skill_tree/halberd/lightning_hail.png",
+  "data_path": "doc/coryn_skills/halberd/lightning_hail.json"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Triple Kick",
+  "slug": "triple_kick",
+  "required_level": 3,
+  "image_url": "https://coryn.club/skill/martial/triplekick.png",
+  "raw_text": "Available with all weapons Type Active, Physical skill Element Weapon Dependent MP 300 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 3 Description Attacks the target three times quickly. Critical rates are higher than normal attacks. Knuckle Power +300 Skill Power +75 Boost on Critical Rate Extras Show more... Weapon: Knuckle Other Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcTripleKickConstant (level, result) { var constant = 25 + (2 * level) result.innerHTML = `<li><b>Skill Constant:</b> ${constant}; constant for each hit</li>` } function calcTripleKickMultiplier (level, weapon, result) { var multipler = 1 + (0.1 * level) if (weapon == \"Knuckle\") {multipler += 1} result.innerHTML += `<li><b>Skill Multiplier:</b> ${multipler}; multiplier for each hit</li>` } function addTripleKickHitCount(result) { result.innerHTML += `<li><b>Hit Count:</b> 3 hits; damage calculation is done for each hit</li><br>` } function calcTripleKickCritRateBonus (level, weapon, result) { var crBonus1 = 0 var crBonus2 = 2 * level var crBonus3 = 4 * level if (weapon == \"Knuckle\") { crBonus1 +=50 crBonus2 +=50 crBonus3 +=50 } var HTML = `` if (crBonus1 != 0) {HTML += `<li><b>Critical Rate</b> of the <b>first hit</b> +${crBonus1}</li>`} HTML += `<li><b>Critical Rate</b> of the <b>second hit</b> +${crBonus2}</li> <li><b>Critical Rate</b> of the <b>third hit</b> +${crBonus3}</li>` result.innerHTML += HTML } function calcTripleKickValues() { let levelSelector = document.getElementById('tripleKickSkillLevel') let level = levelSelector[levelSelector.selectedIndex].value let weaponSelector = document.getElementById('tripleKickWeaponType') let weapon = weaponSelector[weaponSelector.selectedIndex].value let result = document.getElementById('tripleKickValues') calcTripleKickConstant(level, result) calcTripleKickMultiplier(level, weapon, result) addTripleKickHitCount(result) calcTripleKickCritRateBonus(level, weapon, result) } calcTripleKickValues() Rush",
+  "tree": "Martial",
+  "tree_slug": "martial",
+  "tree_url": "https://coryn.club/skill.php?tree=Martial",
+  "image_path": "assets/skill_tree/martial/triple_kick.png",
+  "data_path": "doc/coryn_skills/martial/triple_kick.json"
+}

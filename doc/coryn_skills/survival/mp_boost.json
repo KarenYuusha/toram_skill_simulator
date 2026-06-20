@@ -1,0 +1,12 @@
+{
+  "name": "MP Boost",
+  "slug": "mp_boost",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/survival/mpboost.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description MaxMP increases a little. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcMpBoostValues() { var levelSelector = document.getElementById(\"mpBoostLevel\") var level = levelSelector[levelSelector.selectedIndex].value var maxMP = 30 * level var result = document.getElementById(\"mpBoostValues\") result.innerHTML = `<li><b>MaxMP</b> +${maxMP}</li>` } calcMpBoostValues() Sober Analysis",
+  "tree": "Survival",
+  "tree_slug": "survival",
+  "tree_url": "https://coryn.club/skill.php?tree=Survival",
+  "image_path": "assets/skill_tree/survival/mp_boost.png",
+  "data_path": "doc/coryn_skills/survival/mp_boost.json"
+}

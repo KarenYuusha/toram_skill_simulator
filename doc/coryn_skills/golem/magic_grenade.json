@@ -1,0 +1,12 @@
+{
+  "name": "Magic Grenade",
+  "slug": "magic_grenade",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/golem/magicgrenade.png",
+  "raw_text": "Shield/Bowgun/Bare Hand only Type Active, Magic skill Element Weapon Dependent MP 100 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 8 Description Destabilizes the magic lamp's power to use it like a bomb. It's an AoE attack, but it won't reach targets that are too far away. INT and TEC will boost its power further. Frost Grenade",
+  "tree": "Golem",
+  "tree_slug": "golem",
+  "tree_url": "https://coryn.club/skill.php?tree=Golem",
+  "image_path": "assets/skill_tree/golem/magic_grenade.png",
+  "data_path": "doc/coryn_skills/golem/magic_grenade.json"
+}

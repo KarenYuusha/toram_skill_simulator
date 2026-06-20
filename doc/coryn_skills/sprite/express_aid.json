@@ -1,0 +1,12 @@
+{
+  "name": "Express Aid",
+  "slug": "express_aid",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/sprite/expressaid.png",
+  "raw_text": "Main MD only Type Passive Neutral Description Raises and rushes the output of magic device. Increases traveling speed toward the target of \"First Aid\" and reduces damage received up to a certain number of times. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcExpressAidSkillEffect(level, result) { var dmgReduc = 10 * level var redCount = Math.floor(1 + level/5) var HTML = `Upon using <b>First Aid</b>, <b>doubles</b> your <b>Movement Speed</b> toward the targeted ally, and reduces damage taken by ${dmgReduc}% for up to ${redCount} time` if (redCount != 1) {HTML += `s`} HTML += ` during the movement` if (dmgReduc == 100) {HTML += ` (the received hits will be treated as [Miss] instead of taking 0 damage)`} result.innerHTML = HTML } function calcExpressAidValues() { let levelSelector = document.getElementById(\"expressAidSkillLevel\") let level = levelSelector[levelSelector.selectedIndex].value let result = document.getElementById(\"expressAidValues\") calcExpressAidSkillEffect(level, result) } calcExpressAidValues() Micro Heal",
+  "tree": "Sprite",
+  "tree_slug": "sprite",
+  "tree_url": "https://coryn.club/skill.php?tree=Sprite",
+  "image_path": "assets/skill_tree/sprite/express_aid.png",
+  "data_path": "doc/coryn_skills/sprite/express_aid.json"
+}

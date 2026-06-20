@@ -1,0 +1,12 @@
+{
+  "name": "Flash Grenade",
+  "slug": "flash_grenade",
+  "required_level": 3,
+  "image_url": "https://coryn.club/skill/golem/flashgrenade.png",
+  "raw_text": "Shield/Bowgun/Bare Hand only Type Active, Magic skill Element Weapon Dependent MP 300 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 8 Description Fills the magic lamp with shining magic power. Its power depends on the Magic Grenade you've learned. May inflict [Dazzled] on the target. If you get caught in the blast, there is a medium chance to be dazzled too. Shield When equipping a shield, your Ailment Resistance allows you to resist [Dazzled]. Bare Hand [The following effect is for Main Equipment Only] If the skill \"Internal Elixir\" is active, your Ailment Resistance allows you to resist [Dazzled]. Barrier Screen",
+  "tree": "Golem",
+  "tree_slug": "golem",
+  "tree_url": "https://coryn.club/skill.php?tree=Golem",
+  "image_path": "assets/skill_tree/golem/flash_grenade.png",
+  "data_path": "doc/coryn_skills/golem/flash_grenade.json"
+}

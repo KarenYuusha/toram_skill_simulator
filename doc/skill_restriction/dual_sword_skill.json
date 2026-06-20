@@ -1,0 +1,248 @@
+{
+  "skill_tree": "Dual Sword",
+  "tree_slug": "dualsword",
+  "group": "weapon_class_skills",
+  "raw_skill_file": "weapon_class_skills/dual_sword_skills.txt",
+  "coordinate_system": {
+    "origin": [
+      0,
+      0
+    ],
+    "format": [
+      "row",
+      "column"
+    ],
+    "description": "Moving one level down adds [1, 0]; moving one column right adds [0, 1]. Empty rows and columns are preserved to match the image layout."
+  },
+  "skills": [
+    {
+      "id": "aerial_cut",
+      "name": "Aerial Cut",
+      "position": [
+        0,
+        5
+      ],
+      "prerequisites": [
+        "spinning_slash"
+      ]
+    },
+    {
+      "id": "dual_sword_mastery",
+      "name": "Dual Sword Mastery",
+      "position": [
+        1,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "twin_slash",
+      "name": "Twin Slash",
+      "position": [
+        1,
+        1
+      ],
+      "prerequisites": [
+        "dual_sword_mastery"
+      ]
+    },
+    {
+      "id": "spinning_slash",
+      "name": "Spinning Slash",
+      "position": [
+        1,
+        2
+      ],
+      "prerequisites": [
+        "twin_slash"
+      ]
+    },
+    {
+      "id": "phantom_slash",
+      "name": "Phantom Slash",
+      "position": [
+        1,
+        3
+      ],
+      "prerequisites": [
+        "spinning_slash"
+      ]
+    },
+    {
+      "id": "lunar_misfortune",
+      "name": "Lunar Misfortune",
+      "position": [
+        2,
+        5
+      ],
+      "prerequisites": [
+        "shining_cross"
+      ]
+    },
+    {
+      "id": "cross_parry",
+      "name": "Cross Parry",
+      "position": [
+        3,
+        1
+      ],
+      "prerequisites": [
+        "dual_sword_mastery"
+      ]
+    },
+    {
+      "id": "charging_slash",
+      "name": "Charging Slash",
+      "position": [
+        3,
+        2
+      ],
+      "prerequisites": [
+        "cross_parry"
+      ]
+    },
+    {
+      "id": "shadowstep",
+      "name": "Shadowstep",
+      "position": [
+        3,
+        3
+      ],
+      "prerequisites": [
+        "charging_slash"
+      ]
+    },
+    {
+      "id": "shining_cross",
+      "name": "Shining Cross",
+      "position": [
+        3,
+        4
+      ],
+      "prerequisites": [
+        "shadowstep"
+      ]
+    },
+    {
+      "id": "twin_buster_blade",
+      "name": "Twin Buster Blade",
+      "position": [
+        4,
+        5
+      ],
+      "prerequisites": [
+        "shining_cross"
+      ]
+    },
+    {
+      "id": "reflex",
+      "name": "Reflex",
+      "position": [
+        5,
+        1
+      ],
+      "prerequisites": [
+        "dual_sword_mastery"
+      ]
+    },
+    {
+      "id": "flash_blast",
+      "name": "Flash Blast",
+      "position": [
+        5,
+        3
+      ],
+      "prerequisites": [
+        "reflex"
+      ]
+    },
+    {
+      "id": "storm_reaper",
+      "name": "Storm Reaper",
+      "position": [
+        5,
+        4
+      ],
+      "prerequisites": [
+        "flash_blast"
+      ]
+    },
+    {
+      "id": "dual_sword_control",
+      "name": "Dual Sword Control",
+      "position": [
+        6,
+        1
+      ],
+      "prerequisites": [
+        "dual_sword_mastery"
+      ]
+    },
+    {
+      "id": "godspeed",
+      "name": "Godspeed",
+      "position": [
+        6,
+        2
+      ],
+      "prerequisites": [
+        "dual_sword_control"
+      ]
+    },
+    {
+      "id": "saber_aura",
+      "name": "Saber Aura",
+      "position": [
+        6,
+        4
+      ],
+      "prerequisites": [
+        "godspeed"
+      ]
+    },
+    {
+      "id": "crescent_saber",
+      "name": "Crescent Saber",
+      "position": [
+        6,
+        5
+      ],
+      "prerequisites": [
+        "saber_aura"
+      ]
+    },
+    {
+      "id": "sting_blade",
+      "name": "Sting Blade",
+      "position": [
+        7,
+        6
+      ],
+      "prerequisites": [
+        "aerial_slay"
+      ]
+    },
+    {
+      "id": "aerial_slay",
+      "name": "Aerial Slay",
+      "position": [
+        8,
+        4
+      ],
+      "prerequisites": [
+        "godspeed"
+      ]
+    },
+    {
+      "id": "horizon_cut",
+      "name": "Horizon Cut",
+      "position": [
+        8,
+        5
+      ],
+      "prerequisites": [
+        "aerial_slay"
+      ]
+    }
+  ]
+}

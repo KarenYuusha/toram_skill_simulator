@@ -1,0 +1,12 @@
+{
+  "name": "Play Dead",
+  "slug": "play_dead",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/survival/playdead.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description The waiting time to revive is reduced. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcPlayDeadValues() { var levelSelector = document.getElementById(\"playDeadLevel\") var level = levelSelector[levelSelector.selectedIndex].value var reviveTime = 5 * level var result = document.getElementById(\"playDeadValues\") result.innerHTML = `<li><b>Revive Time</b> -${reviveTime}%</li><br> <b>Base Revive Time</b> is 300 seconds` } calcPlayDeadValues() EXP Gain Up",
+  "tree": "Survival",
+  "tree_slug": "survival",
+  "tree_url": "https://coryn.club/skill.php?tree=Survival",
+  "image_path": "assets/skill_tree/survival/play_dead.png",
+  "data_path": "doc/coryn_skills/survival/play_dead.json"
+}

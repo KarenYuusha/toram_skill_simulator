@@ -1,0 +1,12 @@
+{
+  "name": "Expert's Customization",
+  "slug": "experts_customization",
+  "required_level": 4,
+  "image_url": "https://coryn.club/skill/smith/accuratecustomization.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description The number of abilities you can add with [Customize Equipment] increases. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcExpertsCustomizationEffect(level, result) { var slot = Math.ceil(level/5) var HTML = `<li>Grants ${slot} additional <b>Statting Slot` if (slot != 1) {HTML += `s`} HTML += `</b></li> <li><b>Statting Success Rate</b> +${3*level}</li>` result.innerHTML = HTML } function addExpertsCustomizationExtraInfo(result) { result.innerHTML += `<br>Check <a href=\"https://coryn.club/guide.php?key=smith\" style=\"color:blue;\"><b>Smithing Guide > Statting</b></a> for more details` } function calcExpertsCustomizationValues() { var levelSelector = document.getElementById(\"expertsCustomizationSkillLevel\") var level = levelSelector[levelSelector.selectedIndex].value var result = document.getElementById(\"expertsCustomizationValues\") calcExpertsCustomizationEffect(level, result) addExpertsCustomizationExtraInfo(result) } calcExpertsCustomizationValues() Expert's Customization II",
+  "tree": "Smith",
+  "tree_slug": "smith",
+  "tree_url": "https://coryn.club/skill.php?tree=Smith",
+  "image_path": "assets/skill_tree/smith/experts_customization.png",
+  "data_path": "doc/coryn_skills/smith/experts_customization.json"
+}

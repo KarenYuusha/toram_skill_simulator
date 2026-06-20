@@ -1,0 +1,12 @@
+{
+  "name": "Amazing Throw",
+  "slug": "amazing_throw",
+  "required_level": 4,
+  "image_url": "https://coryn.club/skill/dagger/amazingthrow.png",
+  "raw_text": "Dagger only Type Passive Neutral Description An astounding throwing skill. Add the chance to increase hit counts to all the Dagger Skills. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcAmazingThrowEffect() { var levelSelector = document.getElementById(\"amazingThrowLevel\") var level = levelSelector[levelSelector.selectedIndex].value var chance = 3 * level var result = document.getElementById(\"amazingThrowValues\") result.innerHTML = `Attacks from <b>Dagger Skills</b> (including <b>Hidden Arm</b>, but exclude <b>Flincher Knife/Fighting Knife</b>) can have a ${chance}% chance to deal <b>double of its total amount of hits (effectively doubling its damage)</b><br> <br><b>Extra info:</b> <li>The Additional Hits dealt by this passive are all dealt after the first hit of the main skill; in case of multi-hit skill, this will result in a rapid succession of hits, which can possibly allow skipping some phase-changing mechanisms of some bosses</li> <li><b>Spike Dart</b> seems to always activate this passive regardless of level</li>` } calcAmazingThrowEffect() Mad Dagger",
+  "tree": "Dagger",
+  "tree_slug": "dagger",
+  "tree_url": "https://coryn.club/skill.php?tree=Dagger",
+  "image_path": "assets/skill_tree/dagger/amazing_throw.png",
+  "data_path": "doc/coryn_skills/dagger/amazing_throw.json"
+}

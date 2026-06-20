@@ -1,0 +1,12 @@
+{
+  "name": "Breathwork",
+  "slug": "breathwork",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/crusher/breathwork.png",
+  "raw_text": "Knuckle only Type Active Element Neutral MP 300 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 0 Description A technique to control your breathing quickly. Immediately restores your HP when activated. HP is also restored when the next skill activates. Breathwork resilience declines for a while. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 \"Annihilator\" Skill Level: 0 1 2 3 4 5 6 7 8 9 10 function calcBreathworkBuff(level, anniLevel, result) { var heal1 = level*1 + anniLevel*1 var heal2 = level*0.5 + anniLevel*0.5 result.innerHTML = `<b>Skill Effect:</b> <li>Recovers ${heal1}% of your <b>MaxHP</b> upon using this skill; recovers an additional ${heal2}% of your <b>MaxHP</b> upon using any skill after this skill</li> <li>If <b>Breathwork</b> is reused within 30 seconds from the previous <b>Breathwork</b>, the HP healing effects are <b>reduced by 100 times</b> (becoming ${heal1/100}% and ${heal2/100}% of your <b>MaxHP</b>, respectively)</li>` if (anniLevel == 10) {result.innerHTML += `<li>Grants <b>Breathwork Additional Buff</b> upon using this skill</li> <br><b>Additional Buff Effect:</b> <li>The next <b>skill</b> has its <b>MP Cost halved</b>, rounded up to the nearest multiple of 100</li> <li><b>Buff Duration:</b> Until a skill is used</li>`} } function calcBreathworkValues() { let levelSelector = document.getElementById('breathworkSkillLevel') let level = levelSelector[levelSelector.selectedIndex].value let anniLevelSelector = document.getElementById('annihilatorLevel') let anniLevel = anniLevelSelector[anniLevelSelector.selectedIndex].value let result = document.getElementById('breathworkValues') calcBreathworkBuff(level, anniLevel, result) } calcBreathworkValues() Floating Kick",
+  "tree": "Crusher",
+  "tree_slug": "crusher",
+  "tree_url": "https://coryn.club/skill.php?tree=Crusher",
+  "image_path": "assets/skill_tree/crusher/breathwork.png",
+  "data_path": "doc/coryn_skills/crusher/breathwork.json"
+}

@@ -1,0 +1,110 @@
+{
+  "skill_tree": "Partisan",
+  "tree_slug": "partisan",
+  "group": "sub_weapon_skills",
+  "raw_skill_file": "sub_weapon_skills/partisan_skills.txt",
+  "coordinate_system": {
+    "origin": [
+      0,
+      0
+    ],
+    "format": [
+      "row",
+      "column"
+    ],
+    "description": "Moving one level down adds [1, 0]; moving one column right adds [0, 1]. Empty rows and columns are preserved to match the image layout."
+  },
+  "skills": [
+    {
+      "id": "l_boomerang",
+      "name": "L Boomerang",
+      "position": [
+        0,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "l_boomerang_ii",
+      "name": "L Boomerang II",
+      "position": [
+        0,
+        1
+      ],
+      "prerequisites": [
+        "l_boomerang"
+      ]
+    },
+    {
+      "id": "l_boomerang_iii",
+      "name": "L Boomerang III",
+      "position": [
+        0,
+        2
+      ],
+      "prerequisites": [
+        "l_boomerang_ii"
+      ]
+    },
+    {
+      "id": "n_dragon_tooth",
+      "name": "N Dragon Tooth",
+      "position": [
+        1,
+        2
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "healing_shot",
+      "name": "Healing Shot",
+      "position": [
+        2,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "arrow_sharpening",
+      "name": "Arrow Sharpening",
+      "position": [
+        2,
+        1
+      ],
+      "prerequisites": [
+        "healing_shot"
+      ]
+    },
+    {
+      "id": "survival_instinct",
+      "name": "Survival Instinct",
+      "position": [
+        2,
+        2
+      ],
+      "prerequisites": [
+        "arrow_sharpening"
+      ]
+    },
+    {
+      "id": "frontliner",
+      "name": "Frontliner",
+      "position": [
+        3,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "frontliner_ii",
+      "name": "Frontliner II",
+      "position": [
+        3,
+        1
+      ],
+      "prerequisites": [
+        "frontliner"
+      ]
+    }
+  ]
+}

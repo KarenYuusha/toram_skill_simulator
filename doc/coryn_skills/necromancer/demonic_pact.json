@@ -1,0 +1,12 @@
+{
+  "name": "Demonic Pact",
+  "slug": "demonic_pact",
+  "required_level": 3,
+  "image_url": "https://coryn.club/skill/necromancer/demonicpact.png",
+  "raw_text": "Available with all weapons Type EX Skill Element Neutral MP 100+ $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start No Combo middle No Range 0 Description A contract with a demon. The ability changes based on the amount of MP offered when forming the contract. Each attack by the demon costs the caster some HP. Reusing the skill will terminate the contract. The demon may betray you if things turn bad. Fine Shovel",
+  "tree": "Necromancer",
+  "tree_slug": "necromancer",
+  "tree_url": "https://coryn.club/skill.php?tree=Necromancer",
+  "image_path": "assets/skill_tree/necromancer/demonic_pact.png",
+  "data_path": "doc/coryn_skills/necromancer/demonic_pact.json"
+}

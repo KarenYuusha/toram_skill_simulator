@@ -1,0 +1,12 @@
+{
+  "name": "Sword Mastery",
+  "slug": "sword_mastery",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/blade/swordmastery.png",
+  "raw_text": "2-Handed Sword/1-Handed Sword only Type Passive Neutral Description Get better at swordsmanship. ATK of One/Two-Handed Swords increases. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcSwordMasteryATK(level, result) { var ATK = 1 + Math.ceil((level - 2)/5) result.innerHTML = `<li><b>ATK</b> +${ATK}%</li>` } function calcSwordMasteryWeaponATK(level, result) { var weaponATK = 3 * level result.innerHTML += `<li><b>Weapon ATK</b> +${weaponATK}%</li>` } function addSwordMasteryInfo(result) { result.innerHTML += `<br>This passive can affect the <b>sub-hand sword's Weapon ATK</b> and <b>ATK</b> of Dual Swords` } function calcSwordMasteryValues() { var levelSelector = document.getElementById(\"swordMasteryLevel\") var level = levelSelector[levelSelector.selectedIndex].value var result = document.getElementById(\"swordMasteryValues\") calcSwordMasteryATK(level, result) calcSwordMasteryWeaponATK(level, result) addSwordMasteryInfo(result) } calcSwordMasteryValues() Quick Slash",
+  "tree": "Blade",
+  "tree_slug": "blade",
+  "tree_url": "https://coryn.club/skill.php?tree=Blade",
+  "image_path": "assets/skill_tree/blade/sword_mastery.png",
+  "data_path": "doc/coryn_skills/blade/sword_mastery.json"
+}

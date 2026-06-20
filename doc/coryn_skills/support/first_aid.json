@@ -1,0 +1,12 @@
+{
+  "name": "First Aid",
+  "slug": "first_aid",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/support/firstaid.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description \"First Aid\" effect in Support menu increases. The waiting time to revive is largely reduced. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcFirstAidValues() { var levelSelector = document.getElementById(\"firstAidLevel\") var level = levelSelector[levelSelector.selectedIndex].value var aidRevive = 30 + 2 * level var result = document.getElementById(\"firstAidValues\") result.innerHTML = `Increases the <b>Revive Time reduction</b> effect of <b>First Aid</b> to ${aidRevive}% of <b>current Revive Time</b> (without this passive, the Revive Time reduction effect upon giving <b>First Aid</b> is <b>30% of current Revive Time</b>)` } calcFirstAidValues() Mini Heal",
+  "tree": "Support",
+  "tree_slug": "support",
+  "tree_url": "https://coryn.club/skill.php?tree=Support",
+  "image_path": "assets/skill_tree/support/first_aid.png",
+  "data_path": "doc/coryn_skills/support/first_aid.json"
+}

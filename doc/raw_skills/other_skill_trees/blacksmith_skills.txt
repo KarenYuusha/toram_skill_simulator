@@ -1,0 +1,148 @@
+Process Material
+Lv 1 Skill; No Limit
+Skill Effect:
+Allows you to process items in your inventory and convert them to material points without having to spend Spina
+Items processed through this skill will give material points at random, but will give at least (80 + Skill Level)% of the normal amount they provide
+Game Description: "Process materials by yourself. The success rate increases as the skill levels up. It is a common skill in Smith and Alchemy Skills."
+This skill's level is shared with the skill with the same name in the Alchemy Skills tree
+Refine Equipment
+Lv 1 Skill; No Limit
+Skill Effect:
+Allows you to refine equipments without having to spend Spina
+-Passive Effect: Skill Bonus Multiplier +(2 * Skill Level)
+Game Description: "Refine Equipment by yourself. The success rate is lower than the blacksmiths but you don't need Spina."
+More info in ⁠refinement
+Mid-Class Refinement
+Lv 2 Skill; No Limit
+Passive Effect:
+Skill Bonus Base Chance +(Floor((Skill Level + 1)/2)
+Skill Bonus Multiplier +(0.5 * Skill Level)
+Game Description: "Increases the success rate of [Refine Equipment] a little."
+High-Class Refinement
+Lv 3 Skill; No Limit
+Passive Effect:
+Skill Bonus Base Chance +(Skill Level)
+Skill Bonus Multiplier +(0.5 * Skill Level)
+Game Description: "Increases the success rate of [Refine Equipment]."
+Expert's Refinement
+Lv 4 Skill; No Limit
+Passive Effect:
+Skill Bonus Base Chance +(Floor(1.5 * Skill Level))
+Skill Bonus Multiplier +(0.5 * Skill Level)
+Game Description: "Increases the success rate of [Refine Equipment] more."
+Private Anvil
+Lv 1 Skill; No Limit
+
+Passive Effect:
+Blacksmith Proficiency: 50 + (40% + 6% * Skill Level) * (Current Game Level Cap - 50)
+
+Game Description: "Increases the proficiency limit of blacksmithing. You can level up the proficiency up to Lv50 without this skill. At Lv10, the limit increases to the level cap."
+Craftsman's Anvil
+Lv 2 Skill; No Limit
+
+Passive Effect:
+Reduces the materials required for :costumizeequipmentaccuratecostum: [Customize Equipment] by (Skill Level)%.
+This reduction is additive with reduction from other Anvil Skills, but multiplicative with reduction from blacksmith proficiency and Compassion Skills.
+Blacksmith's Anvil
+Lv 3 Skill; No Limit
+
+Passive Effect:
+Reduces the materials required for :costumizeequipmentaccuratecostum: [Customize Equipment] by (Skill Level)%.
+This reduction is additive with reduction from other Anvil Skills, but multiplicative with reduction from blacksmith proficiency and Compassion Skills.
+Master’s Anvil
+Lv 4 Skill; No Limit
+
+Passive Effect:
+Reduces the materials required for :costumizeequipmentaccuratecostum: [Customize Equipment] by (Skill Level)%.
+This reduction is additive with reduction from other Anvil Skills, but multiplicative with reduction from blacksmith proficiency and Compassion Skills.
+Master’s Anvil II
+Lv 5 Skill; No Limit
+
+Passive Effect:
+Reduces the materials required for :costumizeequipmentaccuratecostum: [Customize Equipment] by (Skill Level)%. 
+This reduction is additive with reduction from other Anvil Skills, but multiplicative with reduction from blacksmith proficiency and Compassion Skills.
+Create Equipment
+Lv 1 Skill; No Limit
+Skill Effect:
+Allows you to create equipment without having to spend any spina; Equipments crafted this way has a very low chance of getting 2-slot — as of right now, the chances of getting a 1-slot or a 2-slot from this skill is currently unknown —, unlike NPC blacksmith, which need spend spina and can't produce a 2-slotted equipment.
+Note: NPC blacksmith & this skill, both still have same materials requirements needed to craft!
+
+The equipments created that way do not have stats, but have a unique stat called Potential; on success, the resulting Potential of an equipment depends on the equipment's base Potential, your stat allocations (this effect depends on the equipment type you're crafting), the number of slots of the resulting equip and certain skills that affect the resulting Potential (full effects unknown; all equips crafted through Blacksmiths or dropped have a Potential of 0); on failure, the equip may have a lower Potential than the base potential
+
+On success, the equipment may have a higher base ATK/DEF than normal and higher potential than normal;
+
+Technical Information(more detail in ⁠crafting)
+The equipments you craft have a difficulty; you can adjust the success rate with your "Difficulty Limit":
+Difficulty Limit = Blacksmith Proficiency Level + TEC/2 + total DEX/6
+
+The formula of crafting success when this skill is at level 10 is supposedly:
+Crafting Success Rate = 10 + Difficulty Limit - equipment's Difficulty + STR/10
+
+Game Description: "Create equipment by yourself. [Create Equipment] is required to attach stats."
+
+Careful Creation
+Lv 2 Skill; No Limit
+Passive Effect: Increases the Potential of equips created by (Skill Lvl)% of Base Pot
+Game Description: "The potential of the equipment created by [Create Equipment] increases."
+Expert’s Creation
+Lv 4 Skill; No Limit
+Passive Effect: Increases the Potential of equips created by (2 * Skill Lvl)% of Base Pot
+Game Description: "The potential of the equipment created by [Create Equipment] increases."
+Customize Equipment
+Lv 1 Skill; No Limit
+Skill Effect:
+Allows you to add and modify stats to equipments who have a Potential higher than 0
+The number of stating slots you have start at 3
+If a stating slot is already occupied by a stat, it cannot be changed, but the value can be modified
+
+Technical Information(more detail in ⁠statting)
+The chances for adding stats are calculated as follows:
+Stating Success Rate = 230 * Potential After Stating/Potential Before Stating + 100 + Skill Stating Bonus Rate
+
+If potential before stating is lower than base potential of the equipment on the final step of stating then,
+potential before stating=base potential
+
+Adding negative stats will add (5 + TEC/10)% of the Potential cost the the equip's Potential
+
+Adding stats from the same category will add a penalty to the Potential removed or added
+
+Passive Effect:
+Skill Stating Bonus Rate +(Skill Level)
+Game Description: "Consume potential and attach stats to the equipment created by [Create Equipment]."
+Accurate Customization
+Lv 3 Skill; No Limit
+Passive Effect:
+Skill Stating Bonus Rate +(2 * Skill Level)
+Increases the number of stating slots by 0 (level 1)/ 1 (levels 2 to 4)/ 2 (levels 5 to 7)/ 3 (level 8 to 10)
+Game Description: "The success rates of [Customize Equipment] increases a little. The number of abilities you can add increase."
+Expert’s Customization
+Lv 4 Skill; No Limit
+Passive Effect:
+Skill Stating Bonus Rate +(3 * Skill Level)
+Increases the number of stating slots by 1 (levels 1 to 5)/ 2 (levels 6 to 10)
+Game Description: "The number of abilities you can add with [Customize Equipment] increases."
+Expert’s Customization II
+Lv 5 Skill; No Limit
+Passive Effect:
+[Still in investigating] (FYI, this effect remain unchanged regardless of how many TEC u have)
+Game Description: "The ability in the first slot may remain unchanged even when Skill: [Customize Equipment] fails."
+Metal Compassion
+Passive Effect:
+Reduces the Metal points consumed from Skill: :costumizeequipmentaccuratecostum: [Customize Equipment] by (Skill Level)%. This applied multiplicatively with mats reduction from Smith proficiency and Anvil Skills.
+Fabric Compassion
+Passive Effect:
+Reduces the Cloth points consumed from Skill: :costumizeequipmentaccuratecostum: [Customize Equipment] by (Skill Level)%. This applied multiplicatively with mats reduction from Smith proficiency and Anvil Skills.
+Beast Compassion
+Passive Effect:
+Reduces the Beast points consumed from Skill: :costumizeequipmentaccuratecostum: [Customize Equipment] by (Skill Level)%. This applied multiplicatively with mats reduction from Smith proficiency and Anvil Skills.
+Wood Compassion
+Passive Effect:
+Reduces the Wood points consumed from Skill: :costumizeequipmentaccuratecostum: [Customize Equipment] by (Skill Level)%. This applied multiplicatively with mats reduction from Smith proficiency and Anvil Skills.
+Medicine Compassion
+Passive Effect:
+Reduces the Medicine points consumed from Skill: :costumizeequipmentaccuratecostum: [Customize Equipment] by (Skill Level)%. This applied multiplicatively with mats reduction from Smith proficiency and Anvil Skills.
+Mana Compassion
+Passive Effect:
+Reduces the Mana points consumed from Skill: :costumizeequipmentaccuratecostum: [Customize Equipment] by (Skill Level)%. This applied multiplicatively with mats reduction from Smith proficiency and Anvil Skills.
+
+Lvl req, T1 lv25, T2 lv50, T3 lv100, T4 lv200, T5 lv250

@@ -1,0 +1,12 @@
+{
+  "name": "Magic UP",
+  "slug": "magic_up",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/battle/magicup.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description Increase MATK a little. The amount depends on the player's level. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 Caster Level: function calcMagicUpStats(level, casterLevel, result) { var matk = casterLevel*(2.5*level)/100 if (matk - Math.floor(matk) < 0.999999999999) {matk = Math.floor(matk)} else {matk = Math.round(matk)} result.innerHTML = `<li><b>MATK</b> +${matk}</li>` } function calcMagicUpValues() { var levelSelector = document.getElementById(\"magicUpSkillLevel\") var level = levelSelector[levelSelector.selectedIndex].value var casterLevel = document.getElementById(\"magicUpCasterLevel\").value var result = document.getElementById(\"magicUpValues\") calcMagicUpStats(level, casterLevel, result) } calcMagicUpValues() Concentrate",
+  "tree": "Battle",
+  "tree_slug": "battle",
+  "tree_url": "https://coryn.club/skill.php?tree=Battle",
+  "image_path": "assets/skill_tree/battle/magic_up.png",
+  "data_path": "doc/coryn_skills/battle/magic_up.json"
+}

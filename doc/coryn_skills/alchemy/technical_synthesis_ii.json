@@ -1,0 +1,12 @@
+{
+  "name": "Technical Synthesis II",
+  "slug": "technical_synthesis_ii",
+  "required_level": 4,
+  "image_url": "https://coryn.club/skill/alchemy/synthesizeeq.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description Increases the success rates of Skill: [Synthesize Equipment]. Technical Synthesis III",
+  "tree": "Alchemy",
+  "tree_slug": "alchemy",
+  "tree_url": "https://coryn.club/skill.php?tree=Alchemy",
+  "image_path": "assets/skill_tree/alchemy/technical_synthesis_ii.png",
+  "data_path": "doc/coryn_skills/alchemy/technical_synthesis_ii.json"
+}

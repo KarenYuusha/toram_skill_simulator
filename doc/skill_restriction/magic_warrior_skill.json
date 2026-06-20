@@ -1,0 +1,178 @@
+{
+  "skill_tree": "Magic Blade",
+  "tree_slug": "magicblade",
+  "group": "sub_weapon_skills",
+  "raw_skill_file": "sub_weapon_skills/magic_warrior_skills.txt",
+  "coordinate_system": {
+    "origin": [
+      0,
+      0
+    ],
+    "format": [
+      "row",
+      "column"
+    ],
+    "description": "Moving one level down adds [1, 0]; moving one column right adds [0, 1]. Empty rows and columns are preserved to match the image layout."
+  },
+  "skills": [
+    {
+      "id": "magic_warrior_mastery",
+      "name": "Magic Warrior Mastery",
+      "position": [
+        0,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "conversion",
+      "name": "Conversion",
+      "position": [
+        0,
+        1
+      ],
+      "prerequisites": [
+        "magic_warrior_mastery"
+      ]
+    },
+    {
+      "id": "resonance",
+      "name": "Resonance",
+      "position": [
+        0,
+        2
+      ],
+      "prerequisites": [
+        "conversion"
+      ]
+    },
+    {
+      "id": "enchanted_spell",
+      "name": "Enchanted Spell",
+      "position": [
+        0,
+        3
+      ],
+      "prerequisites": [
+        "resonance"
+      ]
+    },
+    {
+      "id": "dual_bringer",
+      "name": "Dual Bringer",
+      "position": [
+        0,
+        4
+      ],
+      "prerequisites": [
+        "enchanted_spell"
+      ]
+    },
+    {
+      "id": "ether_flare",
+      "name": "Ether Flare",
+      "position": [
+        1,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "element_slash",
+      "name": "Element Slash",
+      "position": [
+        1,
+        1
+      ],
+      "prerequisites": [
+        "ether_flare"
+      ]
+    },
+    {
+      "id": "enchant_sword",
+      "name": "Enchant Sword",
+      "position": [
+        1,
+        2
+      ],
+      "prerequisites": [
+        "element_slash"
+      ]
+    },
+    {
+      "id": "enchanted_burst",
+      "name": "Enchanted Burst",
+      "position": [
+        1,
+        3
+      ],
+      "prerequisites": [
+        "enchant_sword"
+      ]
+    },
+    {
+      "id": "union_sword",
+      "name": "Union Sword",
+      "position": [
+        1,
+        4
+      ],
+      "prerequisites": [
+        "enchanted_burst"
+      ]
+    },
+    {
+      "id": "siphon_barrier",
+      "name": "Siphon Barrier",
+      "position": [
+        2,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "teleport",
+      "name": "Teleport",
+      "position": [
+        2,
+        1
+      ],
+      "prerequisites": [
+        "siphon_barrier"
+      ]
+    },
+    {
+      "id": "siphon_recall",
+      "name": "Siphon Recall",
+      "position": [
+        2,
+        2
+      ],
+      "prerequisites": [
+        "teleport"
+      ]
+    },
+    {
+      "id": "float_dash",
+      "name": "Float Dash",
+      "position": [
+        2,
+        3
+      ],
+      "prerequisites": [
+        "siphon_recall"
+      ]
+    },
+    {
+      "id": "magic_skin",
+      "name": "Magic Skin",
+      "position": [
+        2,
+        4
+      ],
+      "prerequisites": [
+        "float_dash"
+      ]
+    }
+  ]
+}

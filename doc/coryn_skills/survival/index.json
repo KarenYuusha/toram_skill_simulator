@@ -1,0 +1,118 @@
+{
+  "tree": "Survival",
+  "tree_slug": "survival",
+  "url": "https://coryn.club/skill.php?tree=Survival",
+  "skill_count": 9,
+  "icon_count": 9,
+  "missing_icon_count": 0,
+  "skills": [
+    {
+      "name": "Play Dead",
+      "slug": "play_dead",
+      "required_level": 1,
+      "image_url": "https://coryn.club/skill/survival/playdead.png",
+      "raw_text": "Available with all weapons Type Passive Neutral Description The waiting time to revive is reduced. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcPlayDeadValues() { var levelSelector = document.getElementById(\"playDeadLevel\") var level = levelSelector[levelSelector.selectedIndex].value var reviveTime = 5 * level var result = document.getElementById(\"playDeadValues\") result.innerHTML = `<li><b>Revive Time</b> -${reviveTime}%</li><br> <b>Base Revive Time</b> is 300 seconds` } calcPlayDeadValues() EXP Gain Up",
+      "tree": "Survival",
+      "tree_slug": "survival",
+      "tree_url": "https://coryn.club/skill.php?tree=Survival",
+      "image_path": "assets/skill_tree/survival/play_dead.png",
+      "data_path": "doc/coryn_skills/survival/play_dead.json"
+    },
+    {
+      "name": "EXP Gain Up",
+      "slug": "exp_gain_up",
+      "required_level": 1,
+      "image_url": "https://coryn.club/skill/survival/expgainup.png",
+      "raw_text": "Available with all weapons Type Passive Neutral Description EXP Gain from battles increases by 1% per skill level. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcExpGainUpValues() { var levelSelector = document.getElementById(\"expGainUpLevel\") var level = levelSelector[levelSelector.selectedIndex].value var result = document.getElementById(\"expGainUpValues\") result.innerHTML = `<b>EXP Gain</b> +${level}%; stacks <b>additively</b> with other EXP Gain Increase sources` } calcExpGainUpValues() Drop Rate Up",
+      "tree": "Survival",
+      "tree_slug": "survival",
+      "tree_url": "https://coryn.club/skill.php?tree=Survival",
+      "image_path": "assets/skill_tree/survival/exp_gain_up.png",
+      "data_path": "doc/coryn_skills/survival/exp_gain_up.json"
+    },
+    {
+      "name": "Drop Rate Up",
+      "slug": "drop_rate_up",
+      "required_level": 1,
+      "image_url": "https://coryn.club/skill/survival/droprateup.png",
+      "raw_text": "Available with all weapons Type Passive Neutral Description Drop Rate from battles increases by 1% per skill level. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcDropRateUpValues() { var levelSelector = document.getElementById(\"dropRateUpLevel\") var level = levelSelector[levelSelector.selectedIndex].value var result = document.getElementById(\"dropRateUpValues\") result.innerHTML = `<b>Drop Rate</b> +${level}%; stacks <b>additively</b> with other Drop Rate Increase sources` } calcDropRateUpValues() Safe Rest",
+      "tree": "Survival",
+      "tree_slug": "survival",
+      "tree_url": "https://coryn.club/skill.php?tree=Survival",
+      "image_path": "assets/skill_tree/survival/drop_rate_up.png",
+      "data_path": "doc/coryn_skills/survival/drop_rate_up.json"
+    },
+    {
+      "name": "Safe Rest",
+      "slug": "safe_rest",
+      "required_level": 1,
+      "image_url": "https://coryn.club/skill/survival/saferest.png",
+      "raw_text": "Available with all weapons Type Passive Neutral Description Natural HP Regen increases. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcSafeRestValues() { var levelSelector = document.getElementById(\"safeRestLevel\") var level = levelSelector[levelSelector.selectedIndex].value; var NHPR = 10 * level var result = document.getElementById(\"safeRestValues\"); result.innerHTML = `<li><b>Natural HP Regen</b> +${NHPR}%</li> <li><b>Natural HP Regen</b> +${NHPR}</li><br> <b>Note: Natural HP Regen</b> stat from equipments and avatars are added as <b>base Natural HP Regen</b>; the bonuses from this passive are applied <b>after base Natural HP Regen is calculated</b>` } calcSafeRestValues() HP Boost",
+      "tree": "Survival",
+      "tree_slug": "survival",
+      "tree_url": "https://coryn.club/skill.php?tree=Survival",
+      "image_path": "assets/skill_tree/survival/safe_rest.png",
+      "data_path": "doc/coryn_skills/survival/safe_rest.json"
+    },
+    {
+      "name": "HP Boost",
+      "slug": "hp_boost",
+      "required_level": 2,
+      "image_url": "https://coryn.club/skill/survival/hpboost.png",
+      "raw_text": "Available with all weapons Type Passive Neutral Description MaxHP increases a little. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcHpBoostValues() { var levelSelector = document.getElementById(\"hpBoostLevel\") var level = levelSelector[levelSelector.selectedIndex].value var percHP = 2 * level var flatHP = 100 * level var result = document.getElementById(\"hpBoostValues\") result.innerHTML = `<li><b>MaxHP</b> +${percHP}%</li> <li><b>MaxHP</b> +${flatHP}</li>` } calcHpBoostValues() Fighter's High",
+      "tree": "Survival",
+      "tree_slug": "survival",
+      "tree_url": "https://coryn.club/skill.php?tree=Survival",
+      "image_path": "assets/skill_tree/survival/hp_boost.png",
+      "data_path": "doc/coryn_skills/survival/hp_boost.json"
+    },
+    {
+      "name": "Fighter's High",
+      "slug": "fighters_high",
+      "required_level": 2,
+      "image_url": "https://coryn.club/skill/survival/fightershigh.png",
+      "raw_text": "Available with all weapons Type Passive Neutral Description Regenerate HP during combat. The healing amount is small. Regeneration Tick occurs once every 3 seconds Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcFightersHighValues() { var levelSelector = document.getElementById(\"fightersHighLevel\") var level = levelSelector[levelSelector.selectedIndex].value var result = document.getElementById(\"fightersHighValues\") result.innerHTML = `Recovers HP by ${level}% of your <b>base Natural HP Regen</b> once every 3 seconds <b>during battle</b>` } calcFightersHighValues() Short Rest",
+      "tree": "Survival",
+      "tree_slug": "survival",
+      "tree_url": "https://coryn.club/skill.php?tree=Survival",
+      "image_path": "assets/skill_tree/survival/fighters_high.png",
+      "data_path": "doc/coryn_skills/survival/fighters_high.json"
+    },
+    {
+      "name": "Short Rest",
+      "slug": "short_rest",
+      "required_level": 1,
+      "image_url": "https://coryn.club/skill/survival/shortrest.png",
+      "raw_text": "Available with all weapons Type Passive Neutral Description Natural MP Regen increases. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcShortRestValues() { var levelSelector = document.getElementById(\"shortRestLevel\") var level = levelSelector[levelSelector.selectedIndex].value var NMPR = 5 * level var result = document.getElementById(\"shortRestValues\") result.innerHTML = `<li><b>Natural MP Regen</b> +${NMPR}%</li> <li><b>Natural MP Regen</b> +${level}</li><br> <b>Note: Natural MP Regen</b> stat from equipments and avatars are added as <b>base Natural MP Regen</b>; the bonuses from this passive are applied <b>after base Natural MP Regen is calculated</b>` } calcShortRestValues() MP Boost",
+      "tree": "Survival",
+      "tree_slug": "survival",
+      "tree_url": "https://coryn.club/skill.php?tree=Survival",
+      "image_path": "assets/skill_tree/survival/short_rest.png",
+      "data_path": "doc/coryn_skills/survival/short_rest.json"
+    },
+    {
+      "name": "MP Boost",
+      "slug": "mp_boost",
+      "required_level": 2,
+      "image_url": "https://coryn.club/skill/survival/mpboost.png",
+      "raw_text": "Available with all weapons Type Passive Neutral Description MaxMP increases a little. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcMpBoostValues() { var levelSelector = document.getElementById(\"mpBoostLevel\") var level = levelSelector[levelSelector.selectedIndex].value var maxMP = 30 * level var result = document.getElementById(\"mpBoostValues\") result.innerHTML = `<li><b>MaxMP</b> +${maxMP}</li>` } calcMpBoostValues() Sober Analysis",
+      "tree": "Survival",
+      "tree_slug": "survival",
+      "tree_url": "https://coryn.club/skill.php?tree=Survival",
+      "image_path": "assets/skill_tree/survival/mp_boost.png",
+      "data_path": "doc/coryn_skills/survival/mp_boost.json"
+    },
+    {
+      "name": "Sober Analysis",
+      "slug": "sober_analysis",
+      "required_level": 2,
+      "image_url": "https://coryn.club/skill/survival/soberanalysis.png",
+      "raw_text": "Available with all weapons Type Passive Neutral Description Regenerate MP during combat. The healing amount is small. Regeneration Tick occurs once every 3 seconds Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcSoberAnalysisValues() { var levelSelector = document.getElementById(\"soberAnalysisLevel\") var level = levelSelector[levelSelector.selectedIndex].value var mpRegen = 5 * level var result = document.getElementById(\"soberAnalysisValues\") result.innerHTML = `Recovers MP by ${mpRegen}% of your <b>base Natural MP Regen</b> once every 3 seconds <b>during battle</b>` } calcSoberAnalysisValues() END OF CONTENT WRAPPER /* Top nav */ $(\"#username_container\").click(function(e) { e.preventDefault(); e.stopPropagation(); $(\".username-menu\").toggleClass('active'); $(\"#username_chevron_up\").toggleClass('active'); $(\"#username_chevron_down\").toggleClass('active'); }); /* Sidebar */ if ($(window).width() <= 950) { $(\"#sidebar\").removeClass('animated fadeInLeft fast'); $(\".sidebar-content-item\").removeClass('active');; $(\".sidebar-tab-item\").removeClass('active');; } $('.sidebar-tab-item').on('click',function(ev){ const target = ev.currentTarget.dataset.target; if(!target){ return; } if ($(window).width() <= 950) { if(!ev.currentTarget.classList.contains('active') && !$(\"#sidebar\").hasClass('active')){ $(\"#sidebar\").addClass('active') }else if(ev.currentTarget.classList.contains('active')){ $(\".sidebar-content-item\").removeClass('active');; $(\".sidebar-tab-item\").removeClass('active');; $(\"#sidebar\").removeClass('active'); return; } } $(`.sidebar-content-item[data-target!=\"${target}\"]`).removeClass('active');; $(`.sidebar-content-item[data-target=\"${target}\"]`).addClass('active'); $(`.sidebar-tab-item[data-target!=\"${target}\"]`).removeClass('active');; $(`.sidebar-tab-item[data-target=\"${target}\"]`).addClass('active'); }); $('.back-to-top').on('click',(ev) => { ev.preventDefault(); var $anchor = $(this); $('#content').stop().animate({ scrollTop: 0 }, 500); }); /* Sidebar Menu */ $('ul.menu-root a.nested').click(function(e){ if(e.target.tagName === 'A'){ $(this).toggleClass('expanded'); $(this).siblings('div.submenu').toggleClass('collapse'); } }) /* Pagination JS */ $('body').on('click','.pagination-js-btn', (e) => { let pagebtn = $(e.currentTarget); let list = $(pagebtn.parent().data('target')); let pagenumber = parseInt(pagebtn.data('page-number')); changePage($(list),pagenumber); }) function changePage(list,pagenumber){ let disp = list.data('display'); let accord = list.data('accord'); let listitems = list.children('.pagination-js-items').children(); let total = listitems.length; let perpage = list.data('perpage'); let totalpage = Math.ceil(total / perpage); let currentpage = list.data('current-page'); let pagination = $('[data-target=\"#' + list.attr('id') + '\"].pagination-js-btngroup'); let pstart = pagenumber; let numbtn = 3; let offset = Math.floor(numbtn / 2); if(pagenumber <= 0 || pagenumber > totalpage){ return; } list.data('current-page',pagenumber); pstart -= offset; if(pstart < 1){ pstart = 1; }else if(pstart + numbtn > totalpage){ pstart = totalpage - (numbtn - 1) if(pstart < 1) pstart = 1; } pagination.html(''); let prev = pagenumber - 1; let next = pagenumber + 1; let active = false; listitems.each((idx,elem) => { let num = idx + 1; if(num <= pagenumber * perpage && num >= (pagenumber * perpage) - (perpage - 1) ){ $(elem).css('display',disp); }else{ $(elem).css('display','none'); } }); pagination.append(`<a href=\"#\" class=\"pagination-js-btn\" data-page-number=\"${1}\"><i class=\"fas fa-angle-double-left\"></i></a>`); pagination.append(`<a href=\"#\" class=\"pagination-js-btn\" data-page-number=\"${prev}\"><i class=\"fas fa-angle-left\"></i></a>`); for(let i = pstart, j = 0;j < numbtn && i <= totalpage;i++,j++){ if(i === pagenumber){ active = true; }else{ active = false; } pagination.append(`<a href=\"#\" class=\"pagination-js-btn ${(active)?'active':''}\" data-page-number=\"${i}\">${i}</a>`); } pagination.append(`<a href=\"#\" class=\"pagination-js-btn\" data-page-number=\"${next}\"><i class=\"fas fa-angle-right\"></i></a>`); pagination.append(`<a href=\"#\" class=\"pagination-js-btn\" data-page-number=\"${totalpage}\"><i class=\"fas fa-angle-double-right\"></a>`); if(totalpage < 2){ pagination.css('display','none'); } //fix height if inside accordion if(typeof accord !== 'undefined' && $(accord).get(0).style.maxHeight!=0) $(accord).get(0).style.maxHeight = $(accord).get(0).scrollHeight + 30 + \"px\"; } /* Accordion */ $('body').on('click','ul.accordion > li > div:first-child',accordionOnClick); function accordionOnClick(e){ const item = $(e.currentTarget).parent(); const accordion = item.parent(); const content = item.children('div:nth-child(2)'); const aItem = item.siblings('.active'); const aContent = aItem.children('div:nth-child(2)'); if(item.hasClass('active')){ content.get(0).style.maxHeight = 0; }else{ content.get(0).style.maxHeight = content.get(0).scrollHeight + 30 + \"px\"; } if(aItem.length > 0){ aContent.get(0).style.maxHeight = 0; aItem.toggleClass('active'); } item.toggleClass('active'); } function accordionInit(){ $('ul.accordion > li.active > div:first-child').each((_,target) => { const item = $(target).parent(); const content = item.children('div:nth-child(2)'); content.get(0).style.maxHeight = content.get(0).scrollHeight + 30 + \"px\"; }) } /* Page Initialization */ accordionInit(); //accordion goes first, so the init height is calculated correctly $('.js-pagination').each((ilist, list) => { changePage($(list),1); }) /* Shared theme fallback for pages that no longer provide their own toggle */ (function() { const storageKey = \"corynclub_theme\"; const legacyStorageKey = \"corynclub_index2_theme\"; let navToggle = null; const knownDarkClasses = [ \"item-page-dark\", \"monster-page-dark\", \"map-page-dark\", \"quest-page-dark\", \"skill-page-dark\", \"combo-page-dark\", \"furniture-page-dark\", \"furniture-menu-dark\", \"pet-level-page-dark\", \"api-page-dark\", \"index2-dark\", \"guide-dark\", \"tools-dark\", \"trait-dark\", \"calc-dark\", \"utility-dark\", \"search-dark\", \"monlist-dark\" ]; function getSavedMode() { try { return localStorage.getItem(storageKey) || localStorage.getItem(legacyStorageKey) || \"light\"; } catch (e) { return \"light\"; } } function persistMode(mode) { try { localStorage.setItem(storageKey, mode); localStorage.setItem(legacyStorageKey, mode); } catch (e) {} } function applyTheme(mode) { if (typeof window.__applyCorynThemeMode === \"function\") { window.__applyCorynThemeMode(mode); } if (navToggle) { navToggle.textContent = mode === \"dark\" ? \"☀\" : \"☾\"; navToggle.title = mode === \"dark\" ? \"Switch to light mode\" : \"Switch to dark mode\"; navToggle.setAttribute(\"aria-label\", navToggle.title); } } function syncHtmlThemeFromBody() { const body = document.body; if (!body) { return; } const isDark = knownDarkClasses.some(function(cls) { return body.classList.contains(cls); }); if (isDark) { document.documentElement.setAttribute(\"data-cc-dark\", \"1\"); } else { document.documentElement.removeAttribute(\"data-cc-dark\"); } } window.toggleCorynTheme = window.toggleCorynTheme || function() { const nextMode = getSavedMode() === \"dark\" ? \"light\" : \"dark\"; persistMode(nextMode); applyTheme(nextMode); }; function ensureFallbackToggle() { const languageContainer = document.getElementById(\"language_container\"); if (!languageContainer || !languageContainer.parentNode) { return; } if (document.querySelector('#navbar [class*=\"theme-toggle\"]')) { return; } navToggle = document.createElement(\"button\"); navToggle.type = \"button\"; navToggle.id = \"corynclub-global-theme-toggle\"; navToggle.className = \"cc-global-theme-toggle\"; navToggle.addEventListener(\"click\", function(event) { event.preventDefault(); window.toggleCorynTheme(); }); languageContainer.parentNode.insertBefore(navToggle, languageContainer); applyTheme(getSavedMode()); } if (document.body && window.MutationObserver) { const observer = new MutationObserver(function() { syncHtmlThemeFromBody(); }); observer.observe(document.body, { attributes: true, attributeFilter: [\"class\"] }); } syncHtmlThemeFromBody(); setTimeout(ensureFallbackToggle, 150); })(); (function(){ const storageKey = \"corynclub_theme\"; const legacyStorageKey = \"corynclub_index2_theme\"; const body = document.body; let navToggle = null; function applyTheme(mode){ if(mode === \"dark\"){ body.classList.add(\"skill-page-dark\"); if(navToggle){ navToggle.textContent = \"☀\"; navToggle.setAttribute(\"aria-label\", \"Switch to light mode\"); navToggle.title = \"Switch to light mode\"; } } else{ body.classList.remove(\"skill-page-dark\"); if(navToggle){ navToggle.textContent = \"☾\"; navToggle.setAttribute(\"aria-label\", \"Switch to dark mode\"); navToggle.title = \"Switch to dark mode\"; } } } const savedMode = localStorage.getItem(storageKey) || localStorage.getItem(legacyStorageKey) || \"light\"; applyTheme(savedMode); if(localStorage.getItem(legacyStorageKey) && !localStorage.getItem(storageKey)){ localStorage.setItem(storageKey, savedMode); } window.toggleCorynTheme = function(){ const nextMode = body.classList.contains(\"skill-page-dark\") ? \"light\" : \"dark\"; localStorage.setItem(storageKey, nextMode); localStorage.setItem(legacyStorageKey, nextMode); applyTheme(nextMode); }; const languageContainer = document.getElementById(\"language_container\"); if(languageContainer && languageContainer.parentNode){ navToggle = document.createElement(\"button\"); navToggle.type = \"button\"; navToggle.className = \"skill-page-nav-theme-toggle\"; languageContainer.parentNode.insertBefore(navToggle, languageContainer); navToggle.addEventListener(\"click\", function(event){ event.preventDefault(); window.toggleCorynTheme(); }); applyTheme(savedMode); } })(); (function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML=\"window.__CF$cv$params={r:'a0d94288fef3ce4f',t:'MTc4MTc3NDg2NA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);\";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();",
+      "tree": "Survival",
+      "tree_slug": "survival",
+      "tree_url": "https://coryn.club/skill.php?tree=Survival",
+      "image_path": "assets/skill_tree/survival/sober_analysis.png",
+      "data_path": "doc/coryn_skills/survival/sober_analysis.json"
+    }
+  ]
+}

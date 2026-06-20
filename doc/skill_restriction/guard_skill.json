@@ -1,0 +1,81 @@
+{
+  "skill_tree": "Guard",
+  "tree_slug": "guard",
+  "group": "sub_weapon_skills",
+  "raw_skill_file": "sub_weapon_skills/guard_skills.txt",
+  "coordinate_system": {
+    "origin": [
+      0,
+      0
+    ],
+    "format": [
+      "row",
+      "column"
+    ],
+    "description": "Moving one level down adds [1, 0]; moving one column right adds [0, 1]. Empty rows and columns are preserved to match the image layout."
+  },
+  "skills": [
+    {
+      "id": "physical_guard",
+      "name": "Physical Guard",
+      "position": [
+        0,
+        2
+      ],
+      "prerequisites": [
+        "heavy_armor_mastery"
+      ]
+    },
+    {
+      "id": "heavy_armor_mastery",
+      "name": "Heavy Armor Mastery",
+      "position": [
+        1,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "advanced_guard",
+      "name": "Advanced Guard",
+      "position": [
+        1,
+        1
+      ],
+      "prerequisites": [
+        "heavy_armor_mastery"
+      ]
+    },
+    {
+      "id": "light_armor_mastery",
+      "name": "Light Armor Mastery",
+      "position": [
+        2,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "advanced_evasion",
+      "name": "Advanced Evasion",
+      "position": [
+        2,
+        1
+      ],
+      "prerequisites": [
+        "light_armor_mastery"
+      ]
+    },
+    {
+      "id": "mirage_evasion",
+      "name": "Mirage Evasion",
+      "position": [
+        3,
+        2
+      ],
+      "prerequisites": [
+        "light_armor_mastery"
+      ]
+    }
+  ]
+}

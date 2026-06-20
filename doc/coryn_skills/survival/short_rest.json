@@ -1,0 +1,12 @@
+{
+  "name": "Short Rest",
+  "slug": "short_rest",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/survival/shortrest.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description Natural MP Regen increases. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcShortRestValues() { var levelSelector = document.getElementById(\"shortRestLevel\") var level = levelSelector[levelSelector.selectedIndex].value var NMPR = 5 * level var result = document.getElementById(\"shortRestValues\") result.innerHTML = `<li><b>Natural MP Regen</b> +${NMPR}%</li> <li><b>Natural MP Regen</b> +${level}</li><br> <b>Note: Natural MP Regen</b> stat from equipments and avatars are added as <b>base Natural MP Regen</b>; the bonuses from this passive are applied <b>after base Natural MP Regen is calculated</b>` } calcShortRestValues() MP Boost",
+  "tree": "Survival",
+  "tree_slug": "survival",
+  "tree_url": "https://coryn.club/skill.php?tree=Survival",
+  "image_path": "assets/skill_tree/survival/short_rest.png",
+  "data_path": "doc/coryn_skills/survival/short_rest.json"
+}

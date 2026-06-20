@@ -1,0 +1,12 @@
+{
+  "name": "Speed Boost",
+  "slug": "speed_boost",
+  "required_level": 3,
+  "image_url": "https://coryn.club/skill/golem/speedboost.png",
+  "raw_text": "Staff/Bowgun/Main MD only Type Passive Neutral Description Improves the magic lamp to increase speed. Increases Action Speed per lamp power distributed to Speed. Magic Grenade",
+  "tree": "Golem",
+  "tree_slug": "golem",
+  "tree_url": "https://coryn.club/skill.php?tree=Golem",
+  "image_path": "assets/skill_tree/golem/speed_boost.png",
+  "data_path": "doc/coryn_skills/golem/speed_boost.json"
+}

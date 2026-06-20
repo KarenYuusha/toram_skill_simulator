@@ -1,0 +1,12 @@
+{
+  "name": "Safe Rest",
+  "slug": "safe_rest",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/survival/saferest.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description Natural HP Regen increases. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcSafeRestValues() { var levelSelector = document.getElementById(\"safeRestLevel\") var level = levelSelector[levelSelector.selectedIndex].value; var NHPR = 10 * level var result = document.getElementById(\"safeRestValues\"); result.innerHTML = `<li><b>Natural HP Regen</b> +${NHPR}%</li> <li><b>Natural HP Regen</b> +${NHPR}</li><br> <b>Note: Natural HP Regen</b> stat from equipments and avatars are added as <b>base Natural HP Regen</b>; the bonuses from this passive are applied <b>after base Natural HP Regen is calculated</b>` } calcSafeRestValues() HP Boost",
+  "tree": "Survival",
+  "tree_slug": "survival",
+  "tree_url": "https://coryn.club/skill.php?tree=Survival",
+  "image_path": "assets/skill_tree/survival/safe_rest.png",
+  "data_path": "doc/coryn_skills/survival/safe_rest.json"
+}

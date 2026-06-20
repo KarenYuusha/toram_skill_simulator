@@ -1,0 +1,125 @@
+{
+  "skill_tree": "Minstrel",
+  "tree_slug": "minstrel",
+  "group": "assist_skills",
+  "raw_skill_file": "assist_skills/minstrel_skills.txt",
+  "coordinate_system": {
+    "origin": [
+      0,
+      0
+    ],
+    "format": [
+      "row",
+      "column"
+    ],
+    "description": "Moving one level down adds [1, 0]; moving one column right adds [0, 1]. Empty rows and columns are preserved to match the image layout."
+  },
+  "skills": [
+    {
+      "id": "passion_song",
+      "name": "Passion Song",
+      "position": [
+        0,
+        3
+      ],
+      "prerequisites": [
+        "fairy_song"
+      ]
+    },
+    {
+      "id": "healing_song",
+      "name": "Healing Song",
+      "position": [
+        1,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "fairy_song",
+      "name": "Fairy Song",
+      "position": [
+        1,
+        1
+      ],
+      "prerequisites": [
+        "healing_song"
+      ]
+    },
+    {
+      "id": "wisdom_song",
+      "name": "Wisdom Song",
+      "position": [
+        1,
+        3
+      ],
+      "prerequisites": [
+        "fairy_song"
+      ]
+    },
+    {
+      "id": "fantasy_song",
+      "name": "Fantasy Song",
+      "position": [
+        2,
+        2
+      ],
+      "prerequisites": [
+        "life_song"
+      ]
+    },
+    {
+      "id": "life_song",
+      "name": "Life Song",
+      "position": [
+        3,
+        1
+      ],
+      "prerequisites": [
+        "healing_song"
+      ]
+    },
+    {
+      "id": "sound_veil",
+      "name": "Sound Veil",
+      "position": [
+        3,
+        3
+      ],
+      "prerequisites": [
+        "beat_blast"
+      ]
+    },
+    {
+      "id": "beat_blast",
+      "name": "Beat Blast",
+      "position": [
+        4,
+        2
+      ],
+      "prerequisites": [
+        "life_song"
+      ]
+    },
+    {
+      "id": "battle_anthem",
+      "name": "Battle Anthem",
+      "position": [
+        5,
+        3
+      ],
+      "prerequisites": [
+        "beat_blast"
+      ]
+    },
+    {
+      "id": "ad_lib",
+      "name": "Ad-lib",
+      "position": [
+        6,
+        2
+      ],
+      "prerequisites": []
+    }
+  ]
+}

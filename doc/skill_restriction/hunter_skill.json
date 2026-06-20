@@ -1,0 +1,200 @@
+{
+  "skill_tree": "Hunter",
+  "tree_slug": "hunter",
+  "group": "sub_weapon_skills",
+  "raw_skill_file": "sub_weapon_skills/hunter_skills.txt",
+  "coordinate_system": {
+    "origin": [
+      0,
+      0
+    ],
+    "format": [
+      "row",
+      "column"
+    ],
+    "description": "Moving one level down adds [1, 0]; moving one column right adds [0, 1]. Empty rows and columns are preserved to match the image layout."
+  },
+  "skills": [
+    {
+      "id": "kick",
+      "name": "Kick",
+      "position": [
+        0,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "sunrise_arrow",
+      "name": "Sunrise Arrow",
+      "position": [
+        0,
+        1
+      ],
+      "prerequisites": [
+        "kick"
+      ]
+    },
+    {
+      "id": "magic_arrow",
+      "name": "Magic Arrow",
+      "position": [
+        0,
+        2
+      ],
+      "prerequisites": [
+        "sunrise_arrow"
+      ]
+    },
+    {
+      "id": "satellite_arrow",
+      "name": "Satellite Arrow",
+      "position": [
+        0,
+        3
+      ],
+      "prerequisites": [
+        "magic_arrow"
+      ]
+    },
+    {
+      "id": "focus",
+      "name": "Focus",
+      "position": [
+        0,
+        4
+      ],
+      "prerequisites": [
+        "satellite_arrow"
+      ]
+    },
+    {
+      "id": "sleep_trap",
+      "name": "Sleep Trap",
+      "position": [
+        1,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "bear_trap",
+      "name": "Bear Trap",
+      "position": [
+        1,
+        1
+      ],
+      "prerequisites": [
+        "sleep_trap"
+      ]
+    },
+    {
+      "id": "land_mine",
+      "name": "Land Mine",
+      "position": [
+        1,
+        2
+      ],
+      "prerequisites": [
+        "bear_trap"
+      ]
+    },
+    {
+      "id": "dark_trap",
+      "name": "Dark Trap",
+      "position": [
+        1,
+        3
+      ],
+      "prerequisites": [
+        "land_mine"
+      ]
+    },
+    {
+      "id": "camouflage",
+      "name": "Camouflage",
+      "position": [
+        1,
+        4
+      ],
+      "prerequisites": [
+        "dark_trap"
+      ]
+    },
+    {
+      "id": "cyclon_arrow",
+      "name": "Cyclon Arrow",
+      "position": [
+        2,
+        2
+      ],
+      "prerequisites": [
+        "detection"
+      ]
+    },
+    {
+      "id": "vertical_air",
+      "name": "Vertical Air",
+      "position": [
+        2,
+        3
+      ],
+      "prerequisites": [
+        "cyclon_arrow"
+      ]
+    },
+    {
+      "id": "homing_shot",
+      "name": "Homing Shot",
+      "position": [
+        3,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "detection",
+      "name": "Detection",
+      "position": [
+        3,
+        1
+      ],
+      "prerequisites": [
+        "homing_shot"
+      ]
+    },
+    {
+      "id": "hunter_bowgun",
+      "name": "Hunter Bowgun",
+      "position": [
+        4,
+        2
+      ],
+      "prerequisites": [
+        "detection"
+      ]
+    },
+    {
+      "id": "multiple_hunt",
+      "name": "Multiple Hunt",
+      "position": [
+        4,
+        3
+      ],
+      "prerequisites": [
+        "hunter_bowgun"
+      ]
+    },
+    {
+      "id": "hunter_knowledge",
+      "name": "Hunter Knowledge",
+      "position": [
+        4,
+        4
+      ],
+      "prerequisites": [
+        "multiple_hunt"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Terrawrym",
+  "slug": "terrawrym",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/sprite/terrawrym.png",
+  "raw_text": "Main MD only Type Active, Magic skill Element Weapon Dependent MP 300 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 12 Description Fires a magic projectile that ambush from underground. A magic projectile is sent crawling along the ground toward the target and triggers a small AoE when it hits. Passes through any targets in the way and inflicts [Stop] on them. Faux Weapon",
+  "tree": "Sprite",
+  "tree_slug": "sprite",
+  "tree_url": "https://coryn.club/skill.php?tree=Sprite",
+  "image_path": "assets/skill_tree/sprite/terrawrym.png",
+  "data_path": "doc/coryn_skills/sprite/terrawrym.json"
+}

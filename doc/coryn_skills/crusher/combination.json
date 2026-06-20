@@ -1,0 +1,12 @@
+{
+  "name": "Combination",
+  "slug": "combination",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/crusher/combination.png",
+  "raw_text": "Main Knuckle only Type Active Element Weapon Dependent MP 0 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start No Combo middle Yes Range 2 Description Performs quick consecutive punches. This skill has \"normal attack proration\". Critical rate increases as skill level goes up. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcCombinationConstant (level, result) { let constant = 0 result.innerHTML = `<li><b>Skill Constant:</b> ${constant}</li>` } function calcCombinationMultiplier (level, result) { let multiplier = 1 + (0.1 * level) multiplier = Math.floor(multiplier*100)/100 result.innerHTML += `<li><b>Skill Multiplier: </b>${multiplier}; total multiplier of all hits</li> <li><b>Hit Count:</b> 3 hits; damage calculation is done once then spread between the hits: each of the <b>first 2 hits</b> deal 25% of total damage, the <b>3rd hit</b> deals 50% of total damage</li><br>` } function calcCombinationCritRateBonus(level, result) { let crit = level * level result.innerHTML += `<li><b>Critical Rate</b> of <b>Combination</b> +${crit}</li>` } function addCombinationExtraInfo(result) { result.innerHTML += `<br><b>Extra info:</b> <li>This skill inflicts <b>Normal Attack Proration</b>, but uses <b>Physical Proration</b> for its damage calculation</li> <li>This skill <b>does not apply Attack MP Recovery</b></li>` } function calcCombinationValues() { let levelSelector = document.getElementById(\"combinationSkillLevel\") let level = levelSelector[levelSelector.selectedIndex].value let result = document.getElementById('combinationValues') calcCombinationConstant(level, result) calcCombinationMultiplier(level, result) calcCombinationCritRateBonus(level, result) addCombinationExtraInfo(result) } calcCombinationValues() Annihilator",
+  "tree": "Crusher",
+  "tree_slug": "crusher",
+  "tree_url": "https://coryn.club/skill.php?tree=Crusher",
+  "image_path": "assets/skill_tree/crusher/combination.png",
+  "data_path": "doc/coryn_skills/crusher/combination.json"
+}

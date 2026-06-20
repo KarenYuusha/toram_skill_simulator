@@ -1,0 +1,12 @@
+{
+  "name": "Skeleton Call",
+  "slug": "skeleton_call",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/necromancer/skeletoncall.png",
+  "raw_text": "Available with all weapons Type Active Element Neutral MP 0 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start No Combo middle Yes Range 0 Description Uses 3 spirit stacks to summon a skeleton soldier. ( max 3 on the field ) The soldier performs close-range attack. It explodes and disappears when caught in an AoE. Attack power is based on ATK or MATK, whichever is higher. Demonic Pact",
+  "tree": "Necromancer",
+  "tree_slug": "necromancer",
+  "tree_url": "https://coryn.club/skill.php?tree=Necromancer",
+  "image_path": "assets/skill_tree/necromancer/skeleton_call.png",
+  "data_path": "doc/coryn_skills/necromancer/skeleton_call.json"
+}

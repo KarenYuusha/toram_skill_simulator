@@ -1,0 +1,12 @@
+{
+  "name": "Slash Reaper",
+  "slug": "slash_reaper",
+  "required_level": 4,
+  "image_url": "https://coryn.club/skill/sprite/slashreaper.png",
+  "raw_text": "Main MD only Type Active, Magic skill Element Weapon Dependent MP 400 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 12 Description Protects yourself from looming danger with magical blades. If conditions are met, the number of magical blades increases ( up to 99, max 5 deployed at once ). Reusing the skill sends the deployed magical blades to strike the target. Lebenglanz",
+  "tree": "Sprite",
+  "tree_slug": "sprite",
+  "tree_url": "https://coryn.club/skill.php?tree=Sprite",
+  "image_path": "assets/skill_tree/sprite/slash_reaper.png",
+  "data_path": "doc/coryn_skills/sprite/slash_reaper.json"
+}

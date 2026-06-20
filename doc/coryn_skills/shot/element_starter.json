@@ -1,0 +1,12 @@
+{
+  "name": "Element Starter",
+  "slug": "element_starter",
+  "required_level": 5,
+  "image_url": "https://coryn.club/skill/shot/elementstarter.png",
+  "raw_text": "Bowgun/Bow only Type Passive Neutral Description The element of bow or bowgun will be activated at the same time as the arrow. *Not valid for dual element skills. Gets a small recovery barrier each time you deal damage to targets with the element you are weak to. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 MaxHP: function calcElementStarterEffect() { var levelSelector = document.getElementById(\"elementStarterLevel\") var level = levelSelector[levelSelector.selectedIndex].value var maxHp = document.getElementById('elementStarterMaxHp').value var result = document.getElementById(\"elementStarterValues\") var heal = Math.floor(level*maxHp/1000) result.innerHTML = `<li>Allows skills that <b>do not have Dual Element attribute</b> to gain <b>Dual Element</b> attribute with elements of both <b>main weapon</b> and <b>equipped Arrow</b><ul> <li>&nbsp&nbsp&nbsp- If the skill already has a <b>fixed element</b> by default, however, then it will only gain the element of the <b>main weapon</b> in addition to the fixed element</li> </ul></li> <li>Gains 1 <b>Element Starter stack</b> each time you deal damage to an enemy with <b>an attack whose element is strong against said enemy</b>; can stack up to a maximum of <b>99 stacks</b><ul> <li>&nbsp&nbsp&nbsp- Upon getting hit by an enemy, consumes all stacks to recover ${heal} HP per consumed stack</li> </ul></li>` } calcElementStarterEffect() Samurai Archery",
+  "tree": "Shot",
+  "tree_slug": "shot",
+  "tree_url": "https://coryn.club/skill.php?tree=Shot",
+  "image_path": "assets/skill_tree/shot/element_starter.png",
+  "data_path": "doc/coryn_skills/shot/element_starter.json"
+}

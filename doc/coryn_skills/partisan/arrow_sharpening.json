@@ -1,0 +1,12 @@
+{
+  "name": "Arrow Sharpening",
+  "slug": "arrow_sharpening",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/partisan/arrowsharpening.png",
+  "raw_text": "Bowgun/Bow only Type Active Element Neutral MP 100 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 0 Description Enhances the next normal attack used. STR increases Physical Pierce, AGI increases Action Speed, and DEX increases critical performance. Survival Instinct",
+  "tree": "Partisan",
+  "tree_slug": "partisan",
+  "tree_url": "https://coryn.club/skill.php?tree=Partisan",
+  "image_path": "assets/skill_tree/partisan/arrow_sharpening.png",
+  "data_path": "doc/coryn_skills/partisan/arrow_sharpening.json"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Hidden Arm",
+  "slug": "hidden_arm",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/dagger/hiddenarm.png",
+  "raw_text": "Dagger only Type Passive Neutral Description Chance to add small damage to normal attacks by equipping a dagger. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 \"Intensive Knife\" Skill Level: 0 1 2 3 4 5 6 7 8 9 10 function calcHiddenArmAdditionalChance(level, intensiveLevel, result) { let additionalChance = 5*level + 5*intensiveLevel result.innerHTML = `<li><b>Auto attacks</b> have ${additionalChance}% chance to trigger an <b>Additional Attack</b></li>` } function calcHiddenArmConstant(result) { result.innerHTML += `<li><b>Additional Attack Skill Constant:</b> 0</li>` } function calcHiddenArmMultiplier(level, intensiveLevel, result) { let multiplier = 0.25 if (intensiveLevel > 0) {multiplier += 0.25} result.innerHTML += `<li><b>Additional Attack Skill Multiplier:</b> ${multiplier}</li><br>` } function hiddenArmExtraInformation (result) { result.innerHTML += `<b>Extra info:</b> <li>The <b>Additional Attack</b> cannot deal Critical hits and does not apply AMPR</li> <li><b>Hidden Arm</b> goes through <b>Physical Damage Calculation</b>; the <b>equipped dagger's WeaponATK</b> is added at the very end of damage calculation, ignoring all kinds of defenses of the target except <b>Guard</b></li> <li><b>Hidden Arm</b> uses <b>Normal Attack Proration</b> for its damage calculation, but <b>does not inflict proration</b></li>` } function calcHiddenArmValues() { let levelSelector = document.getElementById('hiddenArmSkillLevel') let level = levelSelector[levelSelector.selectedIndex].value let intensiveKnifeSelector = document.getElementById('intensiveKnifeLevel') let intensiveLevel = intensiveKnifeSelector[intensiveKnifeSelector.selectedIndex].value let result = document.getElementById('hiddenArmValues') calcHiddenArmAdditionalChance(level, intensiveLevel, result) calcHiddenArmConstant(result) calcHiddenArmMultiplier(level, intensiveLevel, result) hiddenArmExtraInformation(result) } calcHiddenArmValues() Intensive Knife",
+  "tree": "Dagger",
+  "tree_slug": "dagger",
+  "tree_url": "https://coryn.club/skill.php?tree=Dagger",
+  "image_path": "assets/skill_tree/dagger/hidden_arm.png",
+  "data_path": "doc/coryn_skills/dagger/hidden_arm.json"
+}

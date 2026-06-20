@@ -1,0 +1,12 @@
+{
+  "name": "Evasion",
+  "slug": "evasion",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/assassin/evasion.png",
+  "raw_text": "Available with all weapons Type Active Element Neutral MP 200 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 0 Description A technique to improve the ability to dodge. Increase dodge rate for a certain period of time and remove Status Ailment: [Slow]. Dagger [Using it with a Ninjutsu Scroll will give you the same effects.] Duration x2 Dodge Boost +10 Extras Show more... Sub-Weapon: Dagger/Ninjutsu Scroll Other Skill Level: 1 2 3 4 5 6 7 8 9 10 function addEvasionSkillEffect(result){ result.innerHTML = `<b>Skill Effect:</b> Removes [Slow] and grants <b>Evasion buff</b> to the <b>caster</b><br>` } function addEvasionBuffEffect(level, weapon, result){ var dodgeFlat = 1*level var dodgePercent = 1*level var duration = 20 + 1*level if (weapon == \"dagger\") { dodgeFlat += 10 duration *= 2 } result.innerHTML += `<b>Buff Effect:</b> <li><b>Dodge</b> +${dodgePercent}%</li> <li><b>Dodge</b> +${dodgeFlat}</li> <li><b>Buff Duration:</b> ${duration} seconds</li>` } function calcEvasionValues() { var weaponSelector = document.getElementById(\"evasionWeapon\") var weapon = weaponSelector[weaponSelector.selectedIndex].value var levelSelector = document.getElementById(\"evasionLevel\") var level = levelSelector[levelSelector.selectedIndex].value var result = document.getElementById(\"evasionValues\"); addEvasionSkillEffect(result) addEvasionBuffEffect(level, weapon, result) } calcEvasionValues() Serum",
+  "tree": "Assassin",
+  "tree_slug": "assassin",
+  "tree_url": "https://coryn.club/skill.php?tree=Assassin",
+  "image_path": "assets/skill_tree/assassin/evasion.png",
+  "data_path": "doc/coryn_skills/assassin/evasion.json"
+}

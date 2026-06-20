@@ -1,0 +1,108 @@
+{
+  "skill_tree": "Survival",
+  "tree_slug": "survival",
+  "group": "assist_skills",
+  "raw_skill_file": "assist_skills/survival_skills.txt",
+  "coordinate_system": {
+    "origin": [
+      0,
+      0
+    ],
+    "format": [
+      "row",
+      "column"
+    ],
+    "description": "Moving one level down adds [1, 0]; moving one column right adds [0, 1]. Empty rows and columns are preserved to match the image layout."
+  },
+  "skills": [
+    {
+      "id": "hp_boost",
+      "name": "HP Boost",
+      "position": [
+        0,
+        2
+      ],
+      "prerequisites": [
+        "safe_rest"
+      ]
+    },
+    {
+      "id": "play_dead",
+      "name": "Play Dead",
+      "position": [
+        1,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "safe_rest",
+      "name": "Safe Rest",
+      "position": [
+        2,
+        1
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "fighters_high",
+      "name": "Fighter's High",
+      "position": [
+        2,
+        2
+      ],
+      "prerequisites": [
+        "safe_rest"
+      ]
+    },
+    {
+      "id": "exp_gain_up",
+      "name": "EXP Gain Up",
+      "position": [
+        3,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "short_rest",
+      "name": "Short Rest",
+      "position": [
+        4,
+        1
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "mp_boost",
+      "name": "MP Boost",
+      "position": [
+        4,
+        2
+      ],
+      "prerequisites": [
+        "short_rest"
+      ]
+    },
+    {
+      "id": "drop_rate_up",
+      "name": "Drop Rate Up",
+      "position": [
+        5,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "sober_analysis",
+      "name": "Sober Analysis",
+      "position": [
+        6,
+        2
+      ],
+      "prerequisites": [
+        "short_rest"
+      ]
+    }
+  ]
+}

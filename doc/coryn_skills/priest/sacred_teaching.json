@@ -1,0 +1,12 @@
+{
+  "name": "Sacred Teaching",
+  "slug": "sacred_teaching",
+  "required_level": 5,
+  "image_url": "https://coryn.club/skill/priest/royalheal.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description Grants temporary HP exceeding your MaxHP when recovering with a Heal-type skill( * ). ATK and MATK will slightly increase according to the value of temporary HP gained. All Weapons ( * )If the total HP (MaxHP + temporary HP) exceeds the 99,999 HP limit, the number of temporary HP gained will be reduced. Holy Fist",
+  "tree": "Priest",
+  "tree_slug": "priest",
+  "tree_url": "https://coryn.club/skill.php?tree=Priest",
+  "image_path": "assets/skill_tree/priest/sacred_teaching.png",
+  "data_path": "doc/coryn_skills/priest/sacred_teaching.json"
+}

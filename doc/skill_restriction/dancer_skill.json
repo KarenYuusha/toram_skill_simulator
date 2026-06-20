@@ -1,0 +1,92 @@
+{
+  "skill_tree": "Dancer",
+  "tree_slug": "dancer",
+  "group": "assist_skills",
+  "raw_skill_file": "assist_skills/dancer_skills.txt",
+  "coordinate_system": {
+    "origin": [
+      0,
+      0
+    ],
+    "format": [
+      "row",
+      "column"
+    ],
+    "description": "Moving one level down adds [1, 0]; moving one column right adds [0, 1]. Empty rows and columns are preserved to match the image layout."
+  },
+  "skills": [
+    {
+      "id": "fairy_dance",
+      "name": "Fairy Dance",
+      "position": [
+        0,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "frenzy_dance",
+      "name": "Frenzy Dance",
+      "position": [
+        0,
+        1
+      ],
+      "prerequisites": [
+        "fairy_dance"
+      ]
+    },
+    {
+      "id": "astute_dance",
+      "name": "Astute Dance",
+      "position": [
+        0,
+        2
+      ],
+      "prerequisites": [
+        "frenzy_dance"
+      ]
+    },
+    {
+      "id": "charming_dance",
+      "name": "Charming Dance",
+      "position": [
+        0,
+        3
+      ],
+      "prerequisites": [
+        "astute_dance"
+      ]
+    },
+    {
+      "id": "spirited_dance",
+      "name": "Spirited Dance",
+      "position": [
+        1,
+        1
+      ],
+      "prerequisites": [
+        "fairy_dance"
+      ]
+    },
+    {
+      "id": "elegant_poise",
+      "name": "Elegant Poise",
+      "position": [
+        2,
+        2
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "natures_wonder",
+      "name": "Nature's Wonder",
+      "position": [
+        2,
+        3
+      ],
+      "prerequisites": [
+        "elegant_poise"
+      ]
+    }
+  ]
+}

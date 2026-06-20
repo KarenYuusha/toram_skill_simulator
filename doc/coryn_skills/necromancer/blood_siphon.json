@@ -1,0 +1,12 @@
+{
+  "name": "Blood Siphon",
+  "slug": "blood_siphon",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/necromancer/bloodsiphon.png",
+  "raw_text": "Staff only Type Active, Magic skill Element Weapon Dependent MP 400 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 12 Description Puts a blood-sucking curse on the target. A portion of the damage dealt is absorbed as HP. Warning: Low chance to absorb status ailments too. Chance to inflict [Flinch] if VIT is 50 or higher. The curse is instantly removed when the target is too far. Soul Stream",
+  "tree": "Necromancer",
+  "tree_slug": "necromancer",
+  "tree_url": "https://coryn.club/skill.php?tree=Necromancer",
+  "image_path": "assets/skill_tree/necromancer/blood_siphon.png",
+  "data_path": "doc/coryn_skills/necromancer/blood_siphon.json"
+}

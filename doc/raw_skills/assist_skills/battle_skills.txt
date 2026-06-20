@@ -1,0 +1,117 @@
+Magic UP
+Slightly increase MATK
+Passive skill
+Effect: Increases + flat MATK based on the player's Lvl
+Amount of increase: PlayerLvl * [2.5 * SkillLvl]/100
+
+Magic UP | #🤺battle-skills⚔
+Concentrate
+Extremely low chance to increase the last magic attack used.
+Passive skill
+Effect: Increase the damage dealt by a magic skill by a set %
+Activation Rate: 1 * Lvl %
+Damage Increase: (10 + 1 * Lvl) %
+NOTES:
+--The skill will not activate for placed skills.
+--The damage increase is applied additively to the skill long range.
+
+Concentrate | #🤺battle-skills⚔
+Desperate Resist
+Reduce damage taken when player is locked down to ailments like tumble and stun.
+Effect: Reduce damage taken by a % whenever the player is "Action Locked".
+Damage Reduction: 1 * Lvl %
+NOTES:
+--Character is "Action Locked" for a set duration whenever the ailments FLINCH, TUMBLE, STUN, KNOCKBACK, SLEEP are inflicted on it.
+
+Desperate Resist | #🤺battle-skills⚔
+Increased Energy
+Slightly increase MATK
+Passive skill
+Effect: Increases + flat MATK based on the player's Lvl
+Amount of increase: PlayerLvl * [2.5 * SkillLvl]/100
+
+Increased Energy | #🤺battle-skills⚔
+Spell Burst
+Gives chance to magic attacks to crit under certain conditions.
+Passive skill
+Effect: gives + flat magic critical rate(based on total Critical Rate before crit resist apply) and magic critical damage(based on total Critical Damage gain excluding base 100).
+Increase Magic Crit Rate(mcr) conversion = (2.5 * SkillLvl)% of total crit rate
+Increase Magic Crit Damage(mcd) conversion = (2.5 * SkillLvl)% of total crit damage gain
+[For more detail about magic critical, check out in ⁠📚critical-formula💥]
+
+Spell Burst | #🤺battle-skills⚔
+Attack UP
+Slightly increase ATK
+Passive skill
+Effect: Increases + flat ATK based on the player's Lvl
+Amount of increase: PlayerLvl * [2.5 * SkillLvl]/100
+
+Attack UP | #🤺battle-skills⚔
+Whack
+Extremely low chance to increase the last physical attack used.
+Passive skill
+Effect: Increase the damage dealt by a physical skill by a set %
+Activation Rate: 1 * Lvl %
+Damage Increase: (10 + 1 * Lvl) %
+NOTES:
+--The skill will not activate for placed skills.
+--The damage increase is applied additively to the skills long range, sword techniques and martial mastery.
+
+Whack | #🤺battle-skills⚔
+Critical UP
+Increase critical rate and critical damage a little.
+Passive skill
+Effect: Gives + flat critical rate and % critical damage.
+Critical Rate Amount: + (Skill Lvl/2)
+Critical Damage Amount: + (Skill Lvl/2) %
+
+Critical UP | #🤺battle-skills⚔
+Intimidating Power
+Slightly increase ATK
+Passive skill
+Effect: Increases + flat ATK based on the player's Lvl
+Amount of increase: PlayerLvl * [2.5 * SkillLvl]/100
+
+Intimidating Power | #🤺battle-skills⚔
+Secret Chase Attack
+Increases chance of additional melee/magic
+Passive skill
+Effect: Give percentage chance of activating additional melee/magic.
+Percentage increase: Skill lvl * 2.5%
+
+Secret Chase Attack | #🤺battle-skills⚔
+Defense UP
+Slightly increase DEF and MDEF
+Passive skill
+Effect: Increases + flat DEF and MDEF based on the player's Lvl
+Amount of increase: PlayerLvl * [2.5 * SkillLvl]/100
+
+Defense UP | #🤺battle-skills⚔
+Dodge UP
+Slightly increase dodge
+Effect: Increase + flat FLEE by a very small amount.
+Amount of increase: 1*Lvl
+
+Dodge UP | #🤺battle-skills⚔
+Accuracy UP
+Slightly increase accuracy
+Effect: Increase + flat HIT by a very small amount.
+Amount of increase: 1*Lvl
+
+Accuracy UP | #🤺battle-skills⚔
+Defense Mastery
+Slightly increase DEF and MDEF
+Passive skill
+Effect: Increases + flat DEF and MDEF based on the player's Lvl
+Amount of increase: PlayerLvl * [2.5 * SkillLvl]/100
+
+Defense Mastery | #🤺battle-skills⚔
+Super Grip
+Reduces knockback distance when defeated.
+Passive skill
+Effect: Knockback distance when defeated is reduced by a percentage.
+Amount of distance decrease in percentage: Skill lvl*7.5%
+
+Super Grip | #🤺battle-skills⚔
+
+Lvl req, T1 Lv20, T2 Lv60, T3 Lv120, T4 Lv180

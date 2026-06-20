@@ -1,0 +1,12 @@
+{
+  "name": "HP Boost",
+  "slug": "hp_boost",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/survival/hpboost.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description MaxHP increases a little. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcHpBoostValues() { var levelSelector = document.getElementById(\"hpBoostLevel\") var level = levelSelector[levelSelector.selectedIndex].value var percHP = 2 * level var flatHP = 100 * level var result = document.getElementById(\"hpBoostValues\") result.innerHTML = `<li><b>MaxHP</b> +${percHP}%</li> <li><b>MaxHP</b> +${flatHP}</li>` } calcHpBoostValues() Fighter's High",
+  "tree": "Survival",
+  "tree_slug": "survival",
+  "tree_url": "https://coryn.club/skill.php?tree=Survival",
+  "image_path": "assets/skill_tree/survival/hp_boost.png",
+  "data_path": "doc/coryn_skills/survival/hp_boost.json"
+}

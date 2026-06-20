@@ -1,0 +1,12 @@
+{
+  "name": "Taming",
+  "slug": "taming",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/tamer/taming.png",
+  "raw_text": "Available with all weapons Type Active Element Neutral MP 300 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start No Combo middle No Range 8 Description Capture the monsters weaker than you. The Max Lv of them and time limit increase. The chance of breaking Cages decreases as the skill levels up. Consume [Cage] x1. Extras Show more... Increase in Capture Time Skill Lv Capture Time 1 +1 sec 2 +2 sec 3 +3 sec 4 +4 sec 5 +5 sec 6 +7 sec 7 +9 sec 8 +11 sec 9 +13 sec 10 +15 sec Target Lv Skill Lv Target Lv 1 (Your Level - 9) 2 (Your Level - 8) 3 (Your Level - 7) 4 (Your Level - 6) 5 (Your Level - 5) 6 (Your Level - 4) 7 (Your Level - 3) 8 (Your Level - 2) 9 (Your Level - 1) 10 (Your Level) Capture Technique I",
+  "tree": "Tamer",
+  "tree_slug": "tamer",
+  "tree_url": "https://coryn.club/skill.php?tree=Tamer",
+  "image_path": "assets/skill_tree/tamer/taming.png",
+  "data_path": "doc/coryn_skills/tamer/taming.json"
+}

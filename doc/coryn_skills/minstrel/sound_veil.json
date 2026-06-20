@@ -1,0 +1,12 @@
+{
+  "name": "Sound Veil",
+  "slug": "sound_veil",
+  "required_level": 3,
+  "image_url": "https://coryn.club/skill/minstrel/soundveil.png",
+  "raw_text": "Magic Device/Staff/Bowgun/Bow/2-Handed Sword/Katana only Type Passive Neutral Description While a song skill is active, your aggro output becomes 1. Reduces all types of damage according to the number of acoustic buffs. However, damage from enemies aiming at you directly cannot be reduced. Battle Anthem",
+  "tree": "Minstrel",
+  "tree_slug": "minstrel",
+  "tree_url": "https://coryn.club/skill.php?tree=Minstrel",
+  "image_path": null,
+  "data_path": "doc/coryn_skills/minstrel/sound_veil.json"
+}

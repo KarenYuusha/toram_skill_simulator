@@ -1,0 +1,12 @@
+{
+  "name": "Teleport",
+  "slug": "teleport",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/magicblade/teleport.png",
+  "raw_text": "Magic Device only Type Active Element Neutral MP 200 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 0 Description A technique to dodge attacks by instantly moving to another point. While casting Teleport, press a direction key to instantly move to that direction. 1-Handed Sword MP Cost -100 Extras Show more... Weapon: 1-Handed Sword Other Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcTeleportSkillEffect(level, weapon, result) { var mpCost = 200 if (weapon == \"ohs\") {mpCost -= 100} var motion = level*5 var HTML = `<li><b>MP Cost:</b> ${mpCost}</li> <li><b>Motion Speed</b> of <b>Teleport</b> +${motion}%</li> <br><b>Skill Effect:</b> <li>Starts channeling for 3 seconds upon cast; as soon as any <b>movement direction input</b> is held within that period, the <b>caster</b> will immediately <b>teleport</b> 8m toward the selected direction</li> <li>If no direction input is held until the cast time runs out, the skill will simply end without any other effect</li>` result.innerHTML = HTML } function addTeleportExtraInfo(result) { result.innerHTML += `<br><b>Extra info:</b> <li>This skill is unaffected by any other <b>Motion Speed</b> modifier aside from its own, including <b>Swift combo tag</b></li> <li>This skill's \"cast time\" is more like an indication of the available period for teleporting rather than \"actual cast time\", therefore it is unaffected by CSPD stat</li>` } function calcTeleportValues() { var weaponSelector = document.getElementById(\"teleportWeapon\") var weapon = weaponSelector[weaponSelector.selectedIndex].value var levelSelector = document.getElementById('teleportSkillLevel') var level = levelSelector[levelSelector.selectedIndex].value var result = document.getElementById('teleportValues') calcTeleportSkillEffect(level, weapon, result) addTeleportExtraInfo(result) } calcTeleportValues() Siphon Recall",
+  "tree": "MagicBlade",
+  "tree_slug": "magicblade",
+  "tree_url": "https://coryn.club/skill.php?tree=MagicBlade",
+  "image_path": "assets/skill_tree/magicblade/teleport.png",
+  "data_path": "doc/coryn_skills/magicblade/teleport.json"
+}

@@ -1,0 +1,61 @@
+{
+  "skill_tree": "Ninja",
+  "tree_slug": "ninja",
+  "group": "sub_weapon_skills",
+  "raw_skill_file": "sub_weapon_skills/ninja_skills.txt",
+  "coordinate_system": {
+    "origin": [
+      0,
+      0
+    ],
+    "format": [
+      "row",
+      "column"
+    ],
+    "description": "Moving one level down adds [1, 0]; moving one column right adds [0, 1]. Empty rows and columns are preserved to match the image layout."
+  },
+  "skills": [
+    {
+      "id": "ninjutsu",
+      "name": "Ninjutsu",
+      "position": [
+        0,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "ninja_spirit",
+      "name": "Ninja Spirit",
+      "position": [
+        0,
+        1
+      ],
+      "prerequisites": [
+        "ninjutsu"
+      ]
+    },
+    {
+      "id": "ninjutsu_drill_i",
+      "name": "Ninjutsu Drill I",
+      "position": [
+        1,
+        1
+      ],
+      "prerequisites": [
+        "ninjutsu"
+      ]
+    },
+    {
+      "id": "ninjutsu_drill_ii",
+      "name": "Ninjutsu Drill II",
+      "position": [
+        1,
+        2
+      ],
+      "prerequisites": [
+        "ninjutsu_drill_i"
+      ]
+    }
+  ]
+}

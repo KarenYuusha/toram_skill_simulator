@@ -1,0 +1,12 @@
+{
+  "name": "Beat Blast",
+  "slug": "beat_blast",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/minstrel/beatblast.png",
+  "raw_text": "Magic Device/Staff/Bowgun/Bow/2-Handed Sword/Katana only Type Active, Magic skill Element Weapon Dependent MP 0 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start No Combo middle Yes Range 1 Description A sound pressure attack that is only usable while a song skill is active. Gains stacks ( max 20 ) based on the MP consumed by party members affected by the song. Uses the stacks ( max 6 ) to deal magic damage to surrounding enemies (in combat). Sound Veil",
+  "tree": "Minstrel",
+  "tree_slug": "minstrel",
+  "tree_url": "https://coryn.club/skill.php?tree=Minstrel",
+  "image_path": null,
+  "data_path": "doc/coryn_skills/minstrel/beat_blast.json"
+}

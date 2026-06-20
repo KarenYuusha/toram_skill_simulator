@@ -1,0 +1,12 @@
+{
+  "name": "Martial Mastery",
+  "slug": "martial_mastery",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/martial/martialmastery.png",
+  "raw_text": "Main Knuckle only Type Passive Neutral Description Gets better at using Knuckles. ATK of Knuckles increases. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcMartialMasteryAtk(level, result) { let baseAtk = 1 + Math.ceil((level-2)/5) result.innerHTML = `<li><b> ATK </b> +${baseAtk}%</li>` } function calcMartialMasteryWeaponAtk(level, result) { let wAtk = 3 * level result.innerHTML += `<li><b>Weapon ATK</b> +${wAtk}%</li>` } function calcMartialMasteryValues() { let levelSelector = document.getElementById('martialMasterySkillLevel') let level = levelSelector[levelSelector.selectedIndex].value let result = document.getElementById('martialMasteryValues') calcMartialMasteryAtk(level, result) calcMartialMasteryWeaponAtk(level,result) } calcMartialMasteryValues() Martial Discipline",
+  "tree": "Martial",
+  "tree_slug": "martial",
+  "tree_url": "https://coryn.club/skill.php?tree=Martial",
+  "image_path": "assets/skill_tree/martial/martial_mastery.png",
+  "data_path": "doc/coryn_skills/martial/martial_mastery.json"
+}

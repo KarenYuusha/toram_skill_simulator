@@ -1,0 +1,253 @@
+{
+  "skill_tree": "Martial",
+  "tree_slug": "martial",
+  "group": "weapon_class_skills",
+  "raw_skill_file": "weapon_class_skills/martial_skills.txt",
+  "coordinate_system": {
+    "origin": [
+      0,
+      0
+    ],
+    "format": [
+      "row",
+      "column"
+    ],
+    "description": "Moving one level down adds [1, 0]; moving one column right adds [0, 1]. Empty rows and columns are preserved to match the image layout."
+  },
+  "skills": [
+    {
+      "id": "mountain_press",
+      "name": "Mountain Press",
+      "position": [
+        0,
+        6
+      ],
+      "prerequisites": [
+        "chariot"
+      ]
+    },
+    {
+      "id": "bash",
+      "name": "Bash",
+      "position": [
+        1,
+        1
+      ],
+      "prerequisites": [
+        "smash"
+      ]
+    },
+    {
+      "id": "shell_break",
+      "name": "Shell Break",
+      "position": [
+        1,
+        2
+      ],
+      "prerequisites": [
+        "bash"
+      ]
+    },
+    {
+      "id": "heavy_smash",
+      "name": "Heavy Smash",
+      "position": [
+        1,
+        3
+      ],
+      "prerequisites": [
+        "shell_break"
+      ]
+    },
+    {
+      "id": "chariot",
+      "name": "Chariot",
+      "position": [
+        1,
+        4
+      ],
+      "prerequisites": [
+        "heavy_smash"
+      ]
+    },
+    {
+      "id": "abstract_arms",
+      "name": "Abstract Arms",
+      "position": [
+        1,
+        5
+      ],
+      "prerequisites": [
+        "chariot"
+      ]
+    },
+    {
+      "id": "smash",
+      "name": "Smash",
+      "position": [
+        2,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "seismic_stomp",
+      "name": "Seismic Stomp",
+      "position": [
+        2,
+        6
+      ],
+      "prerequisites": [
+        "shell_break"
+      ]
+    },
+    {
+      "id": "sonic_wave",
+      "name": "Sonic Wave",
+      "position": [
+        3,
+        1
+      ],
+      "prerequisites": [
+        "smash"
+      ]
+    },
+    {
+      "id": "earthbind",
+      "name": "Earthbind",
+      "position": [
+        3,
+        2
+      ],
+      "prerequisites": [
+        "sonic_wave"
+      ]
+    },
+    {
+      "id": "triple_kick",
+      "name": "Triple Kick",
+      "position": [
+        3,
+        3
+      ],
+      "prerequisites": [
+        "earthbind"
+      ]
+    },
+    {
+      "id": "rush",
+      "name": "Rush",
+      "position": [
+        3,
+        4
+      ],
+      "prerequisites": [
+        "triple_kick"
+      ]
+    },
+    {
+      "id": "asura_aura",
+      "name": "Asura Aura",
+      "position": [
+        3,
+        5
+      ],
+      "prerequisites": [
+        "rush"
+      ]
+    },
+    {
+      "id": "spin_sweep",
+      "name": "Spin Sweep",
+      "position": [
+        4,
+        6
+      ],
+      "prerequisites": [
+        "rush"
+      ]
+    },
+    {
+      "id": "flash_blink",
+      "name": "Flash Blink",
+      "position": [
+        5,
+        5
+      ],
+      "prerequisites": [
+        "triple_kick"
+      ]
+    },
+    {
+      "id": "martial_mastery",
+      "name": "Martial Mastery",
+      "position": [
+        6,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "martial_discipline",
+      "name": "Martial Discipline",
+      "position": [
+        6,
+        3
+      ],
+      "prerequisites": [
+        "martial_mastery"
+      ]
+    },
+    {
+      "id": "chakra",
+      "name": "Chakra",
+      "position": [
+        6,
+        4
+      ],
+      "prerequisites": [
+        "martial_discipline"
+      ]
+    },
+    {
+      "id": "energy_control",
+      "name": "Energy Control",
+      "position": [
+        6,
+        6
+      ],
+      "prerequisites": [
+        "chakra"
+      ]
+    },
+    {
+      "id": "aggravate",
+      "name": "Aggravate",
+      "position": [
+        7,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "strong_chase_attack",
+      "name": "Strong Chase Attack",
+      "position": [
+        7,
+        2
+      ],
+      "prerequisites": [
+        "aggravate"
+      ]
+    },
+    {
+      "id": "slide",
+      "name": "Slide",
+      "position": [
+        8,
+        3
+      ],
+      "prerequisites": []
+    }
+  ]
+}

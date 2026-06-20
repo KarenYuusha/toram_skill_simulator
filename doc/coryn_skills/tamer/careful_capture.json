@@ -1,0 +1,12 @@
+{
+  "name": "Careful Capture",
+  "slug": "careful_capture",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/tamer/carefulcapture.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description Chance to capture monsters with a little high Potential. Pet Heal",
+  "tree": "Tamer",
+  "tree_slug": "tamer",
+  "tree_url": "https://coryn.club/skill.php?tree=Tamer",
+  "image_path": "assets/skill_tree/tamer/careful_capture.png",
+  "data_path": "doc/coryn_skills/tamer/careful_capture.json"
+}

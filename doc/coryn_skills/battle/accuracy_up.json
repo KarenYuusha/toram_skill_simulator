@@ -1,0 +1,12 @@
+{
+  "name": "Accuracy UP",
+  "slug": "accuracy_up",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/battle/accuracyup.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description Increase Accuracy Rate a little. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcAccuracyUpValues() { var levelSelector = document.getElementById(\"accuracyUpSkillLevel\") var level = levelSelector[levelSelector.selectedIndex].value var result = document.getElementById(\"accuracyUpValues\") result.innerHTML = `<li><b>Accuracy</b> +${level}</li>` } calcAccuracyUpValues() Increased Energy",
+  "tree": "Battle",
+  "tree_slug": "battle",
+  "tree_url": "https://coryn.club/skill.php?tree=Battle",
+  "image_path": "assets/skill_tree/battle/accuracy_up.png",
+  "data_path": "doc/coryn_skills/battle/accuracy_up.json"
+}

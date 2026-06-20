@@ -1,0 +1,12 @@
+{
+  "name": "Blizzard",
+  "slug": "blizzard",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/wizard/blizzard.png",
+  "raw_text": "Magic Device/Staff/Sub MD only Type Active, Magic skill Element Water MP 100 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 12 Description Familiar is told to perform a snowstorm magic. Creates a wide AOE that does water element magic damage. Chance to inflict [Freeze] on the target. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcBlizzardConstant (level, result) { var constant = 100 result.innerHTML = `<li><b>Skill Constant:</b> ${constant}; constant for each hit</li>` } function calcBlizzardMultiplier(level, result) { var skillMultiplier = 1 + 0.05 * level skillMultiplier = Math.round(skillMultiplier*100)/100 var hitCount = 2 + Math.floor((level-1)/2) result.innerHTML += `<li><b>Skill Multiplier: </b> ${skillMultiplier}; multiplier for each hit</li> <li><b>Hit Count:</b> ${hitCount} hits; damage calculation is done for each hit</li><br>` } function calcBlizzardCast(level, result) { var castTime = 3 var range = 8 result.innerHTML += `<li><b>Familiar Cast Time:</b> ${castTime} seconds (unaffected by CSPD)</li> <li><b>Hit Range (radius):</b> ${range}m, around the <b>main target's position when the caster used the skill</b></li>` } function calcAilmentChanceBlizzard(level, result) { var chance = 2 * level result.innerHTML += `<li><b>Freeze Chance:</b> ${chance}%</li> <li><b>Freeze Duration:</b> 10 seconds</li>` } function addBlizzardExtraInfo(result) { result.innerHTML += `<br><b>Extra info:</b> <li><b>The familiar must be present</b> in order to cast this skill</li> <li>This skill is unaffected by <b>Short Range Damage</b> and <b>Long Range Damage</b> stats</li>` } function calcBlizzardValue() { let levelSelector = document.getElementById(\"blizzardLevel\") let level = levelSelector[levelSelector.selectedIndex].value let result = document.getElementById(\"blizzardValue\") calcBlizzardConstant (level, result) calcBlizzardMultiplier(level, result) calcBlizzardCast(level, result) calcAilmentChanceBlizzard(level, result) addBlizzardExtraInfo(result) } calcBlizzardValue() Meteor Strike",
+  "tree": "Wizard",
+  "tree_slug": "wizard",
+  "tree_url": "https://coryn.club/skill.php?tree=Wizard",
+  "image_path": "assets/skill_tree/wizard/blizzard.png",
+  "data_path": "doc/coryn_skills/wizard/blizzard.json"
+}

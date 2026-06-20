@@ -1,0 +1,12 @@
+{
+  "name": "Divine Rigid Body",
+  "slug": "divine_rigid_body",
+  "required_level": 4,
+  "image_url": "https://coryn.club/skill/crusher/godhand.png",
+  "raw_text": "Main Knuckle only Type Passive Neutral Description Perfecting the hand of god. May reduce Fractional Damage and increase Ailment Resistance while God Hand is in effect. MP is slightly restored each time the damage gets reduced. ( max 2 times ) Knuckle If Divine Rigid Body has been acquired and \"Annihilator\" is active, \"Goliath Punch\" charges faster each time you deal damage with a Crusher Skill. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcDivineRigidBodyEffect(level, result) { var frac = [10, 13, 17, 22, 28, 36, 45, 57, 72, 90] result.innerHTML = `Allows <b>God Hand</b> to reduce <b>Fractional Damage</b> and gain stack(s) from receiving <b>Fractional Damage</b> <li><b>Fractional Damage received</b> during <b>God Hand Primary Buff</b> -${frac[level-1]}%</li> <li>Negates [Flinch], [Tumble], [Stun], [Knockback] and [Sleep] from all hits taken during <b>God Hand Primary Buff</b></li> <li>Recovers 200 MP every time you receive damage while <b>God Hand Primary Buff</b> is active, up to a maximum of 400 MP recovery per cast</li>` } function calcDivineRigidBodyValues() { let levelSelector = document.getElementById('divineRigidBodySkillLevel') let level = levelSelector[levelSelector.selectedIndex].value let result = document.getElementById('divineRigidBodyValues') calcDivineRigidBodyEffect(level, result) } calcDivineRigidBodyValues() Breathwork",
+  "tree": "Crusher",
+  "tree_slug": "crusher",
+  "tree_url": "https://coryn.club/skill.php?tree=Crusher",
+  "image_path": "assets/skill_tree/crusher/divine_rigid_body.png",
+  "data_path": "doc/coryn_skills/crusher/divine_rigid_body.json"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Fine Shovel",
+  "slug": "fine_shovel",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/necromancer/fineshovel.png",
+  "raw_text": "Staff only Type Passive Neutral Description Gains additional spirit stacks when deploying \"Grave Digger\" for the first time. You can now continue gaining spirit stacks even when slightly away from the graveyard. Harvest",
+  "tree": "Necromancer",
+  "tree_slug": "necromancer",
+  "tree_url": "https://coryn.club/skill.php?tree=Necromancer",
+  "image_path": "assets/skill_tree/necromancer/fine_shovel.png",
+  "data_path": "doc/coryn_skills/necromancer/fine_shovel.json"
+}

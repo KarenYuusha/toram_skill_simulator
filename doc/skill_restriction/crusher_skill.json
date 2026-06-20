@@ -1,0 +1,125 @@
+{
+  "skill_tree": "Crusher",
+  "tree_slug": "crusher",
+  "group": "weapon_class_skills",
+  "raw_skill_file": "weapon_class_skills/crusher_skills.txt",
+  "coordinate_system": {
+    "origin": [
+      0,
+      0
+    ],
+    "format": [
+      "row",
+      "column"
+    ],
+    "description": "Moving one level down adds [1, 0]; moving one column right adds [0, 1]. Empty rows and columns are preserved to match the image layout."
+  },
+  "skills": [
+    {
+      "id": "forefist_punch",
+      "name": "Forefist Punch",
+      "position": [
+        0,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "goliath_punch",
+      "name": "Goliath Punch",
+      "position": [
+        0,
+        1
+      ],
+      "prerequisites": [
+        "forefist_punch"
+      ]
+    },
+    {
+      "id": "god_hand",
+      "name": "God Hand",
+      "position": [
+        0,
+        2
+      ],
+      "prerequisites": [
+        "goliath_punch"
+      ]
+    },
+    {
+      "id": "divine_rigid_body",
+      "name": "Divine Rigid Body",
+      "position": [
+        0,
+        3
+      ],
+      "prerequisites": [
+        "god_hand"
+      ]
+    },
+    {
+      "id": "breathwork",
+      "name": "Breathwork",
+      "position": [
+        1,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "floating_kick",
+      "name": "Floating Kick",
+      "position": [
+        1,
+        1
+      ],
+      "prerequisites": [
+        "breathwork"
+      ]
+    },
+    {
+      "id": "geyser_kick",
+      "name": "Geyser Kick",
+      "position": [
+        1,
+        3
+      ],
+      "prerequisites": [
+        "floating_kick"
+      ]
+    },
+    {
+      "id": "combination",
+      "name": "Combination",
+      "position": [
+        2,
+        1
+      ],
+      "prerequisites": [
+        "breathwork"
+      ]
+    },
+    {
+      "id": "annihilator",
+      "name": "Annihilator",
+      "position": [
+        2,
+        2
+      ],
+      "prerequisites": [
+        "combination"
+      ]
+    },
+    {
+      "id": "terrablast",
+      "name": "Terrablast",
+      "position": [
+        2,
+        3
+      ],
+      "prerequisites": [
+        "annihilator"
+      ]
+    }
+  ]
+}

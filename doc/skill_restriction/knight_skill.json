@@ -1,0 +1,178 @@
+{
+  "skill_tree": "Knight",
+  "tree_slug": "knight",
+  "group": "sub_weapon_skills",
+  "raw_skill_file": "sub_weapon_skills/knight_skills.txt",
+  "coordinate_system": {
+    "origin": [
+      0,
+      0
+    ],
+    "format": [
+      "row",
+      "column"
+    ],
+    "description": "Moving one level down adds [1, 0]; moving one column right adds [0, 1]. Empty rows and columns are preserved to match the image layout."
+  },
+  "skills": [
+    {
+      "id": "assault_attack",
+      "name": "Assault Attack",
+      "position": [
+        0,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "parry",
+      "name": "Parry",
+      "position": [
+        0,
+        1
+      ],
+      "prerequisites": [
+        "assault_attack"
+      ]
+    },
+    {
+      "id": "p_defense",
+      "name": "P. Defense",
+      "position": [
+        0,
+        2
+      ],
+      "prerequisites": [
+        "parry"
+      ]
+    },
+    {
+      "id": "fareth",
+      "name": "Fareth",
+      "position": [
+        0,
+        3
+      ],
+      "prerequisites": [
+        "p_defense"
+      ]
+    },
+    {
+      "id": "aftershield",
+      "name": "Aftershield",
+      "position": [
+        0,
+        4
+      ],
+      "prerequisites": [
+        "fareth"
+      ]
+    },
+    {
+      "id": "provoke",
+      "name": "Provoke",
+      "position": [
+        1,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "rage_sword",
+      "name": "Rage Sword",
+      "position": [
+        1,
+        1
+      ],
+      "prerequisites": [
+        "provoke"
+      ]
+    },
+    {
+      "id": "binding_strike",
+      "name": "Binding Strike",
+      "position": [
+        1,
+        2
+      ],
+      "prerequisites": [
+        "rage_sword"
+      ]
+    },
+    {
+      "id": "knight_will",
+      "name": "Knight Will",
+      "position": [
+        1,
+        3
+      ],
+      "prerequisites": [
+        "binding_strike"
+      ]
+    },
+    {
+      "id": "blink_sword",
+      "name": "Blink Sword",
+      "position": [
+        1,
+        4
+      ],
+      "prerequisites": [
+        "knight_will"
+      ]
+    },
+    {
+      "id": "sonic_thrust",
+      "name": "Sonic Thrust",
+      "position": [
+        2,
+        1
+      ],
+      "prerequisites": [
+        "rage_sword"
+      ]
+    },
+    {
+      "id": "revenir",
+      "name": "Revenir",
+      "position": [
+        2,
+        2
+      ],
+      "prerequisites": [
+        "sonic_thrust"
+      ]
+    },
+    {
+      "id": "knights_stance",
+      "name": "Knight's Stance",
+      "position": [
+        3,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "knights_remedy",
+      "name": "Knight's Remedy",
+      "position": [
+        3,
+        3
+      ],
+      "prerequisites": [
+        "knights_stance"
+      ]
+    },
+    {
+      "id": "knight_pledge",
+      "name": "Knight Pledge",
+      "position": [
+        3,
+        4
+      ],
+      "prerequisites": [
+        "knights_remedy"
+      ]
+    }
+  ]
+}

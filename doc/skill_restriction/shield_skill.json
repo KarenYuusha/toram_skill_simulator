@@ -1,0 +1,158 @@
+{
+  "skill_tree": "Shield",
+  "tree_slug": "shield",
+  "group": "sub_weapon_skills",
+  "raw_skill_file": "sub_weapon_skills/shield_skills.txt",
+  "coordinate_system": {
+    "origin": [
+      0,
+      0
+    ],
+    "format": [
+      "row",
+      "column"
+    ],
+    "description": "Moving one level down adds [1, 0]; moving one column right adds [0, 1]. Empty rows and columns are preserved to match the image layout."
+  },
+  "skills": [
+    {
+      "id": "shield_bash",
+      "name": "Shield Bash",
+      "position": [
+        0,
+        1
+      ],
+      "prerequisites": [
+        "shield_mastery"
+      ]
+    },
+    {
+      "id": "shield_cannon",
+      "name": "Shield Cannon",
+      "position": [
+        0,
+        2
+      ],
+      "prerequisites": [
+        "shield_bash"
+      ]
+    },
+    {
+      "id": "guard_strike",
+      "name": "Guard Strike",
+      "position": [
+        0,
+        3
+      ],
+      "prerequisites": [
+        "shield_cannon"
+      ]
+    },
+    {
+      "id": "shield_mastery",
+      "name": "Shield Mastery",
+      "position": [
+        1,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "force_shield",
+      "name": "Force Shield",
+      "position": [
+        1,
+        1
+      ],
+      "prerequisites": [
+        "shield_mastery"
+      ]
+    },
+    {
+      "id": "magical_shield",
+      "name": "Magical Shield",
+      "position": [
+        1,
+        2
+      ],
+      "prerequisites": [
+        "force_shield"
+      ]
+    },
+    {
+      "id": "shield_uppercut",
+      "name": "Shield Uppercut",
+      "position": [
+        2,
+        1
+      ],
+      "prerequisites": [
+        "shield_mastery"
+      ]
+    },
+    {
+      "id": "dual_shields",
+      "name": "Dual Shields",
+      "position": [
+        2,
+        2
+      ],
+      "prerequisites": [
+        "shield_uppercut"
+      ]
+    },
+    {
+      "id": "shield_repair",
+      "name": "Shield Repair",
+      "position": [
+        2,
+        3
+      ],
+      "prerequisites": [
+        "dual_shields"
+      ]
+    },
+    {
+      "id": "belagerung",
+      "name": "Belagerung",
+      "position": [
+        2,
+        4
+      ],
+      "prerequisites": [
+        "shield_repair"
+      ]
+    },
+    {
+      "id": "protection",
+      "name": "Protection",
+      "position": [
+        3,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "aegis",
+      "name": "Aegis",
+      "position": [
+        3,
+        1
+      ],
+      "prerequisites": [
+        "protection"
+      ]
+    },
+    {
+      "id": "guardian",
+      "name": "Guardian",
+      "position": [
+        3,
+        2
+      ],
+      "prerequisites": [
+        "aegis"
+      ]
+    }
+  ]
+}

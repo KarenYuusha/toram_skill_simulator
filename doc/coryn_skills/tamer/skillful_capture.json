@@ -1,0 +1,12 @@
+{
+  "name": "Skillful Capture",
+  "slug": "skillful_capture",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/tamer/skillfulcapture.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description Chance to raise the growth limit of the captured monsters. Careful Capture",
+  "tree": "Tamer",
+  "tree_slug": "tamer",
+  "tree_url": "https://coryn.club/skill.php?tree=Tamer",
+  "image_path": "assets/skill_tree/tamer/skillful_capture.png",
+  "data_path": "doc/coryn_skills/tamer/skillful_capture.json"
+}

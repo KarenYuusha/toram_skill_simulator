@@ -1,0 +1,12 @@
+{
+  "name": "Sword Techniques",
+  "slug": "sword_techniques",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/blade/swordtechniques.png",
+  "raw_text": "2-Handed Sword/1-Handed Sword only Type Passive Neutral Description Learn the mastership of swords. The damage dealt of Blade Skill increases. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcSwordTechniquesDamageUp() { var levelSelector = document.getElementById(\"swordTechniquesLevel\") var level = levelSelector[levelSelector.selectedIndex].value var result = document.getElementById(\"swordTechniquesValues\") result.innerHTML = `Increases the damage of all skills from the <b>Blade Skills Tree</b> by ${2*level}%` } calcSwordTechniquesDamageUp() War Cry",
+  "tree": "Blade",
+  "tree_slug": "blade",
+  "tree_url": "https://coryn.club/skill.php?tree=Blade",
+  "image_path": "assets/skill_tree/blade/sword_techniques.png",
+  "data_path": "doc/coryn_skills/blade/sword_techniques.json"
+}

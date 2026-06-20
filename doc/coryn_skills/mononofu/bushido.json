@@ -1,0 +1,12 @@
+{
+  "name": "Bushido",
+  "slug": "bushido",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/katana/bushido.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description Learn how to be a Mononofu. HP, MP and Accuracy increase a little. ATK increases when equipping a Katana. Side note: (the following notes are not part of this or any other Mononofu passive, rather being hidden innate effects of Main Katana ) • Auto Attacks of Main Katana are treated as Unsheathe Attacks • You can slide to any direction after an auto attack by using movement input during the auto attack animation if your are not afflicted with [Slow] or [Stop]; the same slide can also be performed after certain Mononofu Skills (conditions are listed within the info of said skills) • After performing a slide , gains a buff that lasts until you perform an auto attack ; the auto attack that consumes the buff will have its damage doubled , gains 50% bonus AMPR, will always deal critical hits , and give 1 Garyou Tensei stack • This slide action can be disabled by equipping Sprint Sheathe Remover registlet Extras Show more... Weapon: Main Katana Other Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcbushidoGlobalBonus(level, result) { let hpMp = 10 * level let acc = 1 * level result.innerHTML = `<li><b>MaxHP</b> +${hpMp}</li> <li><b>MaxMP</b> +${hpMp}</li> <li><b>Accuracy</b> +${acc}</li>` } function calcBushidoKtnMainBonus(level, weapon, result) { let atk = 1 + Math.ceil((level - 2)/5) let watk = 3 *level if (weapon == 'ktn') {result.innerHTML += `<li><b>ATK</b> +${atk}% </li> <li><b>Weapon ATK</b> +${watk}%</li>`} } function calcBushidoValues() { let levelSelector = document.getElementById('bushidoSkillLevel') let level = levelSelector[levelSelector.selectedIndex].value let weaponSelector = document.getElementById('bushidoWeaponType') let weapon = weaponSelector[weaponSelector.selectedIndex].value let result = document.getElementById('bushidoValues') calcbushidoGlobalBonus(level, result) calcBushidoKtnMainBonus(level, weapon, result) } calcBushidoValues() Shukuchi",
+  "tree": "Mononofu",
+  "tree_slug": "mononofu",
+  "tree_url": "https://coryn.club/skill.php?tree=Mononofu",
+  "image_path": "assets/skill_tree/mononofu/bushido.png",
+  "data_path": "doc/coryn_skills/mononofu/bushido.json"
+}

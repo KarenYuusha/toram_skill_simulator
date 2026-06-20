@@ -1,0 +1,12 @@
+{
+  "name": "Sprite Shield",
+  "slug": "sprite_shield",
+  "required_level": 4,
+  "image_url": "https://coryn.club/skill/sprite/spriteshield.png",
+  "raw_text": "Main MD only Type Active Element Neutral MP 0 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start No Combo middle Yes Range 0 Description A secret technique to convert energy into mana. Consumes HP to instantly restore 100 MP. Reduces the damage taken next and the chance of being inflicted with a status ailment. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcSpriteShieldSkillEffect(level, result) { var hpConsumption = 30 - 2*level result.innerHTML = `<b>Skill Effect:</b> Consumes ${hpConsumption}% of your <b>MaxHP</b> to recover 100 MP and grants <b>Sprite Shield buff</b> upon cast; cannot be used if you don't have enough HP` } function calcSpriteShieldBuffEffect(level, result) { var ailres = level * level result.innerHTML += `<br><b>Buff Effect:</b> <li>Reduces <b>all damage taken</b> by 50%</li> <li>Gains ${ailres}% <b>Ailment Resistance</b>; stacks with Ailment Resistance from MTL stat & equipment</li> <li><b>Buff Duration:</b> Until you get hit</li>` } function calcSpriteShieldValues() { let levelSelector = document.getElementById('spriteShieldSkillLevel') let level = levelSelector[levelSelector.selectedIndex].value let result = document.getElementById('spriteShieldValues') calcSpriteShieldSkillEffect(level, result) calcSpriteShieldBuffEffect(level, result) } calcSpriteShieldValues() Counterforce",
+  "tree": "Sprite",
+  "tree_slug": "sprite",
+  "tree_url": "https://coryn.club/skill.php?tree=Sprite",
+  "image_path": "assets/skill_tree/sprite/sprite_shield.png",
+  "data_path": "doc/coryn_skills/sprite/sprite_shield.json"
+}

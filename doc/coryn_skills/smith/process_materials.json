@@ -1,0 +1,12 @@
+{
+  "name": "Process Materials",
+  "slug": "process_materials",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/smith/processmaterials.png",
+  "raw_text": "Available with all weapons Type EX Skill Element Neutral MP 0 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start No Combo middle No Range 0 Description Process materials by yourself. The success rate increases as the skill levels up. It is a common skill in Smith and Alchemy Skills. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcProcessMaterialsSmithValues() { var levelSelector = document.getElementById(\"processMaterialsSmithSkillLevel\") var level = levelSelector[levelSelector.selectedIndex].value var result = document.getElementById(\"processMaterialsSmithValues\") var min = 80+level*1 result.innerHTML = `<li>Allow you to <b>process items by yourself</b> via the <b>Smith/Alchemy Skills</b> section in <b>EX Skills</b>; unlike <b>NPC's Process Materials</b>, this will grant you a random amount of material points <b>between ${min}% and 100%</b> of the <b>processed item's base process value</b></li> <br>This skill <b>shares the level with the skill with the same name in the Alchemy Skills Tree</b>; leveling both will only result in skill points being wasted` } calcProcessMaterialsSmithValues() Metal Compassion",
+  "tree": "Smith",
+  "tree_slug": "smith",
+  "tree_url": "https://coryn.club/skill.php?tree=Smith",
+  "image_path": "assets/skill_tree/smith/process_materials.png",
+  "data_path": "doc/coryn_skills/smith/process_materials.json"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Long Range",
+  "slug": "long_range",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/shot/longrange.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description You become good at attacking from distance. Damage dealt from 8 meters or more away increases. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcLongRangeDamageUp() { var levelSelector = document.getElementById(\"longRangeLevel\") var level = levelSelector[levelSelector.selectedIndex].value var result = document.getElementById(\"longRangeValues\") var damageUp = 1*level result.innerHTML = `Increases the damage of <b>all skills that have a maximum cast range of 8m and higher</b> by +${damageUp}% (excluding a few certain skills)<br><br> <b>Important note:</b><li><b>The description of this passive is misleading</b>: despite being described similar to <b>Long Range Damage</b> stat, the effect of this passive is <b>not the same as Long Range Damage stat</b><ul> <li>&nbsp&nbsp&nbsp- While <b>Long Range Damage</b> stat increases the damage of <b>attacks and skills</b> that are <b>used from 8m or further</b>, this passive increases the damage of <b>skills</b> that <b>have a maximum cast range of 8m or higher, regardless of where they are used</b></li> </ul></li> <li>Certain skills, such as <b>Placed Skills</b>, are unaffected by this passive's effect</li>` } calcLongRangeDamageUp() Quick Draw",
+  "tree": "Shot",
+  "tree_slug": "shot",
+  "tree_url": "https://coryn.club/skill.php?tree=Shot",
+  "image_path": "assets/skill_tree/shot/long_range.png",
+  "data_path": "doc/coryn_skills/shot/long_range.json"
+}

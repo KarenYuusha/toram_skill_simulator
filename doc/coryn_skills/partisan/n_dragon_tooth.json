@@ -1,0 +1,12 @@
+{
+  "name": "N Dragon Tooth",
+  "slug": "n_dragon_tooth",
+  "required_level": 3,
+  "image_url": "https://coryn.club/skill/partisan/ndragontooth.png",
+  "raw_text": "Halberd only Type Active, Physical skill Element Weapon Dependent MP 500 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 4 Description The Dragon Tooth invented by Nino. Attacks the target and moves backward. Slightly raises the piercing power of the next skill used. Acquiring the skill \"Dragon Tooth\" will increase the power further. Healing Shot",
+  "tree": "Partisan",
+  "tree_slug": "partisan",
+  "tree_url": "https://coryn.club/skill.php?tree=Partisan",
+  "image_path": "assets/skill_tree/partisan/n_dragon_tooth.png",
+  "data_path": "doc/coryn_skills/partisan/n_dragon_tooth.json"
+}

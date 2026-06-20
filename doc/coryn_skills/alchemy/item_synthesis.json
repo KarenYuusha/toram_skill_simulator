@@ -1,0 +1,12 @@
+{
+  "name": "Item Synthesis",
+  "slug": "item_synthesis",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/alchemy/itemsynth.png",
+  "raw_text": "Available with all weapons Type EX Skill Element Neutral MP 0 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start No Combo middle No Range 0 Description You can synthesize items by yourself. The success rate is lower than the synthesists but you don't need Spina. Novice's Bottle",
+  "tree": "Alchemy",
+  "tree_slug": "alchemy",
+  "tree_url": "https://coryn.club/skill.php?tree=Alchemy",
+  "image_path": "assets/skill_tree/alchemy/item_synthesis.png",
+  "data_path": "doc/coryn_skills/alchemy/item_synthesis.json"
+}

@@ -1,0 +1,97 @@
+Important notice:
+- Almost all skills of the dancer tree are “timer and charge” skills. Timer and charge skill is a type of skill that has a limited effect time and can gain more stack at a certain condition. In the case of dancer skill, effect time is 15s, and Max charge(stack ) is 10. But if you are using more than 1 dancer skill which is “timer and charge”, Max charge of all affecting skills is reduced to (10-number of using skills).
+
+- About how to gain more stack of a skill, you can use it again when effect time remains lower than 5s. If you use it when effect time remains higher than 5s you will lose 1 stack.
+All dancer skill limited to dagger, halberd, knuckles, one-handed sword, magic device
+Fairy Dance
+MP Costs:100
+Description:A graceful dance like a fairy. Reduce monster’s accuracy. You can increase the effect by using it again right before the effect ends. The effect goes down if you reuse it too early or gain effect from another dance.
+Skill type: support (active)
+Action range: Infinity
+Buff effect time: 15s
+Max charge level: 10
+Buff: Decrease accuracy of enemies by skill_lv * 2+ {Floor[2 + (skill_lv + 2) / 3]} * (charge_level-5) (%)
+
+Fairy Dance | #💃dancer-skills🕺
+Frenzy Dance
+MP Costs: 200
+Description: An extremely emotional dance the makes it easier to break monster’s parts.You can increase the effect by using it again right before the first effect ends. The effect goes down if you reuse it too early or gain effect from another dance.
+Skill type: support (active)
+Action range: Infinity
+Buff effect time: 15s
+Max charge level: 10
+Buff: Increase tap damage by skill_lv2 + [(skill_lv + 1) + max(skill_lv-5, 0)] (charge_lv - 5) %
+Note: max(A, B). Output value is the highest value. If A = 5 and B = 1, then output is A
+If this charge level is under 5, then it doesn't have effect tap dmg buff
+
+Frenzy Dance | #💃dancer-skills🕺
+Astute Dance
+MP Costs: 500
+Description: A agile yet supple dance. Reduces monster’s dodge rate. You can increase the effect by using it again right before the first effect ends. The effect goes down if you reuse it too early or gain effect from another dance.
+Skill type: support (active)
+Action range: Infinity
+Buff effect time: 15s
+Max charge level: 10
+Buff: Decrease enemies dodge by: skill_lv + Floor[2 + (skill_lv + 2)/ 3] * (charge_lv - 5) %
+
+Astute Dance | #💃dancer-skills🕺
+Charming Dance
+MP Costs: 300
+Description: A fascinating dance the reduces monster’s stability. You can increase the effect by using it again right before the first effect ends. The effect goes down if you reuse it too early or gain effect from another dance.
+Skill type: support (active)
+Action range: infinity
+Buff effect time: 15s
+Max charge level: 10
+Buff: Reduce monsters’ stability by skill_lv3 + floor[2 + (skill_lv + 2)/3] (charge_lv - 5) (%)
+
+Charming Dance | #💃dancer-skills🕺
+Elegant Poise
+MP Costs: 100
+Description: Handle attacks easily with a fan. Reduce damage received and becomes invincible while holding the fan. Cant hold the fan gracefully when inflicted with a status ailment.
+Skill type: Support(parry
+Action range: infinity
+Buff 1 Effect time: 2s
+Buff 2 effect time 5s AmountOfTimePassedFromBuffEffect1 (s)
+Buff 1:
+a) Decrease (skill_lv * skill_lv * 0.5)% any kind of damage receive.(50% at lv 10)
+b) Have chance to avoid status ailment by: (skill_lv * skill_lv * 0.25)% (25% at lv 10)
+This mean if you are inflicted by a status ailment in buff 1 time you will have chance to remove it with rate above. So it doesn't increase your ailment resistance. It just gives you a chance to remove it if it penetrates your ailment resistance.
+c) If you receive damage which can kill you in buff effect time, you will survive with 1 HP
+
+When you receive damage during buff 1, then buff 2 will effect/trigger
+Buff 2: Become invincible
+Note: We can not use this skill when we are inflicted with a status ailment.
+
+Elegant Poise | #💃dancer-skills🕺
+Nature's Wonder
+MP Costs: 400
+Description: Attack as if dancing beautifully.
+Deal damage to nearby enemies and recover nearby allies’ HP when the skill ends. Depending on your level, you gain resistance against Flinch or Tumble.
+Skill type: Physical type + support
+Action range: 3m
+Attack range: 3+ Floor(skill_lv * 0.3)
+Heal range: 6+Floor(lv * 0.6)
+Hit count: 4
+Skill constant: 100(constant for each hit)
+Skill multiply: 1.5 + 0.75 * skill_lvl(multiply for total hit)
+Buff effect time: during skill action
+Buff: a) Increase Flinch resistance by: Min(20 * skill_lv, 100) % , tumble resistance by: Max((Skill_lv-5) * 15, 0) %
+-> Level 10: Flinch resist: 100%, Tumble resist: 75%. Note: Min(A, B), if A = 50 and B = 100, then output is A because it is the lowest value. Meanwhile Max(A, B), output is B since B is highest value
+b) Heal caster and caster's ally who is in the heal range. Amount hp heal: (300 * lv + player_maxHP * ((10 + lv) / 100))/ number of players receive heal effect. The healing rate gets divided when pt member(can heal mercenary/pets too) in it's animation range
+
+Nature's Wonder | #💃dancer-skills🕺
+Spirited Dance
+MP cost: 300
+Type: support (active)
+Description: A dance to cheer allier up. Immediately restores MP. You can increase the effect by using it again right before the effect ends. The effect goes down if you reuse it too early or gain effect from another dance.
+- When using this skill, you will restore MP [50 + (5 * SkillLvl)]
+- When this skill is activated, there will be 15 sec duration and start at stack 5 (Max 10 stack)
+- When this skill is activated and used again when under 5 sec duration, you will restore MP as twice as the amount depending on what stack you are on.
+- If you use it above 4 sec, the stack will be decreased by 1
+- But if this skill at under 5 stack, then MP recovery will be lessened MP +([50 + (5 * SkillLvl)] * [20% * stack_aftercast]) {stack_aftercast value cannot exceed 5}
+Note: stack_aftercast => if you have 3 stack, and you use it too early, then it is 2 stack then recover mp. But if you use it under 5 sec, then it is 3 stack recover mp first then add 1 stack.
+Full Example: If this skill is on 2 stack n use it too early, you will restore 20MP and the stack will be decreased to 1. And then if you use it under 5 sec at 2 stack, you will restore 40MP x 2 = 80MP then gain 1 stack.
+
+Spirited Dance | #💃dancer-skills🕺
+
+Lvl req, T1 none, T2 lv60, T3 lv120

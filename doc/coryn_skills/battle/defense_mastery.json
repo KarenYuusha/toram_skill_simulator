@@ -1,0 +1,12 @@
+{
+  "name": "Defense Mastery",
+  "slug": "defense_mastery",
+  "required_level": 3,
+  "image_url": "https://coryn.club/skill/battle/defensemastery.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description Increase DEF & MDEF a little. The amount depends on the player's level. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 Caster Level: function calcDefenseMasteryStats(level, casterLevel, result) { var pmdef = casterLevel*(2.5*level)/100 if (pmdef - Math.floor(pmdef) < 0.999999999999) {pmdef = Math.floor(pmdef)} else {pmdef = Math.round(pmdef)} result.innerHTML = `<li><b>DEF</b> +${pmdef}</li> <li><b>MDEF</b> +${pmdef}</li>` } function calcDefenseMasteryValues() { var levelSelector = document.getElementById(\"defenseMasterySkillLevel\") var level = levelSelector[levelSelector.selectedIndex].value var casterLevel = document.getElementById(\"defenseMasteryCasterLevel\").value var result = document.getElementById(\"defenseMasteryValues\") calcDefenseMasteryStats(level, casterLevel, result) } calcDefenseMasteryValues() Spell Burst",
+  "tree": "Battle",
+  "tree_slug": "battle",
+  "tree_url": "https://coryn.club/skill.php?tree=Battle",
+  "image_path": "assets/skill_tree/battle/defense_mastery.png",
+  "data_path": "doc/coryn_skills/battle/defense_mastery.json"
+}

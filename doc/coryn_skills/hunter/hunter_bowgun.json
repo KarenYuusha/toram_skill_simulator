@@ -1,0 +1,12 @@
+{
+  "name": "Hunter Bowgun",
+  "slug": "hunter_bowgun",
+  "required_level": 3,
+  "image_url": "https://coryn.club/skill/hunter/hunterbowgun.png",
+  "raw_text": "Bowgun only Type Passive Neutral Description Enhances the versatility of hunting. Even with a non-arrow sub-weapon, Hunter Skills will exhibit the properties of arrow skills. Raising the skill level will increase Bowgun ATK. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcHunterBowgunEffect(level, result) { var watk = Math.floor(1.5*level)*5/3 watk = Math.round(watk*100)/100 var HTML = `<li>Allows <b>Hunter Skills</b> to gain <b>Arrow bonus</b> when equipping a sub-weapon other than <b>Arrow</b></li> <li>Gains <b>Base ATK</b> equals to ${watk}% of <b>Base Weapon ATK</b> when equipping a sub-weapon other than <b>Arrow</b></li>` result.innerHTML = HTML } function addHunterBowgunExtraInfo(result) { result.innerHTML += `<br><b>Extra info:</b> <li><b>Your sub-weapon slot must not be empty</b> in order to gain the effects of this passive</li> <li>As the ATK bonus from this passive is <b>Base ATK</b> and <b>not WeaponATK stat</b>, it will <b>not</b> increase the MATK bonus from <b>Conversion</b> passive</li>` } function calcHunterBowgunValues() { let levelSelector = document.getElementById(\"hunterBowgunSkillLevel\") let level = levelSelector[levelSelector.selectedIndex].value let result = document.getElementById(\"hunterBowgunValues\") calcHunterBowgunEffect(level, result) addHunterBowgunExtraInfo(result) } calcHunterBowgunValues() Multiple Hunt",
+  "tree": "Hunter",
+  "tree_slug": "hunter",
+  "tree_url": "https://coryn.club/skill.php?tree=Hunter",
+  "image_path": "assets/skill_tree/hunter/hunter_bowgun.png",
+  "data_path": "doc/coryn_skills/hunter/hunter_bowgun.json"
+}

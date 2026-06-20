@@ -1,0 +1,12 @@
+{
+  "name": "Crystal Laser",
+  "slug": "crystal_laser",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/wizard/crystallaser.png",
+  "raw_text": "Staff/Main MD only Type Active, Magic skill Element Weapon Dependent MP 200 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 12 Description Shoots out mana from Mana Crystal in a straight line to attack. Slightly restores the MP of the party members within the attack area. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 \"Mana Crystal\" Skill Level: 5 6 7 8 9 10 function calcCrystalLaserConstant(level, result) { result.innerHTML = `<li><b>Skill Constant:</b> 200</li>` } function calcCrystalLaserMultiplier(level, result) { var multiplier = 7 + 0.3 * level multiplier = Math.round(multiplier*100)/100 result.innerHTML += `<li><b>Skill Multiplier: </b> ${multiplier}</li><br>` } function calcCrystalLaserSkillEffect(level, mXtalLevel, result) { var mp = (5 + mXtalLevel*1)*level result.innerHTML += `<li><b>Hit Range:</b> Length of 12m and width of 2m; from the <b>caster's Mana Crystal</b> towards the <b>main target</b></li> <li>Consumes the <b>Mana Crystal</b> placed by the <b>caster</b> upon cast; if no <b>Mana Crystal</b> is present, the skill will simply consume MP without doing anything else</li> <li>Recovers ${mp} MP to any party member within the hit range of this skill</li>` } function addCrystalLaserExtraInfo(result) { result.innerHTML += `<br><b>Extra info:</b> <li><b>The familiar must be present</b> in order to cast this skill</li> <li>This skill is unaffected by <b>Short Range Damage</b> and <b>Long Range Damage</b> stats</li>` } function calcCrystalLaserValue() { var levelSelector = document.getElementById(\"crystalLaserLevel\") var level = levelSelector[levelSelector.selectedIndex].value var mXtalLevelSelector = document.getElementById(\"crystalLaserManaCrystalLevel\") var mXtalLevel = mXtalLevelSelector[mXtalLevelSelector.selectedIndex].value var result = document.getElementById(\"crystalLaserValue\") calcCrystalLaserConstant(level, result) calcCrystalLaserMultiplier(level, result) calcCrystalLaserSkillEffect(level, mXtalLevel, result) addCrystalLaserExtraInfo(result) } calcCrystalLaserValue() Overlimit",
+  "tree": "Wizard",
+  "tree_slug": "wizard",
+  "tree_url": "https://coryn.club/skill.php?tree=Wizard",
+  "image_path": "assets/skill_tree/wizard/crystal_laser.png",
+  "data_path": "doc/coryn_skills/wizard/crystal_laser.json"
+}

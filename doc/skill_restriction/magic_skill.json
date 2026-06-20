@@ -1,0 +1,275 @@
+{
+  "skill_tree": "Magic",
+  "tree_slug": "magic",
+  "group": "weapon_class_skills",
+  "raw_skill_file": "weapon_class_skills/magic_skills.txt",
+  "coordinate_system": {
+    "origin": [
+      0,
+      0
+    ],
+    "format": [
+      "row",
+      "column"
+    ],
+    "description": "Moving one level down adds [1, 0]; moving one column right adds [0, 1]. Empty rows and columns are preserved to match the image layout."
+  },
+  "skills": [
+    {
+      "id": "magic_javelin",
+      "name": "Magic: Javelin",
+      "position": [
+        0,
+        1
+      ],
+      "prerequisites": [
+        "magic_arrows"
+      ]
+    },
+    {
+      "id": "magic_lances",
+      "name": "Magic: Lances",
+      "position": [
+        0,
+        2
+      ],
+      "prerequisites": [
+        "magic_javelin"
+      ]
+    },
+    {
+      "id": "magic_impact",
+      "name": "Magic: Impact",
+      "position": [
+        0,
+        3
+      ],
+      "prerequisites": [
+        "magic_lances"
+      ]
+    },
+    {
+      "id": "magic_finale",
+      "name": "Magic: Finale",
+      "position": [
+        0,
+        4
+      ],
+      "prerequisites": [
+        "magic_impact"
+      ]
+    },
+    {
+      "id": "chronos_shift",
+      "name": "Chronos Shift",
+      "position": [
+        0,
+        5
+      ],
+      "prerequisites": [
+        "magic_finale"
+      ]
+    },
+    {
+      "id": "magic_arrows",
+      "name": "Magic: Arrows",
+      "position": [
+        1,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "magic_laser",
+      "name": "Magic: Laser",
+      "position": [
+        1,
+        6
+      ],
+      "prerequisites": [
+        "magic_finale"
+      ]
+    },
+    {
+      "id": "magic_wall",
+      "name": "Magic: Wall",
+      "position": [
+        2,
+        1
+      ],
+      "prerequisites": [
+        "magic_arrows"
+      ]
+    },
+    {
+      "id": "magic_blast",
+      "name": "Magic: Blast",
+      "position": [
+        2,
+        2
+      ],
+      "prerequisites": [
+        "magic_wall"
+      ]
+    },
+    {
+      "id": "magic_storm",
+      "name": "Magic: Storm",
+      "position": [
+        2,
+        3
+      ],
+      "prerequisites": [
+        "magic_blast"
+      ]
+    },
+    {
+      "id": "magic_burst",
+      "name": "Magic: Burst",
+      "position": [
+        2,
+        4
+      ],
+      "prerequisites": [
+        "magic_storm"
+      ]
+    },
+    {
+      "id": "magic_magic_cannon",
+      "name": "Magic: Magic Cannon",
+      "position": [
+        2,
+        5
+      ],
+      "prerequisites": [
+        "magic_burst"
+      ]
+    },
+    {
+      "id": "magic_crash",
+      "name": "Magic: Crash",
+      "position": [
+        3,
+        6
+      ],
+      "prerequisites": [
+        "magic_storm"
+      ]
+    },
+    {
+      "id": "magic_mastery",
+      "name": "Magic Mastery",
+      "position": [
+        4,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "magic_knife",
+      "name": "Magic Knife",
+      "position": [
+        4,
+        2
+      ],
+      "prerequisites": [
+        "magic_mastery"
+      ]
+    },
+    {
+      "id": "qadal",
+      "name": "Qadal",
+      "position": [
+        4,
+        3
+      ],
+      "prerequisites": [
+        "magic_knife"
+      ]
+    },
+    {
+      "id": "spell_calibration",
+      "name": "Spell Calibration",
+      "position": [
+        4,
+        4
+      ],
+      "prerequisites": [
+        "qadal"
+      ]
+    },
+    {
+      "id": "mp_charge",
+      "name": "MP Charge",
+      "position": [
+        5,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "chain_cast",
+      "name": "Chain Cast",
+      "position": [
+        5,
+        2
+      ],
+      "prerequisites": [
+        "mp_charge"
+      ]
+    },
+    {
+      "id": "power_wave",
+      "name": "Power Wave",
+      "position": [
+        5,
+        3
+      ],
+      "prerequisites": [
+        "chain_cast"
+      ]
+    },
+    {
+      "id": "maximizer",
+      "name": "Maximizer",
+      "position": [
+        5,
+        4
+      ],
+      "prerequisites": [
+        "power_wave"
+      ]
+    },
+    {
+      "id": "rapid_charge",
+      "name": "Rapid Charge",
+      "position": [
+        5,
+        5
+      ],
+      "prerequisites": [
+        "maximizer"
+      ]
+    },
+    {
+      "id": "magic_guardian_beam",
+      "name": "Magic: Guardian Beam",
+      "position": [
+        6,
+        3
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "enchanted_barrier",
+      "name": "Enchanted Barrier",
+      "position": [
+        6,
+        5
+      ],
+      "prerequisites": [
+        "maximizer"
+      ]
+    }
+  ]
+}

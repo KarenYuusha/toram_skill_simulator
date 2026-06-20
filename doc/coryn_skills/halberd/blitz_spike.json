@@ -1,0 +1,12 @@
+{
+  "name": "Blitz Spike",
+  "slug": "blitz_spike",
+  "required_level": 3,
+  "image_url": "https://coryn.club/skill/halberd/blitzspike.png",
+  "raw_text": "Halberd only Type Active, Magic skill Element Weapon Dependent MP 300 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 12 Description A swift spear thrust wrapped in lightning. Chance to inflict [Paralysis] when activated near the target. If paralyzed, the target will take additional magic damage. When activated at a distance, lightning spears that automatically attack approaching enemies will be summoned. Lightning Hail",
+  "tree": "Halberd",
+  "tree_slug": "halberd",
+  "tree_url": "https://coryn.club/skill.php?tree=Halberd",
+  "image_path": "assets/skill_tree/halberd/blitz_spike.png",
+  "data_path": "doc/coryn_skills/halberd/blitz_spike.json"
+}

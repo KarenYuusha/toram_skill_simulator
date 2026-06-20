@@ -1,0 +1,12 @@
+{
+  "name": "Mail Breaker",
+  "slug": "mail_breaker",
+  "required_level": 4,
+  "image_url": "https://coryn.club/skill/dagger/mailbreaker.png",
+  "raw_text": "Dagger only Type Passive Neutral Description Ignore certain amount of DEF when using Hidden Arm. The next normal attack gets Critical Rate +75, Attack MP Recovery +100% at a small probability. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcMailBreakerSkillEffect(level, result){ var pp = 10 + 4 * level var chance = 1*level result.innerHTML = `<b>Skill Effect:</b> <li><b>Physical Pierce</b> of <b>Hidden Arm</b> +${pp}%</li> <li>When <b>Hidden Arm</b> is activated, ${chance}% chance to gain <b>Mail Breaker buff</b></li><br>` } function calcMailBreakerBuffEffect(result){ var cr = 75 var ampr = 100 result.innerHTML += `<b>Buff Effect:</b> The next <b>auto attack</b> gains these bonuses: <li><b>Critical Rate</b> +${cr}</li> <li><b>Attack MP Recovery</b> +${ampr}% of <b>Base AMPR</b></li>` } function calcMailBreakerBuffDuration(result){ result.innerHTML += `<li><b>Buff Duration:</b> Until an auto attack is used</li>` } function calcMailBreakerValues() { var levelSelector = document.getElementById(\"mailBreakerLevel\") var level = levelSelector[levelSelector.selectedIndex].value var result = document.getElementById(\"mailBreakerValues\") calcMailBreakerSkillEffect(level, result) calcMailBreakerBuffEffect(result) calcMailBreakerBuffDuration(result) } calcMailBreakerValues() Knife Combat",
+  "tree": "Dagger",
+  "tree_slug": "dagger",
+  "tree_url": "https://coryn.club/skill.php?tree=Dagger",
+  "image_path": "assets/skill_tree/dagger/mail_breaker.png",
+  "data_path": "doc/coryn_skills/dagger/mail_breaker.json"
+}

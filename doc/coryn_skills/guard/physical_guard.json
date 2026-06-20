@@ -1,0 +1,12 @@
+{
+  "name": "Physical Guard",
+  "slug": "physical_guard",
+  "required_level": 3,
+  "image_url": "https://coryn.club/skill/guard/physicalguard.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description Increases Ailment Resistance from Guard when running low on HP. Higher skill level enables the skill to be activated with more HP remaining. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcPhysicalGuardValues() { var levelSelector = document.getElementById(\"physicalGuardLevel\") var level = levelSelector[levelSelector.selectedIndex].value var hpThreshold = 5 * level var result = document.getElementById(\"physicalGuardValues\") result.innerHTML = `<b>Doubles Guard's ailment resistance</b> when your <b>current HP</b> is below ${hpThreshold}% of your <b>MaxHP</b>` } calcPhysicalGuardValues() Light Armor Mastery",
+  "tree": "Guard",
+  "tree_slug": "guard",
+  "tree_url": "https://coryn.club/skill.php?tree=Guard",
+  "image_path": "assets/skill_tree/guard/physical_guard.png",
+  "data_path": "doc/coryn_skills/guard/physical_guard.json"
+}

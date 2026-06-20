@@ -1,0 +1,12 @@
+{
+  "name": "Forefist Punch",
+  "slug": "forefist_punch",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/crusher/forefistpunch.png",
+  "raw_text": "Main Knuckle only Type Active, Physical skill Element Weapon Dependent MP 300 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 2 Description A sharp straight punch. Inflict critical damage to target. Reduce damage received 1 time only while the effect is active. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 MaxHP: function calcForefistPunchConstant(result) { var constant = 200 result.innerHTML = `<li><b>Skill Constant: </b> ${constant} </li>` } function calcForefistPunchMultiplier(level, result) { var multiplier = 2 + (0.2 * level) multiplier = Math.round(multiplier*100)/100 result.innerHTML += `<li><b>Skill Multiplier: </b> ${multiplier}</li>` } function calcForefistPunchCritical(result) { result.innerHTML += \"<li>This skill will <b>always deal critical hits</b></li><br>\" } function calcForefistPunchBuff(maxHp, result){ var dmgRed = Math.floor(maxHp/4) result.innerHTML += `<li>Grants <b>Forefist Punch buff</b> upon cast</li><br> <b>Buff Effect:</b> <li>Reduces <b>flat physical/magic/fractional damage received</b> once during skill animation based on your MaxHP; applies after <b>Stone Barrier</b> and before <b>Barrier stats from equipment</b></li> <li><b>Received Damage Reduction:</b> ${dmgRed} damage; can only reduce received damage to a minimum of 1</li> <li><b>Buff Duration:</b> Until you get hit OR until the skill ends</li>` } function calcForefistPunchValues() { let levelSelector = document.getElementById(\"forefistPunchLevel\") let level = levelSelector[levelSelector.selectedIndex].value let maxHp = document.getElementById('maxHpForefistPunch').value let result = document.getElementById(\"forefistPunchValues\") calcForefistPunchConstant(result) calcForefistPunchMultiplier(level, result) calcForefistPunchCritical(result) calcForefistPunchBuff(maxHp, result) result.innerHTML += \"<br>Credits to <b>Phantom Library</b> and <b>Cy's Grimoire</b> for the info of the skill\" } calcForefistPunchValues() Goliath Punch",
+  "tree": "Crusher",
+  "tree_slug": "crusher",
+  "tree_url": "https://coryn.club/skill.php?tree=Crusher",
+  "image_path": "assets/skill_tree/crusher/forefist_punch.png",
+  "data_path": "doc/coryn_skills/crusher/forefist_punch.json"
+}

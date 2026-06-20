@@ -1,0 +1,145 @@
+{
+  "skill_tree": "Bare Hand",
+  "tree_slug": "barehand",
+  "group": "sub_weapon_skills",
+  "raw_skill_file": "sub_weapon_skills/barehand_skills.txt",
+  "coordinate_system": {
+    "origin": [
+      0,
+      0
+    ],
+    "format": [
+      "row",
+      "column"
+    ],
+    "description": "Moving one level down adds [1, 0]; moving one column right adds [0, 1]. Empty rows and columns are preserved to match the image layout."
+  },
+  "skills": [
+    {
+      "id": "unarmed_mastery",
+      "name": "Unarmed Mastery",
+      "position": [
+        0,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "lion_rage",
+      "name": "Lion Rage",
+      "position": [
+        0,
+        1
+      ],
+      "prerequisites": [
+        "qi_charge"
+      ]
+    },
+    {
+      "id": "ultima_lion_rage",
+      "name": "Ultima Lion Rage",
+      "position": [
+        0,
+        2
+      ],
+      "prerequisites": [
+        "lion_rage"
+      ]
+    },
+    {
+      "id": "earthshaker",
+      "name": "Earthshaker",
+      "position": [
+        1,
+        3
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "qi_charge",
+      "name": "Qi Charge",
+      "position": [
+        2,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "raving_storm",
+      "name": "Raving Storm",
+      "position": [
+        2,
+        1
+      ],
+      "prerequisites": [
+        "qi_charge"
+      ]
+    },
+    {
+      "id": "ultima_raving_storm",
+      "name": "Ultima Raving Storm",
+      "position": [
+        2,
+        2
+      ],
+      "prerequisites": [
+        "raving_storm"
+      ]
+    },
+    {
+      "id": "internal_elixir",
+      "name": "Internal Elixir",
+      "position": [
+        3,
+        1
+      ],
+      "prerequisites": [
+        "qi_charge"
+      ]
+    },
+    {
+      "id": "clash_of_enmity",
+      "name": "Clash of Enmity",
+      "position": [
+        3,
+        2
+      ],
+      "prerequisites": [
+        "internal_elixir"
+      ]
+    },
+    {
+      "id": "miracle_comeback",
+      "name": "Miracle Comeback",
+      "position": [
+        3,
+        3
+      ],
+      "prerequisites": [
+        "clash_of_enmity"
+      ]
+    },
+    {
+      "id": "ultima_qi_charge",
+      "name": "Ultima Qi Charge",
+      "position": [
+        4,
+        2
+      ],
+      "prerequisites": [
+        "qi_charge"
+      ]
+    },
+    {
+      "id": "hidden_talent",
+      "name": "Hidden Talent",
+      "position": [
+        4,
+        3
+      ],
+      "prerequisites": [
+        "ultima_qi_charge"
+      ]
+    }
+  ]
+}

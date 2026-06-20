@@ -1,0 +1,12 @@
+{
+  "name": "Assault Chase",
+  "slug": "assault_chase",
+  "required_level": 5,
+  "image_url": "https://coryn.club/skill/assassin/assaultchase.png",
+  "raw_text": "Available with all weapons Type Active Element Neutral MP 800 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 0 Description Restores Evasion by 50% if a new buff is gained and decreases the consumption of Evasion toward (or around) the attack target for 180 seconds. The buff effect will end too once the remaining Evasion count hits 0. All Weapons A successful dodge with Evasion while the buff is active will add an effect that increases close-range attack power. Adds Evasion effect to Assault Chase's activation animation only if the skill level is 10. Dagger [Using it with a Ninjutsu Scroll will give you the same effects.] Decreases the consumption of Evasion further. Increases the amount of close-range attack power added when Evasion is successful. ( maximum limit remains unchanged ) Venom Injection",
+  "tree": "Assassin",
+  "tree_slug": "assassin",
+  "tree_url": "https://coryn.club/skill.php?tree=Assassin",
+  "image_path": "assets/skill_tree/assassin/assault_chase.png",
+  "data_path": "doc/coryn_skills/assassin/assault_chase.json"
+}

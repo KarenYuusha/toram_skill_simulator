@@ -1,0 +1,12 @@
+{
+  "name": "Attack Boost",
+  "slug": "attack_boost",
+  "required_level": 3,
+  "image_url": "https://coryn.club/skill/golem/attackboost.png",
+  "raw_text": "Staff/Bowgun/Main MD only Type Passive Neutral Description Improves the magic lamp to increase attack efficiency. Increases the boost received per lamp power distributed to Attack. Always increases Accuracy, no matter the distribution. Neo Shielder",
+  "tree": "Golem",
+  "tree_slug": "golem",
+  "tree_url": "https://coryn.club/skill.php?tree=Golem",
+  "image_path": "assets/skill_tree/golem/attack_boost.png",
+  "data_path": "doc/coryn_skills/golem/attack_boost.json"
+}

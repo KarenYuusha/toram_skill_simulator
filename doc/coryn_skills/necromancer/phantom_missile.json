@@ -1,0 +1,12 @@
+{
+  "name": "Phantom Missile",
+  "slug": "phantom_missile",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/necromancer/phantommissile.png",
+  "raw_text": "Staff only Type Active, Magic skill Element Weapon Dependent MP 500 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 12 Description Sends forth evil spirits to attack. Performs a magic attack on the target by consuming spirit stacks ( max 10 ). Consuming more spirit increases its duration (number of hits), and its power increases with each critical hit ( physical ). Blood Siphon",
+  "tree": "Necromancer",
+  "tree_slug": "necromancer",
+  "tree_url": "https://coryn.club/skill.php?tree=Necromancer",
+  "image_path": "assets/skill_tree/necromancer/phantom_missile.png",
+  "data_path": "doc/coryn_skills/necromancer/phantom_missile.json"
+}

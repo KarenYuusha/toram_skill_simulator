@@ -1,0 +1,12 @@
+{
+  "name": "EXP Gain Up",
+  "slug": "exp_gain_up",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/survival/expgainup.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description EXP Gain from battles increases by 1% per skill level. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcExpGainUpValues() { var levelSelector = document.getElementById(\"expGainUpLevel\") var level = levelSelector[levelSelector.selectedIndex].value var result = document.getElementById(\"expGainUpValues\") result.innerHTML = `<b>EXP Gain</b> +${level}%; stacks <b>additively</b> with other EXP Gain Increase sources` } calcExpGainUpValues() Drop Rate Up",
+  "tree": "Survival",
+  "tree_slug": "survival",
+  "tree_url": "https://coryn.club/skill.php?tree=Survival",
+  "image_path": "assets/skill_tree/survival/exp_gain_up.png",
+  "data_path": "doc/coryn_skills/survival/exp_gain_up.json"
+}

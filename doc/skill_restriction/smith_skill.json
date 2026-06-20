@@ -1,0 +1,256 @@
+{
+  "skill_tree": "Smith",
+  "tree_slug": "smith",
+  "group": "other_skill_trees",
+  "raw_skill_file": "other_skill_trees/blacksmith_skills.txt",
+  "coordinate_system": {
+    "origin": [
+      0,
+      0
+    ],
+    "format": [
+      "row",
+      "column"
+    ],
+    "description": "Moving one level down adds [1, 0]; moving one column right adds [0, 1]. Empty rows and columns are preserved to match the image layout."
+  },
+  "skills": [
+    {
+      "id": "novices_anvil",
+      "name": "Novice's Anvil",
+      "position": [
+        0,
+        1
+      ],
+      "prerequisites": [
+        "refine_equipment"
+      ]
+    },
+    {
+      "id": "craftsmans_anvil",
+      "name": "Craftsman's Anvil",
+      "position": [
+        0,
+        2
+      ],
+      "prerequisites": [
+        "novices_anvil"
+      ]
+    },
+    {
+      "id": "blacksmiths_anvil",
+      "name": "Blacksmith's Anvil",
+      "position": [
+        0,
+        3
+      ],
+      "prerequisites": [
+        "craftsmans_anvil"
+      ]
+    },
+    {
+      "id": "masters_anvil",
+      "name": "Master's Anvil",
+      "position": [
+        0,
+        4
+      ],
+      "prerequisites": [
+        "blacksmiths_anvil"
+      ]
+    },
+    {
+      "id": "masters_anvil_ii",
+      "name": "Master's Anvil II",
+      "position": [
+        0,
+        5
+      ],
+      "prerequisites": [
+        "masters_anvil"
+      ]
+    },
+    {
+      "id": "metal_compassion",
+      "name": "Metal Compassion",
+      "position": [
+        0,
+        6
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "refine_equipment",
+      "name": "Refine Equipment",
+      "position": [
+        1,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "mid_class_refinement",
+      "name": "Mid-Class Refinement",
+      "position": [
+        1,
+        2
+      ],
+      "prerequisites": [
+        "refine_equipment"
+      ]
+    },
+    {
+      "id": "high_class_refinement",
+      "name": "High-Class Refinement",
+      "position": [
+        1,
+        3
+      ],
+      "prerequisites": [
+        "mid_class_refinement"
+      ]
+    },
+    {
+      "id": "experts_refinement",
+      "name": "Expert's Refinement",
+      "position": [
+        1,
+        4
+      ],
+      "prerequisites": [
+        "high_class_refinement"
+      ]
+    },
+    {
+      "id": "fabric_compassion",
+      "name": "Fabric Compassion",
+      "position": [
+        1,
+        6
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "create_equipment",
+      "name": "Create Equipment",
+      "position": [
+        2,
+        1
+      ],
+      "prerequisites": [
+        "refine_equipment"
+      ]
+    },
+    {
+      "id": "careful_creation",
+      "name": "Careful Creation",
+      "position": [
+        2,
+        2
+      ],
+      "prerequisites": [
+        "create_equipment"
+      ]
+    },
+    {
+      "id": "experts_creation",
+      "name": "Expert's Creation",
+      "position": [
+        2,
+        4
+      ],
+      "prerequisites": [
+        "careful_creation"
+      ]
+    },
+    {
+      "id": "beast_compassion",
+      "name": "Beast Compassion",
+      "position": [
+        2,
+        6
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "process_material",
+      "name": "Process Material",
+      "position": [
+        3,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "customize_equipment",
+      "name": "Customize Equipment",
+      "position": [
+        3,
+        2
+      ],
+      "prerequisites": [
+        "create_equipment"
+      ]
+    },
+    {
+      "id": "accurate_customization",
+      "name": "Accurate Customization",
+      "position": [
+        3,
+        3
+      ],
+      "prerequisites": [
+        "customize_equipment"
+      ]
+    },
+    {
+      "id": "experts_customization",
+      "name": "Expert's Customization",
+      "position": [
+        3,
+        4
+      ],
+      "prerequisites": [
+        "accurate_customization"
+      ]
+    },
+    {
+      "id": "experts_customization_ii",
+      "name": "Expert's Customization II",
+      "position": [
+        3,
+        5
+      ],
+      "prerequisites": [
+        "experts_customization"
+      ]
+    },
+    {
+      "id": "wood_compassion",
+      "name": "Wood Compassion",
+      "position": [
+        3,
+        6
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "medicine_compassion",
+      "name": "Medicine Compassion",
+      "position": [
+        4,
+        6
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "mana_compassion",
+      "name": "Mana Compassion",
+      "position": [
+        5,
+        6
+      ],
+      "prerequisites": []
+    }
+  ]
+}

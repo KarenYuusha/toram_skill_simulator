@@ -1,0 +1,12 @@
+{
+  "name": "Throwing Knife",
+  "slug": "throwing_knife",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/dagger/throwingknife.png",
+  "raw_text": "Dagger only Type Active, Physical skill Element Weapon Dependent MP Lv1-9: 100mp; Lv10: 0mp $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start No Combo middle Yes Range 12 Description Attack by throwing a dagger. MP Cost becomes 0 when reaching Lv10 and normal attack proration will be applied. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcThrowingKnifeMpCost(level, result){ var cost = 100 if (level == 10) {cost = 0} result.innerHTML = `<li><b>MP Cost</b>: ${cost}</li>` } function calcThrowingKnifeConstant(result) { result.innerHTML += `<li><b>Skill Constant:</b> 0</li>` } function calcThrowingKnifeMultiplier(level, result) { var multiplier = 0.1 + (0.04 * level) multiplier = Math.round(multiplier*100)/100 result.innerHTML += `<li><b>Skill Multiplier:</b> ${multiplier}</li>` } function calcEffectThrowingKnife(level, result) { let HTML = `<br><li>The <b>equipped dagger's WeaponATK</b> is added at the very end of damage calculation, ignoring all kinds of defenses of the target except <b>Guard</b></li>` if (level == 10) {HTML += `<li>This skill inflicts <b>Normal Attack Proration</b>, but uses <b>Physical Proration</b> for its damage calculation</li>`} else {HTML += `<li>This skill inflicts <b>Physical Proration</b>, and uses <b>Physical Proration</b> for its damage calculation</li>`} result.innerHTML += HTML } function calcthrowingKnifeValue() { let levelSelector = document.getElementById(\"throwingKnifeLevel\") let level = levelSelector[levelSelector.selectedIndex].value let result = document.getElementById(\"throwingKnifeValue\") calcThrowingKnifeMpCost(level, result) calcThrowingKnifeConstant(result) calcThrowingKnifeMultiplier(level, result) calcEffectThrowingKnife(level, result) } calcthrowingKnifeValue() Spike Dart",
+  "tree": "Dagger",
+  "tree_slug": "dagger",
+  "tree_url": "https://coryn.club/skill.php?tree=Dagger",
+  "image_path": "assets/skill_tree/dagger/throwing_knife.png",
+  "data_path": "doc/coryn_skills/dagger/throwing_knife.json"
+}

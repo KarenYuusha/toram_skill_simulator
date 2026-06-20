@@ -1,0 +1,91 @@
+{
+  "skill_tree": "Scroll",
+  "tree_slug": "scroll",
+  "group": "sub_weapon_skills",
+  "raw_skill_file": "sub_weapon_skills/scroll_skills.txt",
+  "coordinate_system": {
+    "origin": [
+      0,
+      0
+    ],
+    "format": [
+      "row",
+      "column"
+    ],
+    "description": "Moving one level down adds [1, 0]; moving one column right adds [0, 1]. All skills in this tree are independent."
+  },
+  "skills": [
+    {
+      "id": "kunai_throw",
+      "name": "Kunai Throw",
+      "position": [
+        0,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "fire_release",
+      "name": "Fire Release",
+      "position": [
+        0,
+        1
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "water_release",
+      "name": "Water Release",
+      "position": [
+        0,
+        2
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "earth_release",
+      "name": "Earth Release",
+      "position": [
+        0,
+        3
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "wind_release",
+      "name": "Wind Release",
+      "position": [
+        0,
+        4
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "demon_wind_shuriken",
+      "name": "Demon Wind Shuriken",
+      "position": [
+        0,
+        5
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "cloning",
+      "name": "Cloning",
+      "position": [
+        0,
+        6
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "thunder_release",
+      "name": "Thunder Release",
+      "position": [
+        0,
+        7
+      ],
+      "prerequisites": []
+    }
+  ]
+}

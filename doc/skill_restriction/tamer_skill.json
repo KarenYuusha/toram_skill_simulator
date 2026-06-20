@@ -1,0 +1,94 @@
+{
+  "skill_tree": "Tamer",
+  "tree_slug": "tamer",
+  "group": "other_skill_trees",
+  "raw_skill_file": "other_skill_trees/tamer_skills.txt",
+  "coordinate_system": {
+    "origin": [
+      0,
+      0
+    ],
+    "format": [
+      "row",
+      "column"
+    ],
+    "description": "Moving one level down adds [1, 0]; moving one column right adds [0, 1]. Empty rows and columns are preserved to match the image layout."
+  },
+  "skills": [
+    {
+      "id": "taming",
+      "name": "Taming",
+      "position": [
+        0,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "capture_technique_i",
+      "name": "Capture Technique I",
+      "position": [
+        0,
+        1
+      ],
+      "prerequisites": [
+        "taming"
+      ]
+    },
+    {
+      "id": "capture_technique_ii",
+      "name": "Capture Technique II",
+      "position": [
+        0,
+        2
+      ],
+      "prerequisites": [
+        "capture_technique_i"
+      ]
+    },
+    {
+      "id": "skillful_capture",
+      "name": "Skillful Capture",
+      "position": [
+        1,
+        1
+      ],
+      "prerequisites": [
+        "taming"
+      ]
+    },
+    {
+      "id": "careful_capture",
+      "name": "Careful Capture",
+      "position": [
+        1,
+        2
+      ],
+      "prerequisites": [
+        "skillful_capture"
+      ]
+    },
+    {
+      "id": "pet_heal",
+      "name": "Pet Heal",
+      "position": [
+        2,
+        1
+      ],
+      "prerequisites": [
+        "taming"
+      ]
+    },
+    {
+      "id": "pet_mp_charge",
+      "name": "Pet MP Charge",
+      "position": [
+        2,
+        2
+      ],
+      "prerequisites": [
+        "pet_heal"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Ultima Lion Rage",
+  "slug": "ultima_lion_rage",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/unarmed/ultimalionsrage.png",
+  "raw_text": "Bare Hand/No Sub Weapon only Type Passive Neutral Description Raises Lion Rage effect to boost Normal Attack. If a critical hit is inflicted while Lion Rage is active, the effect that enhances attack skills will be accumulated. But if Internal Elixir is activated, the power will vanish. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 Current Ultima Lion Rage stacks: 0 1 2 3 4 5 ~ 30 function calcUltimaLionRageBuffEffect(level, result) { let aaMult = Math.round(level * 20)/100 result.innerHTML = `<li>Gains the following effects while <b>Lion Rage buff</b> is active:<ul> <li>&nbsp&nbsp&nbsp- <b>Auto Attack Skill Multiplier</b> +${aaMult}</li> <li>&nbsp&nbsp&nbsp- Gains 1 <b>Ultima Lion Rage stack</b> for <b>each critical hit</b> you dealt (attack that has multiple hits will grant multiple stacks); can gain up to a maximum of 30 stacks</li> </ul></li>` } function calcUltimaLionRageStackEffect(level, stacks, result) { let dmgBonus = level * stacks let HTML = `` if (stacks > 0) { HTML += `<li>When you use an <b>attack skill</b>, consumes ${stacks} <b>Ultima Lion Rage stack` if (stacks != 1) {HTML += `s`} HTML += `</b> to increase damage by ${dmgBonus}% (applies <b>multiplicatively</b> with other damage multipliers); this effect can be activated anytime even when <b>Lion Rage buff</b> is not active</li> <li><b>Stacks Duration:</b> Until all stacks are used up OR until <b>Internal Elixir</b> is used; the latter will <b>remove all Ultima Lion Rage stacks</b></li>` } result.innerHTML += HTML } function calcUltimaLionRageValues() { let levelSelector = document.getElementById('ultimaLionRageSkillLevel') let level = levelSelector[levelSelector.selectedIndex].value let stackSelector = document.getElementById('ultimaLionRageStack') let stacks = stackSelector[stackSelector.selectedIndex].value let result = document.getElementById('ultimaLionRageValues') calcUltimaLionRageBuffEffect(level, result) calcUltimaLionRageStackEffect(level, stacks, result) } calcUltimaLionRageValues() Raving Storm",
+  "tree": "Barehand",
+  "tree_slug": "barehand",
+  "tree_url": "https://coryn.club/skill.php?tree=Barehand",
+  "image_path": "assets/skill_tree/barehand/ultima_lion_rage.png",
+  "data_path": "doc/coryn_skills/barehand/ultima_lion_rage.json"
+}

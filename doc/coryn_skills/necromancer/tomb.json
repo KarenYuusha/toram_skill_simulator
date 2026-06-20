@@ -1,0 +1,12 @@
+{
+  "name": "Tomb",
+  "slug": "tomb",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/necromancer/tomb.png",
+  "raw_text": "Available with all weapons Type Active, Physical skill Element Weapon Dependent MP 300 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 12 Description Summons tombstones that spike out of the ground. Performs a physical attack on the target. Chance to inflict [Tumble] if VIT is 50 or higher. Using 3 spirit stacks adds an AoE attack, activating up to 3 times at once. Skull Shaker",
+  "tree": "Necromancer",
+  "tree_slug": "necromancer",
+  "tree_url": "https://coryn.club/skill.php?tree=Necromancer",
+  "image_path": "assets/skill_tree/necromancer/tomb.png",
+  "data_path": "doc/coryn_skills/necromancer/tomb.json"
+}

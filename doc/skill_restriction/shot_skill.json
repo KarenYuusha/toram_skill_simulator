@@ -1,0 +1,288 @@
+{
+  "skill_tree": "Shot",
+  "tree_slug": "shot",
+  "group": "weapon_class_skills",
+  "raw_skill_file": "weapon_class_skills/shot_skills.txt",
+  "coordinate_system": {
+    "origin": [
+      0,
+      0
+    ],
+    "format": [
+      "row",
+      "column"
+    ],
+    "description": "Moving one level down adds [1, 0]; moving one column right adds [0, 1]. Empty rows and columns are preserved to match the image layout."
+  },
+  "skills": [
+    {
+      "id": "piercing_shot",
+      "name": "Piercing Shot",
+      "position": [
+        0,
+        5
+      ],
+      "prerequisites": [
+        "snipe"
+      ]
+    },
+    {
+      "id": "snipe",
+      "name": "Snipe",
+      "position": [
+        1,
+        3
+      ],
+      "prerequisites": [
+        "bullseye"
+      ]
+    },
+    {
+      "id": "vanquisher",
+      "name": "Vanquisher",
+      "position": [
+        1,
+        6
+      ],
+      "prerequisites": [
+        "snipe"
+      ]
+    },
+    {
+      "id": "twin_storm",
+      "name": "Twin Storm",
+      "position": [
+        2,
+        5
+      ],
+      "prerequisites": [
+        "cross_fire"
+      ]
+    },
+    {
+      "id": "power_shot",
+      "name": "Power Shot",
+      "position": [
+        3,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "bullseye",
+      "name": "Bullseye",
+      "position": [
+        3,
+        1
+      ],
+      "prerequisites": [
+        "power_shot"
+      ]
+    },
+    {
+      "id": "arrow_rain",
+      "name": "Arrow Rain",
+      "position": [
+        3,
+        2
+      ],
+      "prerequisites": [
+        "bullseye"
+      ]
+    },
+    {
+      "id": "cross_fire",
+      "name": "Cross Fire",
+      "position": [
+        3,
+        4
+      ],
+      "prerequisites": [
+        "arrow_rain"
+      ]
+    },
+    {
+      "id": "quick_loader",
+      "name": "Quick Loader",
+      "position": [
+        3,
+        6
+      ],
+      "prerequisites": [
+        "cross_fire"
+      ]
+    },
+    {
+      "id": "retrograde_shot",
+      "name": "Retrograde Shot",
+      "position": [
+        4,
+        5
+      ],
+      "prerequisites": [
+        "cross_fire"
+      ]
+    },
+    {
+      "id": "moeba_shot",
+      "name": "Moeba Shot",
+      "position": [
+        5,
+        1
+      ],
+      "prerequisites": [
+        "power_shot"
+      ]
+    },
+    {
+      "id": "paralysis_shot",
+      "name": "Paralysis Shot",
+      "position": [
+        5,
+        2
+      ],
+      "prerequisites": [
+        "moeba_shot"
+      ]
+    },
+    {
+      "id": "smoke_dust",
+      "name": "Smoke Dust",
+      "position": [
+        5,
+        3
+      ],
+      "prerequisites": [
+        "paralysis_shot"
+      ]
+    },
+    {
+      "id": "arm_break",
+      "name": "Arm Break",
+      "position": [
+        5,
+        4
+      ],
+      "prerequisites": [
+        "smoke_dust"
+      ]
+    },
+    {
+      "id": "parabola_cannon",
+      "name": "Parabola Cannon",
+      "position": [
+        5,
+        6
+      ],
+      "prerequisites": [
+        "arm_break"
+      ]
+    },
+    {
+      "id": "spread_shot",
+      "name": "Spread Shot",
+      "position": [
+        6,
+        5
+      ],
+      "prerequisites": [
+        "arm_break"
+      ]
+    },
+    {
+      "id": "shot_mastery",
+      "name": "Shot Mastery",
+      "position": [
+        7,
+        0
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "long_range",
+      "name": "Long Range",
+      "position": [
+        7,
+        2
+      ],
+      "prerequisites": [
+        "shot_mastery"
+      ]
+    },
+    {
+      "id": "quick_draw",
+      "name": "Quick Draw",
+      "position": [
+        7,
+        3
+      ],
+      "prerequisites": [
+        "long_range"
+      ]
+    },
+    {
+      "id": "decoy_shot",
+      "name": "Decoy Shot",
+      "position": [
+        7,
+        4
+      ],
+      "prerequisites": [
+        "quick_draw"
+      ]
+    },
+    {
+      "id": "element_starter",
+      "name": "Element Starter",
+      "position": [
+        7,
+        6
+      ],
+      "prerequisites": [
+        "decoy_shot"
+      ]
+    },
+    {
+      "id": "samurai_archery",
+      "name": "Samurai Archery",
+      "position": [
+        8,
+        5
+      ],
+      "prerequisites": [
+        "shot_mastery"
+      ]
+    },
+    {
+      "id": "sneak_attack",
+      "name": "Sneak Attack",
+      "position": [
+        9,
+        1
+      ],
+      "prerequisites": [
+        "shot_mastery"
+      ]
+    },
+    {
+      "id": "hunting_buddy",
+      "name": "Hunting Buddy",
+      "position": [
+        9,
+        4
+      ],
+      "prerequisites": [
+        "sneak_attack"
+      ]
+    },
+    {
+      "id": "fatal_shot",
+      "name": "Fatal Shot",
+      "position": [
+        10,
+        3
+      ],
+      "prerequisites": []
+    }
+  ]
+}

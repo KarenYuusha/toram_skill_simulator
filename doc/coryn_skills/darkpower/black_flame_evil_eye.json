@@ -1,0 +1,12 @@
+{
+  "name": "Black Flame Evil Eye",
+  "slug": "black_flame_evil_eye",
+  "required_level": 3,
+  "image_url": "https://coryn.club/skill/dark/blackflameevileye.png",
+  "raw_text": "Available with all weapons Type Active, Magic skill Element Dark MP 100 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 16 Description Uses dark flames to burn the target who makes direct eye contact. Deals magic damage based on ATK or MATK, whichever is higher. Critical hit guaranteed when the enemy is targeting you. Overusing black flames comes at a price... All Weapons Power increases based on the level of Eternal Nightmare. Chaotic Evil Eye",
+  "tree": "DarkPower",
+  "tree_slug": "darkpower",
+  "tree_url": "https://coryn.club/skill.php?tree=DarkPower",
+  "image_path": null,
+  "data_path": "doc/coryn_skills/darkpower/black_flame_evil_eye.json"
+}

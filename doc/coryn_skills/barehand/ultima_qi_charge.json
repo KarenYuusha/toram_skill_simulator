@@ -1,0 +1,12 @@
+{
+  "name": "Ultima Qi Charge",
+  "slug": "ultima_qi_charge",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/unarmed/qicharge.png",
+  "raw_text": "Bare Hand/No Sub Weapon only Type Passive Neutral Description Mitigates qi consumption when using skills other than Bare Hand Skills and slightly increases Attack MP Recovery. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcUltimaQiChargeBuffEffect(level, result) { let ampr = Math.floor(level/2) let qiCost = 20 - 1*level let HTML = \"\" if (ampr != 0) {HTML += `<li><b>Attack MP Recovery</b> +${ampr}</li>`} HTML += `<li>Reduces Qi comsumption when using <b>non-Bare Hand skills</b> to ${qiCost}% of current <b>Accumulated Qi</b> (rounded down, minimum 1)</li>` result.innerHTML = HTML } function calcUltimaQiChargeValues() { let levelSelector = document.getElementById('ultimaQiChargeSkillLevel') let level = levelSelector[levelSelector.selectedIndex].value let result = document.getElementById('ultimaQiChargeValues') calcUltimaQiChargeBuffEffect(level, result) } calcUltimaQiChargeValues() Hidden Talent",
+  "tree": "Barehand",
+  "tree_slug": "barehand",
+  "tree_url": "https://coryn.club/skill.php?tree=Barehand",
+  "image_path": "assets/skill_tree/barehand/ultima_qi_charge.png",
+  "data_path": "doc/coryn_skills/barehand/ultima_qi_charge.json"
+}

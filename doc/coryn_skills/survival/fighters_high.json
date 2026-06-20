@@ -1,0 +1,12 @@
+{
+  "name": "Fighter's High",
+  "slug": "fighters_high",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/survival/fightershigh.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description Regenerate HP during combat. The healing amount is small. Regeneration Tick occurs once every 3 seconds Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcFightersHighValues() { var levelSelector = document.getElementById(\"fightersHighLevel\") var level = levelSelector[levelSelector.selectedIndex].value var result = document.getElementById(\"fightersHighValues\") result.innerHTML = `Recovers HP by ${level}% of your <b>base Natural HP Regen</b> once every 3 seconds <b>during battle</b>` } calcFightersHighValues() Short Rest",
+  "tree": "Survival",
+  "tree_slug": "survival",
+  "tree_url": "https://coryn.club/skill.php?tree=Survival",
+  "image_path": "assets/skill_tree/survival/fighters_high.png",
+  "data_path": "doc/coryn_skills/survival/fighters_high.json"
+}

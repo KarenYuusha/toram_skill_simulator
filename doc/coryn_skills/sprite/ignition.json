@@ -1,0 +1,12 @@
+{
+  "name": "Ignition",
+  "slug": "ignition",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/sprite/ignition.png",
+  "raw_text": "Main MD only Type Active, Magic skill Element Weapon Dependent MP 100 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 12 Description Attacks by causing the opponent's mana to burn. Deals unstable magic damage. Low chance to inflict [Weaken]. The chance increases with higher DEX and Sprite skill tree level. Terrawrym",
+  "tree": "Sprite",
+  "tree_slug": "sprite",
+  "tree_url": "https://coryn.club/skill.php?tree=Sprite",
+  "image_path": "assets/skill_tree/sprite/ignition.png",
+  "data_path": "doc/coryn_skills/sprite/ignition.json"
+}

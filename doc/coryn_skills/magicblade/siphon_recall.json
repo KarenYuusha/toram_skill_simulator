@@ -1,0 +1,12 @@
+{
+  "name": "Siphon Recall",
+  "slug": "siphon_recall",
+  "required_level": 3,
+  "image_url": "https://coryn.club/skill/magicblade/siphonrecall.png",
+  "raw_text": "Sub MD only Type Passive Neutral Description Gets an additional status that continues to restore MP when damage is successfully reduced by Siphon Barrier. The heal amount changes based on the value obtained from Siphon Barrier. Staff MP Heal Amount -50% Extras Show more... Weapon: 1-Handed Sword Bowgun/Knuckle Staff Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcSiphonRecallSkillEffect(level, weapon, result) { var mp1 = 5*level var mp2 = 5 var cap = 150 if (weapon == \"ohs\") {mp2 *= 2} else if (weapon == \"staff\") { mp1 = Math.floor(mp1/2) mp2 /= 2 cap /= 2 } var duration = 2*level var HTML = `Grants <b>Siphon Recall buff</b> to the <b>caster</b> upon successfully reducing damage with <b>Siphon Barrier</b><br> <br><b>Buff Effect:</b> <li>Recovers ${mp1} MP every 2 seconds for the entire duration</li> <li>Said MP recovery amount is increased by ${Math.floor(mp2)} for each received <b>physical damage hit</b>, and ${Math.floor(mp2*5)} for each received <b>magic damage hit</b>; this increment is capped at ${cap} MP</li>` HTML += `<li><b>Buff Duration:</b> ${duration} seconds</li>` result.innerHTML = HTML } function calcSiphonRecallValues() { var weaponSelector = document.getElementById(\"siphonRecallWeapon\") var weapon = weaponSelector[weaponSelector.selectedIndex].value var levelSelector = document.getElementById('siphonRecallSkillLevel') var level = levelSelector[levelSelector.selectedIndex].value var result = document.getElementById('siphonRecallValues') calcSiphonRecallSkillEffect(level, weapon, result) result.innerHTML += `<br>Credits to <b>Phantom Library</b> for the info of the skill` } calcSiphonRecallValues() Float Dash",
+  "tree": "MagicBlade",
+  "tree_slug": "magicblade",
+  "tree_url": "https://coryn.club/skill.php?tree=MagicBlade",
+  "image_path": "assets/skill_tree/magicblade/siphon_recall.png",
+  "data_path": "doc/coryn_skills/magicblade/siphon_recall.json"
+}

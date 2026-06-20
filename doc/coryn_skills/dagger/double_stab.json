@@ -1,0 +1,12 @@
+{
+  "name": "Double Stab",
+  "slug": "double_stab",
+  "required_level": 3,
+  "image_url": "https://coryn.club/skill/dagger/doublethrow.png",
+  "raw_text": "Dagger only Type Passive Neutral Description Raises the next dagger skill power used after Evasion. Requires some time to reactivate after 1 activation. Reactivate faster by leveling the skill. Has no effect on skills that do not consume MP. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcDoubleStabEffect() { var levelSelector = document.getElementById(\"doubleStabLevel\") var level = levelSelector[levelSelector.selectedIndex].value var cooldown = 30 - 1*level var result = document.getElementById(\"doubleStabValues\") result.innerHTML = `After activating <b>Evasion</b>, the next <b>Dagger Skill</b> will <b>have its damage doubled</b>; this effect enters a cooldown of ${cooldown} seconds after the effect is used, during which you cannot activate it again <li>Skills that <b>does not consume MP</b> (including by combo tags) will neither receive this skill's effect, nor will it consume the effect</li> <li>Does not affect the Additional Hits from <b>Amazing Throw</b></li>` } calcDoubleStabEffect() Hidden Arm",
+  "tree": "Dagger",
+  "tree_slug": "dagger",
+  "tree_url": "https://coryn.club/skill.php?tree=Dagger",
+  "image_path": "assets/skill_tree/dagger/double_stab.png",
+  "data_path": "doc/coryn_skills/dagger/double_stab.json"
+}

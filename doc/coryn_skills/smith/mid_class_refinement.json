@@ -1,0 +1,12 @@
+{
+  "name": "Mid-Class Refinement",
+  "slug": "mid_class_refinement",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/smith/midclassrefinement.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description Increases the success rate of [Refine Equipment] a little. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcMidClassRefinementEffect(level, result) { var srConst = Math.floor((1*level+1)/2) var srMult = level/2 result.innerHTML = `<li><b>Refine Success Rate Constant</b> +${srConst}</li> <li><b>Refine Success Rate Multiplier</b> +${srMult}%</li>` } function addMidClassRefinementExtraInfo(result) { result.innerHTML += `<br>Check <a href=\"https://coryn.club/guide.php?key=smith\" style=\"color:blue;\"><b>Smithing Guide > Refining</b></a> for more details` } function calcMidClassRefinementValues() { var levelSelector = document.getElementById(\"midClassRefinementSkillLevel\") var level = levelSelector[levelSelector.selectedIndex].value var result = document.getElementById(\"midClassRefinementValues\") calcMidClassRefinementEffect(level, result) addMidClassRefinementExtraInfo(result) } calcMidClassRefinementValues() High-Class Refinement",
+  "tree": "Smith",
+  "tree_slug": "smith",
+  "tree_url": "https://coryn.club/skill.php?tree=Smith",
+  "image_path": "assets/skill_tree/smith/mid_class_refinement.png",
+  "data_path": "doc/coryn_skills/smith/mid_class_refinement.json"
+}

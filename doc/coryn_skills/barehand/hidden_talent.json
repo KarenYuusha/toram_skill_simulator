@@ -1,0 +1,12 @@
+{
+  "name": "Hidden Talent",
+  "slug": "hidden_talent",
+  "required_level": 3,
+  "image_url": "https://coryn.club/skill/unarmed/hiddentalent.png",
+  "raw_text": "Bare Hand/No Sub Weapon only Type EX Skill Element Neutral MP 0 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start No Combo middle No Range 0 Description If there are no slots, just hold them. Equips 3 crystas and get the ability of the 2 corresponding crystas when Lion Rage/Raving Storm/Internal Elixir activates. Earthshaker",
+  "tree": "Barehand",
+  "tree_slug": "barehand",
+  "tree_url": "https://coryn.club/skill.php?tree=Barehand",
+  "image_path": "assets/skill_tree/barehand/hidden_talent.png",
+  "data_path": "doc/coryn_skills/barehand/hidden_talent.json"
+}

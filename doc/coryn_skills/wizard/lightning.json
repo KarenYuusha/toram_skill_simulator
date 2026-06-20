@@ -1,0 +1,12 @@
+{
+  "name": "Lightning",
+  "slug": "lightning",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/wizard/lightning.png",
+  "raw_text": "Magic Device/Staff/Sub MD only Type Active, Magic skill Element Wind MP 0 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start No Combo middle Yes Range 12 Description Familiar is told to perform a lightning magic. Deals wind element magic damage to the target. Chance to inflict [Paralysis] on the target. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcLightningConstant (level, result) { var constant = 80 result.innerHTML = `<li><b>Skill Constant:</b> ${constant}</li>` } function calcLightningMultiplier(level, result) { var skillMultiplier = 4 + 0.3 * level skillMultiplier = Math.round(skillMultiplier*100)/100 result.innerHTML += `<li><b>Skill Multiplier: </b> ${skillMultiplier}</li><br>` } function calcLightningCastTime(level, result) { var castTime = 8 - 0.4 * level castTime = Math.round(castTime*100)/100 result.innerHTML += `<li><b>Familiar Cast Time:</b> ${castTime} seconds (unaffected by CSPD)</li>` } function calcAilmentChanceLightning(level, result) { var chance = 20 + 1*level result.innerHTML += `<li><b>Paralysis Chance:</b> ${chance}%</li> <li><b>Paralysis Duration:</b> 10 seconds</li>` } function addLightningExtraInfo(result) { result.innerHTML += `<br><b>Extra info:</b> <li><b>The familiar must be present</b> in order to cast this skill</li> <li>This skill is unaffected by <b>Short Range Damage</b> and <b>Long Range Damage</b> stats</li>` } function calcLightningValue() { let levelSelector = document.getElementById(\"lightningLevel\") let level = levelSelector[levelSelector.selectedIndex].value let result = document.getElementById(\"lightningValue\") calcLightningConstant (level, result) calcLightningMultiplier(level, result) calcLightningCastTime(level, result) calcAilmentChanceLightning(level, result) addLightningExtraInfo(result) } calcLightningValue() Blizzard",
+  "tree": "Wizard",
+  "tree_slug": "wizard",
+  "tree_url": "https://coryn.club/skill.php?tree=Wizard",
+  "image_path": "assets/skill_tree/wizard/lightning.png",
+  "data_path": "doc/coryn_skills/wizard/lightning.json"
+}

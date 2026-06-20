@@ -1,0 +1,12 @@
+{
+  "name": "Ninjutsu Drill I",
+  "slug": "ninjutsu_drill_i",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/ninja/ninjaspirit.png",
+  "raw_text": "Available with all weapons Type Passive Neutral Description Enhances the skills activated with Ninjutsu. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcNinjutsuDrill1Effect(level, result) { result.innerHTML = `Enhances <b>Ninjutsu Scroll Skills</b>; increases <b>Total Ninjutsu Drill Level</b> by <b>${level}</b><br> Check <a href=\"https://coryn.club/skill.php?tree=Scroll\" style=\"color:blue;\"><b>Ninjutsu Scroll Skills</b></a> for detailed effects` } function calcNinjutsuDrill1Values() { let levelSelector = document.getElementById(\"ninjutsuDrill1Level\") let level = levelSelector[levelSelector.selectedIndex].value let result = document.getElementById(\"ninjutsuDrill1Values\") calcNinjutsuDrill1Effect(level, result) } calcNinjutsuDrill1Values() Ninjutsu Drill II",
+  "tree": "Ninja",
+  "tree_slug": "ninja",
+  "tree_url": "https://coryn.club/skill.php?tree=Ninja",
+  "image_path": "assets/skill_tree/ninja/ninjutsu_drill_i.png",
+  "data_path": "doc/coryn_skills/ninja/ninjutsu_drill_i.json"
+}

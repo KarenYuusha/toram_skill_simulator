@@ -1,0 +1,12 @@
+{
+  "name": "Healing Shot",
+  "slug": "healing_shot",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/partisan/healingshot.png",
+  "raw_text": "Bowgun/Bow only Type Active Element Neutral MP 0 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start No Combo middle Yes Range 16 Description Consumes your own HP ( min 100 ) and shoots a straight healing arrow toward the furthest party member. The heal amount is different for mercenary, partner, and pet. Arrow Sharpening",
+  "tree": "Partisan",
+  "tree_slug": "partisan",
+  "tree_url": "https://coryn.club/skill.php?tree=Partisan",
+  "image_path": "assets/skill_tree/partisan/healing_shot.png",
+  "data_path": "doc/coryn_skills/partisan/healing_shot.json"
+}

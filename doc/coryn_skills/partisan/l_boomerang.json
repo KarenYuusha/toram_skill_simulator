@@ -1,0 +1,12 @@
+{
+  "name": "L Boomerang",
+  "slug": "l_boomerang",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/partisan/lboomerang.png",
+  "raw_text": "2-Handed Sword only Type Active, Physical skill Element Weapon Dependent MP 200 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 10 Description Throws Lepage's boomerang sword. It will only hit the target and return after traveling a certain distance with the chance of hitting the target again. The skill will do no damage without a boomerang. L Boomerang II",
+  "tree": "Partisan",
+  "tree_slug": "partisan",
+  "tree_url": "https://coryn.club/skill.php?tree=Partisan",
+  "image_path": "assets/skill_tree/partisan/l_boomerang.png",
+  "data_path": "doc/coryn_skills/partisan/l_boomerang.json"
+}

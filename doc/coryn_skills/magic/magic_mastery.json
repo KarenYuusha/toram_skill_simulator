@@ -1,0 +1,12 @@
+{
+  "name": "Magic Mastery",
+  "slug": "magic_mastery",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/magic/magicmastery.png",
+  "raw_text": "Staff/Main MD only Type Passive Neutral Description Get better at using magic weapons. ATK of Staffs and Magic Devices increases. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcMagicMasteryMagicAtk(level, result) { var magicAtk = 1 + Math.ceil((level-2)/5) result.innerHTML = `<li><b>MATK</b> +${magicAtk}%</li>` } function calcMagicMasteryWeaponAtk(level, result) { var weaponAtk = 3 * level result.innerHTML += `<li><b> Weapon ATK</b> +${weaponAtk}% </li>` } function calcMagicMastery() { var levelSelector = document.getElementById(\"magicMasteryLevel\") var level = levelSelector[levelSelector.selectedIndex].value var result = document.getElementById(\"magicMasteryValues\") calcMagicMasteryMagicAtk(level, result) calcMagicMasteryWeaponAtk(level, result) } calcMagicMastery() Magic Knife",
+  "tree": "Magic",
+  "tree_slug": "magic",
+  "tree_url": "https://coryn.club/skill.php?tree=Magic",
+  "image_path": "assets/skill_tree/magic/magic_mastery.png",
+  "data_path": "doc/coryn_skills/magic/magic_mastery.json"
+}

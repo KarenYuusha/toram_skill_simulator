@@ -1,0 +1,12 @@
+{
+  "name": "Strong Chase Attack",
+  "slug": "strong_chase_attack",
+  "required_level": 2,
+  "image_url": "https://coryn.club/skill/martial/strongchaseattack.png",
+  "raw_text": "Knuckle/Bare Hand only Type Passive Neutral Description Enhances the power of small attacks. Increases your accuracy and enhances the additional damage of [Aggravate]. Knuckle [The following effect is for Main Equipment Only ] Raises Accuracy further. Grants Physical Pierce that depends on skill level to the additional damage of Aggravate. Extras Show more... Weapon: Main Knuckle Sub Knuckle Skill Level: 1 2 3 4 5 6 7 8 9 10 function calcStrongChaseSubBuff(level, weapon, result) { var acc = level if (weapon == \"main\") {acc *= 2} var HTML = `<li><b>Accuracy</b> +${acc}%</li>` result.innerHTML = HTML } function calcStrongChaseMainBuff(level, weapon, result) { let multiplier = 0.05 * level multiplier = Math.round(multiplier*100)/100 if (weapon == \"main\") {result.innerHTML += `<li><b>Aggravate Additional Attack Skill Multiplier</b> +${multiplier}</li> <li>Increase <b>Physical Pierce</b> for <b>Aggravate Additional Attack</b> (exact amount currently unknown)</li>`} } function calcStrongChaseValues() { let levelSelector = document.getElementById(\"strongChaseSkillLevel\") let level = levelSelector[levelSelector.selectedIndex].value let weaponSelector = document.getElementById('strongChaseWeaponType') let weapon = weaponSelector[weaponSelector.selectedIndex].value let result= document.getElementById(\"strongChaseValues\") calcStrongChaseSubBuff(level, weapon, result) calcStrongChaseMainBuff(level, weapon, result) } calcStrongChaseValues() Slide",
+  "tree": "Martial",
+  "tree_slug": "martial",
+  "tree_url": "https://coryn.club/skill.php?tree=Martial",
+  "image_path": "assets/skill_tree/martial/strong_chase_attack.png",
+  "data_path": "doc/coryn_skills/martial/strong_chase_attack.json"
+}

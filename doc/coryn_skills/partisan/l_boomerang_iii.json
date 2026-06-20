@@ -1,0 +1,12 @@
+{
+  "name": "L Boomerang III",
+  "slug": "l_boomerang_iii",
+  "required_level": 3,
+  "image_url": "https://coryn.club/skill/partisan/lboomerangiii.png",
+  "raw_text": "2-Handed Sword only Type Active, Physical skill Element Weapon Dependent MP 400 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 10 Description Critical Rate and Physical Pierce go up. The boomerang will go after the target. It will return after traveling a certain distance or colliding with an obstacle with the chance of hitting the target again. The skill will do no damage without a boomerang. N Dragon Tooth",
+  "tree": "Partisan",
+  "tree_slug": "partisan",
+  "tree_url": "https://coryn.club/skill.php?tree=Partisan",
+  "image_path": "assets/skill_tree/partisan/l_boomerang_iii.png",
+  "data_path": "doc/coryn_skills/partisan/l_boomerang_iii.json"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Thor's Hammer",
+  "slug": "thors_hammer",
+  "required_level": 5,
+  "image_url": "https://coryn.club/skill/halberd/thorshammer.png",
+  "raw_text": "Halberd only Type Active, Magic skill Element Weapon Dependent MP 400 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 12 Description A spear technique that calls down a massive lightning strike. A magic attack with guaranteed critical, but the damage will be split among targets caught in the blast. Once activated, your Additional Magic, Magic Pierce, and Accuracy Rate will increase for a certain period of time. Halberd Accuracy Rate increases according to INT. The skill \"Lightning Hail\" will leave a lightning trail, and when Thor's Hammer is activated, additional magic damage will be generated. Halberd Mastery",
+  "tree": "Halberd",
+  "tree_slug": "halberd",
+  "tree_url": "https://coryn.club/skill.php?tree=Halberd",
+  "image_path": "assets/skill_tree/halberd/thors_hammer.png",
+  "data_path": "doc/coryn_skills/halberd/thors_hammer.json"
+}

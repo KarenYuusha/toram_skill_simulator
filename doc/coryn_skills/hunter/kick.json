@@ -1,0 +1,12 @@
+{
+  "name": "Kick",
+  "slug": "kick",
+  "required_level": 1,
+  "image_url": "https://coryn.club/skill/hunter/kick.png",
+  "raw_text": "Available with all weapons Type Active, Physical skill Element Neutral MP 100 $result_string .= sprintf(\"<td><b>Aggro</b></td> <td>%s</td>\", $row['aggro_text']); Combo start Yes Combo middle Yes Range 3 Description Kick an enemy and create distance. Deal damage and Knock Back the target. Extras Show more... Skill Level: 1 2 3 4 5 6 7 8 9 10 Base STR: function calcKickConstant (level, result) { var constant = 10*level result.innerHTML = `<li><b>Skill Constant:</b> ${constant}</li>` } function calcKickMultiplier(level, strValue, result) { var skillMultiplier = 0.1*level + 0.1*Math.max(0,level-5) + strValue/200 if (skillMultiplier - Math.floor(skillMultiplier*100)/100 < 0.009999) {skillMultiplier = Math.floor(skillMultiplier*100)/100} else {skillMultiplier = Math.round(skillMultiplier*100)/100} result.innerHTML += `<li><b>Skill Multiplier: </b> ${skillMultiplier}</li><br>` } function calcAilmentChanceKick(level, result) { var knockback = 90 + 1*level var kbDistance = 3 + Math.floor((level-1)/2) result.innerHTML += `<li><b>Knockback Chance:</b> ${knockback}%</li> <li><b>Knockback Distance:</b> ${kbDistance/2}m for <b>bosses</b>; ${kbDistance}m for other targets</li>` } function calcKickValue() { let levelSelector = document.getElementById(\"kickLevel\") let level = levelSelector[levelSelector.selectedIndex].value let strValue = document.getElementById('strValueKick').value let result = document.getElementById(\"kickValue\") calcKickConstant (level, result) calcKickMultiplier(level, strValue, result) calcAilmentChanceKick(level, result) } calcKickValue() Sunrise Arrow",
+  "tree": "Hunter",
+  "tree_slug": "hunter",
+  "tree_url": "https://coryn.club/skill.php?tree=Hunter",
+  "image_path": "assets/skill_tree/hunter/kick.png",
+  "data_path": "doc/coryn_skills/hunter/kick.json"
+}
