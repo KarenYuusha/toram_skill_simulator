@@ -1,0 +1,321 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --gold: #ffd166;
+  --blue: #5cc8ff;
+  --accent: #5cc8ff;
+  --green: #70e000;
+  --dark-edge: #343a46;
+  --soft-edge: #9aa4b2;
+  --panel: rgba(12, 16, 28, 0.92);
+}
+
+html,
+body {
+  margin: 0;
+  overflow: visible;
+  background: transparent;
+}
+
+#viewport {
+  background:
+    radial-gradient(circle at 35% 20%, rgba(92, 200, 255, 0.15), transparent 28%),
+    radial-gradient(circle at 75% 65%, rgba(255, 209, 102, 0.12), transparent 30%),
+    linear-gradient(135deg, #070a12 0%, #111827 50%, #070913 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  box-sizing: border-box;
+  height: auto;
+  overflow: visible;
+  position: relative;
+  width: 100%;
+}
+
+#canvas {
+  height: 900px;
+  min-width: 0;
+  position: relative;
+  transform-origin: top left;
+  width: 100%;
+}
+
+.tree-panel {
+  background: rgba(4, 8, 16, 0.34);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  left: 18px;
+  pointer-events: none;
+  position: absolute;
+  right: 18px;
+  z-index: 0;
+}
+
+.tree-header {
+  align-items: center;
+  background: linear-gradient(90deg, rgba(92, 200, 255, 0.16), rgba(255, 209, 102, 0.08));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  color: #f5f7fb;
+  cursor: grab;
+  display: flex;
+  font-size: 17px;
+  font-weight: 900;
+  gap: 12px;
+  height: 48px;
+  justify-content: space-between;
+  left: 30px;
+  letter-spacing: 0.04em;
+  padding: 0 18px;
+  position: absolute;
+  right: 30px;
+  text-transform: uppercase;
+  z-index: 4;
+}
+
+.tree-header button {
+  background: rgba(8, 12, 22, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  color: #f5f7fb;
+  cursor: pointer;
+  font-weight: 900;
+  padding: 5px 12px;
+}
+
+.tree-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.tree-header.dragging-tree {
+  cursor: grabbing;
+  filter: drop-shadow(0 0 16px rgba(92, 200, 255, 0.55));
+  opacity: 0.75;
+}
+
+#edges,
+#nodes {
+  inset: 0;
+  position: absolute;
+}
+
+#edges {
+  height: 100%;
+  overflow: visible;
+  width: 100%;
+  z-index: 1;
+}
+
+#nodes {
+  z-index: 2;
+}
+
+.edge-hit {
+  fill: none;
+  pointer-events: stroke;
+  stroke: transparent;
+  stroke-linecap: round;
+  stroke-width: 20;
+}
+
+.edge-rail,
+.edge-line {
+  fill: none;
+  pointer-events: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke 160ms ease, stroke-width 160ms ease, filter 160ms ease, opacity 160ms ease, stroke-dasharray 160ms ease;
+}
+
+.edge-rail {
+  opacity: 0.82;
+  stroke: rgba(1, 4, 12, 0.96);
+  stroke-width: 5.5;
+}
+
+.edge-line {
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.75));
+  opacity: 0.68;
+  stroke: #8792a5;
+  stroke-width: 2.4;
+}
+
+.edge-arrow {
+  fill: #b8c2d4;
+  opacity: 0.86;
+}
+
+.edge.locked .edge-line {
+  opacity: 0.54;
+  stroke: #758094;
+  stroke-dasharray: 7 9;
+}
+
+.edge.available .edge-line {
+  opacity: 0.82;
+  stroke: #c1cada;
+  stroke-dasharray: none;
+}
+
+.edge.active .edge-line {
+  opacity: 0.94;
+  stroke: #d7deeb;
+  stroke-dasharray: none;
+  stroke-width: 2.6;
+}
+
+.edge.hover .edge-line,
+.edge.path .edge-line {
+  filter: drop-shadow(0 0 8px var(--accent));
+  opacity: 1;
+  stroke: var(--accent);
+  stroke-dasharray: none;
+  stroke-width: 3.6;
+}
+
+.edge.hover .edge-rail,
+.edge.path .edge-rail {
+  opacity: 0.84;
+  stroke-width: 6;
+}
+
+.skill-node {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 108px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transition: filter 160ms ease, opacity 160ms ease, transform 160ms ease;
+  user-select: none;
+  width: 126px;
+  z-index: 3;
+}
+
+.skill-node:hover,
+.skill-node.edge-hover {
+  transform: translate(-50%, -50%) scale(1.06);
+  z-index: 5;
+}
+
+.skill-name {
+  align-items: flex-end;
+  color: #f5f7fb;
+  display: flex;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  min-height: 26px;
+  text-align: center;
+  text-shadow: 0 2px 6px #000;
+}
+
+.skill-icon {
+  align-items: center;
+  background: radial-gradient(circle at 35% 25%, #31425e, #101827 70%);
+  border: 3px solid #687385;
+  border-radius: 50%;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 18px rgba(255, 255, 255, 0.12), 0 0 0 rgba(255, 255, 255, 0);
+  cursor: pointer;
+  display: flex;
+  flex: 0 0 auto;
+  height: 56px;
+  justify-content: center;
+  min-height: 56px;
+  min-width: 56px;
+  overflow: hidden;
+  transition: border-color 160ms ease, box-shadow 160ms ease, filter 160ms ease, transform 80ms ease;
+  width: 56px;
+}
+
+.skill-icon:active {
+  transform: scale(0.94);
+}
+
+.skill-icon img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.fallback-icon {
+  color: #e8edf8;
+  font-size: 21px;
+  font-weight: 900;
+}
+
+.skill-level {
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  color: #dce5f5;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 3px 10px;
+}
+
+.skill-node.locked {
+  opacity: 0.48;
+}
+
+.skill-node.locked .skill-icon {
+  filter: grayscale(1);
+}
+
+.skill-node.available .skill-icon {
+  border-color: #d6deee;
+  box-shadow: 0 0 15px rgba(214, 222, 238, 0.35), inset 0 0 18px rgba(255, 255, 255, 0.14);
+}
+
+.skill-node.invested .skill-icon {
+  border-color: var(--blue);
+  box-shadow: 0 0 22px rgba(92, 200, 255, 0.62), inset 0 0 18px rgba(92, 200, 255, 0.18);
+}
+
+.skill-node.maxed .skill-icon {
+  border-color: var(--gold);
+  box-shadow: 0 0 28px rgba(255, 209, 102, 0.78), inset 0 0 22px rgba(255, 209, 102, 0.2);
+}
+
+.tooltip {
+  background: var(--panel);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 12px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+  color: #eaf0ff;
+  display: none;
+  font-size: 12px;
+  left: 88px;
+  line-height: 1.4;
+  max-width: 280px;
+  max-height: 360px;
+  overflow: auto;
+  padding: 12px;
+  position: absolute;
+  top: 26px;
+  width: max-content;
+  z-index: 30;
+}
+
+.tooltip-description {
+  margin-bottom: 8px;
+}
+
+.skill-node.show-tooltip:hover .tooltip {
+  display: block;
+}
+
+.tooltip strong {
+  color: #fff;
+  display: block;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.tooltip .warn {
+  color: #ffadad;
+  margin-top: 6px;
+}
