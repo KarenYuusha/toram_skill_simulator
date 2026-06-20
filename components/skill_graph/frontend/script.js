@@ -158,7 +158,6 @@ function toggleTree(treeName) {
     settings: { ...settings, collapsed_trees: collapsedTrees },
   };
   render();
-  emitTreeEvent("toggle_tree", { tree: treeName, collapsed: collapsedTrees[treeName] });
 }
 
 function applyPendingTreeState(data) {
