@@ -27,8 +27,8 @@ def apply_auth_session(response) -> None:
     if session is None or user is None:
         raise SupabaseConfigError("Check your email to confirm the account before logging in")
 
-    email = getattr(user, "email", None) or "user"
     user_id = getattr(user, "id", None)
+    email = getattr(user, "email", None) or f"guest:{user_id or 'anonymous'}"
     st.session_state.authenticated_user = email
     st.session_state.authenticated_user_id = user_id
     st.session_state.supabase_access_token = session.access_token
@@ -88,13 +88,45 @@ def render_login_controls() -> None:
         col_login, col_signup = st.columns(2)
         login_submitted = col_login.form_submit_button("Log in", use_container_width=True)
         signup_submitted = col_signup.form_submit_button("Sign up", use_container_width=True)
+    reset_submitted = st.sidebar.button("Reset password", use_container_width=True)
+    guest_submitted = st.sidebar.button("Continue as guest", use_container_width=True)
 
-    if not login_submitted and not signup_submitted:
+    if not login_submitted and not signup_submitted and not reset_submitted and not guest_submitted:
         st.sidebar.caption("Log in to save builds and preferences. Shared links can still be opened without logging in.")
         return
 
-    if not email.strip() or not password:
-        st.sidebar.error("Email and password are required")
+    if guest_submitted:
+        try:
+            response = create_supabase_client().auth.sign_in_anonymously()
+            apply_auth_session(response)
+            st.session_state.message = "Signed in as guest"
+            st.rerun()
+        except Exception as exc:
+            st.sidebar.error(f"Guest sign-in failed: {exc}")
+        return
+
+    if not email.strip():
+        st.sidebar.error("Email is required")
+        return
+
+    if reset_submitted:
+        try:
+            options = {}
+            redirect_url = auth_redirect_url()
+            if redirect_url:
+                options["redirect_to"] = redirect_url
+            auth = create_supabase_client().auth
+            if options:
+                auth.reset_password_for_email(email.strip(), options)
+            else:
+                auth.reset_password_for_email(email.strip())
+            st.sidebar.success("Password reset email sent")
+        except Exception as exc:
+            st.sidebar.error(f"Password reset failed: {exc}")
+        return
+
+    if not password:
+        st.sidebar.error("Password is required")
         return
 
     try:
