@@ -4,6 +4,7 @@ let lastRenderKey = null;
 let layoutMetrics = { width: 0, height: 0 };
 let resizeFrame = null;
 let lastAvailableWidth = 0;
+let pendingTreeCollapsed = {};
 sessionStorage.removeItem("skillGraphSelectedSkill");
 
 const viewport = document.getElementById("viewport");
@@ -151,12 +152,33 @@ function toggleTree(treeName) {
   const collapsedTrees = { ...(settings.collapsed_trees || {}) };
   const isCollapsed = collapsedTrees[treeName] !== false;
   collapsedTrees[treeName] = !isCollapsed;
+  pendingTreeCollapsed[treeName] = collapsedTrees[treeName];
   graphData = {
     ...graphData,
     settings: { ...settings, collapsed_trees: collapsedTrees },
   };
   render();
   emitTreeEvent("toggle_tree", { tree: treeName, collapsed: collapsedTrees[treeName] });
+}
+
+function applyPendingTreeState(data) {
+  const pendingEntries = Object.entries(pendingTreeCollapsed);
+  if (!pendingEntries.length) return data;
+
+  const settings = data.settings || {};
+  const collapsedTrees = { ...(settings.collapsed_trees || {}) };
+  pendingEntries.forEach(([treeName, pendingValue]) => {
+    if (collapsedTrees[treeName] === pendingValue) {
+      delete pendingTreeCollapsed[treeName];
+      return;
+    }
+    collapsedTrees[treeName] = pendingValue;
+  });
+
+  return {
+    ...data,
+    settings: { ...settings, collapsed_trees: collapsedTrees },
+  };
 }
 
 function openSkillDocs(skill) {
@@ -659,7 +681,7 @@ viewport.addEventListener("contextmenu", (event) => {
   }
 });
 window.Streamlit.events.addEventListener(window.Streamlit.RENDER_EVENT, (event) => {
-  const nextData = event.detail.args;
+  const nextData = applyPendingTreeState(event.detail.args);
   const nextKey = renderKey(nextData);
   graphData = nextData;
   if (lastRenderKey === nextKey && nodesEl.childElementCount) {
