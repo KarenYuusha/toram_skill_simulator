@@ -1,0 +1,92 @@
+from __future__ import annotations
+
+import streamlit as st
+
+from toram_utils.data.build_store import load_user_builds, load_user_preferences
+from toram_utils.data.supabase_client import SupabaseConfigError, create_supabase_client, supabase_configured
+
+
+def initialize_auth_state() -> None:
+    st.session_state.setdefault("authenticated_user", None)
+    st.session_state.setdefault("authenticated_user_id", None)
+    st.session_state.setdefault("supabase_access_token", None)
+    st.session_state.setdefault("supabase_refresh_token", None)
+    st.session_state.setdefault("login_email", "")
+    st.session_state.setdefault("login_password", "")
+
+
+def is_logged_in() -> bool:
+    return bool(st.session_state.get("authenticated_user_id"))
+
+
+def apply_auth_session(response) -> None:
+    session = getattr(response, "session", None)
+    user = getattr(response, "user", None)
+    if session is None or user is None:
+        raise SupabaseConfigError("Check your email to confirm the account before logging in")
+
+    email = getattr(user, "email", None) or "user"
+    user_id = getattr(user, "id", None)
+    st.session_state.authenticated_user = email
+    st.session_state.authenticated_user_id = user_id
+    st.session_state.supabase_access_token = session.access_token
+    st.session_state.supabase_refresh_token = session.refresh_token
+    st.session_state.saved_builds = load_user_builds(email)
+    st.session_state.pending_user_preferences = load_user_preferences(email)
+
+
+def clear_auth_session() -> None:
+    st.session_state.authenticated_user = None
+    st.session_state.authenticated_user_id = None
+    st.session_state.supabase_access_token = None
+    st.session_state.supabase_refresh_token = None
+    st.session_state.saved_builds = []
+
+
+def render_login_controls() -> None:
+    st.sidebar.header("Account")
+    user = st.session_state.get("authenticated_user")
+    if user:
+        st.sidebar.success(f"Logged in as {user}")
+        if st.sidebar.button("Log out", use_container_width=True):
+            try:
+                create_supabase_client().auth.sign_out()
+            except SupabaseConfigError:
+                pass
+            clear_auth_session()
+            st.session_state.message = "Logged out"
+            st.rerun()
+        return
+
+    if not supabase_configured():
+        st.sidebar.warning("Supabase Auth is not configured. Add SUPABASE_URL and SUPABASE_ANON_KEY to Streamlit secrets.")
+        return
+
+    with st.sidebar.form("login_form"):
+        email = st.text_input("Email", key="login_email")
+        password = st.text_input("Password", type="password", key="login_password")
+        col_login, col_signup = st.columns(2)
+        login_submitted = col_login.form_submit_button("Log in", use_container_width=True)
+        signup_submitted = col_signup.form_submit_button("Sign up", use_container_width=True)
+
+    if not login_submitted and not signup_submitted:
+        st.sidebar.caption("Log in to save builds and preferences. Shared links can still be opened without logging in.")
+        return
+
+    if not email.strip() or not password:
+        st.sidebar.error("Email and password are required")
+        return
+
+    try:
+        client = create_supabase_client()
+        if login_submitted:
+            response = client.auth.sign_in_with_password({"email": email.strip(), "password": password})
+            apply_auth_session(response)
+            st.session_state.message = f"Logged in as {email.strip()}"
+        else:
+            response = client.auth.sign_up({"email": email.strip(), "password": password})
+            apply_auth_session(response)
+            st.session_state.message = f"Signed up as {email.strip()}"
+        st.rerun()
+    except Exception as exc:
+        st.sidebar.error(f"Authentication failed: {exc}")
