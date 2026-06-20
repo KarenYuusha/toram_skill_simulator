@@ -146,6 +146,18 @@ function emitTreeEvent(action, payload) {
   });
 }
 
+function toggleTree(treeName) {
+  const settings = graphData.settings || {};
+  const collapsedTrees = { ...(settings.collapsed_trees || {}) };
+  collapsedTrees[treeName] = !collapsedTrees[treeName];
+  graphData = {
+    ...graphData,
+    settings: { ...settings, collapsed_trees: collapsedTrees },
+  };
+  render();
+  emitTreeEvent("toggle_tree", { tree: treeName, collapsed: collapsedTrees[treeName] });
+}
+
 function openSkillDocs(skill) {
   let baseUrl = document.referrer || "/";
   try {
@@ -574,11 +586,11 @@ function renderTreeHeaders() {
       </div>
     `;
     header.addEventListener("click", () => {
-      emitTreeEvent("toggle_tree", { tree: treeName });
+      toggleTree(treeName);
     });
     header.querySelector('[data-action="toggle"]').addEventListener("click", (event) => {
       event.stopPropagation();
-      emitTreeEvent("toggle_tree", { tree: treeName });
+      toggleTree(treeName);
     });
     header.querySelector('[data-action="reset"]').addEventListener("click", (event) => {
       event.stopPropagation();
