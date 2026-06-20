@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from urllib.parse import urlsplit, urlunsplit
+
 import streamlit as st
 
 from toram_utils.data.build_store import load_user_builds, load_user_preferences
@@ -33,6 +35,24 @@ def apply_auth_session(response) -> None:
     st.session_state.supabase_refresh_token = session.refresh_token
     st.session_state.saved_builds = load_user_builds(email)
     st.session_state.pending_user_preferences = load_user_preferences(email)
+
+
+def auth_redirect_url() -> str | None:
+    try:
+        configured = st.secrets.get("AUTH_REDIRECT_URL") or st.secrets.get("APP_URL")
+    except (FileNotFoundError, KeyError):
+        configured = None
+
+    if configured:
+        return str(configured).rstrip("/") + "/"
+
+    context = getattr(st, "context", None)
+    current_url = getattr(context, "url", None) if context is not None else None
+    if not current_url:
+        return None
+
+    parts = urlsplit(str(current_url))
+    return urlunsplit((parts.scheme, parts.netloc, parts.path, "", ""))
 
 
 def clear_auth_session() -> None:
@@ -84,7 +104,11 @@ def render_login_controls() -> None:
             apply_auth_session(response)
             st.session_state.message = f"Logged in as {email.strip()}"
         else:
-            response = client.auth.sign_up({"email": email.strip(), "password": password})
+            payload = {"email": email.strip(), "password": password}
+            redirect_url = auth_redirect_url()
+            if redirect_url:
+                payload["options"] = {"email_redirect_to": redirect_url}
+            response = client.auth.sign_up(payload)
             apply_auth_session(response)
             st.session_state.message = f"Signed up as {email.strip()}"
         st.rerun()
