@@ -149,7 +149,8 @@ function emitTreeEvent(action, payload) {
 function toggleTree(treeName) {
   const settings = graphData.settings || {};
   const collapsedTrees = { ...(settings.collapsed_trees || {}) };
-  collapsedTrees[treeName] = !collapsedTrees[treeName];
+  const isCollapsed = collapsedTrees[treeName] !== false;
+  collapsedTrees[treeName] = !isCollapsed;
   graphData = {
     ...graphData,
     settings: { ...settings, collapsed_trees: collapsedTrees },
@@ -232,7 +233,7 @@ function layoutSkills() {
   let offsetY = 24;
   let maxX = 900;
   treeGroups().forEach(([treeName, skills]) => {
-    const expanded = !collapsed[treeName];
+    const expanded = collapsed[treeName] === false;
     const localMaxY = Math.max(...skills.map((skill) => skill.y), 0);
     const localMaxX = Math.max(...skills.map((skill) => skill.x), 0);
     maxX = Math.max(maxX, localMaxX + 170);
@@ -564,8 +565,9 @@ function renderTreeHeaders() {
   const collapsed = (graphData.settings && graphData.settings.collapsed_trees) || {};
   let offsetY = 24;
   treeGroups().forEach(([treeName, skills]) => {
+    const isCollapsed = collapsed[treeName] !== false;
     const localMaxY = Math.max(...skills.map((skill) => skill.y), 0);
-    const panelHeight = collapsed[treeName] ? 54 : localMaxY + 152;
+    const panelHeight = isCollapsed ? 54 : localMaxY + 152;
     const panel = document.createElement("div");
     panel.className = "tree-panel";
     panel.style.top = `${offsetY - 8}px`;
@@ -581,7 +583,7 @@ function renderTreeHeaders() {
     header.innerHTML = `
       <span class="tree-title">${treeName} Skills (${spent})</span>
       <div class="tree-actions">
-        <button type="button" data-action="toggle">${collapsed[treeName] ? "Expand" : "Collapse"}</button>
+        <button type="button" data-action="toggle">${isCollapsed ? "Expand" : "Collapse"}</button>
         <button type="button" data-action="reset">Reset</button>
       </div>
     `;
@@ -615,7 +617,7 @@ function renderTreeHeaders() {
       emitTreeEvent("reorder_trees", { tree_order: order });
     });
     nodesEl.appendChild(header);
-    offsetY += collapsed[treeName] ? 68 : localMaxY + 170;
+    offsetY += isCollapsed ? 68 : localMaxY + 170;
   });
 }
 

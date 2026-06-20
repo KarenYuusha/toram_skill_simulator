@@ -19,7 +19,7 @@ def apply_event(tree: SkillTree, event: dict[str, Any] | None) -> bool:
         if isinstance(tree_name, str):
             collapsed = dict(st.session_state.collapsed_trees)
             target = event.get("collapsed")
-            collapsed[tree_name] = bool(target) if isinstance(target, bool) else not collapsed.get(tree_name, False)
+            collapsed[tree_name] = bool(target) if isinstance(target, bool) else not collapsed.get(tree_name, True)
             st.session_state.collapsed_trees = collapsed
             return True
         return False
