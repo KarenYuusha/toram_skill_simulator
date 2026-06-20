@@ -7,6 +7,32 @@ import streamlit as st
 from toram_utils.core import SkillTree, SkillTreeError
 
 
+def apply_skill_event(tree: SkillTree, event: dict[str, Any]) -> tuple[dict[str, int], str]:
+    skill_id = event.get("skill_id")
+    action = event.get("action")
+
+    if not isinstance(skill_id, str):
+        return st.session_state.levels, "Invalid graph event"
+
+    try:
+        if action == "increment":
+            if tree.is_unlocked(skill_id, st.session_state.levels):
+                return tree.increment_skill(skill_id, st.session_state.levels, st.session_state.total_points)
+            if st.session_state.auto_allocate:
+                return tree.auto_allocate_and_increment(skill_id, st.session_state.levels, st.session_state.total_points)
+            missing = tree.calculate_missing_prerequisites(skill_id, st.session_state.levels)
+            detail = ", ".join(
+                f"{tree.get_skill(parent_id).name} needs {amount} more point(s)"
+                for parent_id, amount in missing.items()
+            )
+            return st.session_state.levels, f"{tree.get_skill(skill_id).name} is locked: {detail}"
+        if action == "decrement":
+            return tree.decrement_skill_cascade(skill_id, st.session_state.levels)
+        return st.session_state.levels, "Unknown graph action"
+    except SkillTreeError as exc:
+        return st.session_state.levels, str(exc)
+
+
 def apply_event(tree: SkillTree, event: dict[str, Any] | None) -> bool:
     if not event or event.get("event_id") == st.session_state.last_event_id:
         return False
@@ -46,31 +72,21 @@ def apply_event(tree: SkillTree, event: dict[str, Any] | None) -> bool:
             st.session_state.tree_order.extend(sorted(known - set(st.session_state.tree_order)))
             return True
         return False
-
-    if not isinstance(skill_id, str):
-        st.session_state.message = "Invalid graph event"
+    if action == "skill_batch":
+        events = event.get("events")
+        if not isinstance(events, list):
+            st.session_state.message = "Invalid graph event"
+            return True
+        message = st.session_state.message
+        for item in events:
+            if not isinstance(item, dict):
+                continue
+            levels, message = apply_skill_event(tree, item)
+            st.session_state.levels = levels
+        st.session_state.message = message
         return True
 
-    try:
-        if action == "increment":
-            if tree.is_unlocked(skill_id, st.session_state.levels):
-                levels, message = tree.increment_skill(skill_id, st.session_state.levels, st.session_state.total_points)
-            elif st.session_state.auto_allocate:
-                levels, message = tree.auto_allocate_and_increment(skill_id, st.session_state.levels, st.session_state.total_points)
-            else:
-                missing = tree.calculate_missing_prerequisites(skill_id, st.session_state.levels)
-                detail = ", ".join(
-                    f"{tree.get_skill(parent_id).name} needs {amount} more point(s)"
-                    for parent_id, amount in missing.items()
-                )
-                levels, message = st.session_state.levels, f"{tree.get_skill(skill_id).name} is locked: {detail}"
-        elif action == "decrement":
-            levels, message = tree.decrement_skill_cascade(skill_id, st.session_state.levels)
-        else:
-            levels, message = st.session_state.levels, "Unknown graph action"
-    except SkillTreeError as exc:
-        levels, message = st.session_state.levels, str(exc)
-
+    levels, message = apply_skill_event(tree, event)
     st.session_state.levels = levels
     st.session_state.message = message
     return True

@@ -5,6 +5,9 @@ let layoutMetrics = { width: 0, height: 0 };
 let resizeFrame = null;
 let lastAvailableWidth = 0;
 let pendingTreeCollapsed = {};
+let pendingSkillEvents = [];
+let skillEventFlushTimer = null;
+const SKILL_EVENT_BATCH_DELAY_MS = 300;
 sessionStorage.removeItem("skillGraphSelectedSkill");
 
 const viewport = document.getElementById("viewport");
@@ -17,12 +20,25 @@ function emit(action, skillId) {
   selectedSkillId = skillId;
   applyOptimisticLevel(action, skillId);
   updateDynamicState();
-  const event = {
-    action,
-    skill_id: skillId,
+  pendingSkillEvents.push({ action, skill_id: skillId });
+  scheduleSkillEventFlush();
+}
+
+function scheduleSkillEventFlush() {
+  if (skillEventFlushTimer !== null) clearTimeout(skillEventFlushTimer);
+  skillEventFlushTimer = setTimeout(flushSkillEvents, SKILL_EVENT_BATCH_DELAY_MS);
+}
+
+function flushSkillEvents() {
+  skillEventFlushTimer = null;
+  if (!pendingSkillEvents.length) return;
+  const events = pendingSkillEvents;
+  pendingSkillEvents = [];
+  window.Streamlit.setComponentValue({
+    action: "skill_batch",
+    events,
     event_id: `${Date.now()}-${Math.random().toString(36).slice(2)}`,
-  };
-  window.Streamlit.setComponentValue(event);
+  });
 }
 
 function renderKey(data) {
