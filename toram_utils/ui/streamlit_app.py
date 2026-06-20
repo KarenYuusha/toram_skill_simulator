@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import streamlit as st
 
-from components.skill_graph import skill_graph
+from toram_utils.components.skill_graph import skill_graph
 from toram_utils.core import SkillTree, SkillTreeError
 from toram_utils.data.builds import BuildPackageError, decode_build_code
 from toram_utils.data.restrictions import load_skill_tree, restriction_version
