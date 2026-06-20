@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 from typing import Any
 
-from toram_utils.data.supabase_client import SupabaseConfigError, authenticated_supabase_client, current_user_id
+from toram_utils.data.supabase_client import authenticated_supabase_client, current_user_id
 from toram_utils.paths import ROOT
 
 
@@ -62,7 +62,7 @@ def load_user_builds(username: str) -> list[dict[str, Any]]:
                 }
                 for item in (response.data or [])
             ]
-        except SupabaseConfigError:
+        except Exception:
             pass
     return list(load_build_store().get(username, empty_user_record()).get("builds", []))
 
@@ -89,7 +89,7 @@ def save_user_builds(username: str, builds: list[dict[str, Any]]) -> None:
                     on_conflict="user_id,name",
                 ).execute()
             return
-        except SupabaseConfigError:
+        except Exception:
             pass
     store = load_build_store()
     record = store.setdefault(username, empty_user_record())
@@ -105,7 +105,7 @@ def load_user_preferences(username: str) -> dict[str, Any]:
             if isinstance(response.data, dict) and isinstance(response.data.get("preferences"), dict):
                 return dict(response.data["preferences"])
             return {}
-        except SupabaseConfigError:
+        except Exception:
             pass
     return dict(load_build_store().get(username, empty_user_record()).get("preferences", {}))
 
@@ -119,7 +119,7 @@ def save_user_preferences(username: str, preferences: dict[str, Any]) -> None:
                 on_conflict="id",
             ).execute()
             return
-        except SupabaseConfigError:
+        except Exception:
             pass
     store = load_build_store()
     record = store.setdefault(username, empty_user_record())
