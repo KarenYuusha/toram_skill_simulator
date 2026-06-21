@@ -14,6 +14,8 @@ const viewport = document.getElementById("viewport");
 const canvas = document.getElementById("canvas");
 const edgesSvg = document.getElementById("edges");
 const nodesEl = document.getElementById("nodes");
+const MOBILE_WIDTH_BREAKPOINT = 640;
+const MOBILE_MIN_SCALE = 0.72;
 
 function emit(action, skillId) {
   rememberViewportState();
@@ -583,9 +585,10 @@ function applyScale() {
   if (!layoutMetrics.width || !layoutMetrics.height) return;
   const availableWidth = availableGraphWidth();
   const fitScale = Math.min(1, availableWidth / layoutMetrics.width);
-  canvas.style.transform = `scale(${fitScale})`;
-  viewport.style.height = `${layoutMetrics.height * fitScale}px`;
-  window.Streamlit.setFrameHeight(layoutMetrics.height * fitScale + 24);
+  const scale = availableWidth <= MOBILE_WIDTH_BREAKPOINT ? Math.max(MOBILE_MIN_SCALE, fitScale) : fitScale;
+  canvas.style.transform = `scale(${scale})`;
+  viewport.style.height = `${layoutMetrics.height * scale}px`;
+  window.Streamlit.setFrameHeight(layoutMetrics.height * scale + 40);
   lastAvailableWidth = availableWidth;
 }
 
