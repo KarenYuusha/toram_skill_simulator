@@ -1,10 +1,12 @@
 from __future__ import annotations
 
 import base64
+from functools import lru_cache
 
 from toram_utils.paths import ROOT
 
 
+@lru_cache(maxsize=None)
 def icon_data_uri(path_text: str) -> str | None:
     path = ROOT / path_text
     if not path.exists():

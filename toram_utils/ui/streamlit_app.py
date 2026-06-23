@@ -25,12 +25,34 @@ def cached_raw_skill_details() -> dict[str, str]:
     return load_raw_skill_details()
 
 
-def component_skills(tree: SkillTree) -> list[dict]:
-    payload = tree.component_payload(st.session_state.levels)
+@st.cache_data
+def cached_component_skill_metadata(restriction_version_key: tuple[tuple[str, int, int], ...]) -> list[dict]:
+    tree = load_tree(restriction_version_key)
     details = cached_raw_skill_details()
-    for item in payload:
+    payload = []
+    for skill in tree.config.skills:
+        item = skill.to_component_dict()
         item["icon_data_uri"] = icon_data_uri(item["icon"])
         item["description"] = detail_lookup(details, item["id"]) or item["description"]
+        payload.append(item)
+    return payload
+
+
+def component_skills(tree: SkillTree, restriction_version_key: tuple[tuple[str, int, int], ...]) -> list[dict]:
+    levels = tree.normalize_levels(st.session_state.levels)
+    payload = []
+    for item in cached_component_skill_metadata(restriction_version_key):
+        skill_id = item["id"]
+        skill = tree.get_skill(skill_id)
+        next_item = dict(item)
+        next_item["level"] = levels[skill_id]
+        next_item["unlocked"] = all(levels[parent_id] >= skill.required_points for parent_id in skill.prerequisites)
+        next_item["missing"] = {
+            parent_id: skill.required_points - levels[parent_id]
+            for parent_id in skill.prerequisites
+            if levels[parent_id] < skill.required_points
+        }
+        payload.append(next_item)
     return payload
 
 
@@ -75,7 +97,8 @@ def main() -> None:
     doc_skill = st.query_params.get("skill")
 
     try:
-        tree = load_tree(restriction_version())
+        version_key = restriction_version()
+        tree = load_tree(version_key)
     except (OSError, ValueError, SkillTreeError) as exc:
         st.error(f"Skill-tree validation failed: {exc}")
         st.stop()
@@ -117,7 +140,7 @@ def main() -> None:
     render_message()
 
     event = skill_graph(
-        skills=component_skills(tree),
+        skills=component_skills(tree, version_key),
         levels=st.session_state.levels,
         total_points=st.session_state.total_points,
         remaining_points=remaining,

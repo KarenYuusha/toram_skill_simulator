@@ -18,6 +18,7 @@ class SkillTree:
         self.skills: dict[str, Skill] = {skill.id: skill for skill in config.skills}
         self.children: dict[str, list[str]] = defaultdict(list)
         self._validate_config()
+        self.topological_order = self._topological_order()
         for skill in config.skills:
             for parent_id in skill.prerequisites:
                 self.children[parent_id].append(skill.id)
@@ -111,24 +112,21 @@ class SkillTree:
         return descendants
 
     def spent_points(self, levels: dict[str, int]) -> int:
-        levels = self.normalize_levels(levels)
-        return sum(levels[skill_id] * skill.point_cost_per_level for skill_id, skill in self.skills.items())
+        return sum(int(levels.get(skill_id, 0)) * skill.point_cost_per_level for skill_id, skill in self.skills.items())
 
     def remaining_points(self, levels: dict[str, int], total_points: int) -> int:
         return total_points - self.spent_points(levels)
 
     def is_unlocked(self, skill_id: str, levels: dict[str, int]) -> bool:
-        levels = self.normalize_levels(levels)
         skill = self.get_skill(skill_id)
-        return all(levels[parent_id] >= skill.required_points for parent_id in skill.prerequisites)
+        return all(int(levels.get(parent_id, 0)) >= skill.required_points for parent_id in skill.prerequisites)
 
     def calculate_missing_prerequisites(self, skill_id: str, levels: dict[str, int]) -> dict[str, int]:
-        levels = self.normalize_levels(levels)
         skill = self.get_skill(skill_id)
         return {
-            parent_id: skill.required_points - levels[parent_id]
+            parent_id: skill.required_points - int(levels.get(parent_id, 0))
             for parent_id in skill.prerequisites
-            if levels[parent_id] < skill.required_points
+            if int(levels.get(parent_id, 0)) < skill.required_points
         }
 
     def can_increment(self, skill_id: str, levels: dict[str, int]) -> tuple[bool, str]:
@@ -200,7 +198,7 @@ class SkillTree:
 
         candidate = dict(levels)
         relevant = self.get_ancestors(skill_id) | {skill_id}
-        for node_id in self._topological_order():
+        for node_id in self.topological_order:
             if node_id not in relevant:
                 continue
             node = self.get_skill(node_id)
@@ -262,8 +260,12 @@ class SkillTree:
         for skill in self.config.skills:
             item = skill.to_component_dict()
             item["level"] = levels[skill.id]
-            item["unlocked"] = self.is_unlocked(skill.id, levels)
-            item["missing"] = self.calculate_missing_prerequisites(skill.id, levels)
+            item["unlocked"] = all(levels[parent_id] >= skill.required_points for parent_id in skill.prerequisites)
+            item["missing"] = {
+                parent_id: skill.required_points - levels[parent_id]
+                for parent_id in skill.prerequisites
+                if levels[parent_id] < skill.required_points
+            }
             payload.append(item)
         return payload
 
