@@ -107,7 +107,7 @@ def main() -> None:
         render_skill_docs_page(tree, doc_tree, doc_skill)
         return
 
-    st.title("RPG Skill Tree Simulator")
+    st.title("Toram Skill Simulator")
 
     initialize_state(tree)
     if isinstance(st.session_state.get("pending_user_preferences"), dict):
