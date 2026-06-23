@@ -8,7 +8,7 @@ from toram_utils.core import SkillTree, SkillTreeError
 from toram_utils.data.builds import (
     BuildPackageError,
     build_package,
-    encode_build_code,
+    encode_compact_build_code,
     unpack_build_package,
 )
 from toram_utils.data.build_store import save_user_builds, save_user_preferences
@@ -211,7 +211,7 @@ def build_management_sections(tree: SkillTree) -> None:
         if selected_build is not None
         else None
     )
-    share_url = share_url_from_code(encode_build_code(share_package)) if share_package else ""
+    share_url = share_url_from_code(encode_compact_build_code(share_package, tree)) if share_package else ""
     render_share_button(share_url, selected_build is None)
     if selected_build is None:
         st.caption("Choose a saved build before sharing.")

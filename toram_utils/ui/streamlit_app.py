@@ -80,7 +80,7 @@ def apply_shared_build_from_url(tree: SkillTree) -> None:
     if not isinstance(code, str) or not code or st.session_state.get("loaded_build_code") == code:
         return
     try:
-        import_packaged_or_raw_build(decode_build_code(code), tree)
+        import_packaged_or_raw_build(decode_build_code(code, tree), tree)
         st.session_state.loaded_build_code = code
         name = st.session_state.save_build_name
         st.session_state.message = f"Loaded shared build: {name}" if name else "Loaded shared build"
