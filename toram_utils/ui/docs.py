@@ -3,6 +3,7 @@ from __future__ import annotations
 import re
 
 import streamlit as st
+import streamlit.components.v1 as components
 
 from toram_utils.core import SkillTree, SkillTreeError
 from toram_utils.data.skill_details import (
@@ -14,7 +15,7 @@ from toram_utils.data.skill_details import (
     trim_raw_skill_block,
 )
 from toram_utils.paths import ROOT
-from toram_utils.ui.html import escape_html, iframe_html
+from toram_utils.ui.html import escape_html
 
 
 def render_skill_docs_page(tree: SkillTree, tree_name: str, skill_id: str) -> None:
@@ -110,25 +111,32 @@ def render_skill_docs_page(tree: SkillTree, tree_name: str, skill_id: str) -> No
     )
     st.markdown(f'<div class="raw-skill-doc">{"".join(html_lines)}</div>', unsafe_allow_html=True)
     if has_target:
-        iframe_html(
+        components.html(
             """
             <script>
               let attempts = 0;
+              const parentDocument = () => {
+                try {
+                  return window.parent && window.parent.document;
+                } catch {
+                  return null;
+                }
+              };
               const scrollToTarget = () => {
                 attempts += 1;
-                let target = null;
-                try {
-                  target = window.parent.document.getElementById("target-skill");
-                } catch {
-                  target = document.getElementById("target-skill");
+                const doc = parentDocument();
+                let target = doc ? doc.getElementById("target-skill") : null;
+                if (!target && doc) {
+                  target = doc.querySelector('[id="target-skill"]');
                 }
+                if (!target) target = document.getElementById("target-skill");
                 if (target) {
                   target.scrollIntoView({ block: "center", behavior: "smooth" });
                   return;
                 }
                 if (attempts < 80) setTimeout(scrollToTarget, 100);
               };
-              setTimeout(scrollToTarget, 100);
+              requestAnimationFrame(scrollToTarget);
             </script>
             """,
             height=0,
