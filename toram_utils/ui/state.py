@@ -105,6 +105,7 @@ def initialize_state(tree: SkillTree) -> None:
     st.session_state.setdefault("saved_builds", [])
     st.session_state.setdefault("save_build_name", "")
     st.session_state.setdefault("save_build_description", "")
+    st.session_state.setdefault("loaded_build_name", None)
     st.session_state.setdefault("authenticated_user", None)
     names = tree_names(tree)
     st.session_state.setdefault("tree_order", names)

@@ -224,6 +224,7 @@ def build_management_sections(tree: SkillTree) -> None:
             imported = selected_build["build"]
             st.session_state.save_build_name = selected_build["name"]
             st.session_state.save_build_description = selected_build.get("description", "")
+            st.session_state.loaded_build_name = selected_build["name"]
             apply_build_settings(selected_build.get("settings"), tree, defer_widget_settings=True)
             st.session_state.levels = tree.import_build(imported, st.session_state.total_points)
             st.session_state.message = "Build loaded"
@@ -236,6 +237,8 @@ def build_management_sections(tree: SkillTree) -> None:
             st.session_state.message = "Choose a saved build to delete"
         else:
             st.session_state.saved_builds = [build for build in saved_builds if build["name"] != selected_name]
+            if st.session_state.get("loaded_build_name") == selected_name:
+                st.session_state.loaded_build_name = None
             if st.session_state.authenticated_user:
                 save_user_builds(st.session_state.authenticated_user, st.session_state.saved_builds)
             st.session_state.message = f"Deleted {selected_name}"
@@ -257,10 +260,16 @@ def build_management_sections(tree: SkillTree) -> None:
                 "build": tree.export_build(st.session_state.levels),
                 "settings": current_build_settings(),
             }
-            st.session_state.saved_builds = [item for item in saved_builds if item["name"] != build["name"]]
+            loaded_build_name = st.session_state.get("loaded_build_name")
+            st.session_state.saved_builds = [
+                item
+                for item in saved_builds
+                if item["name"] not in {loaded_build_name, build["name"]}
+            ]
             st.session_state.saved_builds.append(build)
             save_user_builds(st.session_state.authenticated_user, st.session_state.saved_builds)
-            st.session_state.message = f"Saved {build['name']}"
+            st.session_state.loaded_build_name = build["name"]
+            st.session_state.message = f"Updated {build['name']}" if loaded_build_name else f"Saved {build['name']}"
             st.rerun()
 
     if st.session_state.authenticated_user:
