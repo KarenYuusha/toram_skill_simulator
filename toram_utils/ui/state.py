@@ -52,7 +52,12 @@ def current_build_settings() -> dict[str, Any]:
     }
 
 
-def apply_build_settings(settings: dict[str, Any] | None, tree: SkillTree) -> None:
+def apply_build_settings(
+    settings: dict[str, Any] | None,
+    tree: SkillTree,
+    *,
+    defer_widget_settings: bool = False,
+) -> None:
     if not isinstance(settings, dict):
         return
     names = tree_names(tree)
@@ -68,12 +73,17 @@ def apply_build_settings(settings: dict[str, Any] | None, tree: SkillTree) -> No
             name: bool(settings["collapsed_trees"].get(name, st.session_state.collapsed_trees.get(name, True)))
             for name in names
         }
+    widget_settings: dict[str, Any] = {}
     if isinstance(settings.get("auto_allocate"), bool):
-        st.session_state.auto_allocate = settings["auto_allocate"]
+        widget_settings["auto_allocate"] = settings["auto_allocate"]
     if isinstance(settings.get("show_skill_tooltips"), bool):
-        st.session_state.show_skill_tooltips = settings["show_skill_tooltips"]
+        widget_settings["show_skill_tooltips"] = settings["show_skill_tooltips"]
     if isinstance(settings.get("edge_color"), str) and settings["edge_color"].startswith("#"):
-        st.session_state.edge_color = settings["edge_color"]
+        widget_settings["edge_color"] = settings["edge_color"]
+    if defer_widget_settings:
+        st.session_state.pending_widget_settings = widget_settings
+    else:
+        st.session_state.update(widget_settings)
 
 
 def initialize_state(tree: SkillTree) -> None:
@@ -87,6 +97,9 @@ def initialize_state(tree: SkillTree) -> None:
     st.session_state.setdefault("auto_allocate", True)
     st.session_state.setdefault("show_skill_tooltips", False)
     st.session_state.setdefault("edge_color", "#5cc8ff")
+    if isinstance(st.session_state.get("pending_widget_settings"), dict):
+        st.session_state.update(st.session_state.pending_widget_settings)
+        del st.session_state.pending_widget_settings
     st.session_state.setdefault("last_event_id", None)
     st.session_state.setdefault("message", "")
     st.session_state.setdefault("saved_builds", [])

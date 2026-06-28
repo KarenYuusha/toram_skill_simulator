@@ -224,7 +224,7 @@ def build_management_sections(tree: SkillTree) -> None:
             imported = selected_build["build"]
             st.session_state.save_build_name = selected_build["name"]
             st.session_state.save_build_description = selected_build.get("description", "")
-            apply_build_settings(selected_build.get("settings"), tree)
+            apply_build_settings(selected_build.get("settings"), tree, defer_widget_settings=True)
             st.session_state.levels = tree.import_build(imported, st.session_state.total_points)
             st.session_state.message = "Build loaded"
             st.rerun()
